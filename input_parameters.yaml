@@ -1,0 +1,279 @@
+# ============================================================================
+# CONFIGURATION FILE FOR METABOLIC FLUX ANALYSIS DIFFERENTIAL PATHWAY FLUX ANALYSIS (DPFA)
+# ============================================================================
+
+paths:
+  base_model: "data/models/curated_model55.xml"
+  pathway_database: "data/models/subsystem_matrix.csv"
+  base_output_dir: "results/fluxomics"
+
+tissues:
+  - tissue: "breast"
+    slow_model: "data/models/context_specific/mcs_slow_breast_fraction_0.65.json"
+    fast_model: "data/models/context_specific/mcs_fast_breast_fraction_0.90.json"
+    deg_csv: "data/processed/transcriptomics/degs/degs_results_breast.csv"
+    output_dir: "results/fluxomics/breast"
+
+  - tissue: "leg"
+    slow_model: "data/models/context_specific/mcs_slow_leg_fraction_0.60.json"
+    fast_model: "data/models/context_specific/mcs_fast_leg_fraction_0.95.json"
+    deg_csv: "data/processed/transcriptomics/degs/degs_results_leg.csv"
+    output_dir: "results_riptide/fluxomics/leg"
+
+  - tissue: "liver"
+    slow_model: "data/models/context_specific/mcs_slow_liver_fraction_0.50.json"
+    fast_model: "data/models/context_specific/mcs_fast_liver_fraction_0.60.json"
+    deg_csv: "data/processed/transcriptomics/degs/degs_results_liver.csv"
+    output_dir: "results_riptide/fluxomics/liver"
+
+# ============================================================================
+# ANALYSIS PARAMETERS
+# ============================================================================
+analysis:
+  drf_treshold: 0.3                # Treshold for type of increased and decreased DRF 
+  fdr_threshold: 0.99              # FDR threshold for DEG significance
+  flux_diff_threshold: 0.0         # Minimum flux difference for analysis
+  secretion_threshold: 1.0e-6      # Threshold for exchange reactions
+
+  # GPR processing
+  gpr_missing_strategy: "impute"   # "impute" or "drop"
+  gpr_impute_value: 0.0            # Value for missing genes 
+
+# ============================================================================
+# VISUALIZATION PARAMETERS
+# ============================================================================
+visualization:
+  # Pathway legend
+  legend_ncol: 2
+  legend_filename: "global_legend_pathways.pdf"
+
+  # DRF bar plots
+  drf_figsize: [12, 8]
+  drf_min_bar_width: 0.3
+  drf_max_bar_width: 1.5
+  drf_xlim_max: 70  # Maximum X-axis value (reactions count). Set to null for auto-scale
+  flux_diff_threshold: 0.1  # Minimum |flux_difference| for pathway to be shown in DRF plots
+
+  # Heatmaps
+  heatmap_figsize: [14, 10]
+  heatmap_cmap: "RdBu_r"
+  heatmap_center: 0
+
+scatter:
+  # Thresholds for highlighting points
+  rxn_lfc_threshold: 0.75           # Reaction log2FC threshold
+  flux_threshold: 0.75              # Flux log2 ratio threshold
+
+  # Marker sizes 
+  size_mode: "discrete"            # "discrete" or "continuous"
+  size_thresholds: [0.001, 0.01, 0.05, 0.25]
+  size_values: [175, 150, 100, 50]
+  size_default: 25
+
+  # GPR annotations
+  gpr_na_token: "NA"
+  gpr_value_fmt: "{:.2f}"
+
+  # Visual parameters
+  fig_size: [7, 6]
+  title_fontsize: 13
+  label_fontsize: 12
+  tick_fontsize: 10
+  annotation_fontsize: 11
+
+# ============================================================================
+# MERGING PATHWAYS&METABOLITES
+# ============================================================================
+
+pathway_merging:
+  
+  "Energy metabolism":
+    - "Oxidative Phosphorylation"
+    - "Citric Acid Cycle"
+    - "Glycolysis/Gluconeogenesis"
+    - "Pyruvate Metabolism"
+    - "Pentose Phosphate Pathway"
+    - "Pentose And Glucuronate Interconversions"  
+    - "Glutathione Metabolism"  
+  
+  "Lipid metabolism":
+    - "Fatty Acid Biosynthesis"
+    - "Fatty Acid Degradation"
+    - "Fatty Acid Metabolism" 
+    - "Triacylglycerol Synthesis"
+    - "Synthesis And Degradation Of Ketone Bodies"
+    - "Cholesterol Metabolism"
+    - "Glycerophospholipid Metabolism"
+  
+  "AA central (Ala/Asp/Glu, Gly/Ser/Thr)":
+    - "Alanine, Aspartate And Glutamate Metabolism"
+    - "Glycine, Serine And Threonine Metabolism"
+    - "Biosynthesis Of Amino Acids"  
+  
+  "BCAA metabolism (Val/Leu/Iso)":
+    - "Valine, Leucine And Isoleucine Biosynthesis"
+    - "Valine, Leucine And Isoleucine Degradation"
+  
+  "AA other":
+    - "Cysteine And Methionine Metabolism"
+    - "Tryptophan Metabolism"
+    - "Lysine Degradation"
+    - "Arginine Biosynthesis"
+    - "Butanoate Metabolism"  
+
+  "Nitrogen disposal":
+    - "Nitrogen Metabolism"
+    - "Urea Cycle"
+    - "Purine Metabolism" 
+  
+  "Nucleotide metabolism":
+    - "Purine Synthesis"
+    - "Pyrimidine Synthesis"
+    - "Pyrimidine Metabolism"
+    - "Pyrimidine Catabolism"
+    - "Nucleotide Interconversion"
+    - "Nucleotide Metabolism" 
+  
+  "Folate metabolism":
+    - "Folate Metabolism"
+  
+  "Mitochondrial transport":
+    - "Transport, Mitochondrial"
+  
+  "Extracellular Transport":
+    - "Extracellular Transport"
+  
+
+
+pathway_filter:
+  mode: "whitelist"
+  whitelist:
+    - "Energy metabolism"
+    - "Lipid metabolism"
+    - "AA central (Ala/Asp/Glu, Gly/Ser/Thr)"
+    - "AA other"
+    - "BCAA metabolism (Val/Leu/Iso)"
+    - "Nucleotide metabolism"
+    - "Folate Metabolism"
+    - "Nitrogen disposal"
+    - "Mitochondrial transport"
+    - "Extracellular Transport" 
+    - "Terpenoid Backbone Biosynthesis"
+
+metabolite_name_shortcuts:
+  l-2-aminoadipate: Aminoadipate derivatives
+  2-oxoadipate: Aminoadipate derivatives
+  nadp(+): NADP+
+  nadp: NADP+
+  nad(+): NAD+
+  nad+: NAD+
+  nicotinamide adenine dinucleotide phosphate: NADP+
+  nicotinamide adenine dinucleotide: NAD+
+  phosphatidylserine: PtSer
+  l-phenylalanine: L-Phe
+  l-phenylala: L-Phe
+  l-glutamate(1-): L-Glu
+  l-lysinium(1+): Lys
+  l-argininium(1+): Arg
+  l-glutamate: L-Glu
+  l-cysteine: L-Cys
+  l-alanine: L-Ala
+  l-proline: L-Pro
+  l-valine: L-Val
+  l-glu(1-): L-Glu
+  l-pro: L-Pro
+  l-val: L-Val
+  arginine: Arg
+  glycine: Gly
+  lysine: Lys
+  5,10-methylenetetrahydrofolate: Folate pool
+  5,10-methenyltetrahydrofolate: Folate pool
+  10-formyltetrahydrofolate: Folate pool
+  5-methyltetrahydrofolate: Folate pool
+  5,6,7,8-tetrahydrofolate: Folate pool
+  tetrahydrofolate: Folate pool
+  dihydrofolate: Folate pool
+  hydroxymethylglutaryl-coa: Ketone/FA-CoA
+  (s)-3-hydroxyisobutyryl-coa: Ketone/FA-CoA
+  2-methylprop-2-enoyl-coa: Ketone/FA-CoA
+  (s)-3-hydroxybutanoyl-coa: Ketone/FA-CoA
+  acetyl-coenzyme a: Acetyl-CoA pool
+  acetoacetyl-coa: Ketone/FA-CoA
+  crotonoyl-coa: Ketone/FA-CoA
+  acetyl-coa: Acetyl-CoA pool
+  acac-coa: Ketone/FA-CoA
+  3-hb-coa: Ketone/FA-CoA
+  cro-coa: Ketone/FA-CoA
+  acetylcoa: Acetyl-CoA pool
+  coenzyme a: CoA pool
+  coa: CoA pool
+  d-glucose: Glc
+  glucose: Glc
+  deoxyadenosine: A-nucleotides
+  datp: A-nucleotides
+  dadp: A-nucleotides
+  damp: A-nucleotides
+  atp: A-nucleotides
+  adp: A-nucleotides
+  amp: A-nucleotides
+  ado: A-nucleotides
+  dgtp: G-nucleotides
+  dgdp: G-nucleotides
+  dgmp: G-nucleotides
+  gtp: G-nucleotides
+  gdp: G-nucleotides
+  gmp: G-nucleotides
+  dguo: G-nucleotides
+  guo: G-nucleotides
+  dctp: C-nucleotides
+  dcdp: C-nucleotides
+  dcmp: C-nucleotides
+  ctp: C-nucleotides
+  cdp: C-nucleotides
+  cmp: C-nucleotides
+  dcyd: C-nucleotides
+  cyd: C-nucleotides
+  ditp: I-nucleotides
+  didp: I-nucleotides
+  dimp: I-nucleotides
+  itp: I-nucleotides
+  idp: I-nucleotides
+  imp: I-nucleotides
+  dino: I-nucleotides
+  inosine: I-nucleotides
+  dttp: T-nucleotides
+  dtdp: T-nucleotides
+  dtmp: T-nucleotides
+  dthd: T-nucleotides
+  pyruvate: Pyr
+  pyr: Pyr
+  3-methyl-2-oxobutanoate: BCAA α-ketoacids
+  2-methyl-3-oxopropanoate: BCAA α-ketoacids
+  2-oxobutanoate: BCAA α-ketoacids
+  beta-hydroxybutyrate: Ketone bodies
+  3-hydroxybutyrate: Ketone bodies
+  acetoacetate: Ketone bodies
+  carbon dioxide: CO2
+  hydrogen phosphate: Pi
+  inorganic phosphate: Pi
+  orthophosphate: Pi
+  hydrogenphosphate: Pi
+  hydrogen carbonate: HCO3-
+  hydrogencarbonate: HCO3-
+  bicarbonate: HCO3-
+  ammonium: NH4+
+  water: H2O
+  proton: H+
+  hco3-: HCO3-
+  nh4+: NH4+
+  nh4: NH4+
+  h2o: H2O
+  co2: CO2
+  pi: Pi
+  h+: H+
+  carbamoyl phosphate: Carb-P
+  carbamoyl p: Carb-P
+  (4-): ''
+  (3-): ''
+  (2-): ''
+  (1-): ''

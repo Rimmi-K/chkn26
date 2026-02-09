@@ -7,7 +7,7 @@
 [![COBRApy](https://img.shields.io/badge/COBRApy-0.29.1-green.svg)](https://opencobra.github.io/cobrapy/)
 [![RIPTiDe](https://img.shields.io/badge/RIPTiDe-3.4.81-green.svg)](https://github.com/mjenior/riptide)
 
-This repository contains a multi-omics analysis of fast- and slow-growing chickens, integrating **transcriptomics**, **metabolomics**, **phenotypes**, and **context-specific genome-scale metabolic models (csGEMs)** to investigate tissue-specific metabolic differences.
+This repository contains a multi-omics analysis of fast- and slow-growing chickens, integrating **transcriptomics**, **metabolomics**, **phenotypes** to investigate tissue-specific metabolic differences.
 The main focus is on **liver**, **leg muscle**, and **breast muscle** tissues.
 
 ## Table of Contents
@@ -22,9 +22,6 @@ The main focus is on **liver**, **leg muscle**, and **breast muscle** tissues.
   - [Installation](#installation)
   - [Running the analysis](#running-the-analysis)
 - [The dpfa package](#the-dpfa-package)
-- [Configuration](#configuration)
-- [Expected outputs](#expected-outputs)
-- [Troubleshooting](#troubleshooting)
 - [License](#license)
 - [Citation](#citation)
 - [Contact](#contact)
@@ -32,22 +29,11 @@ The main focus is on **liver**, **leg muscle**, and **breast muscle** tissues.
 
 ---
 
-## Background
+## Introduction 
 
 Growth rate in poultry is a complex trait shaped by coordinated transcriptional and metabolic regulation across tissues. While transcriptomic differences between fast- and slow-growing chickens can be detected, understanding their **mechanistic metabolic consequences** requires a systems-level approach.
 
 Genome-scale metabolic models (GEMs), combined with expression integration methods (e.g., RIPTiDe), provide a framework to translate expression patterns into **flux-level metabolic changes**, which can then be compared with metabolomic measurements and phenotypic traits.
-
----
-
-## Research questions
-
-This project addresses the following questions:
-
-- Which metabolic pathways differ between fast- and slow-growing chickens?
-- Are differences tissue-specific (liver vs muscle)?
-- How do transcriptomic changes translate into metabolic flux alterations?
-- Are metabolomic and phenotypic measurements consistent with model predictions?
 
 ---
 
@@ -65,13 +51,11 @@ This project addresses the following questions:
 - **Phenotypes:** biomass-related / growth-associated traits and statistical summaries
 - **Models:** curated chicken GEM and a collection of context-specific models produced across multiple expression thresholds
 
-All data are stored under `data/`. Generated outputs are stored under `results/`.
+All data are stored under `data/`. Results of analysis are stored under `results/`.
 
 ---
 
 ## Repository structure
-
-High-level map of the repository:
 
 - `data/` — raw and processed datasets used in analysis  
   - `data/transcriptomics/` — expression matrices, counts, DEGs, GSEA outputs  
@@ -153,12 +137,6 @@ Install Python dependencies:
 pip install -r envs/requirements.txt
 ```
 
-Key Python packages include:
-- `cobra` (0.29.1) — genome-scale metabolic modeling
-- `riptide` (3.4.81) — transcriptomic integration
-- `pandas`, `numpy`, `scipy` — data manipulation and analysis
-- `matplotlib`, `seaborn` — visualization
-- `pydeseq2` — differential expression analysis
 
 #### 3. Set up R environment
 
@@ -168,28 +146,30 @@ Install R (≥ 4.3) and required packages:
 install.packages(c("edgeR", "dplyr", "readr", "ggplot2", "tidyr", "effsize"))
 ```
 
-Key R packages:
-- `edgeR` — TMM normalization and differential expression
-- `dplyr`, `tidyr` — data wrangling
-- `ggplot2` — plotting
-- `effsize` — effect size calculations
-
 ---
 
 ## Running the analysis
+
+### Step 0: Statistical analysis
+
+Run metabolomic and phenotypic statistical analyses:
+
+```bash
+# Metabolomics statistics
+python scrs/metabolomics/metabolomics_stats.py
+
+# Phenotype statistics
+Rscript scrs/phenotypes/PhenStatAn.Rscript
+
+```
 
 ### Step 1: Transcriptomic preprocessing
 
 Run TMM normalization and differential expression analysis using R scripts in `scrs/transcriptomics/`:
 
 ```bash
-# TMM normalization
 Rscript scrs/transcriptomics/TMM.R
-
-# Differential expression analysis
 Rscript scrs/transcriptomics/DEG_analysis.R
-
-# Gene Set Enrichment Analysis
 Rscript scrs/transcriptomics/GSEA.R
 ```
 
@@ -223,30 +203,13 @@ Output logs are saved to `riptide_log.txt` and `riptide_summary.csv`.
 
 Use the `dpfa` package to analyze flux distributions and compare metabolic pathways:
 
-```python
-from dpfa import analysis, visualization
+First of all, check parameters in config file - input_parameters.yaml
 
-# Load configuration
-from dpfa.config_loader import load_config
-config = load_config('input_parameters.yaml')
-
-# Perform flux analysis
-# See dpfa/analysis.py for available functions
-```
-
-### Step 5: Statistical analysis
-
-Run metabolomic and phenotypic statistical analyses:
-
+Then, you can just exec dpfa:
 ```bash
-# Metabolomics statistics
-python scrs/metabolomics/metabolomics_stats.py
-
-# Phenotype statistics
-Rscript scrs/phenotypes/PhenStatAn.R
+python -m dpfa
 ```
 
----
 
 ## The dpfa package
 
@@ -258,119 +221,8 @@ The `dpfa` (Downstream Pathway and Flux Analysis) package provides tools for:
 - **Configuration** (`dpfa/config_loader.py`) — YAML parameter loading
 - **Utilities** (`dpfa/utils/`) — pathway databases, GPR parsing, flux calculations, metabolite turnover
 
-Example usage:
-
-```python
-from dpfa.analysis import compare_fluxes
-from dpfa.visualization import plot_pathway_activity
-
-# Load models
-# ... load context-specific models ...
-
-# Compare flux between fast and slow groups
-flux_diff = compare_fluxes(model_fast, model_slow)
-
-# Visualize pathway activity
-plot_pathway_activity(flux_diff, save_path='results/fluxomics/')
-```
-
----
-
-## Configuration
-
-Pipeline settings are centralized in `input_parameters.yaml`, which controls:
-
-- **Paths:** locations of models, databases, and output directories
-- **Tissue configurations:** model files, DEG data, and fraction thresholds for each tissue
-- **Pathway settings:** pathway merging, filtering (whitelist/blacklist), and naming
-- **Visualization parameters:** plot settings, statistical thresholds, color schemes
-- **Analysis options:** objectives, optimization parameters, flux calculations
-
-**Configuration file structure:**
-
-```yaml
-paths:
-  base_model: "data/models/curated_model55.xml"
-  pathway_database: "data/models/subsystem_matrix.csv"
-  base_output_dir: "results_riptide"
-
-tissues:
-  - tissue: "breast"
-    slow_model: "data/models/context_specific/mcs_slow_breast_fraction_0.65.json"
-    fast_model: "data/models/context_specific/mcs_fast_breast_fraction_0.90.json"
-    # ... additional tissue-specific settings
-
-pathway_settings:
-  merge_pathways:
-    "Unified Pathway Name":
-      - "Original pathway 1"
-      - "Original pathway 2"
-  # ... filtering and exclusion rules
-```
-
-See `CONFIG_README.md` for detailed documentation of all configuration options.
-
-> **Important:** If you change parameters, keep a copy of the configuration file with your results for reproducibility.
-
----
-
-## Expected outputs
-
-After running the full pipeline, you should have:
-
-- `data/models/` — context-specific metabolic models (JSON format)
-- `results/transcriptomics/` — DEG lists, GSEA results, normalized expression matrices
-- `results/fluxomics/` — flux analysis results and pathway comparisons
-- `results/metabolomics/` — metabolomics plots (forest plots, volcano plots)
-- `results/phenotypes/` — phenotype statistics and visualizations
-- `riptide_log.txt` — detailed RIPTiDe integration log
-- `riptide_summary.csv` — summary of RIPTiDe runs
-
-**Computation time:** The full pipeline (especially RIPTiDe integration across all thresholds and tissues) may take several hours depending on your hardware.
-
----
-
-## Troubleshooting
-
-### Common issues
-
-**1. Import errors with COBRApy or RIPTiDe**
-- Ensure you're using Python 3.12 and have installed all dependencies from `envs/requirements.txt`
-- Try creating a fresh conda environment
-
-**2. R script errors (e.g., `edgeR` not found)**
-- Install Bioconductor packages:
-  ```r
-  if (!require("BiocManager", quietly = TRUE))
-      install.packages("BiocManager")
-  BiocManager::install("edgeR")
-  ```
-
-**3. Memory errors during RIPTiDe integration**
-- Reduce the number of fraction thresholds being tested
-- Process tissues sequentially rather than in parallel
-- Increase system swap space
-
-**4. File path errors in R scripts**
-- R scripts may contain hardcoded paths (e.g., `C:/Users/...`). Update these to match your directory structure
-- Check paths in `TMM.R`, `DEG_analysis.R`, `GSEA.R`, and `PhenStatAn.R`
-
-**5. Model optimization failures**
-- Check that model files are not corrupted
-- Verify that the objective function is set correctly in `input_parameters.yaml`
-- Ensure metabolite/reaction IDs match between model and transcriptome data
-
-For additional help, please open an issue on GitHub with:
-- Error message and full traceback
-- Python/R version
-- Operating system
-- Steps to reproduce
-
----
-
 ## License
 
-This project is currently unlicensed. Please contact the authors for usage permissions.
 
 ---
 
@@ -378,15 +230,11 @@ This project is currently unlicensed. Please contact the authors for usage permi
 
 If you use this work in your research, please cite:
 
-```
-[Add citation information here when published]
-```
-
 ---
 
 ## Contact
 
-For questions or issues, please open an issue on GitHub or contact the authors.
+kaplanrimi@gmail.com
 
 ---
 

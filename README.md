@@ -81,9 +81,9 @@ Differential pathway flux analysis toolkit:
 
 ## Citation
 ```bibtex
-@article{kaplan2026,
+@article{chkn2026,
   title={Genome-scale and Omics-Driven Modelling Reveals Metabolic Differences Between Fast- and Slow-Growing Chicken Groups},
-  author={Kaplan, Vladimir and ...},
+  author={...},
   journal={...},
   year={2026}
 }

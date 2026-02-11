@@ -80,6 +80,7 @@ Differential pathway flux analysis toolkit:
 ---
 
 ## Citation
+
 ```bibtex
 @article{chkn2026,
   title={Genome-scale and Omics-Driven Modelling Reveals Metabolic Differences Between Fast- and Slow-Growing Chicken Groups},
@@ -94,10 +95,4 @@ Differential pathway flux analysis toolkit:
 ## Contact
 
 📧 kaplanrimi@gmail.com  
-🔗 [Publication](link) | [Data](data-repo-link)
-
 ---
-
-## Acknowledgments
-
-Built with: [COBRApy](https://opencobra.github.io/cobrapy/) • [RIPTiDe](https://github.com/mjenior/riptide) • [edgeR](https://bioconductor.org/packages/edgeR/)

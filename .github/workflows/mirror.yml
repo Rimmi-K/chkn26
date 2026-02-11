@@ -1,0 +1,25 @@
+name: Mirror to GitLab
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - '**'  # все ветки
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # полная история
+      
+      - name: Mirror to GitLab
+        env:
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+        run: |
+          git remote add gitlab https://oauth2:${GITLAB_TOKEN}@gitlab.sirius-web.org/collaboration/Chicken/gem_g.gallus2024.git
+          git push gitlab --all --force
+          git push gitlab --tags --force

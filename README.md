@@ -8,10 +8,6 @@ Multi-omics analysis integrating transcriptomics, metabolomics, and constraint-b
 
 ---
 
-**Requirements:** Python ≥3.10, R ≥4.3
-
----
-
 ## Repository structure
 
 ```

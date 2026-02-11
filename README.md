@@ -8,22 +8,28 @@ Multi-omics analysis integrating transcriptomics, metabolomics, and constraint-b
 
 ---
 
-**Requirements:** Python ≥3.10, R ≥4.3, 8GB RAM  
-**Output:** Results → `results/` (organized by tissue/analysis type)
+**Requirements:** Python ≥3.10, R ≥4.3
 
 ---
 
-## Data
+## Repository structure
 
-**Design:** 9-week *Gallus gallus*, fast-growing (n=6) vs slow-growing (n=6)  
-**Tissues:** Liver, leg muscle, breast muscle  
-**Modalities:** CAGE-seq, NMR metabolomics, phenotypes, context-specific GEMs
 ```
 data/
-├── transcriptomics/  # TMM matrices, DEGs, GSEA
-├── metabolomics/     # NMR concentrations
-├── phenotypes/       # Growth traits
-└── models/           # iES1470 GEM + context-specific models
+├── transcriptomics/    # TMM-normalised matrices, DESeq2 DEGs, GSEA results
+├── metabolomics/       # NMR concentrations (nmol/g wet tissue)
+├── phenotypes/         # Body & organ weights, serum biochemistry
+└── models/             # iES1470 GEM (SBML) + RIPTiDe context-specific models
+
+scrs/
+├── transcriptomics/    # CAGE-seq QC, DESeq2, GSEA
+├── metabolomics/       # Hodges–Lehmann analysis, bootstrap CIs
+├── riptide_integration/# RIPTiDe integration
+└── models/             # scripts for refine model
+
+dpfa/                   # Differential Pathway Flux Analysis package
+
+results/                # Generated figures, tables, supplementary files
 ```
 
 ---
@@ -36,30 +42,17 @@ data/
 - RIPTiDe integration (fraction 0.10–0.95)
 - Differential pathway flux analysis (DPFA: r-DPFA + mc-DPFA)
 
-**Full methods:** See [publication](link) or `scrs/` scripts
-
 ---
 
-## Repository Structure
-```
-data/          # Omics data & models
-scrs/          # Analysis scripts
-  ├── transcriptomics/
-  ├── metabolomics/
-  ├── riptide_integration/
-  └── models/
-dpfa/          # Flux analysis package
-results/       # Generated outputs
-```
+## The DPFA Package
 
----
+Differential Pathway Flux Analysis toolkit for comparing context-specific flux distributions.
 
-## The dpfa Package
-
-Differential pathway flux analysis toolkit:
-- `dpfa.analysis` — flux comparisons (FG vs SG)
-- `dpfa.visualization` — pathway/metabolite heatmaps
-- `dpfa.utils` — GPR parsing, metabolite turnover
+**Modules:**
+- `dpfa.analysis` — DRF classification, r-DPFA, mc-DPFA
+- `dpfa.visualization` — pathway bar charts, metabolite heatmaps
+- `dpfa.scatter_plot` — transcript–flux concordance analysis: compares transcript-derived reaction effects (aggregated via GPR rules) with predicted flux ratios to identify concordant, flux-dominant, and transcript-dominant regulation
+- `dpfa.utils` — GPR rule parsing, metabolite turnover calculations
 
 **Usage:** Configure `input_parameters.yaml`, run `python -m dpfa`
 
@@ -67,12 +60,17 @@ Differential pathway flux analysis toolkit:
 
 ## Citation
 
+
 ```bibtex
-@article{chkn2026,
-  title={Genome-scale and Omics-Driven Modelling Reveals Metabolic Differences Between Fast- and Slow-Growing Chicken Groups},
-  author={...},
-  journal={...},
-  year={2026}
+@article{kaplan2026chkn,
+  title   = {Genome-scale and Omics-Driven Modelling Reveals Metabolic
+             Differences Between Fast- and Slow-Growing Chicken Groups},
+  author  = {Kaplan, Vladimir and Evshin, Ivan and Osik, Nataliya and
+             Yanshole, Lyudmila and Tsentalovich, Yuri and
+             Shagimardanova, Elena and Gusev, Oleg and Kolpakov, Fedor and
+             Kulyashov, Mikhail and Akberdin, Ilya},
+  journal = {submitted},
+  year    = {2026}
 }
 ```
 
@@ -80,5 +78,5 @@ Differential pathway flux analysis toolkit:
 
 ## Contact
 
-📧 kaplanrimi@gmail.com  
+kaplanrimi@gmail.com
 ---

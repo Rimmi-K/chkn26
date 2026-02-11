@@ -7,28 +7,35 @@ import matplotlib.pyplot as plt
 import math
 import matplotlib.transforms as mtransforms
 
-def _explode_pathways(df: pd.DataFrame) -> pd.DataFrame:
+def _explode_pathways(df: pd.DataFrame, pathway_column: str = "Pathways") -> pd.DataFrame:
     """
     Explode pathways column and remove duplicate pathway entries per reaction.
 
     After pathway merging, a reaction may have duplicate pathway names.
     We deduplicate to avoid counting reactions multiple times in DRF bar plots.
+
+    Parameters:
+    -----------
+    df : pd.DataFrame
+        Input dataframe
+    pathway_column : str
+        Name of pathway column to explode (default: "Pathways")
     """
-    if "Pathways" not in df.columns:
+    if pathway_column not in df.columns:
         return df
 
     out = df.copy()
-    out["Pathways"] = out["Pathways"].fillna("").astype(str)
-    out["Pathways"] = (out["Pathways"]
-                       .str.replace("|", ";", regex=False)
-                       .str.replace(" / ", ";", regex=False))
-    out["Pathways"] = out["Pathways"].str.split(";")
-    out = out.explode("Pathways")
-    out["Pathways"] = out["Pathways"].str.strip()
-    out = out[out["Pathways"] != ""]
+    out[pathway_column] = out[pathway_column].fillna("").astype(str)
+    out[pathway_column] = (out[pathway_column]
+                           .str.replace("|", ";", regex=False)
+                           .str.replace(" / ", ";", regex=False))
+    out[pathway_column] = out[pathway_column].str.split(";")
+    out = out.explode(pathway_column)
+    out[pathway_column] = out[pathway_column].str.strip()
+    out = out[out[pathway_column] != ""]
 
     if "reaction_id" in out.columns:
-        out = out.drop_duplicates(subset=["reaction_id", "Pathways"], keep="first")
+        out = out.drop_duplicates(subset=["reaction_id", pathway_column], keep="first")
 
     return out
 
@@ -57,37 +64,33 @@ def plot_regulation_counts(df: pd.DataFrame, output_dir: str, tissue: str,
         'Unchanged': 'gray'
     }
 
-    if 'Pathways' not in df.columns or 'DRF_category' not in df.columns:
-        logging.warning("No pathways or DRF_category for plotting.")
+    # Use Pathway Groups for visualization if available, otherwise use Pathways
+    pathway_col = "Pathway Groups" if "Pathway Groups" in df.columns else "Pathways"
+
+    if pathway_col not in df.columns or 'DRF_category' not in df.columns:
+        logging.warning(f"No {pathway_col} or DRF_category for plotting.")
         return
 
-    df = _explode_pathways(df)
+    df = _explode_pathways(df, pathway_column=pathway_col)
 
     if pathways_filter is None:
         pathways_filter = UNIFIED_PATHWAYS
 
-    df = df[df['Pathways'].isin(pathways_filter)]
+    df = df[df[pathway_col].isin(pathways_filter)]
     df = df[df['DRF_category'].isin(color_dict.keys())]
 
-    if pathway_flux_diff is not None:
-        flux_table = pathway_flux_diff[['Pathways', 'flux_fast', 'flux_slow', 'flux_difference']].copy()
-        flux_table = flux_table.rename(columns={
-            'flux_fast': '∑FG_flux',
-            'flux_slow': '∑SG_flux',
-            'flux_difference': 'Difference'
-        })
-        flux_table_path = os.path.join(output_dir, f'pathway_flux_values_{tissue}.csv')
-        flux_table.to_csv(flux_table_path, index=False)
-        logging.info(f"Flux values table saved: {flux_table_path}")
+    # Note: Pathway flux values are now saved in analyze_pathway_flux_difference()
+    # as pathway_flux_values_{tissue}.csv (original) and pathwaygroup_flux_values_{tissue}.csv (groups)
 
-    df['Pathways label'] = df['Pathways']
+    df['Pathways label'] = df[pathway_col]
     counts = df.groupby(['Pathways label', 'DRF_category']).size().unstack(fill_value=0)
     pathway_order = [p for p in pathways_filter if p in counts.index]
     counts = counts.reindex(pathway_order)
 
     if flux_diff_threshold > 0 and pathway_flux_diff is not None:
+        flux_col_diff = "Pathway Groups" if "Pathway Groups" in pathway_flux_diff.columns else "Pathways"
         flux_diff_dict = dict(zip(
-            pathway_flux_diff['Pathways'],
+            pathway_flux_diff[flux_col_diff],
             abs(pathway_flux_diff['flux_difference'])
         ))
 
@@ -107,8 +110,9 @@ def plot_regulation_counts(df: pd.DataFrame, output_dir: str, tissue: str,
     min_pt, max_pt = 5, 15
 
     if pathway_flux_diff is not None and not pathway_flux_diff.empty:
+        flux_col_diff = "Pathway Groups" if "Pathway Groups" in pathway_flux_diff.columns else "Pathways"
         flux_diff_dict = dict(zip(
-            pathway_flux_diff['Pathways'],
+            pathway_flux_diff[flux_col_diff],
             abs(pathway_flux_diff['flux_difference'])
         ))
 
@@ -174,8 +178,9 @@ def plot_regulation_counts(df: pd.DataFrame, output_dir: str, tissue: str,
     ax.invert_yaxis()
 
     if pathway_flux_diff is not None and not pathway_flux_diff.empty:
+        flux_col_final = "Pathway Groups" if "Pathway Groups" in pathway_flux_diff.columns else "Pathways"
         flux_diff_dict = dict(zip(
-            pathway_flux_diff['Pathways'],
+            pathway_flux_diff[flux_col_final],
             pathway_flux_diff['flux_difference']
         ))
 
@@ -231,34 +236,71 @@ def plot_regulation_counts(df: pd.DataFrame, output_dir: str, tissue: str,
 
 def analyze_pathway_flux_difference(merged_df: pd.DataFrame, output_dir: str,
                                    tissue: str, threshold: float = 1.0) -> pd.DataFrame:
-    """Analyze flux difference by pathways (sum of absolute fluxes)."""
-    if not {'Pathways', 'flux_slow', 'flux_fast'}.issubset(merged_df.columns):
+    """
+    Analyze flux difference by pathways (sum of absolute fluxes).
+    Creates two CSV files:
+    - pathway_flux_values_{tissue}.csv: Original pathway analysis
+    - pathwaygroup_flux_values_{tissue}.csv: Pathway groups analysis
+    """
+    if not {'flux_slow', 'flux_fast'}.issubset(merged_df.columns):
         logging.warning("Pathway flux analysis skipped (missing flux data).")
         return None
 
-    merged_df = _explode_pathways(merged_df)
+    # 1. Analyze ORIGINAL pathways
+    if "Pathways" in merged_df.columns:
+        df_original = _explode_pathways(merged_df.copy(), pathway_column="Pathways")
+        path_sums_original = df_original.groupby('Pathways')[['flux_slow', 'flux_fast']].apply(
+            lambda x: x.abs().sum()
+        ).reset_index()
 
-    path_sums = merged_df.groupby('Pathways')[['flux_slow', 'flux_fast']].apply(
-        lambda x: x.abs().sum()
-    ).reset_index()
+        path_sums_original['flux_slow'] = path_sums_original['flux_slow'].where(
+            path_sums_original['flux_slow'] >= 1e-6, 0
+        )
+        path_sums_original['flux_fast'] = path_sums_original['flux_fast'].where(
+            path_sums_original['flux_fast'] >= 1e-6, 0
+        )
+        path_sums_original['flux_difference'] = (
+            path_sums_original['flux_fast'] - path_sums_original['flux_slow']
+        )
 
-    path_sums['flux_slow'] = path_sums['flux_slow'].where(
-        path_sums['flux_slow'] >= 1e-6, 0
-    )
-    path_sums['flux_fast'] = path_sums['flux_fast'].where(
-        path_sums['flux_fast'] >= 1e-6, 0
-    )
+        # Save original pathways
+        out_path_original = os.path.join(output_dir, f'pathway_flux_values_{tissue}.csv')
+        path_sums_original.to_csv(out_path_original, index=False)
+        logging.info(f"Original pathway flux values saved: {out_path_original}")
 
-    path_sums['flux_difference'] = path_sums['flux_fast'] - path_sums['flux_slow']
+    # 2. Analyze PATHWAY GROUPS
+    pathway_groups_available = "Pathway Groups" in merged_df.columns
 
-    filtered = path_sums[abs(path_sums['flux_difference']) > threshold]
-    filtered = filtered.sort_values(by='flux_difference', ascending=False)
+    if pathway_groups_available:
+        df_groups = _explode_pathways(merged_df.copy(), pathway_column="Pathway Groups")
+        path_sums_groups = df_groups.groupby('Pathway Groups')[['flux_slow', 'flux_fast']].apply(
+            lambda x: x.abs().sum()
+        ).reset_index()
 
-    out_path = os.path.join(output_dir, f'pathway_flux_diff_{tissue}.csv')
-    path_sums.to_csv(out_path, index=False)
-    logging.info(f"Pathway flux difference saved: {out_path}")
+        path_sums_groups['flux_slow'] = path_sums_groups['flux_slow'].where(
+            path_sums_groups['flux_slow'] >= 1e-6, 0
+        )
+        path_sums_groups['flux_fast'] = path_sums_groups['flux_fast'].where(
+            path_sums_groups['flux_fast'] >= 1e-6, 0
+        )
+        path_sums_groups['flux_difference'] = (
+            path_sums_groups['flux_fast'] - path_sums_groups['flux_slow']
+        )
 
-    return filtered
+        # Save pathway groups
+        out_path_groups = os.path.join(output_dir, f'pathwaygroup_flux_values_{tissue}.csv')
+        path_sums_groups.to_csv(out_path_groups, index=False)
+        logging.info(f"Pathway groups flux values saved: {out_path_groups}")
+
+        # Return filtered groups for visualization
+        filtered = path_sums_groups[abs(path_sums_groups['flux_difference']) > threshold]
+        filtered = filtered.sort_values(by='flux_difference', ascending=False)
+        return filtered
+    else:
+        # No groups - return original pathways
+        filtered = path_sums_original[abs(path_sums_original['flux_difference']) > threshold]
+        filtered = filtered.sort_values(by='flux_difference', ascending=False)
+        return filtered
 
 
 def make_band_squash_transform(B: float = 1.0, k: float = 10.0):
@@ -340,10 +382,11 @@ def plot_fluxsum_log2fc_heatmap(df: pd.DataFrame, tissue: str, output_dir: str,
     cbar_tick_fontsize = 7
 
     pathway_column = "Pathway Group" if "Pathway Group" in df.columns else "Metabolic Pathways"
+    metabolite_column = "Metabolite Group" if "Metabolite Group" in df.columns else "Metabolites"
 
     heatmap_df = df.pivot_table(
         index=pathway_column,
-        columns="Metabolites",
+        columns=metabolite_column,
         values="log2FC_fluxsum",
         aggfunc="mean"
     )
@@ -485,10 +528,11 @@ def plot_fluxsum_log2fc_heatmap_mets(df: pd.DataFrame, tissue: str, output_dir: 
     plt.rcParams['font.sans-serif'] = ['Arial']
 
     pathway_column = "Pathway Group" if "Pathway Group" in df.columns else "Metabolic Pathways"
+    metabolite_column = "Metabolite Group" if "Metabolite Group" in df.columns else "Metabolites"
 
     heatmap_df = df.pivot_table(
         index=pathway_column,
-        columns="Metabolites",
+        columns=metabolite_column,
         values="log2FC_fluxsum",
         aggfunc="mean"
     )

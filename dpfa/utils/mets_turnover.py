@@ -12,10 +12,44 @@ except Exception:
     Model = object
 
 try:
-    from .pathway_database import PathwayDatabase  
+    from .pathway_database import PathwayDatabase
 except Exception:
     PathwayDatabase = object
 
+
+def smart_capitalize(name: str) -> str:
+    """Capitalize first letter in string"""
+    m = re.search(r'([a-zA-Z])', str(name))
+    if m:
+        i = m.start()
+        return name[:i] + name[i].upper() + name[i+1:]
+    return str(name)
+
+
+def shorten_names(name: str, custom_abbrev: Optional[Dict[str, str]] = None) -> str:
+    """
+    Shorten metabolite names using abbreviation dictionary
+
+    Parameters:
+    -----------
+    name : str
+        Metabolite name to shorten
+    custom_abbrev : dict, optional
+        Custom abbreviation dictionary from input_parameters.yaml
+
+    Returns:
+    --------
+    str
+        Shortened metabolite name
+    """
+    if custom_abbrev is None:
+        custom_abbrev = {}
+
+    s = str(name).strip().lower()
+    for full, abbr in custom_abbrev.items():
+        if full.lower() in s:
+            s = s.replace(full.lower(), abbr)
+    return smart_capitalize(s)
 
 
 def compute_metabolite_turnover_by_subsystem(
@@ -170,17 +204,25 @@ def analyze_mets_turnover(
         log2fc_vals.append(log2fc)
 
         met = None
+        met_original_name = met_id
         try:
             met = model.metabolites.get_by_id(met_id)
-            base_name = shorten_names(met.name, metabolite_shortcuts)
+            met_original_name = met.name
         except Exception:
-            base_name = met_id
+            pass
 
+        # Get compartment
+        comp = _extract_compartment(met, met_id)
+
+        # Original metabolite name with compartment
+        original_met_label = f"{met_original_name} ({comp})" if comp != "?" else met_original_name
+
+        # Shortened metabolite name (for grouping/visualization)
+        shortened_name = shorten_names(met_original_name, metabolite_shortcuts)
         if merge_compartments:
-            mlabel = base_name
+            met_group = shortened_name
         else:
-            comp = _extract_compartment(met, met_id)
-            mlabel = f"{base_name} ({comp})"
+            met_group = f"{shortened_name} ({comp})"
 
         key = (met_id, subsystem)
         rxn_str = _format_reactions_for_key(key, top_n=None)
@@ -188,7 +230,8 @@ def analyze_mets_turnover(
         rows.append(
             {
                 "metabolite_id": met_id,
-                "Metabolites": mlabel,
+                "Metabolite": original_met_label,
+                "Metabolite Group": met_group,
                 "Metabolic Pathways": subsystem,
                 "log2FC_fluxsum": log2fc,
                 "Reactions": rxn_str,
@@ -221,16 +264,18 @@ def analyze_mets_turnover(
         )
         merged_pathways = df["Pathway Group"].nunique()
 
-        cols = ["metabolite_id", "Metabolites", "Metabolic Pathways", "Pathway Group",
-                "log2FC_fluxsum", "Reactions"]
-        df = df[cols]
-
         logging.info(
             f"[{tissue}] Applied pathway merging to mcPFA: "
             f"{original_pathways} original pathways → {merged_pathways} pathway groups"
         )
     else:
         df["Pathway Group"] = df["Metabolic Pathways"]
+
+    # Reorder columns
+    cols = ["metabolite_id", "Metabolite", "Metabolite Group",
+            "Metabolic Pathways", "Pathway Group",
+            "log2FC_fluxsum", "Reactions"]
+    df = df[cols]
 
     out_csv = os.path.join(output_dir, "fluxsum_log2fc_by_subsystem.csv")
     df.to_csv(out_csv, index=False)

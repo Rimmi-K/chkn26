@@ -73,6 +73,7 @@ def run_analysis(model, slow_model, fast_model, tissue,
         pathways = pathway_db.get_pathways_for_reaction(rxn_id)
         return pathways if pathways else ["Unknown"]
 
+    # Store original pathways
     merged_df["Pathways_list"] = merged_df["reaction_id"].apply(_get_pathways_for_rxn)
     merged_df["Pathways"] = merged_df["Pathways_list"].apply(lambda lst: "; ".join(lst))
 
@@ -89,17 +90,27 @@ def run_analysis(model, slow_model, fast_model, tissue,
         if pathways:
             logging.info(f"[{tissue}] {rid} pathways: {pathways}")
 
+    # Create pathway groups for visualization (keep original pathways intact)
     if pathway_merging:
         from .utils.pathway_utils import apply_pathway_merging_to_list_column
 
         if "Pathways_list" in merged_df.columns:
-            merged_df = apply_pathway_merging_to_list_column(
-                merged_df, pathway_merging, "Pathways_list"
+            # Create a copy for grouping
+            merged_df_grouped = apply_pathway_merging_to_list_column(
+                merged_df.copy(), pathway_merging, "Pathways_list"
             )
-            merged_df["Pathways"] = merged_df["Pathways_list"].apply(lambda lst: "; ".join(lst))
+            merged_df["Pathway_Groups_list"] = merged_df_grouped["Pathways_list"]
+            merged_df["Pathway Groups"] = merged_df["Pathway_Groups_list"].apply(lambda lst: "; ".join(lst))
+        else:
+            merged_df["Pathway_Groups_list"] = merged_df["Pathways_list"]
+            merged_df["Pathway Groups"] = merged_df["Pathways"]
 
         logging.info(f"[{tissue}] Applied pathway merging to analysis data")
-        logging.info(f"[{tissue}] Merged pathways count: {merged_df['Pathways'].nunique()}")
+        logging.info(f"[{tissue}] Original pathways: {merged_df['Pathways'].nunique()}, Pathway groups: {merged_df['Pathway Groups'].nunique()}")
+    else:
+        # No merging - groups are same as original
+        merged_df["Pathway_Groups_list"] = merged_df["Pathways_list"]
+        merged_df["Pathway Groups"] = merged_df["Pathways"]
 
     merged_df.to_csv(os.path.join(output_dir, f'drf_{tissue}.csv'), index=False)
 

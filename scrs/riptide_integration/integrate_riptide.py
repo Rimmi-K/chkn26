@@ -163,7 +163,7 @@ if __name__ == "__main__":
     output_dir = 'data/models/context_specific'
     tissues = ['breast', 'leg', 'liver']
     transcript_path_template = './data/processed/transcriptomics/{tissue}_{group}.csv'
-    model_path = 'data/models/curated_model55.json'
+    model_path = 'data/models/iES1470.json'
 
     try:
         for tissue in tissues:

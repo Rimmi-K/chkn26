@@ -212,6 +212,29 @@ def reaction_log2fc_via_gpr(
     return rxn_lfc
 
 
+def _harmonic_mean_p(pvals: List[float]) -> float:
+    """
+    Harmonic Mean P-value (HMP) 
+    
+    Reference: Wilson D.J. (2019) PNAS 116: 1195-1200
+    """
+    pvals = [float(p) for p in pvals if pd.notna(p) and p > 0]
+    n = len(pvals)
+    if n == 0:
+        return np.nan
+    if n == 1:
+        return pvals[0]
+    
+    # HMP = n / Σ(1/p_i)
+    hmp = n / np.sum([1.0/p for p in pvals])
+    
+    # HMP не может быть меньше минимального p-value
+    hmp = max(hmp, min(pvals))
+    # HMP не может быть больше 1
+    hmp = min(hmp, 1.0)
+    
+    return float(hmp)
+
 
 def reaction_pvalues_via_gpr(
     clauses: Dict[str, List[List[str]]],

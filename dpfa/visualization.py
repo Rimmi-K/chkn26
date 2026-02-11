@@ -6,7 +6,6 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import math
 import matplotlib.transforms as mtransforms
-from .utils.mets_turnover import shorten_names
 
 def _explode_pathways(df: pd.DataFrame) -> pd.DataFrame:
     """

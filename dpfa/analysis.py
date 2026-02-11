@@ -13,8 +13,7 @@ from .utils.gpr_utils import (
 from .utils.io_utils import load_deg_table
 from .visualization import (
     plot_regulation_counts,
-    analyze_pathway_flux_difference,
-    analyze_exchange_flux_changes
+    analyze_pathway_flux_difference
 )
 from .scatter_plot import make_scatter_deg_vs_flux
 from .utils.flux_utils import (
@@ -36,7 +35,6 @@ def run_analysis(model, slow_model, fast_model, tissue,
                  scatter_rxn_lfc_thr: float = 0.5,
                  scatter_flux_thr: float = 0.5,
                  scatter_require_sig: bool = False,
-                 highlight_logic: str = "threshold_only",
                  gpr_missing_strategy: str = "impute",
                  gpr_impute_value: float = 0.0,
                  global_pathway_colors: dict = None,
@@ -206,7 +204,6 @@ def run_analysis(model, slow_model, fast_model, tissue,
                 model_for_paths=md_for_paths,
                 rxn_lfc_thr=scatter_rxn_lfc_thr,
                 flux_log2_thr=scatter_flux_thr,
-                highlight_logic=highlight_logic,
                 pathway_merging=pathway_merging,
                 pathway_filter=filter_pathways_list,
                 model_for_gpr_rules=model_for_gpr,
@@ -275,14 +272,12 @@ if __name__ == "__main__":
     flux_diff_plot_thr = config.get_flux_diff_threshold()
     metabolite_shortcuts = config.get_metabolite_name_shortcuts()
     drf_xlim_max = config.visualization.get("drf_xlim_max")
+    scatter_params = config.scatter
 
     filter_mode = config.pathway_filter.get("mode", "none")
-        if filter_mode == "whitelist":
+    if filter_mode == "whitelist":
         whitelist = config.pathway_filter.get("whitelist", [])
         logging.info(f"  - Whitelist: {len(whitelist)} pathways")
-    elif filter_mode == "blacklist":
-        blacklist = config.pathway_filter.get("blacklist", [])
-        logging.info(f"  - Blacklist: {len(blacklist)} pathways")
 
     used_all = pd.DataFrame(columns=["Pathways", "color_hex"])
 
@@ -308,11 +303,9 @@ if __name__ == "__main__":
             pathway_merging=config.pathway_merging,
             pathway_filter_mode=filter_mode,
             pathways_filter=config.pathway_filter.get("whitelist") if filter_mode == "whitelist" else None,
-            pathway_blacklist=config.pathway_filter.get("blacklist") if filter_mode == "blacklist" else None,
             scatter_rxn_lfc_thr=scatter_params['rxn_lfc_threshold'],
             scatter_flux_thr=scatter_params['flux_threshold'],
             scatter_require_sig=scatter_params.get('require_significance', False),
-            highlight_logic=scatter_params.get('highlight_logic', 'threshold_only'),
             metabolite_shortcuts=metabolite_shortcuts,
             flux_diff_plot_threshold=flux_diff_plot_thr,
             drf_xlim_max=drf_xlim_max,
@@ -346,9 +339,8 @@ if __name__ == "__main__":
 
         save_legend_from_df(used_all, output_dir=base_output_dir,
                           fname=legend_fname, ncol=legend_ncol)
-        logging.info(f"✓ Saved global legend: {base_output_dir}/{legend_fname}")
+        logging.info(f"Saved global legend: {base_output_dir}/{legend_fname}")
     else:
         logging.info("[main] No pathways to draw in legend")
 
-    analyze_exchange_flux_changes(tissue_configs, model, output_dir=base_output_dir)
 

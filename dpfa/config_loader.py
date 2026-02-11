@@ -231,8 +231,26 @@ class AnalysisConfig:
         return self.paths.get("base_output_dir", "results_riptide")
 
     def get_tissue_configs(self) -> List[Dict[str, str]]:
-        """Get list of tissue configurations"""
-        return self.tissues
+        """
+        Get list of tissue configurations with processed output directories.
+
+        If output_dir is not specified for a tissue, it will be constructed
+        from base_output_dir and tissue name.
+        """
+        base_output_dir = self.paths.get("base_output_dir", "results/fluxomics")
+
+        processed_tissues = []
+        for tissue_cfg in self.tissues:
+            cfg = tissue_cfg.copy()
+
+            # If output_dir not specified, construct it from base_output_dir + tissue name
+            if "output_dir" not in cfg or not cfg["output_dir"]:
+                tissue_name = cfg.get("tissue", "unknown")
+                cfg["output_dir"] = os.path.join(base_output_dir, tissue_name)
+
+            processed_tissues.append(cfg)
+
+        return processed_tissues
 
     def get_fdr_threshold(self) -> float:
         """Get FDR threshold"""

@@ -2,7 +2,6 @@ import os
 import re
 from collections import defaultdict
 from typing import Dict, Iterable, Optional, Tuple, Union, List
-from ..visualization import plot_fluxsum_log2fc_heatmap
 
 import numpy as np
 import pandas as pd
@@ -246,7 +245,8 @@ def analyze_mets_turnover(
     logging.info(f"[{tissue}] mcPFA rows after filtering: {len(df)}")
     logging.info(f"[{tissue}] mcPFA table saved: {out_csv}")
 
-
+    # Import here to avoid circular dependency
+    from ..visualization import plot_fluxsum_log2fc_heatmap
 
     plot_fluxsum_log2fc_heatmap(
         df,

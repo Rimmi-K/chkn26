@@ -8,20 +8,6 @@ Multi-omics analysis integrating transcriptomics, metabolomics, and constraint-b
 
 ---
 
-## Quick Start
-```bash
-# Clone & install
-git clone https://github.com/YOUR_USERNAME/chkn26.git
-cd chkn26
-pip install -r envs/requirements.txt
-
-# Configure (see CONFIG_README.md for parameter details)
-nano input_parameters.yaml
-
-# Run analysis
-python -m dpfa
-```
-
 **Requirements:** Python ≥3.10, R ≥4.3, 8GB RAM  
 **Output:** Results → `results/` (organized by tissue/analysis type)
 

@@ -59,7 +59,7 @@ visualization:
 scatter:
   # Thresholds for highlighting points
   rxn_lfc_threshold: 0.75           # Reaction log2FC threshold
-  flux_threshold: 0.75              # Flux log2 ratio threshold
+  flux_threshold: 0.37              # Flux log2 ratio threshold
 
   # Marker sizes 
   size_mode: "discrete"            # "discrete" or "continuous"
@@ -84,14 +84,15 @@ scatter:
 
 pathway_merging:
   
-  "Energy metabolism":
-    - "Oxidative Phosphorylation"
-    - "Citric Acid Cycle"
+  "Central Energy Metabolism":
     - "Glycolysis/Gluconeogenesis"
     - "Pyruvate Metabolism"
+    - "Citric Acid Cycle"
+
+  "Redox & Pentose Metabolism":
     - "Pentose Phosphate Pathway"
-    - "Pentose And Glucuronate Interconversions"  
-    - "Glutathione Metabolism"  
+    - "Pentose And Glucuronate Interconversions"
+    - "Glutathione Metabolism"
   
   "Lipid metabolism":
     - "Fatty Acid Biosynthesis"
@@ -145,7 +146,9 @@ pathway_merging:
 pathway_filter:
   mode: "whitelist"
   whitelist:
-    - "Energy metabolism"
+    - "Central Energy Metabolism"
+    - "Oxidative Phosphorylation"
+    - "Redox & Pentose Metabolism"
     - "Lipid metabolism"
     - "AA central (Ala/Asp/Glu, Gly/Ser/Thr)"
     - "AA other"
@@ -155,7 +158,6 @@ pathway_filter:
     - "Nitrogen disposal"
     - "Mitochondrial transport"
     - "Extracellular Transport" 
-    - "Terpenoid Backbone Biosynthesis"
 
 metabolite_name_shortcuts:
   l-2-aminoadipate: Aminoadipate derivatives
@@ -242,6 +244,7 @@ metabolite_name_shortcuts:
   dtdp: T-nucleotides
   dtmp: T-nucleotides
   dthd: T-nucleotides
+  dudp: U-nucleotides
   pyruvate: Pyr
   pyr: Pyr
   3-methyl-2-oxobutanoate: BCAA α-ketoacids

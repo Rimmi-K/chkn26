@@ -1,304 +1,888 @@
 metabolite_id,Metabolite,Metabolite Group,Metabolic Pathways,Pathway Group,log2FC_fluxsum,Reactions
-mlthf_m,"5,10-Methylenetetrahydrofolate (m)",Folate pool,Nucleotide Interconversion,Nucleotide metabolism,6.0,TMDSm
-3mob_c,3-methyl-2-oxobutanoate (c),BCAA α-ketoacids,Pantothenate And Coa Biosynthesis,Pantothenate And Coa Biosynthesis,-0.560061212923069,VALTA
-ser__L_m,L-serine (m),L-serine,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5247613478965615,PSP__Lm;GHMT2rm
-glutcoa_m,glutaryl-CoA(5-) (m),Glutaryl-CoA pool(5-),2-oxocarboxylic Acid Metabolism,2-oxocarboxylic Acid Metabolism,6.0,2OXOADOXm
-ibcoa_m,isobutyryl-CoA(4-) (m),Isobutyryl-CoA pool,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.5600612129230688,r0561;r0560
-1pyr5c_m,1-Pyrroline-5-carboxylate (m),1-Pyrroline-5-carboxylate,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,PRO1xm
-ditp_c,dITP(4-) (c),I-nucleotides,Purine Metabolism,Nitrogen disposal,6.0,NDPK10
-for_c,Formate (c),Formate,Folate Metabolism,Folate metabolism,0.7454005798849832,FTHFL
-adp_c,ADP (c),A-nucleotides,Folate Metabolism,Folate metabolism,0.7454005798849832,FTHFL
-3hibutcoa_m,(S)-3-Hydroxyisobutyryl-CoA (m),Ketone/FA-CoA,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.5600612129230697,3HBCOAHLm;ECOAH12m
-pro__L_c,L-proline (c),L-Pro,"Transport, Mitochondrial",Mitochondrial transport,6.0,PROtm
-pser__L_m,O-Phospho-L-serine (m),O-phospho-l-serine,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5247613478965615,PSP__Lm
-nadp_m,Nicotinamide adenine dinucleotide phosphate (m),NADP+,Lysine Degradation,AA other,6.0,SACCD3m
-b2coa_m,crotonoyl-CoA(4-) (m),Ketone/FA-CoA,Butanoate Metabolism,AA other,6.0,ECOAH1m
-urea_m,Urea (m),Urea,Urea Cycle,Nitrogen disposal,6.0,ARGNm
-2mpdhl_m,S-(2-Methylpropanoyl)-dihydrolipoamide (m),S-(2-methylpropanoyl)-dihydrolipoamide,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.5600612129230692,r0561;r0385
-hLkynr_c,3-hydroxy-L-kynurenine (c),3-Hydroxy-l-kynurenine,Tryptophan Metabolism,AA other,0.7454005798849833,KYN3OX;3HKYNAKGAT
-gly_m,Glycine (m),Gly,Methane Metabolism,Methane Metabolism,0.5247613478965615,GHMT2rm
-h2o_m,Water (m),H2O,Fatty Acid Metabolism,Lipid metabolism,6.0,ECOAH1m
-dttp_n,dTTP (n),T-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,NDPK4n
-arg__L_m,L-argininium(1+) (m),Arg,Arginine And Proline Metabolism,Arginine And Proline Metabolism,6.0,ARGNm
-atp_n,ATP (n),A-nucleotides,Pyrimidine Metabolism,Nucleotide metabolism,6.0,NDPK4n
-mlthf_m,"5,10-Methylenetetrahydrofolate (m)",Folate pool,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5247613478965615,GHMT2rm
-h_c,proton (c),H+,Cysteine And Methionine Metabolism,AA other,0.5247613478965617,PGCD
-2oxoadp_m,2-oxoadipate(2-) (m),Aminoadipate derivatives,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,r0450
-val__L_c,L-valine (c),L-Val,Pantothenate And Coa Biosynthesis,Pantothenate And Coa Biosynthesis,-0.560061212923069,VALTA
-3mob_c,3-methyl-2-oxobutanoate (c),BCAA α-ketoacids,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",-0.560061212923069,VALTA
-ser__L_m,L-serine (m),L-serine,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5247613478965615,PSP__Lm;GHMT2rm
-didp_n,dIDP (n),I-nucleotides,Purine Metabolism,Nitrogen disposal,6.0,NDPK10n
-trp__L_e,L-Tryptophan (e),L-tryptophan,Extracellular Transport,Extracellular Transport,0.5887161331454546,TRPt
-3pg_c,3-Phospho-D-glycerate (c),3-Phospho-d-glycerate,Cysteine And Methionine Metabolism,AA other,0.5247613478965617,PGCD
-dudp_m,dUDP (m),U-nucleotides,"Transport, Mitochondrial",Mitochondrial transport,6.0,_DNDPt14m
-glu__L_m,L-glutamate(1-) (m),L-Glu,Arginine And Proline Metabolism,Arginine And Proline Metabolism,6.0,ORNTArm;r0074
-_L2aadp_m,L-2-aminoadipate(1-) (m),Aminoadipate derivatives,Lysine Metabolism,Lysine Metabolism,6.0,r0594m;r0450
-cl_c,Chloride (c),Chloride,Extracellular Transport,Extracellular Transport,-6.0,ARGATB0tc;KCCt;NKCCt
-ser__L_m,L-serine (m),L-serine,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5247613478965615,GHMT2rm
-3php_c,3-phosphonatooxypyruvate(3-) (c),3-PhosphonatooxyPyr,Methane Metabolism,Methane Metabolism,0.5247613478965617,PSERT;PGCD
-pser__L_m,O-Phospho-L-serine (m),O-phospho-l-serine,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5247613478965615,PSP__Lm
-nadp_c,Nicotinamide adenine dinucleotide phosphate (c),NADP+,Tryptophan Metabolism,AA other,0.7454005798849833,KYN3OX
-lys__L_m,L-lysinium(1+) (m),Lys,Lysine Metabolism,Lysine Metabolism,6.0,SACCD3m
-nadph_m,Nicotinamide adenine dinucleotide phosphate - reduced (m),NADP+ - reduced,Lysine Metabolism,Lysine Metabolism,6.0,SACCD3m
-ppi_m,Diphosphate (m),Diphosphate,Nucleotide Interconversion,Nucleotide metabolism,6.0,_DUTPDPm
-coa_m,Coenzyme A (m),CoA pool,Lysine Degradation,AA other,-6.0,ACACT1rm
-_L2aadp_m,L-2-aminoadipate(1-) (m),Aminoadipate derivatives,2-oxocarboxylic Acid Metabolism,2-oxocarboxylic Acid Metabolism,6.0,r0450
-dttp_c,dTTP (c),T-nucleotides,"Transport, Nuclear","Transport, Nuclear",6.0,_DTTPtn
-dtdp_n,dTDP (n),T-nucleotides,Pyrimidine Metabolism,Nucleotide metabolism,6.0,NDPK4n
-nadh_m,Nicotinamide adenine dinucleotide - reduced (m),NAD+ - reduced,Lysine Metabolism,Lysine Metabolism,6.0,r0525;2OXOADOXm;r0594m
-glu__L_c,L-glutamate(1-) (c),L-Glu,Tryptophan Metabolism,AA other,0.7454005798849832,3HKYNAKGAT
-dtmp_m,dTMP (m),T-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,TMDSm
-val__L_c,L-valine (c),L-Val,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",-0.560061212923069,VALTA
-pser__L_c,O-Phospho-L-serine (c),O-phospho-l-serine,Methane Metabolism,Methane Metabolism,0.5247613478965617,PSERT
-lys__L_m,L-lysinium(1+) (m),Lys,"Transport, Mitochondrial",Mitochondrial transport,6.0,_LYStm
-glu__L_m,L-glutamate(1-) (m),L-Glu,Lysine Biosynthesis,Lysine Biosynthesis,6.0,r0450
-arg__L_m,L-argininium(1+) (m),Arg,Arginine Biosynthesis,AA other,6.0,ARGNm
-dutp_m,dUTP (m),Dutp,Nucleotide Metabolism,Nucleotide metabolism,6.0,NDPK6m
-3php_c,3-phosphonatooxypyruvate(3-) (c),3-PhosphonatooxyPyr,Cysteine And Methionine Metabolism,AA other,0.5247613478965617,PSERT;PGCD
-atp_m,ATP (m),A-nucleotides,Purine Metabolism,Nitrogen disposal,6.0,NDPK8m;ADK1m
-didp_c,dIDP (c),I-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,6.0,NDPK10
-urea_m,Urea (m),Urea,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,ARGNm
-10fthf_c,10-Formyltetrahydrofolate (c),Folate pool,Folate Metabolism,Folate metabolism,0.5517682093146367,FTHFL;GARFT;AICART
-lys__L_e,L-lysinium(1+) (e),Lys,Extracellular Transport,Extracellular Transport,2.9077956885900385,_LYSt5r;ARGLYSex
-pi_c,hydrogenphosphate (c),Pi,Folate Metabolism,Folate metabolism,0.7454005798849832,FTHFL
-2oxoadp_m,2-oxoadipate(2-) (m),Aminoadipate derivatives,Lysine Degradation,AA other,6.0,r0450
-coa_m,Coenzyme A (m),CoA pool,Butanoate Metabolism,AA other,-0.5533256708789895,HMGCOASim;ACACT1rm
-pser__L_m,O-Phospho-L-serine (m),O-phospho-l-serine,"Transport, Mitochondrial",Mitochondrial transport,0.5247613478965617,PSERtm
-dudp_m,dUDP (m),U-nucleotides,Pyrimidine Metabolism,Nucleotide metabolism,6.0,NDPK6m
-co2_m,carbon dioxide (m),CO2,Lysine Metabolism,Lysine Metabolism,6.0,2OXOADOXm
-thf_m,"5,6,7,8-Tetrahydrofolate (m)",Folate pool,Glyoxylate And Dicarboxylate Metabolism,Glyoxylate And Dicarboxylate Metabolism,0.5247613478965615,GHMT2rm
-for_c,Formate (c),Formate,Tryptophan Metabolism,AA other,0.7454005798849833,FKYNH
-arg__L_m,L-argininium(1+) (m),Arg,"Transport, Mitochondrial",Mitochondrial transport,6.0,ARGtm
-h2o_m,Water (m),H2O,Lysine Metabolism,Lysine Metabolism,6.0,SACCD3m;r0525;r0594m
-orn_m,Ornithine (m),Ornithine,Arginine And Proline Metabolism,Arginine And Proline Metabolism,6.0,ARGNm;ORNTArm
-didp_n,dIDP (n),I-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,NDPK10n
-pser__L_c,O-Phospho-L-serine (c),O-phospho-l-serine,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5247613478965617,PSERT
-val__L_c,L-valine (c),L-Val,2-oxocarboxylic Acid Metabolism,2-oxocarboxylic Acid Metabolism,-0.560061212923069,VALTA
-ditp_c,dITP(4-) (c),I-nucleotides,"Transport, Nuclear","Transport, Nuclear",6.0,_DITPtn
-nad_m,Nicotinamide adenine dinucleotide (m),NAD+,Lysine Degradation,AA other,6.0,r0525;HACD1m
-mlthf_m,"5,10-Methylenetetrahydrofolate (m)",Folate pool,Methane Metabolism,Methane Metabolism,0.5247613478965615,GHMT2rm
-h_m,proton (m),H+,Fatty Acid Degradation,Lipid metabolism,0.5462100026719252,ACCOACm;HACD1m
-accoa_m,Acetyl-CoA (m),Acetyl-CoA pool,Lysine Degradation,AA other,-6.0,ACACT1rm
-o2_c,O2 (c),O2,Tryptophan Metabolism,AA other,0.7454005798849833,TRPO2;KYN3OX
-dtdp_n,dTDP (n),T-nucleotides,"Transport, Nuclear","Transport, Nuclear",6.0,_DTDPtn
-thf_m,"5,6,7,8-Tetrahydrofolate (m)",Folate pool,Cyanoamino Acid Metabolism,Cyanoamino Acid Metabolism,0.5247613478965615,GHMT2rm
-pi_m,hydrogenphosphate (m),Pi,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5247613478965615,PSP__Lm
-datp_m,dATP (m),A-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,NDPK8m
-ser__L_m,L-serine (m),L-serine,Methane Metabolism,Methane Metabolism,0.5247613478965615,GHMT2rm
-gly_m,Glycine (m),Gly,Glyoxylate And Dicarboxylate Metabolism,Glyoxylate And Dicarboxylate Metabolism,0.5247613478965615,GHMT2rm
-nadp_m,Nicotinamide adenine dinucleotide phosphate (m),NADP+,Lysine Metabolism,Lysine Metabolism,6.0,SACCD3m
-3hbcoa_m,(S)-3-hydroxybutanoyl-CoA(4-) (m),Ketone/FA-CoA,Lysine Degradation,AA other,6.0,HACD1m;ECOAH1m
-ala__L_e,L-Alanine (e),L-Ala,Extracellular Transport,Extracellular Transport,-6.0,ALAtN1
-ditp_n,dITP(4-) (n),I-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,6.0,NDPK10n
-1pyr5c_m,1-Pyrroline-5-carboxylate (m),1-Pyrroline-5-carboxylate,Arginine And Proline Metabolism,Arginine And Proline Metabolism,6.0,PRO1xm
-b2coa_m,crotonoyl-CoA(4-) (m),Ketone/FA-CoA,Lysine Degradation,AA other,6.0,ECOAH1m
-3hmp_m,3-hydroxy-2-methylpropanoate (m),3-Hydroxy-2-methylpropanoate,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.5600612129230694,3HBCOAHLm;HIBDm
-pser__L_c,O-Phospho-L-serine (c),O-phospho-l-serine,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5247613478965617,PSERT
-dad_2_c,Deoxyadenosine (c),A-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,6.0,PUNP2
-_L2aadp6sa_m,L-allysine (m),L-alLys,Lysine Degradation,AA other,6.0,r0525
-gly_m,Glycine (m),Gly,"Transport, Mitochondrial",Mitochondrial transport,6.0,GLYtm
-nadh_m,Nicotinamide adenine dinucleotide - reduced (m),NAD+ - reduced,Fatty Acid Metabolism,Lipid metabolism,6.0,HACD1m
-orn_m,Ornithine (m),Ornithine,Arginine Biosynthesis,AA other,6.0,ARGNm
-nad_m,Nicotinamide adenine dinucleotide (m),NAD+,Butanoate Metabolism,AA other,6.0,HACD1m
-_Lfmkynr_c,N-formyl-L-kynurenine (c),N-formyl-l-kynurenine,Tryptophan Metabolism,AA other,0.7454005798849833,TRPO2;FKYNH
-dadp_m,dADP (m),A-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,NDPK8m
-h_m,proton (m),H+,Tryptophan Metabolism,AA other,6.0,HACD1m;r0541
-h2o_m,Water (m),H2O,Methane Metabolism,Methane Metabolism,0.5247613478965615,GHMT2rm
-aacoa_m,Acetoacetyl-CoA (m),Ketone/FA-CoA,Pyruvate Metabolism,Central Energy Metabolism,-6.0,ACACT1rm
-dttp_n,dTTP (n),T-nucleotides,Pyrimidine Metabolism,Nucleotide metabolism,6.0,NDPK4n
-dtmp_m,dTMP (m),T-nucleotides,Pyrimidine Synthesis,Nucleotide metabolism,6.0,RE0452M
-btn_c,Biotin (c),Biotin,Extracellular Transport,Extracellular Transport,-6.0,BTNt4i;BTNt2
-2mop_m,2-methyl-3-oxopropanoate (m),BCAA α-ketoacids,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.5600612129230694,HIBDm;MMSAD1m
-nadh_m,Nicotinamide adenine dinucleotide - reduced (m),NAD+ - reduced,Arginine And Proline Metabolism,Arginine And Proline Metabolism,6.0,r0074;PRO1xm
-3hbcoa_m,(S)-3-hydroxybutanoyl-CoA(4-) (m),Ketone/FA-CoA,Butanoate Metabolism,AA other,6.0,HACD1m;ECOAH1m
-pro__L_c,L-proline (c),L-Pro,Extracellular Transport,Extracellular Transport,1.6405890448696145,PROt4;r1402
-dad_2_c,Deoxyadenosine (c),A-nucleotides,Purine Catabolism,Purine Catabolism,6.0,PUNP2
-coa_m,Coenzyme A (m),CoA pool,Lysine Metabolism,Lysine Metabolism,6.0,2OXOADOXm
-h_m,proton (m),H+,Urea Cycle,Nitrogen disposal,3.3658958339545557,r0074;r0034
-didp_c,dIDP (c),I-nucleotides,Purine Metabolism,Nitrogen disposal,6.0,NDPK10
-dtdp_m,dTDP (m),T-nucleotides,"Transport, Mitochondrial",Mitochondrial transport,6.0,_DNDPt14m
-b2coa_m,crotonoyl-CoA(4-) (m),Ketone/FA-CoA,Fatty Acid Metabolism,Lipid metabolism,6.0,ECOAH1m
-h_m,proton (m),H+,Butanoate Metabolism,AA other,1.4466743291210102,HACD1m;HMGCOASim
-_L2aadp_m,L-2-aminoadipate(1-) (m),Aminoadipate derivatives,Lysine Biosynthesis,Lysine Biosynthesis,6.0,r0450
-akg_m,2-Oxoglutarate (m),2-Oxoglutarate,Urea Cycle,Nitrogen disposal,6.0,ORNTArm
-ade_c,Adenine (c),Adenine,Purine Catabolism,Purine Catabolism,6.0,PUNP2
-cl_e,Chloride (e),Chloride,Extracellular Transport,Extracellular Transport,-6.0,ARGATB0tc;KCCt;NKCCt
-dttp_n,dTTP (n),T-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,6.0,NDPK4n
-atp_c,ATP (c),A-nucleotides,Folate Metabolism,Folate metabolism,0.7454005798849832,FTHFL
-pser__L_c,O-Phospho-L-serine (c),O-phospho-l-serine,"Transport, Mitochondrial",Mitochondrial transport,0.5247613478965617,PSERtm
-glu5sa_m,L-Glutamate 5-semialdehyde (m),L-Glu 5-semialdehyde,Urea Cycle,Nitrogen disposal,6.0,ORNTArm;r0074
-2oxoadp_m,2-oxoadipate(2-) (m),Aminoadipate derivatives,Lysine Biosynthesis,Lysine Biosynthesis,6.0,r0450
-dtdp_m,dTDP (m),T-nucleotides,Pyrimidine Synthesis,Nucleotide metabolism,6.0,RE0452M
+adp_m,ADP (m),A-nucleotides,Fatty Acid Biosynthesis,Lipid metabolism,0.5729643986846154,ACCOACm
+nh4_m,Ammonium (m),NH4+,Nitrogen Metabolism,Nitrogen disposal,-0.7870617998662142,GLUDxm;r0034
+prpp_c,5-Phospho-alpha-D-ribose 1-diphosphate (c),5-Phospho-alpha-d-ribose 1-diphosphate,Pentose Phosphate Pathway,Redox & Pentose Metabolism,0.5729643987160702,PRPPS
+Rtotal_e,R total (e),R total,Extracellular Transport,Extracellular Transport,0.5729643986840695,CHOLESTle;RTOTALt
+pi_m,hydrogenphosphate (m),Pi,Fatty Acid Biosynthesis,Lipid metabolism,0.5729643986846154,ACCOACm
+gdp_c,GDP (c),G-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987275318,GK1;NDPK1;ADSS
 ala__L_c,L-alanine (c),L-Ala,Extracellular Transport,Extracellular Transport,-6.0,ALAtN1;r1402
-urea_m,Urea (m),Urea,Arginine And Proline Metabolism,Arginine And Proline Metabolism,6.0,ARGNm
-dtdp_c,dTDP (c),T-nucleotides,"Transport, Nuclear","Transport, Nuclear",6.0,_DTDPtn
-h2o_m,Water (m),H2O,Arginine And Proline Metabolism,Arginine And Proline Metabolism,6.0,ARGNm;r0074
-2oxoadp_m,2-oxoadipate(2-) (m),Aminoadipate derivatives,Lysine Metabolism,Lysine Metabolism,6.0,r0450;2OXOADOXm
-_Lkynr_c,L-kynurenine (c),L-kynurenine,Tryptophan Metabolism,AA other,0.7454005798849833,FKYNH;KYN3OX
-glutcoa_m,glutaryl-CoA(5-) (m),Glutaryl-CoA pool(5-),Tryptophan Metabolism,AA other,6.0,r0541;2OXOADOXm
-q10h2_m,Ubiquinol-10 (m),Ubiquinol-10,Tryptophan Metabolism,AA other,6.0,r0541
-crm_hs_c,N-acylsphingosine (c),N-acylsphingosine,Sphingolipid Metabolism,Sphingolipid Metabolism,6.0,RE2675C;SMS
-mlthf_m,"5,10-Methylenetetrahydrofolate (m)",Folate pool,Glyoxylate And Dicarboxylate Metabolism,Glyoxylate And Dicarboxylate Metabolism,0.5247613478965615,GHMT2rm
-dutp_m,dUTP (m),Dutp,Pyrimidine Metabolism,Nucleotide metabolism,6.0,NDPK6m
-pro__L_m,L-proline (m),L-Pro,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,PRO1xm
-akg_c,2-Oxoglutarate (c),2-Oxoglutarate,Tryptophan Metabolism,AA other,0.7454005798849832,3HKYNAKGAT
-datp_m,dATP (m),A-nucleotides,Pyrimidine Synthesis,Nucleotide metabolism,6.0,RE0452M
-C02470_e,Xanthurenic acid (e),Xanthurenic acid,Extracellular Transport,Extracellular Transport,0.7454005798849832,r1030
-nad_m,Nicotinamide adenine dinucleotide (m),NAD+,Lysine Metabolism,Lysine Metabolism,6.0,r0525;2OXOADOXm;r0594m
-2oxoadp_m,2-oxoadipate(2-) (m),Aminoadipate derivatives,2-oxocarboxylic Acid Metabolism,2-oxocarboxylic Acid Metabolism,6.0,r0450;2OXOADOXm
-k_c,Potassium (c),Potassium,Extracellular Transport,Extracellular Transport,-6.0,KCCt;NKCCt
-3mob_c,3-methyl-2-oxobutanoate (c),BCAA α-ketoacids,2-oxocarboxylic Acid Metabolism,2-oxocarboxylic Acid Metabolism,-0.560061212923069,VALTA
-r1p_c,alpha-D-Ribose 1-phosphate (c),Alpha-d-ribose 1-phosphate,Nucleotide Interconversion,Nucleotide metabolism,6.0,PUNP1
-ser__L_m,L-serine (m),L-serine,Glyoxylate And Dicarboxylate Metabolism,Glyoxylate And Dicarboxylate Metabolism,0.5247613478965615,GHMT2rm
-ditp_n,dITP(4-) (n),I-nucleotides,Purine Metabolism,Nitrogen disposal,6.0,NDPK10n
-lys__L_c,L-lysinium(1+) (c),Lys,Extracellular Transport,Extracellular Transport,2.8688534245681923,_LYSt5r;ARGLYSex;r1402
-3mob_c,3-methyl-2-oxobutanoate (c),BCAA α-ketoacids,"Transport, Mitochondrial",Mitochondrial transport,-0.560061212923069,3MOBt2im
-thf_m,"5,6,7,8-Tetrahydrofolate (m)",Folate pool,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5247613478965615,GHMT2rm
-dad_2_c,Deoxyadenosine (c),A-nucleotides,Purine Metabolism,Nitrogen disposal,6.0,PUNP2
-ditp_c,dITP(4-) (c),I-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,NDPK10
-nadh_m,Nicotinamide adenine dinucleotide - reduced (m),NAD+ - reduced,Fatty Acid Degradation,Lipid metabolism,6.0,HACD1m
-dtdp_n,dTDP (n),T-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,NDPK4n
-3hmp_m,3-hydroxy-2-methylpropanoate (m),3-Hydroxy-2-methylpropanoate,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),-0.5600612129230694,3HBCOAHLm
-42A3HP24DB_c,"4-(2-Amino-3-hydroxyphenyl)-2,4-dioxobutanoate (c)","4-(2-Amino-3-hydroxyphenyl)-2,4-dioxobutanoate",Tryptophan Metabolism,AA other,0.7454005798849832,r0647;3HKYNAKGAT
-dadp_m,dADP (m),A-nucleotides,Pyrimidine Synthesis,Nucleotide metabolism,6.0,RE0452M
-urea_m,Urea (m),Urea,Arginine Biosynthesis,AA other,6.0,ARGNm
-_L2aadp6sa_m,L-allysine (m),L-alLys,Lysine Metabolism,Lysine Metabolism,6.0,r0525;r0594m
-coa_m,Coenzyme A (m),CoA pool,Fatty Acid Metabolism,Lipid metabolism,-6.0,ACACT1rm
-gly_m,Glycine (m),Gly,Folate Metabolism,Folate metabolism,0.5247613478965615,GHMT2rm
-pser__L_c,O-Phospho-L-serine (c),O-phospho-l-serine,Cysteine And Methionine Metabolism,AA other,0.5247613478965617,PSERT
-q10_m,ubiquinone-10 (m),Ubiquinone-10,Tryptophan Metabolism,AA other,6.0,r0541
-glu__L_c,L-glutamate(1-) (c),L-Glu,Pantothenate And Coa Biosynthesis,Pantothenate And Coa Biosynthesis,-0.560061212923069,VALTA
-2mp2coa_m,2-Methylprop-2-enoyl-CoA (m),Ketone/FA-CoA,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),-0.5600612129230694,ECOAH12m
-didp_c,dIDP (c),I-nucleotides,"Transport, Nuclear","Transport, Nuclear",6.0,_DIDPtn
-dhf_m,"7,8-Dihydrofolate (m)","7,8-Folate pool",Nucleotide Interconversion,Nucleotide metabolism,6.0,TMDSm
-co2_m,carbon dioxide (m),CO2,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),-0.560061212923069,MMSAD1m
-arg__L_c,L-argininium(1+) (c),Arg,"Transport, Mitochondrial",Mitochondrial transport,6.0,ARGtm
-dudp_m,dUDP (m),U-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,NDPK6m
-2mop_m,2-methyl-3-oxopropanoate (m),BCAA α-ketoacids,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),-0.560061212923069,MMSAD1m
-3mob_c,3-methyl-2-oxobutanoate (c),BCAA α-ketoacids,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.560061212923069,VALTA
-h2o_m,Water (m),H2O,Fatty Acid Degradation,Lipid metabolism,6.0,ECOAH1m
-datp_m,dATP (m),A-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,6.0,NDPK8m
-adp_n,ADP (n),A-nucleotides,Purine Metabolism,Nitrogen disposal,6.0,NDPK10n
-aacoa_m,Acetoacetyl-CoA (m),Ketone/FA-CoA,Glyoxylate And Dicarboxylate Metabolism,Glyoxylate And Dicarboxylate Metabolism,-6.0,ACACT1rm
+dctp_c,dCTP (c),C-nucleotides,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+h_c,proton (c),H+,Fatty Acid Biosynthesis,Lipid metabolism,0.5729643986846158,FAS120COA;FAS140COA;FAS100COA;FAS80COA__L;FAS160COA
+glu__L_c,L-glutamate(1-) (c),L-Glu,Purine Metabolism,Nitrogen disposal,0.572964398774412,GLUPRT;PRFGS
+gly_c,Glycine (c),Gly,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+h2o_m,Water (m),H2O,Methane Metabolism,Methane Metabolism,6.0,GHMT2rm
+h2o_c,Water (c),H2O,Citric Acid Cycle,Central Energy Metabolism,0.5729643987861271,FUM
+ura_c,uracil (c),Uracil,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987006509,PYNP2r
+dgmp_c,dGMP (c),G-nucleotides,Purine Metabolism,Nitrogen disposal,0.5729643987011666,NTD8
+cgly_e,L-cysteinylglycine (e),L-cysteinylGly,Glutathione Metabolism,Redox & Pentose Metabolism,-6.0,r0130
+fpram_c,2-(Formamido)-N1-(5-phospho-D-ribosyl)acetamidine (c),2-(Formamido)-n1-(5-phospho-d-ribosyl)acetamidine,Purine Synthesis,Nucleotide metabolism,0.5729643987744117,r0666;PRFGS
+met__L_c,L-methionine (c),L-methionine,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+aacoa_m,Acetoacetyl-CoA (m),Ketone/FA-CoA,Fatty Acid Metabolism,Lipid metabolism,0.5729643986846162,HACD1m;ACACT1rm
+cdpchol_c,CDPcholine (c),C-nucleotidescholine,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643986963392,CHLPCTD;CEPTC
 nadh_m,Nicotinamide adenine dinucleotide - reduced (m),NAD+ - reduced,Tryptophan Metabolism,AA other,6.0,HACD1m;2OXOADOXm
-dhcrm_hs_c,dihydroceramide (c),Dihydroceramide,Sphingolipid Metabolism,Sphingolipid Metabolism,6.0,RE2675C;_DSAT
-akg_c,2-Oxoglutarate (c),2-Oxoglutarate,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5247613478965617,PSERT
-glu__L_c,L-glutamate(1-) (c),L-Glu,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5247613478965617,PSERT
-C02470_c,Xanthurenic acid (c),Xanthurenic acid,Tryptophan Metabolism,AA other,0.7454005798849832,r0647
-h_m,proton (m),H+,Lysine Degradation,AA other,6.0,HACD1m;SACCD3m;r0525
-nadh_c,Nicotinamide adenine dinucleotide - reduced (c),NAD+ - reduced,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5247613478965617,PGCD
-nadh_m,Nicotinamide adenine dinucleotide - reduced (m),NAD+ - reduced,Urea Cycle,Nitrogen disposal,6.0,r0074
-dad_2_c,Deoxyadenosine (c),A-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,_DADNK
-aacoa_m,Acetoacetyl-CoA (m),Ketone/FA-CoA,Terpenoid Backbone Biosynthesis,Terpenoid Backbone Biosynthesis,-0.5533256708789895,HMGCOASim;ACACT1rm
-h2o_c,Water (c),H2O,Tryptophan Metabolism,AA other,0.7454005798849833,FKYNH;KYN3OX;r0647
-akg_m,2-Oxoglutarate (m),2-Oxoglutarate,Lysine Degradation,AA other,6.0,SACCD3m;r0450
-gly_m,Glycine (m),Gly,Cyanoamino Acid Metabolism,Cyanoamino Acid Metabolism,0.5247613478965615,GHMT2rm
-adp_m,ADP (m),A-nucleotides,Purine Metabolism,Nitrogen disposal,6.0,NDPK8m;ADK1m
-nad_m,Nicotinamide adenine dinucleotide (m),NAD+,Fatty Acid Metabolism,Lipid metabolism,6.0,HACD1m
-dadp_m,dADP (m),A-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,6.0,NDPK8m
-ade_c,Adenine (c),Adenine,Nucleotide Interconversion,Nucleotide metabolism,6.0,PUNP1
-thf_m,"5,6,7,8-Tetrahydrofolate (m)",Folate pool,Methane Metabolism,Methane Metabolism,0.5247613478965615,GHMT2rm
-val__L_c,L-valine (c),L-Val,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.560061212923069,VALTA
-b2coa_m,crotonoyl-CoA(4-) (m),Ketone/FA-CoA,Tryptophan Metabolism,AA other,6.0,r0541;ECOAH1m
-co2_m,carbon dioxide (m),CO2,Tryptophan Metabolism,AA other,6.0,r0541;2OXOADOXm
-2mp2coa_m,2-Methylprop-2-enoyl-CoA (m),Ketone/FA-CoA,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.560061212923069,ECOAH12m;r0560
-arg__L_m,L-argininium(1+) (m),Arg,Urea Cycle,Nitrogen disposal,6.0,ARGNm
-h_c,proton (c),H+,Tryptophan Metabolism,AA other,0.7454005798849833,FKYNH;KYN3OX
-h2o_m,Water (m),H2O,Tryptophan Metabolism,AA other,6.0,ECOAH1m
-adp_n,ADP (n),A-nucleotides,Pyrimidine Metabolism,Nucleotide metabolism,6.0,NDPK4n
-saccrp__L_m,L-saccharopinate(1-) (m),L-saccharoPinate,Lysine Degradation,AA other,6.0,SACCD3m;r0525
-ditp_n,dITP(4-) (n),I-nucleotides,"Transport, Nuclear","Transport, Nuclear",6.0,_DITPtn
-glu__L_m,L-glutamate(1-) (m),L-Glu,Urea Cycle,Nitrogen disposal,6.0,ORNTArm;r0074
-nad_m,Nicotinamide adenine dinucleotide (m),NAD+,Arginine And Proline Metabolism,Arginine And Proline Metabolism,6.0,r0074;PRO1xm
-3hbcoa_m,(S)-3-hydroxybutanoyl-CoA(4-) (m),Ketone/FA-CoA,Fatty Acid Metabolism,Lipid metabolism,6.0,HACD1m;ECOAH1m
-trp__L_c,L-tryptophan (c),L-tryptophan,Tryptophan Metabolism,AA other,0.7454005798849833,TRPO2
-nad_c,Nicotinamide adenine dinucleotide (c),NAD+,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5247613478965617,PGCD
-h2o_m,Water (m),H2O,Urea Cycle,Nitrogen disposal,4.267236919790882,ARGNm;r0074;r0034
-h_m,proton (m),H+,Fatty Acid Metabolism,Lipid metabolism,0.5462100026719252,ACCOACm;HACD1m
-_L2aadp_m,L-2-aminoadipate(1-) (m),Aminoadipate derivatives,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,r0450
-h2o_m,Water (m),H2O,Butanoate Metabolism,AA other,1.4466743291210102,HMGCOASim;ECOAH1m
-pro__L_m,L-proline (m),L-Pro,Arginine And Proline Metabolism,Arginine And Proline Metabolism,6.0,PRO1xm
-coa_m,Coenzyme A (m),CoA pool,Fatty Acid Degradation,Lipid metabolism,-6.0,ACACT1rm
+r1p_c,alpha-D-Ribose 1-phosphate (c),Alpha-d-ribose 1-phosphate,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987013785,PYNP2r;PUNP1;PUNP3
+aicar_c,5-Amino-1-(5-Phospho-D-ribosyl)imidazole-4-carboxamide (c),5-Amino-1-(5-phospho-d-ribosyl)imidazole-4-carboxamide,Purine Synthesis,Nucleotide metabolism,0.5729643987744115,ADSL2;AICART
+nadh_m,Nicotinamide adenine dinucleotide - reduced (m),NAD+ - reduced,Lysine Metabolism,Lysine Metabolism,6.0,r0525;r0594m;2OXOADOXm
+akg_m,2-Oxoglutarate (m),2-Oxoglutarate,Nitrogen Metabolism,Nitrogen disposal,-0.8007489670516705,GLUDxm
+adp_c,ADP (c),A-nucleotides,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643986961753,CHOLK;_DAGK_hs
+alpam_m,S-aminomethyldihydrolipoamide (m),S-aminomethyldihydrolipoamide,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,GCC2bim;GCC2am
+gthrd_e,Reduced glutathione (e),Reduced glutathione,"Transport, Endoplasmic Reticulum","Transport, Endoplasmic Reticulum",1.1672354983333308,HUMANGEM_MAR06107
+nad_m,Nicotinamide adenine dinucleotide (m),NAD+,Taurine And Hypotaurine Metabolism,Taurine And Hypotaurine Metabolism,-0.8007489670516705,GLUDxm
+cbp_c,Carbamoyl phosphate (c),Carb-P,Pyrimidine Metabolism,Nucleotide metabolism,0.57296439871112,ASPCTr
+nadh_m,Nicotinamide adenine dinucleotide - reduced (m),NAD+ - reduced,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.543909667538749,HACD9m;MMSAD1m;HIBDm
+utp_c,UTP (c),Utp,Nucleotide Metabolism,Nucleotide metabolism,0.5729643986979145,CTPS2
+coa_m,Coenzyme A (m),CoA pool,"Transport, Mitochondrial",Mitochondrial transport,0.5729643986846121,COAtim
+ditp_n,dITP(4-) (n),I-nucleotides,Purine Metabolism,Nitrogen disposal,6.0,NDPK10n
+_Lkynr_c,L-kynurenine (c),L-kynurenine,Tryptophan Metabolism,AA other,0.5729643987744161,FKYNH;KYN3OX
+Rtotal_c,R total (c),R total,Extracellular Transport,Extracellular Transport,0.5729643986840695,RTOTALt
+r1p_c,alpha-D-Ribose 1-phosphate (c),Alpha-d-ribose 1-phosphate,Pentose Phosphate Pathway,Redox & Pentose Metabolism,0.5729643987013785,PPM
+glu__L_c,L-glutamate(1-) (c),L-Glu,Purine Synthesis,Nucleotide metabolism,0.572964398774412,GLUPRT;PRFGS
 dudp_c,dUDP (c),U-nucleotides,"Transport, Mitochondrial",Mitochondrial transport,6.0,_DNDPt14m
-h_m,proton (m),H+,Nucleotide Interconversion,Nucleotide metabolism,6.0,_DUTPDPm
-coa_m,Coenzyme A (m),CoA pool,Terpenoid Backbone Biosynthesis,Terpenoid Backbone Biosynthesis,-0.5533256708789895,HMGCOASim;ACACT1rm
-ser__L_m,L-serine (m),L-serine,Folate Metabolism,Folate metabolism,0.5247613478965615,GHMT2rm
-h_m,proton (m),H+,Arginine And Proline Metabolism,Arginine And Proline Metabolism,6.0,r0074;PRO1xm
-3pg_c,3-Phospho-D-glycerate (c),3-Phospho-d-glycerate,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5247613478965617,PGCD
-akg_m,2-Oxoglutarate (m),2-Oxoglutarate,Arginine And Proline Metabolism,Arginine And Proline Metabolism,6.0,ORNTArm
-coa_m,Coenzyme A (m),CoA pool,Pyruvate Metabolism,Central Energy Metabolism,-6.0,ACACT1rm
-pro__L_e,L-Proline (e),L-Pro,Extracellular Transport,Extracellular Transport,1.6709913925095867,PROt4
+trp__L_c,L-tryptophan (c),L-tryptophan,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+ppi_c,Diphosphate (c),Diphosphate,Pentose And Glucuronate Interconversions,Redox & Pentose Metabolism,0.5729643987111656,GALU
+aacoa_c,Acetoacetyl-CoA (c),Ketone/FA-CoA,Glyoxylate And Dicarboxylate Metabolism,Glyoxylate And Dicarboxylate Metabolism,0.5729643986846156,ACACT1r
+methf_m,"5,10-Methenyltetrahydrofolate (m)",Folate pool,Folate Metabolism,Folate metabolism,6.0,MTHFCm;MTHFD2m
+lpchol_hs_e,lysophosphatidylcholine (e),Lysophosphatidylcholine,Extracellular Transport,Extracellular Transport,0.5729643986840695,_LPCHOLt
+nad_m,Nicotinamide adenine dinucleotide (m),NAD+,Folate Metabolism,Folate metabolism,6.0,MTHFD2m
+dadp_m,dADP (m),A-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,NDPK8m
+cbp_m,Carbamoyl phosphate (m),Carb-P,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.57296439871112,r0034
+duri_c,Deoxyuridine (c),Deoxyuridine,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987006509,_DURIK1;_DURIPP
+dgmp_c,dGMP (c),G-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987011666,NTD8
+atp_m,ATP (m),A-nucleotides,Arginine Biosynthesis,AA other,0.57296439871112,r0034
+tyr__L_c,L-tyrosine (c),L-tyrosine,Extracellular Transport,Extracellular Transport,0.5729643987111656,TYRPHELAT2tc;r1402
+cdp_m,CDP (m),C-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987111658,UMPK2m;NDPK3m;CYTK1m
+adp_m,ADP (m),A-nucleotides,Fatty Acid Degradation,Lipid metabolism,0.5729643986846154,ACCOACm
+pi_m,hydrogenphosphate (m),Pi,Fatty Acid Degradation,Lipid metabolism,0.5729643986846154,ACCOACm
+met__L_e,L-Methionine (e),L-methionine,Extracellular Transport,Extracellular Transport,0.5729643987111658,METt4;METtec
+gln__L_c,L-glutamine (c),L-glutamine,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643986979145,CTPS2
+dtdp_n,dTDP (n),T-nucleotides,Pyrimidine Metabolism,Nucleotide metabolism,6.0,NDPK4n
+adp_n,ADP (n),A-nucleotides,Purine Metabolism,Nitrogen disposal,6.0,NDPK10n
+coa_m,Coenzyme A (m),CoA pool,Synthesis And Degradation Of Ketone Bodies,Lipid metabolism,0.5729643986846162,HMGCOASim
+gln__L_c,L-glutamine (c),L-glutamine,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
 datp_m,dATP (m),A-nucleotides,Purine Metabolism,Nitrogen disposal,6.0,NDPK8m
-dttp_n,dTTP (n),T-nucleotides,"Transport, Nuclear","Transport, Nuclear",6.0,_DTTPtn
-btn_e,Biotin (e),Biotin,Extracellular Transport,Extracellular Transport,-6.0,BTNt4i;BTNt2
-akg_c,2-Oxoglutarate (c),2-Oxoglutarate,Methane Metabolism,Methane Metabolism,0.5247613478965617,PSERT
-glu5sa_m,L-Glutamate 5-semialdehyde (m),L-Glu 5-semialdehyde,Arginine And Proline Metabolism,Arginine And Proline Metabolism,6.0,ORNTArm;r0074
-arg__L_m,L-argininium(1+) (m),Arg,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,ARGNm
-glu__L_c,L-glutamate(1-) (c),L-Glu,Methane Metabolism,Methane Metabolism,0.5247613478965617,PSERT
-3mob_c,3-methyl-2-oxobutanoate (c),BCAA α-ketoacids,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),-0.560061212923069,VALTA
-gly_c,Glycine (c),Gly,"Transport, Mitochondrial",Mitochondrial transport,6.0,GLYtm
-orn_m,Ornithine (m),Ornithine,Urea Cycle,Nitrogen disposal,6.0,ARGNm;ORNTArm
-ditp_c,dITP(4-) (c),I-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,6.0,NDPK10
-mlthf_m,"5,10-Methylenetetrahydrofolate (m)",Folate pool,Cyanoamino Acid Metabolism,Cyanoamino Acid Metabolism,0.5247613478965615,GHMT2rm
-lys__L_c,L-lysinium(1+) (c),Lys,"Transport, Mitochondrial",Mitochondrial transport,6.0,_LYStm
-dtdp_n,dTDP (n),T-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,6.0,NDPK4n
-3dsphgn_c,(2S)-1-hydroxy-3-oxooctadecan-2-aminium (c),(2S)-1-hydroxy-3-oxooctadecan-2-aminium,Sphingolipid Metabolism,Sphingolipid Metabolism,6.0,3DSPHR;SERPT
-didp_c,dIDP (c),I-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,NDPK10
-3php_c,3-phosphonatooxypyruvate(3-) (c),3-PhosphonatooxyPyr,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5247613478965617,PSERT;PGCD
-akg_m,2-Oxoglutarate (m),2-Oxoglutarate,Lysine Biosynthesis,Lysine Biosynthesis,6.0,r0450
-_L2aadp_m,L-2-aminoadipate(1-) (m),Aminoadipate derivatives,Lysine Degradation,AA other,6.0,r0450
-nad_m,Nicotinamide adenine dinucleotide (m),NAD+,Fatty Acid Degradation,Lipid metabolism,6.0,HACD1m
-dadp_m,dADP (m),A-nucleotides,Purine Metabolism,Nitrogen disposal,6.0,NDPK8m
-ser__L_m,L-serine (m),L-serine,Cyanoamino Acid Metabolism,Cyanoamino Acid Metabolism,0.5247613478965615,GHMT2rm
-akg_c,2-Oxoglutarate (c),2-Oxoglutarate,Cysteine And Methionine Metabolism,AA other,0.5247613478965617,PSERT
-C02470_c,Xanthurenic acid (c),Xanthurenic acid,Extracellular Transport,Extracellular Transport,0.7454005798849832,r1030
-glu__L_m,L-glutamate(1-) (m),L-Glu,Lysine Metabolism,Lysine Metabolism,6.0,r0525;r0450
-nadh_c,Nicotinamide adenine dinucleotide - reduced (c),NAD+ - reduced,Cysteine And Methionine Metabolism,AA other,0.5247613478965617,PGCD
-glu__L_c,L-glutamate(1-) (c),L-Glu,Cysteine And Methionine Metabolism,AA other,0.5247613478965617,PSERT
-accoa_m,Acetyl-CoA (m),Acetyl-CoA pool,Terpenoid Backbone Biosynthesis,Terpenoid Backbone Biosynthesis,-0.5533256708789895,HMGCOASim;ACACT1rm
-lys__L_m,L-lysinium(1+) (m),Lys,Lysine Degradation,AA other,6.0,SACCD3m
-h_m,proton (m),H+,Lysine Metabolism,Lysine Metabolism,6.0,SACCD3m;r0525;r0594m
-dtdp_c,dTDP (c),T-nucleotides,"Transport, Mitochondrial",Mitochondrial transport,6.0,_DNDPt14m
-nadph_m,Nicotinamide adenine dinucleotide phosphate - reduced (m),NADP+ - reduced,Lysine Degradation,AA other,6.0,SACCD3m
-3mob_m,3-methyl-2-oxobutanoate (m),BCAA α-ketoacids,"Transport, Mitochondrial",Mitochondrial transport,-0.560061212923069,3MOBt2im
-pro__L_m,L-proline (m),L-Pro,"Transport, Mitochondrial",Mitochondrial transport,6.0,PROtm
-didp_n,dIDP (n),I-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,6.0,NDPK10n
-akg_c,2-Oxoglutarate (c),2-Oxoglutarate,Pantothenate And Coa Biosynthesis,Pantothenate And Coa Biosynthesis,-0.560061212923069,VALTA
+_L2aadp_m,L-2-aminoadipate(1-) (m),Aminoadipate derivatives,Lysine Metabolism,Lysine Metabolism,6.0,r0594m;r0450
+coa_c,Coenzyme A (c),CoA pool,Triacylglycerol Synthesis,Lipid metabolism,0.5729643986971944,AGPAT1;GPAM_hs;_DGAT
+nadh_m,Nicotinamide adenine dinucleotide - reduced (m),NAD+ - reduced,Taurine And Hypotaurine Metabolism,Taurine And Hypotaurine Metabolism,-0.8007489670516705,GLUDxm
+_L2aadp6sa_m,L-allysine (m),L-alLys,Lysine Metabolism,Lysine Metabolism,6.0,r0525;r0594m
+3hbcoa_m,(S)-3-hydroxybutanoyl-CoA(4-) (m),Ketone/FA-CoA,Butanoate Metabolism,AA other,6.0,HACD1m;ECOAH1m
+gdp_c,GDP (c),G-nucleotides,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5729643988031662,ADSS
+coa_c,Coenzyme A (c),CoA pool,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),0.572964398684616,AACOAT;ACACT1r
+ser__L_m,L-serine (m),L-serine,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,PSP__Lm;GHMT2rm
+ditp_n,dITP(4-) (n),I-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,6.0,NDPK10n
+nadh_c,Nicotinamide adenine dinucleotide - reduced (c),NAD+ - reduced,Glycerophospholipid Metabolism,Lipid metabolism,0.572964398711166,r0202c
+b2coa_m,crotonoyl-CoA(4-) (m),Ketone/FA-CoA,Lysine Degradation,AA other,6.0,ECOAH1m
+glyc3p_c,Glycerol 3-phosphate (c),Glycerol 3-phosphate,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643986972669,GPDDA1;r0202c
+co2_m,carbon dioxide (m),CO2,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643987111653,PSDm_hs
+coa_c,Coenzyme A (c),CoA pool,"Transport, Mitochondrial",Mitochondrial transport,0.5729643986846121,COAtim
+2oxoadp_m,2-oxoadipate(2-) (m),Aminoadipate derivatives,Lysine Degradation,AA other,6.0,r0450
+co2_c,carbon dioxide (c),CO2,Pyrimidine Synthesis,Nucleotide metabolism,0.5729643987111653,OMPDC
+h2o_e,Water (e),H2O,Glutathione Metabolism,Redox & Pentose Metabolism,-6.0,r0130
 akg_m,2-Oxoglutarate (m),2-Oxoglutarate,Lysine Metabolism,Lysine Metabolism,6.0,SACCD3m;r0450
-gly_m,Glycine (m),Gly,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5247613478965615,GHMT2rm
-coa_c,Coenzyme A (c),CoA pool,Sphingolipid Metabolism,Sphingolipid Metabolism,6.0,_DSAT;SERPT
-val__L_c,L-valine (c),L-Val,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),-0.560061212923069,VALTA
-nadh_m,Nicotinamide adenine dinucleotide - reduced (m),NAD+ - reduced,Lysine Degradation,AA other,6.0,r0525;HACD1m
-3hbcoa_m,(S)-3-hydroxybutanoyl-CoA(4-) (m),Ketone/FA-CoA,Fatty Acid Degradation,Lipid metabolism,6.0,HACD1m;ECOAH1m
-b2coa_m,crotonoyl-CoA(4-) (m),Ketone/FA-CoA,Fatty Acid Degradation,Lipid metabolism,6.0,ECOAH1m
-2oxoadp_m,2-oxoadipate(2-) (m),Aminoadipate derivatives,Tryptophan Metabolism,AA other,6.0,2OXOADOXm
-3php_c,3-phosphonatooxypyruvate(3-) (c),3-PhosphonatooxyPyr,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5247613478965617,PSERT;PGCD
-dudp_m,dUDP (m),U-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,6.0,NDPK6m
-arg__L_c,L-argininium(1+) (c),Arg,Extracellular Transport,Extracellular Transport,1.849912265322711,ARGLYSex;ARGATB0tc;r1402
-saccrp__L_m,L-saccharopinate(1-) (m),L-saccharoPinate,Lysine Metabolism,Lysine Metabolism,6.0,SACCD3m;r0525
-nadph_c,Nicotinamide adenine dinucleotide phosphate - reduced (c),NADP+ - reduced,Tryptophan Metabolism,AA other,0.7454005798849833,KYN3OX
-h2o_m,Water (m),H2O,Cyanoamino Acid Metabolism,Cyanoamino Acid Metabolism,0.5247613478965615,GHMT2rm
-3php_c,3-phosphonatooxypyruvate(3-) (c),3-PhosphonatooxyPyr,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5247613478965617,PSERT;PGCD
-3hibutcoa_m,(S)-3-Hydroxyisobutyryl-CoA (m),Ketone/FA-CoA,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),-0.5600612129230697,3HBCOAHLm;ECOAH12m
+glu__L_e,L-glutamate(1-) (e),L-Glu,Extracellular Transport,Extracellular Transport,-0.6366605693466945,GLUt4
+h_m,proton (m),H+,Arginine And Proline Metabolism,Arginine And Proline Metabolism,6.0,PRO1xm
+trp__L_e,L-Tryptophan (e),L-tryptophan,Extracellular Transport,Extracellular Transport,0.5729643987507357,TRPt
+nadh_m,Nicotinamide adenine dinucleotide - reduced (m),NAD+ - reduced,Folate Metabolism,Folate metabolism,6.0,MTHFD2m
+dhlam_m,dihydrolipoamide (m),Dihydrolipoamide,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,GCC2bim
+glu__L_m,L-glutamate(1-) (m),L-Glu,Lysine Metabolism,Lysine Metabolism,6.0,r0525;r0450
+_L2aadp_m,L-2-aminoadipate(1-) (m),Aminoadipate derivatives,2-oxocarboxylic Acid Metabolism,2-oxocarboxylic Acid Metabolism,6.0,r0450
+dgsn_c,Deoxyguanosine (c),Deoxyguanosine,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987011666,NTD8
+asn__L_e,L-Asparagine (e),L-asparagine,Extracellular Transport,Extracellular Transport,0.5729643987111656,ASNtN1
+fgam_c,N2-Formyl-N1-(5-phospho-D-ribosyl)glycinamide (c),N2-formyl-n1-(5-phospho-d-ribosyl)glycinamide,Purine Metabolism,Nitrogen disposal,0.5729643987744117,PRFGS;GARFT
+gln__L_c,L-glutamine (c),L-glutamine,Purine Metabolism,Nitrogen disposal,0.572964398774412,GLUPRT;PRFGS
+3hibutcoa_m,(S)-3-Hydroxyisobutyryl-CoA (m),Ketone/FA-CoA,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),-0.8025482880538267,3HBCOAHLm;ECOAH12m
+accoa_m,Acetyl-CoA (m),Acetyl-CoA pool,Lysine Degradation,AA other,-6.0,ACACT1rm
+_L2aadp_m,L-2-aminoadipate(1-) (m),Aminoadipate derivatives,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,r0450
+g6p_c,D-Glucose 6-phosphate (c),Glc 6-phosphate,Pentose Phosphate Pathway,Redox & Pentose Metabolism,0.5729643987467485,G6PDH2r
+cbp_m,Carbamoyl phosphate (m),Carb-P,Arginine Biosynthesis,AA other,0.57296439871112,r0034
+nadph_c,Nicotinamide adenine dinucleotide phosphate - reduced (c),NADP+ - reduced,Pentose Phosphate Pathway,Redox & Pentose Metabolism,0.5729643987467472,G6PDH2r;GND
+arg__L_c,L-argininium(1+) (c),Arg,Extracellular Transport,Extracellular Transport,0.5729643987105292,ARGATB0tc;ARGLYSex;r1402
+co2_c,carbon dioxide (c),CO2,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987111653,OMPDC
+dhf_m,"7,8-Dihydrofolate (m)","7,8-Folate pool",Folate Metabolism,Folate metabolism,6.0,r0226
+accoa_c,Acetyl-CoA (c),Acetyl-CoA pool,Fatty Acid Degradation,Lipid metabolism,0.5729643986846156,ACACT1r
+pi_r,hydrogenphosphate (r),Pi,"Transport, Mitochondrial",Mitochondrial transport,0.57296439871112,HUMANGEM_MAR08651
+pser__L_c,O-Phospho-L-serine (c),O-phospho-l-serine,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,PSERT
+dtmp_m,dTMP (m),T-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,TMDSm
+akg_m,2-Oxoglutarate (m),2-Oxoglutarate,Taurine And Hypotaurine Metabolism,Taurine And Hypotaurine Metabolism,-0.8007489670516705,GLUDxm
+acac_m,acetoacetate (m),Ketone bodies,Butanoate Metabolism,AA other,0.5729643986846162,HMGLm
+dttp_n,dTTP (n),T-nucleotides,Pyrimidine Metabolism,Nucleotide metabolism,6.0,NDPK4n
+fgam_c,N2-Formyl-N1-(5-phospho-D-ribosyl)glycinamide (c),N2-formyl-n1-(5-phospho-d-ribosyl)glycinamide,Purine Synthesis,Nucleotide metabolism,0.5729643987744117,PRFGS;GARFT
+prpp_c,5-Phospho-alpha-D-ribose 1-diphosphate (c),5-Phospho-alpha-d-ribose 1-diphosphate,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5729643987160702,PRPPS
+gln__L_c,L-glutamine (c),L-glutamine,Purine Synthesis,Nucleotide metabolism,0.572964398774412,GLUPRT;PRFGS
+h_m,proton (m),H+,Glycolysis/Gluconeogenesis,Central Energy Metabolism,2.181966862645131,GCC2cm
+h2o_c,Water (c),H2O,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987046987,RNDR2;NTD8;r0475;RNDR3;NTD7
+his__L_e,L-Histidine (e),L-histidine,Extracellular Transport,Extracellular Transport,0.5729643987111658,HIStN1
+gln__L_c,L-glutamine (c),L-glutamine,Nucleotide Metabolism,Nucleotide metabolism,0.5729643986979145,CTPS2
+hco3_e,Bicarbonate (e),HCO3-,Nitrogen Metabolism,Nitrogen disposal,-0.8566956954519471,r1418
+dtdp_n,dTDP (n),T-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,6.0,NDPK4n
+didp_c,dIDP (c),I-nucleotides,"Transport, Nuclear","Transport, Nuclear",6.0,_DIDPtn
+nadp_c,Nicotinamide adenine dinucleotide phosphate (c),NADP+,Glutathione Metabolism,Redox & Pentose Metabolism,0.5729643987467458,GND
+h2o_c,Water (c),H2O,Extracellular Transport,Extracellular Transport,0.5729643986901153,PCt;PSFLIP;r1402
+h2o_c,Water (c),H2O,Glutathione Metabolism,Redox & Pentose Metabolism,1.167235498333331,AMPTASECG;r0129
+oaa_c,Oxaloacetate (c),Oxaloacetate,Pyruvate Metabolism,Central Energy Metabolism,0.5729643987238328,MDH
+acac_m,acetoacetate (m),Ketone bodies,"Transport, Mitochondrial",Mitochondrial transport,0.5729643986846156,r1464
+datp_c,dATP (c),A-nucleotides,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+coa_c,Coenzyme A (c),CoA pool,Fatty Acid Biosynthesis,Lipid metabolism,0.5729643986846158,FAS120COA;FAS100COA;FAS140COA;FAS160COA;FAS80COA__L
+malcoa_c,Malonyl-CoA (c),Malonyl-CoA pool,"Transport, Mitochondrial",Mitochondrial transport,0.5729643986846156,MALCOAtm
+fprica_c,5-Formamido-1-(5-phospho-D-ribosyl)imidazole-4-carboxamide (c),5-Formamido-1-(5-phospho-d-ribosyl)imidazole-4-carboxamide,Folate Metabolism,Folate metabolism,0.5729643987744115,AICART
+1pyr5c_m,1-Pyrroline-5-carboxylate (m),1-Pyrroline-5-carboxylate,Arginine And Proline Metabolism,Arginine And Proline Metabolism,6.0,PRO1xm
+dttp_c,dTTP (c),T-nucleotides,"Transport, Nuclear","Transport, Nuclear",6.0,_DTTPtn
+coa_m,Coenzyme A (m),CoA pool,Fatty Acid Degradation,Lipid metabolism,-6.0,ACACT1rm
+co2_c,carbon dioxide (c),CO2,Purine Metabolism,Nitrogen disposal,0.5729643987744117,AIRCr
+2dr1p_c,2-Deoxy-D-ribose 1-phosphate (c),2-Deoxy-d-ribose 1-phosphate,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987016337,PUNP4;PUNP2
+h2o_e,Water (e),H2O,Pyrimidine Catabolism,Nucleotide metabolism,0.5729643986952747,CYTDe
+gdp_c,GDP (c),G-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987169667,GK1;RNDR2;NDPK1;ADSS
+6pgc_c,6-Phospho-D-gluconate (c),6-Phospho-d-gluconate,Pentose Phosphate Pathway,Redox & Pentose Metabolism,0.5729643987467472,PGL;GND
+gly_m,Glycine (m),Gly,Methane Metabolism,Methane Metabolism,6.0,GHMT2rm
+coa_m,Coenzyme A (m),CoA pool,Lysine Degradation,AA other,-6.0,ACACT1rm
+pa_hs_c,phosphatidate(2-) (c),Phosphatidate,Triacylglycerol Synthesis,Lipid metabolism,0.5729643986970445,AGPAT1
+pchol_hs_e,Phosphatidylcholine (e),Phosphatidylcholine,Fatty Acid Degradation,Lipid metabolism,0.5729643986840695,_LCAT1e
+g1p_c,D-Glucose 1-phosphate (c),Glc 1-phosphate,Glycolysis/Gluconeogenesis,Central Energy Metabolism,0.5729643987111668,PGMT
+fum_c,Fumarate (c),Fumarate,Pyruvate Metabolism,Central Energy Metabolism,0.5729643987861271,FUM
+cys__L_c,L-cysteine (c),L-Cys,Glutathione Metabolism,Redox & Pentose Metabolism,1.1672354983333313,AMPTASECG
+r1p_c,alpha-D-Ribose 1-phosphate (c),Alpha-d-ribose 1-phosphate,Nucleotide Interconversion,Nucleotide metabolism,6.0,PUNP1
+cbp_c,Carbamoyl phosphate (c),Carb-P,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.57296439871112,ASPCTr
+mlthf_m,"5,10-Methylenetetrahydrofolate (m)",Folate pool,Glyoxylate And Dicarboxylate Metabolism,Glyoxylate And Dicarboxylate Metabolism,6.0,GHMT2rm
+coa_c,Coenzyme A (c),CoA pool,Terpenoid Backbone Biosynthesis,Terpenoid Backbone Biosynthesis,0.5729643986846156,ACACT1r
+acac_c,acetoacetate (c),Ketone bodies,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),0.572964398684616,AACOAT
+pro__L_m,L-proline (m),L-Pro,"Transport, Mitochondrial",Mitochondrial transport,6.0,PROtm
+h_c,proton (c),H+,Pentose And Glucuronate Interconversions,Redox & Pentose Metabolism,0.5729643987734595,GALU;RE0383C
+ps_hs_m,phosphatidylserine (m),PtSer,Extracellular Transport,Extracellular Transport,0.5729643987111656,PSFLIP
+for_c,Formate (c),Formate,Folate Metabolism,Folate metabolism,0.5729643987744117,FTHFL
+utp_c,UTP (c),Utp,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987004978,r0475
+prpp_c,5-Phospho-alpha-D-ribose 1-diphosphate (c),5-Phospho-alpha-d-ribose 1-diphosphate,Nucleotide Salvage Pathway,Nucleotide Salvage Pathway,0.5729643987013813,GUAPRT
+co2_c,carbon dioxide (c),CO2,Purine Synthesis,Nucleotide metabolism,0.5729643987744117,AIRCr
+nad_m,Nicotinamide adenine dinucleotide (m),NAD+,Fatty Acid Degradation,Lipid metabolism,6.0,HACD1m
+ppi_r,Diphosphate (r),Diphosphate,"Transport, Endoplasmic Reticulum","Transport, Endoplasmic Reticulum",0.57296439871112,PPItr
+chol_c,Choline (c),Choline,Extracellular Transport,Extracellular Transport,0.5729643987111666,CHOLtu
+atp_c,ATP (c),A-nucleotides,Butanoate Metabolism,AA other,0.572964398684616,AACOAT
+oaa_c,Oxaloacetate (c),Oxaloacetate,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5729643987289457,ASPTA
+nadph_c,Nicotinamide adenine dinucleotide phosphate - reduced (c),NADP+ - reduced,Tryptophan Metabolism,AA other,0.5729643987744161,KYN3OX
+nad_m,Nicotinamide adenine dinucleotide (m),NAD+,Lysine Degradation,AA other,6.0,r0525;HACD1m
+coa_c,Coenzyme A (c),CoA pool,Fatty Acid Degradation,Lipid metabolism,0.5729643986846156,ACACT1r
+h_m,proton (m),H+,Arginine Biosynthesis,AA other,-0.7870617998662142,GLUDxm;r0034
+glu__L_c,L-glutamate(1-) (c),L-Glu,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,PSERT
+lpam_m,lipoamide (m),Lipoamide,Glycolysis/Gluconeogenesis,Central Energy Metabolism,2.181966862645131,GCC2cm
+lpchol_hs_c,lysophosphatidylcholine (c),Lysophosphatidylcholine,Extracellular Transport,Extracellular Transport,0.5729643986840695,_LPCHOLt
+alpa_hs_c,lysophosphatidic acid (c),Lysophosphatidic acid,Triacylglycerol Synthesis,Lipid metabolism,0.5729643986970447,GPAM_hs;AGPAT1
+gln__L_c,L-glutamine (c),L-glutamine,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.572964398774412,GLUPRT
 1pyr5c_m,1-Pyrroline-5-carboxylate (m),1-Pyrroline-5-carboxylate,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,P5CDm
-nad_m,Nicotinamide adenine dinucleotide (m),NAD+,Tryptophan Metabolism,AA other,6.0,HACD1m;2OXOADOXm
-trp__L_c,L-tryptophan (c),L-tryptophan,Extracellular Transport,Extracellular Transport,0.5810212942222187,TRPt;r1402
-thf_c,"5,6,7,8-Tetrahydrofolate (c)",Folate pool,Folate Metabolism,Folate metabolism,0.5517682093146367,FTHFL;GARFT;AICART
-nad_c,Nicotinamide adenine dinucleotide (c),NAD+,Cysteine And Methionine Metabolism,AA other,0.5247613478965617,PGCD
-arg__L_e,L-Arginine (e),L-Arg,Extracellular Transport,Extracellular Transport,1.8888630687347938,ARGLYSex;ARGATB0tc
+dgmp_c,dGMP (c),G-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987011683,_DGK1;NTD8
+h_c,proton (c),H+,Tryptophan Metabolism,AA other,0.5729643987744161,FKYNH;KYN3OX
+glu__L_c,L-glutamate(1-) (c),L-Glu,Extracellular Transport,Extracellular Transport,-0.6224648799092773,GLUt4;r1402
+dttp_n,dTTP (n),T-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,6.0,NDPK4n
+b2coa_m,crotonoyl-CoA(4-) (m),Ketone/FA-CoA,Tryptophan Metabolism,AA other,6.0,ECOAH1m;r0541
+lpchol_hs_e,lysophosphatidylcholine (e),Lysophosphatidylcholine,Fatty Acid Degradation,Lipid metabolism,0.5729643986840695,_LCAT1e
+coa_c,Coenzyme A (c),CoA pool,Lysine Degradation,AA other,0.5729643986846156,ACACT1r
+pa_hs_c,phosphatidate(2-) (c),Phosphatidate,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643986969971,_DAGK_hs;CDS
+gly_m,Glycine (m),Gly,Glyoxylate And Dicarboxylate Metabolism,Glyoxylate And Dicarboxylate Metabolism,6.0,GHMT2rm
+2oxoadp_m,2-oxoadipate(2-) (m),Aminoadipate derivatives,Tryptophan Metabolism,AA other,6.0,2OXOADOXm
+fum_c,Fumarate (c),Fumarate,Nucleotide Interconversion,Nucleotide metabolism,0.5729643988031666,ADSL1
+malcoa_c,Malonyl-CoA (c),Malonyl-CoA pool,Fatty Acid Biosynthesis,Lipid metabolism,0.5729643986846158,FAS120COA;FAS140COA;FAS100COA;FAS160COA;FAS80COA__L
+_L2aadp_m,L-2-aminoadipate(1-) (m),Aminoadipate derivatives,Lysine Biosynthesis,Lysine Biosynthesis,6.0,r0450
+2oxoadp_m,2-oxoadipate(2-) (m),Aminoadipate derivatives,Lysine Metabolism,Lysine Metabolism,6.0,r0450;2OXOADOXm
+2mop_m,2-methyl-3-oxopropanoate (m),BCAA α-ketoacids,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),-0.8025482880538267,MMSAD1m
+air_c,5-amino-1-(5-phospho-D-ribosyl)imidazole (c),5-Amino-1-(5-phospho-d-ribosyl)imidazole,Purine Synthesis,Nucleotide metabolism,0.5729643987744117,r0666;AIRCr
+dtmp_m,dTMP (m),T-nucleotides,Pyrimidine Synthesis,Nucleotide metabolism,6.0,RE0452M
+datp_c,dATP (c),A-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987111658,NDPK8
+h2o_c,Water (c),H2O,Pyrimidine Synthesis,Nucleotide metabolism,0.57296439870083,CTPS2;_DHORTS
+thf_c,"5,6,7,8-Tetrahydrofolate (c)",Folate pool,Purine Metabolism,Nitrogen disposal,0.5729643987744117,GARFT;AICART
+nadh_m,Nicotinamide adenine dinucleotide - reduced (m),NAD+ - reduced,Fatty Acid Degradation,Lipid metabolism,6.0,HACD1m
+uri_e,Uridine (e),Uridine,Pyrimidine Catabolism,Nucleotide metabolism,0.5729643986952747,CYTDe
 accoa_m,Acetyl-CoA (m),Acetyl-CoA pool,Tryptophan Metabolism,AA other,-6.0,ACACT1rm
-glu__L_m,L-glutamate(1-) (m),L-Glu,Lysine Degradation,AA other,6.0,r0525;r0450
-didp_n,dIDP (n),I-nucleotides,"Transport, Nuclear","Transport, Nuclear",6.0,_DIDPtn
-orn_m,Ornithine (m),Ornithine,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,ARGNm
-aacoa_m,Acetoacetyl-CoA (m),Ketone/FA-CoA,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),-0.5533256708789895,HMGCOASim;ACACT1rm
-ditp_n,dITP(4-) (n),I-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,NDPK10n
-sphgn_c,sphinganine(1+) (c),Sphinganine(1+),Sphingolipid Metabolism,Sphingolipid Metabolism,6.0,_DSAT;3DSPHR
-k_e,Potassium (e),Potassium,Extracellular Transport,Extracellular Transport,-6.0,KCCt;NKCCt
-3mob_m,3-methyl-2-oxobutanoate (m),BCAA α-ketoacids,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.560061212923069,r0385
-nad_m,Nicotinamide adenine dinucleotide (m),NAD+,Urea Cycle,Nitrogen disposal,6.0,r0074
-h2o_m,Water (m),H2O,Lysine Degradation,AA other,6.0,SACCD3m;r0525;ECOAH1m
-nadh_m,Nicotinamide adenine dinucleotide - reduced (m),NAD+ - reduced,Butanoate Metabolism,AA other,6.0,HACD1m
+akg_m,2-Oxoglutarate (m),2-Oxoglutarate,Lysine Biosynthesis,Lysine Biosynthesis,6.0,r0450
+nadh_m,Nicotinamide adenine dinucleotide - reduced (m),NAD+ - reduced,Lysine Degradation,AA other,6.0,r0525;HACD1m
+ditp_c,dITP(4-) (c),I-nucleotides,"Transport, Nuclear","Transport, Nuclear",6.0,_DITPtn
+cytd_e,Cytidine (e),Cytidine,Pyrimidine Catabolism,Nucleotide metabolism,0.5729643986952747,CYTDe
+gly_c,Glycine (c),Gly,Glutathione Metabolism,Redox & Pentose Metabolism,1.1672354983333313,AMPTASECG
+atp_m,ATP (m),A-nucleotides,Purine Metabolism,Nitrogen disposal,6.0,NDPK8m;ADK1m
+r5p_c,alpha-D-Ribose 5-phosphate (c),Alpha-d-ribose 5-phosphate,Purine Metabolism,Nitrogen disposal,0.5729643987101435,PRPPS;PPM
+cys__L_e,L-Cysteine (e),L-Cys,Extracellular Transport,Extracellular Transport,1.336249886343135,CYSGLUexR
+nad_m,Nicotinamide adenine dinucleotide (m),NAD+,Arginine And Proline Metabolism,Arginine And Proline Metabolism,6.0,PRO1xm
+gthrd_c,Reduced glutathione (c),Reduced glutathione,Glutathione Metabolism,Redox & Pentose Metabolism,1.167235498333331,r0129
+h2o_c,Water (c),H2O,Fatty Acid Biosynthesis,Lipid metabolism,0.5729643986846158,FAS100COA;FAS120COA;FAS140COA;FAS80COA__L;FAS160COA
+his__L_c,L-histidine (c),L-histidine,Extracellular Transport,Extracellular Transport,0.5729643987111656,HIStN1;r1402
+occoa_c,Octanoyl-CoA (n-C8:0CoA) (c),Octanoyl-CoA pool (n-c8:0CoA pool),Fatty Acid Biosynthesis,Lipid metabolism,0.572964398684616,FAS100COA;FAS80COA__L
+adp_n,ADP (n),A-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,0.572964398985466,NDPK10n;NDPK4n;ADK1n
+ppi_c,Diphosphate (c),Diphosphate,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987111651,ORPT
+datp_m,dATP (m),A-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,NDPK8m
+ctp_c,CTP (c),C-nucleotides,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643986979145,CTPS2
+3mob_m,3-methyl-2-oxobutanoate (m),BCAA α-ketoacids,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.8025482880430987,r0385;VALTAm
+atp_c,ATP (c),A-nucleotides,Pyrimidine Synthesis,Nucleotide metabolism,0.5729643986979145,CTPS2
+2oxoadp_m,2-oxoadipate(2-) (m),Aminoadipate derivatives,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,r0450
+h_m,proton (m),H+,Butanoate Metabolism,AA other,1.5729643986846162,HMGCOASim;HACD1m
+ctp_c,CTP (c),C-nucleotides,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+thf_c,"5,6,7,8-Tetrahydrofolate (c)",Folate pool,Purine Synthesis,Nucleotide metabolism,0.5729643987744117,GARFT;AICART
+3php_c,3-phosphonatooxypyruvate(3-) (c),3-PhosphonatooxyPyr,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,PGCD;PSERT
+pi_e,hydrogenphosphate (e),Pi,Extracellular Transport,Extracellular Transport,0.5729643987382577,PIt9
+chol_c,Choline (c),Choline,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643986935705,CHOLK;GPDDA1;PSSA1_hs
+sphgn_c,sphinganine(1+) (c),Sphinganine(1+),Sphingolipid Metabolism,Sphingolipid Metabolism,6.0,3DSPHR;_DSAT
+ser__L_c,L-serine (c),L-serine,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643987111658,PSSA1_hs
+adp_m,ADP (m),A-nucleotides,Fatty Acid Metabolism,Lipid metabolism,0.5729643986846154,ACCOACm
+pi_m,hydrogenphosphate (m),Pi,Fatty Acid Metabolism,Lipid metabolism,0.5729643986846154,ACCOACm
+ser__L_e,L-Serine (e),L-serine,Extracellular Transport,Extracellular Transport,0.5729643987057444,SERt4
+3mob_c,3-methyl-2-oxobutanoate (c),BCAA α-ketoacids,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",-0.802548288064555,VALTA
+dad_2_c,Deoxyadenosine (c),A-nucleotides,Purine Catabolism,Purine Catabolism,6.0,PUNP2
+co2_m,carbon dioxide (m),CO2,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.014444166675911,GCC2am;r0034
+dump_m,dUMP (m),Dump,Nucleotide Interconversion,Nucleotide metabolism,0.572964398711166,_DUTPDPm;TMDSm
+h_e,proton (e),H+,Nitrogen Metabolism,Nitrogen disposal,-0.8566956954519471,r1418
+udpg_c,UDPglucose (c),UdpGlc,Pentose And Glucuronate Interconversions,Redox & Pentose Metabolism,0.5729643987111656,GALU
+cdp_c,CDP (c),C-nucleotides,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987111658,CYTK1
+coa_m,Coenzyme A (m),CoA pool,Pyruvate Metabolism,Central Energy Metabolism,-6.0,ACACT1rm
+nadh_m,Nicotinamide adenine dinucleotide - reduced (m),NAD+ - reduced,Arginine And Proline Metabolism,Arginine And Proline Metabolism,6.0,PRO1xm
+leu__L_c,L-leucine (c),L-leucine,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+dtdp_n,dTDP (n),T-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,NDPK4n
+malcoa_m,Malonyl-CoA (m),Malonyl-CoA pool,Propanoate Metabolism,Propanoate Metabolism,0.5729643986846154,ACCOACm
+aacoa_c,Acetoacetyl-CoA (c),Ketone/FA-CoA,Butanoate Metabolism,AA other,0.572964398684616,AACOAT;ACACT1r
+orot_c,Orotate (c),Orotate,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987111651,ORPT
+coa_m,Coenzyme A (m),CoA pool,Tryptophan Metabolism,AA other,0.572964398684616,2OXOADOXm;ACACT1rm
+ser__L_m,L-serine (m),L-serine,Glyoxylate And Dicarboxylate Metabolism,Glyoxylate And Dicarboxylate Metabolism,6.0,GHMT2rm
+q10_m,ubiquinone-10 (m),Ubiquinone-10,Tryptophan Metabolism,AA other,6.0,r0541
+asp__L_c,L-aspartate(1-) (c),L-aspartate,2-oxocarboxylic Acid Metabolism,2-oxocarboxylic Acid Metabolism,0.5729643987289457,ASPTA
+coa_m,Coenzyme A (m),CoA pool,Lysine Metabolism,Lysine Metabolism,6.0,2OXOADOXm
+akg_m,2-Oxoglutarate (m),2-Oxoglutarate,Lysine Degradation,AA other,6.0,SACCD3m;r0450
+mlthf_m,"5,10-Methylenetetrahydrofolate (m)",Folate pool,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,GCC2bim;GHMT2rm
+cbp_c,Carbamoyl phosphate (c),Carb-P,"Transport, Mitochondrial",Mitochondrial transport,0.57296439871112,HUMANGEM_MAR08651
+didp_n,dIDP (n),I-nucleotides,Purine Metabolism,Nitrogen disposal,6.0,NDPK10n
+val__L_c,L-valine (c),L-Val,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.802548288064555,VALTA
+nad_c,Nicotinamide adenine dinucleotide (c),NAD+,Pyruvate Metabolism,Central Energy Metabolism,0.5729643987238328,MDH
+ibcoa_m,isobutyryl-CoA(4-) (m),Isobutyryl-CoA pool,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.8025482880538267,r0560;r0561
+pyr_e,Pyruvate (e),Pyr,Extracellular Transport,Extracellular Transport,-0.6520825826830301,PYRt2
+pchol_hs_c,Phosphatidylcholine (c),Phosphatidylcholine,Glycerophospholipid Metabolism,Lipid metabolism,0.572964398698138,CEPTC;PSSA1_hs
+h2o_m,Water (m),H2O,Butanoate Metabolism,AA other,1.5729643986846162,HMGCOASim;ECOAH1m
+asp__L_c,L-aspartate(1-) (c),L-aspartate,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5729643987289457,ASPTA
+3mob_c,3-methyl-2-oxobutanoate (c),BCAA α-ketoacids,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),-0.802548288064555,VALTA
+fgam_c,N2-Formyl-N1-(5-phospho-D-ribosyl)glycinamide (c),N2-formyl-n1-(5-phospho-d-ribosyl)glycinamide,Folate Metabolism,Folate metabolism,0.5729643987744117,GARFT
+nadp_m,Nicotinamide adenine dinucleotide phosphate (m),NADP+,Lysine Degradation,AA other,6.0,SACCD3m
+acac_m,acetoacetate (m),Ketone bodies,Cholesterol Metabolism,Lipid metabolism,0.5729643986846162,HMGLm
+3dsphgn_c,(2S)-1-hydroxy-3-oxooctadecan-2-aminium (c),(2S)-1-hydroxy-3-oxooctadecan-2-aminium,Sphingolipid Metabolism,Sphingolipid Metabolism,6.0,3DSPHR;SERPT
+dcdp_c,dCDP (c),C-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987111658,RNDR3;CYTK12
+atp_n,ATP (n),A-nucleotides,Pyrimidine Metabolism,Nucleotide metabolism,6.0,NDPK4n
+udp_m,UDP (m),Udp,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987111658,UMPK2m
+ump_c,UMP (c),Ump,Pyrimidine Catabolism,Nucleotide metabolism,0.5729643987111656,NTD2
+ser__L_c,L-serine (c),L-serine,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+h_c,proton (c),H+,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643986955543,CHLPCTD;CHOLK;CEPTC;_DAGK_hs;_LPASE;GPDDA1;r0202c;CDS;CDIPTr
+42A3HP24DB_c,"4-(2-Amino-3-hydroxyphenyl)-2,4-dioxobutanoate (c)","4-(2-Amino-3-hydroxyphenyl)-2,4-dioxobutanoate",Tryptophan Metabolism,AA other,0.5729643987744161,3HKYNAKGAT;r0647
+ile__L_c,L-isoleucine (c),L-isoleucine,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+h2o_e,Water (e),H2O,Nitrogen Metabolism,Nitrogen disposal,-0.8566956954519471,r1418
+ppi_c,Diphosphate (c),Diphosphate,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987013813,GUAPRT
+co2_m,carbon dioxide (m),CO2,Arginine Biosynthesis,AA other,0.57296439871112,r0034
+pser__L_c,O-Phospho-L-serine (c),O-phospho-l-serine,Cysteine And Methionine Metabolism,AA other,6.0,PSERT
+3mob_m,3-methyl-2-oxobutanoate (m),BCAA α-ketoacids,"Transport, Mitochondrial",Mitochondrial transport,-0.802548288064555,3MOBt2im
+ctp_c,CTP (c),C-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,0.5729643986979145,CTPS2
+ru5p__D_c,D-ribulose 5-phosphate(2-) (c),D-ribulose 5-phosphate,Glutathione Metabolism,Redox & Pentose Metabolism,0.5729643987467458,GND
+ps_hs_c,phosphatidylserine (c),PtSer,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643987111658,PSSA1_hs
+pe_hs_m,phosphatidylethanolamine (m),Phosphatidylethanolamine,"Transport, Endoplasmic Reticulum","Transport, Endoplasmic Reticulum",0.5729643987111656,PE_HSter
+atp_m,ATP (m),A-nucleotides,Nitrogen Metabolism,Nitrogen disposal,0.57296439871112,r0034
+lys__L_c,L-lysinium(1+) (c),Lys,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+uri_c,Uridine (c),Uridine,Pyrimidine Catabolism,Nucleotide metabolism,0.5729643987033091,PYNP2r;NTD2
+xolest2_hs_e,cholesterol ester (e),Cholesterol ester,Extracellular Transport,Extracellular Transport,0.5729643986840695,CHOLESTle
+accoa_c,Acetyl-CoA (c),Acetyl-CoA pool,Fatty Acid Metabolism,Lipid metabolism,0.5729643986846156,ACACT1r
+gly_m,Glycine (m),Gly,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,GCC2am;GHMT2rm
+pe_hs_c,Phosphatidylethanolamine (gallus gallus) (c),Phosphatidylethanolamine (gallus gallus),"Transport, Endoplasmic Reticulum","Transport, Endoplasmic Reticulum",0.5729643987111656,PE_HSter
+dump_c,dUMP (c),Dump,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987010277,URIDK2
+h_c,proton (c),H+,Methane Metabolism,Methane Metabolism,3.099188074463549,PGCD;MDH
+coa_c,Coenzyme A (c),CoA pool,Tryptophan Metabolism,AA other,0.5729643986846156,ACACT1r
+pser__L_m,O-Phospho-L-serine (m),O-phospho-l-serine,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,PSP__Lm
+cbp_c,Carbamoyl phosphate (c),Carb-P,Pyrimidine Synthesis,Nucleotide metabolism,0.57296439871112,ASPCTr
+thr__L_e,L-Threonine (e),L-threonine,Extracellular Transport,Extracellular Transport,0.5729643987111658,THRt4
+co2_c,carbon dioxide (c),CO2,Extracellular Transport,Extracellular Transport,0.8357100903265128,CO2t
+accoa_m,Acetyl-CoA (m),Acetyl-CoA pool,Propanoate Metabolism,Propanoate Metabolism,0.5729643986846154,ACCOACm
+phe__L_c,L-phenylalanine (c),L-Phe,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+dgdp_c,dGDP (c),G-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987015112,RNDR2;_DGK1;NDPK5
+25aics_c,(S)-2-[5-Amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxamido]succinate (c),(S)-2-[5-amino-1-(5-phospho-d-ribosyl)imidazole-4-carboxamido]succinate,Purine Metabolism,Nitrogen disposal,0.5729643987744117,PRASCS;ADSL2
+asn__L_c,L-asparagine (c),L-asparagine,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+dttp_c,dTTP (c),T-nucleotides,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+clpn_hs_c,cardiolipin (c),CardioliPin,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+nadp_c,Nicotinamide adenine dinucleotide phosphate (c),NADP+,Pentose Phosphate Pathway,Redox & Pentose Metabolism,0.5729643987467472,G6PDH2r;GND
+h2o_c,Water (c),H2O,Pentose Phosphate Pathway,Redox & Pentose Metabolism,0.5729643987467485,PGL
+dttp_n,dTTP (n),T-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,NDPK4n
+gthrd_c,Reduced glutathione (c),Reduced glutathione,"Transport, Endoplasmic Reticulum","Transport, Endoplasmic Reticulum",1.1672354983333308,HUMANGEM_MAR06107
+nad_c,Nicotinamide adenine dinucleotide (c),NAD+,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,PGCD
+thf_m,"5,6,7,8-Tetrahydrofolate (m)",Folate pool,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,GCC2bim;GHMT2rm
+thf_m,"5,6,7,8-Tetrahydrofolate (m)",Folate pool,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,GHMT2rm
+atp_c,ATP (c),A-nucleotides,Purine Synthesis,Nucleotide metabolism,0.5729643987744117,r0666;PRFGS;PRAGSr;PRASCS
+3php_c,3-phosphonatooxypyruvate(3-) (c),3-PhosphonatooxyPyr,Methane Metabolism,Methane Metabolism,6.0,PGCD;PSERT
+cdp_c,CDP (c),C-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987111658,CYTK1
+mal__L_c,(S)-malate(2-) (c),(S)-malate,Methane Metabolism,Methane Metabolism,0.5729643987238328,MDH
+coa_m,Coenzyme A (m),CoA pool,Fatty Acid Metabolism,Lipid metabolism,-6.0,ACACT1rm
 atp_n,ATP (n),A-nucleotides,Purine Metabolism,Nitrogen disposal,6.0,NDPK10n
-pser__L_c,O-Phospho-L-serine (c),O-phospho-l-serine,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5247613478965617,PSERT
+3hmp_m,3-hydroxy-2-methylpropanoate (m),3-Hydroxy-2-methylpropanoate,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.8025482880538267,3HBCOAHLm;HIBDm
+2oxoadp_m,2-oxoadipate(2-) (m),Aminoadipate derivatives,Lysine Biosynthesis,Lysine Biosynthesis,6.0,r0450
+ump_c,UMP (c),Ump,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987111656,NTD2;OMPDC
+udp_m,UDP (m),Udp,"Transport, Mitochondrial",Mitochondrial transport,0.5729643987111653,HUMANGEM_MAR20147
+dag_hs_c,diglyceride (c),Diglyceride,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643986961753,CEPTC;_DAGK_hs
+g6p_c,D-Glucose 6-phosphate (c),Glc 6-phosphate,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+coa_m,Coenzyme A (m),CoA pool,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),-0.5294618205174181,ACACT10m;3HBCOAHLm;MMSAD1m;HMGCOASim;ACACT1rm
+adp_m,ADP (m),A-nucleotides,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987111656,NDPK3m;NDPK6m;CYTK1m
+chsterol_e,Chsterol c (e),Chsterol c,Extracellular Transport,Extracellular Transport,0.5729643986860162,CHOLESTle;CHOLESTTDe
+dhap_c,Dihydroxyacetone phosphate (c),Dihydroxyacetone phosphate,Glycerophospholipid Metabolism,Lipid metabolism,0.572964398711166,r0202c
+pi_c,hydrogenphosphate (c),Pi,Pyrimidine Catabolism,Nucleotide metabolism,0.5729643987033091,PYNP2r;NTD2
+val__L_c,L-valine (c),L-Val,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),-0.802548288064555,VALTA
+gln__L_c,L-glutamine (c),L-glutamine,Pyrimidine Synthesis,Nucleotide metabolism,0.5729643986979145,CTPS2
+h_c,proton (c),H+,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987044496,CTPS2;CYTDK1;OMPDC;ASPCTr
+udp_c,UDP (c),Udp,"Transport, Mitochondrial",Mitochondrial transport,0.5729643987111653,HUMANGEM_MAR20147
+uri_c,Uridine (c),Uridine,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987033091,PYNP2r;NTD2
+gtp_c,GTP (c),G-nucleotides,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+nadph_m,Nicotinamide adenine dinucleotide phosphate - reduced (m),NADP+ - reduced,Lysine Degradation,AA other,6.0,SACCD3m
+aacoa_m,Acetoacetyl-CoA (m),Ketone/FA-CoA,Butanoate Metabolism,AA other,0.5729643986846162,HACD1m;HMGCOASim;ACACT1rm
+mlthf_m,"5,10-Methylenetetrahydrofolate (m)",Folate pool,Nucleotide Interconversion,Nucleotide metabolism,6.0,TMDSm
+mlthf_m,"5,10-Methylenetetrahydrofolate (m)",Folate pool,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,GCC2bim;GHMT2rm
+25aics_c,(S)-2-[5-Amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxamido]succinate (c),(S)-2-[5-amino-1-(5-phospho-d-ribosyl)imidazole-4-carboxamido]succinate,Purine Synthesis,Nucleotide metabolism,0.5729643987744117,PRASCS;ADSL2
+hco3_m,Bicarbonate (m),HCO3-,Fatty Acid Degradation,Lipid metabolism,0.5729643986846154,ACCOACm
+nh4_e,Ammonium (e),NH4+,Pyrimidine Catabolism,Nucleotide metabolism,0.5729643986952747,CYTDe
+thf_m,"5,6,7,8-Tetrahydrofolate (m)",Folate pool,Folate Metabolism,Folate metabolism,9.199117508087722,FTHFDHm;GHMT2rm;r0226
+atp_c,ATP (c),A-nucleotides,Pentose Phosphate Pathway,Redox & Pentose Metabolism,0.5729643987160702,PRPPS
+amp_c,AMP (c),A-nucleotides,Purine Metabolism,Nitrogen disposal,0.5729643987119182,ADK1;PRPPS;ADSL1;NTD7
+cmp_c,CMP (c),C-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987035675,r0531;CYTDK1;CYTK1
+btn_c,Biotin (c),Biotin,Extracellular Transport,Extracellular Transport,-6.0,BTNt4i;BTNt2
+pser__L_m,O-Phospho-L-serine (m),O-phospho-l-serine,"Transport, Mitochondrial",Mitochondrial transport,6.0,PSERtm
+cbp_m,Carbamoyl phosphate (m),Carb-P,Nitrogen Metabolism,Nitrogen disposal,0.57296439871112,r0034
+ps_hs_c,phosphatidylserine (c),PtSer,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+2mpdhl_m,S-(2-Methylpropanoyl)-dihydrolipoamide (m),S-(2-methylpropanoyl)-dihydrolipoamide,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.8025482880538267,r0385;r0561
+dudp_m,dUDP (m),U-nucleotides,Pyrimidine Metabolism,Nucleotide metabolism,6.0,NDPK6m
+gly_c,Glycine (c),Gly,Purine Metabolism,Nitrogen disposal,0.5729643987744117,PRAGSr
+ddcacoa_c,Dodecanoyl-CoA (n-C12:0CoA) (c),Dodecanoyl-CoA pool (n-c12:0CoA pool),Fatty Acid Biosynthesis,Lipid metabolism,0.572964398684616,FAS120COA;FAS140COA
+thf_m,"5,6,7,8-Tetrahydrofolate (m)",Folate pool,Cyanoamino Acid Metabolism,Cyanoamino Acid Metabolism,6.0,GHMT2rm
+ppi_c,Diphosphate (c),Diphosphate,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.572964398774412,GLUPRT
+aacoa_c,Acetoacetyl-CoA (c),Ketone/FA-CoA,Terpenoid Backbone Biosynthesis,Terpenoid Backbone Biosynthesis,0.5729643986846156,ACACT1r
+imp_c,IMP (c),I-nucleotides,Purine Synthesis,Nucleotide metabolism,0.5729643987744115,IMPC
+nad_m,Nicotinamide adenine dinucleotide (m),NAD+,Fatty Acid Metabolism,Lipid metabolism,6.0,HACD1m
+dadp_c,dADP (c),A-nucleotides,Purine Metabolism,Nitrogen disposal,0.5729643987111658,NDPK8
+dcamp_c,"N6-(1,2-Dicarboxyethyl)-AMP (c)","N6-(1,2-dicarboxyethyl)-A-nucleotides",Purine Metabolism,Nitrogen disposal,0.5729643988031662,ADSL1;ADSS
+atp_n,ATP (n),A-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,0.5729643988483158,NDPK10n;NDPK4n
+coa_c,Coenzyme A (c),CoA pool,Fatty Acid Metabolism,Lipid metabolism,0.5729643986846156,ACACT1r
+didp_c,dIDP (c),I-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,6.0,NDPK10
+dutp_c,dUTP (c),Dutp,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987004978,r0475;r0531
+b2coa_m,crotonoyl-CoA(4-) (m),Ketone/FA-CoA,Fatty Acid Degradation,Lipid metabolism,6.0,ECOAH1m
+pi_c,hydrogenphosphate (c),Pi,"Transport, Endoplasmic Reticulum","Transport, Endoplasmic Reticulum",0.57296439871112,PIter
+h2o_m,Water (m),H2O,Terpenoid Backbone Biosynthesis,Terpenoid Backbone Biosynthesis,0.5729643986846162,HMGCOASim
+mal__L_c,(S)-malate(2-) (c),(S)-malate,Glyoxylate And Dicarboxylate Metabolism,Glyoxylate And Dicarboxylate Metabolism,0.5729643987238328,MDH
+dump_c,dUMP (c),Dump,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987010277,URIDK2
+pi_c,hydrogenphosphate (c),Pi,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987022379,PYNP2r;CTPS2;NTD2;ASPCTr
+q10h2_m,Ubiquinol-10 (m),Ubiquinol-10,Tryptophan Metabolism,AA other,6.0,r0541
+dgsn_c,Deoxyguanosine (c),Deoxyguanosine,Purine Catabolism,Purine Catabolism,0.5729643987011666,PUNP4
+cytd_c,Cytidine (c),Cytidine,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987111644,CYTDK1
+amp_c,AMP (c),A-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987115163,ADK1;ADSL1;NTD7
+adp_c,ADP (c),A-nucleotides,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987017308,URIDK2;CTPS2;CYTDK1;CYTK1
+gly_c,Glycine (c),Gly,Purine Synthesis,Nucleotide metabolism,0.5729643987744117,PRAGSr
+atp_m,ATP (m),A-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,0.572964398662608,NDPK3m;NDPK6m;NDPK8m;CYTK1m;ADK1m
+h2o_c,Water (c),H2O,Pyruvate Metabolism,Central Energy Metabolism,0.5729643987861271,FUM
+h2o_e,Water (e),H2O,Extracellular Transport,Extracellular Transport,0.5729643986840695,CHOLESTle
+Rtotal2coa_c,R total 2 coenzyme A (c),R total 2 CoA pool,Triacylglycerol Synthesis,Lipid metabolism,0.5729643986970445,AGPAT1
+nad_c,Nicotinamide adenine dinucleotide (c),NAD+,Glycerophospholipid Metabolism,Lipid metabolism,0.572964398711166,r0202c
+6pgl_c,"6-phospho-D-glucono-1,5-lactone (c)","6-Phospho-d-glucono-1,5-lactone",Pentose Phosphate Pathway,Redox & Pentose Metabolism,0.5729643987467485,PGL;G6PDH2r
+ade_c,Adenine (c),Adenine,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987111395,PUNP2;PUNP1
+nadh_c,Nicotinamide adenine dinucleotide - reduced (c),NAD+ - reduced,Methane Metabolism,Methane Metabolism,3.099188074463549,PGCD;MDH
+nadh_m,Nicotinamide adenine dinucleotide - reduced (m),NAD+ - reduced,Fatty Acid Metabolism,Lipid metabolism,6.0,HACD1m
+3hmp_m,3-hydroxy-2-methylpropanoate (m),3-Hydroxy-2-methylpropanoate,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),-0.8025482880538267,3HBCOAHLm
+dadp_c,dADP (c),A-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987111658,NDPK8
+asp__L_c,L-aspartate(1-) (c),L-aspartate,Pyrimidine Metabolism,Nucleotide metabolism,0.57296439871112,ASPCTr
+dcamp_c,"N6-(1,2-Dicarboxyethyl)-AMP (c)","N6-(1,2-dicarboxyethyl)-A-nucleotides",Nucleotide Metabolism,Nucleotide metabolism,0.5729643988031662,ADSL1;ADSS
+h2o_c,Water (c),H2O,Tryptophan Metabolism,AA other,0.5729643987744161,r0647;FKYNH;KYN3OX
+gua_c,Guanine (c),Guanine,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987013813,GUAPRT;PUNP4;PUNP3
+thf_c,"5,6,7,8-Tetrahydrofolate (c)",Folate pool,Folate Metabolism,Folate metabolism,0.5729643987744115,FTHFL;GARFT;AICART
+pail_hs_c,1-phosphatidyl-1D-myo-inositol(1-) (c),1-Phosphatidyl-1d-myo-inositol,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+asp__L_c,L-aspartate(1-) (c),L-aspartate,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+ump_c,UMP (c),Ump,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987111656,NTD2
+nh4_m,Ammonium (m),NH4+,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,GCC2bim
+nh4_m,Ammonium (m),NH4+,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.57296439871112,r0034
+nadp_m,Nicotinamide adenine dinucleotide phosphate (m),NADP+,Lysine Metabolism,Lysine Metabolism,6.0,SACCD3m
+nad_c,Nicotinamide adenine dinucleotide (c),NAD+,Methane Metabolism,Methane Metabolism,3.099188074463549,PGCD;MDH
+adp_m,ADP (m),A-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,0.572964398662608,NDPK3m;NDPK6m;NDPK8m;CYTK1m;ADK1m
+thf_m,"5,6,7,8-Tetrahydrofolate (m)",Folate pool,Methane Metabolism,Methane Metabolism,6.0,GHMT2rm
+hLkynr_c,3-hydroxy-L-kynurenine (c),3-Hydroxy-l-kynurenine,Tryptophan Metabolism,AA other,0.5729643987744161,3HKYNAKGAT;KYN3OX
+co2_c,carbon dioxide (c),CO2,Fatty Acid Biosynthesis,Lipid metabolism,0.5729643986846158,FAS120COA;FAS100COA;FAS140COA;FAS160COA;FAS80COA__L
+nh4_m,Ammonium (m),NH4+,Taurine And Hypotaurine Metabolism,Taurine And Hypotaurine Metabolism,-0.8007489670516705,GLUDxm
+C02470_e,Xanthurenic acid (e),Xanthurenic acid,Extracellular Transport,Extracellular Transport,0.5729643987744115,r1030
+gtp_c,GTP (c),G-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987923116,NDPK1;ADSS
+for_c,Formate (c),Formate,Tryptophan Metabolism,AA other,0.5729643987744161,FKYNH
+utp_c,UTP (c),Utp,Pentose And Glucuronate Interconversions,Redox & Pentose Metabolism,0.5729643987111656,GALU
+uri_c,Uridine (c),Uridine,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987033091,PYNP2r;NTD2
+accoa_c,Acetyl-CoA (c),Acetyl-CoA pool,Glyoxylate And Dicarboxylate Metabolism,Glyoxylate And Dicarboxylate Metabolism,0.5729643986846156,ACACT1r
+alpam_m,S-aminomethyldihydrolipoamide (m),S-aminomethyldihydrolipoamide,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,GCC2bim;GCC2am
+2dr1p_c,2-Deoxy-D-ribose 1-phosphate (c),2-Deoxy-d-ribose 1-phosphate,Purine Metabolism,Nitrogen disposal,0.5729643987016337,PUNP4;PUNP2
+Rtotal_c,R total (c),R total,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643986840695,_LPASE
+ppi_r,Diphosphate (r),Diphosphate,"Transport, Mitochondrial",Mitochondrial transport,0.57296439871112,HUMANGEM_MAR08651
+gly_m,Glycine (m),Gly,"Transport, Mitochondrial",Mitochondrial transport,6.0,GLYtm
+cmp_c,CMP (c),C-nucleotides,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643986968793,CEPTC;CDIPTr
+imp_c,IMP (c),I-nucleotides,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5729643988031662,ADSS
+dudp_m,dUDP (m),U-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,6.0,NDPK6m
+ditp_c,dITP(4-) (c),I-nucleotides,Purine Metabolism,Nitrogen disposal,6.0,NDPK10
+pro__L_m,L-proline (m),L-Pro,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,PRO1xm
+akg_c,2-Oxoglutarate (c),2-Oxoglutarate,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",2.3650044219199318,PSERT;ASPTA;ALATA__L
+dutp_m,dUTP (m),Dutp,Pyrimidine Metabolism,Nucleotide metabolism,6.0,NDPK6m
+thr__L_c,L-Threonine (c),L-threonine,Extracellular Transport,Extracellular Transport,0.5729643987111656,THRt4;r1402
+glygn1_c,"glycogen, structure 1 (glycogenin-11[1,4-Glc]) (c)","Glycogen, structure 1 (glycogenin-11[1,4-glc])",Starch And Sucrose Metabolism,Starch And Sucrose Metabolism,0.5729643987111656,GLBRAN;GLGNS1
+acac_m,acetoacetate (m),Ketone bodies,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),0.5729643986846162,HMGLm
+damp_c,dAMP(2-) (c),A-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987111658,ADKd;_DADNK
+ala__L_c,L-alanine (c),L-Ala,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+ctp_m,CTP (m),C-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987111656,UMPK2m;NDPK3m
+glutcoa_m,glutaryl-CoA(5-) (m),Glutaryl-CoA pool(5-),Tryptophan Metabolism,AA other,6.0,r0541;2OXOADOXm
+aacoa_m,Acetoacetyl-CoA (m),Ketone/FA-CoA,Glyoxylate And Dicarboxylate Metabolism,Glyoxylate And Dicarboxylate Metabolism,-6.0,ACACT1rm
+amp_c,AMP (c),A-nucleotides,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5729643988031666,ADSL1
+10fthf_c,10-Formyltetrahydrofolate (c),Folate pool,Folate Metabolism,Folate metabolism,0.5729643987744115,FTHFL;GARFT;AICART
+cdpdag_hs_c,CDP-diacylglycerol(2-) (c),C-nucleotides-diacylglycerol,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643987111668,CDS;CDIPTr
 glutcoa_m,glutaryl-CoA(5-) (m),Glutaryl-CoA pool(5-),Lysine Metabolism,Lysine Metabolism,6.0,2OXOADOXm
+didp_n,dIDP (n),I-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,NDPK10n
+pi_c,hydrogenphosphate (c),Pi,Purine Synthesis,Nucleotide metabolism,0.5729643987744117,r0666;PRFGS;PRASCS;PRAGSr
+nadh_c,Nicotinamide adenine dinucleotide - reduced (c),NAD+ - reduced,Glyoxylate And Dicarboxylate Metabolism,Glyoxylate And Dicarboxylate Metabolism,0.5729643987238328,MDH
+cytd_c,Cytidine (c),Cytidine,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987111644,CYTDK1
+hmgcoa_m,Hydroxymethylglutaryl-CoA (m),Ketone/FA-CoA,Butanoate Metabolism,AA other,0.5729643986846162,HMGLm;HMGCOASim
+dcamp_c,"N6-(1,2-Dicarboxyethyl)-AMP (c)","N6-(1,2-dicarboxyethyl)-A-nucleotides","Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5729643988031662,ADSL1;ADSS
+glu__L_c,L-glutamate(1-) (c),L-Glu,Tryptophan Metabolism,AA other,0.5729643987744161,3HKYNAKGAT
+ser__L_m,L-serine (m),L-serine,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,PSP__Lm;GHMT2rm
+atp_m,ATP (m),A-nucleotides,Urea Cycle,Nitrogen disposal,0.57296439871112,r0034
+ppi_c,Diphosphate (c),Diphosphate,Butanoate Metabolism,AA other,0.572964398684616,AACOAT
+mal__L_c,(S)-malate(2-) (c),(S)-malate,Citric Acid Cycle,Central Energy Metabolism,0.5729643987357775,MDH;FUM
+cdp_c,CDP (c),C-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987111658,RNDR3;CYTK1
+ura_c,uracil (c),Uracil,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987006509,_DURIPP
+atp_c,ATP (c),A-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987096288,ADK1;GK1;_DGK1;URIDK2;_DURIK1;CYTDK1;NDPK1;NDPK8;CYTK1;NDPK10;_DADNK;NDPK5
+ditp_c,dITP(4-) (c),I-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,6.0,NDPK10
+nadp_m,Nicotinamide adenine dinucleotide phosphate (m),NADP+,Folate Metabolism,Folate metabolism,6.0,FTHFDHm;r0226
+cys__L_c,L-cysteine (c),L-Cys,Extracellular Transport,Extracellular Transport,1.3153618547560337,CYSGLUexR;r1402
+nadph_m,Nicotinamide adenine dinucleotide phosphate - reduced (m),NADP+ - reduced,Lysine Metabolism,Lysine Metabolism,6.0,SACCD3m
+adp_m,ADP (m),A-nucleotides,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.57296439871112,r0034
+akg_c,2-Oxoglutarate (c),2-Oxoglutarate,Pantothenate And Coa Biosynthesis,Pantothenate And Coa Biosynthesis,-0.802548288064555,VALTA
+atp_c,ATP (c),A-nucleotides,Extracellular Transport,Extracellular Transport,0.5729643986901153,PCt;PSFLIP;r1402
+pi_m,hydrogenphosphate (m),Pi,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",5.9147110468839115,PSP__Lm;r0034
+asp__L_c,L-aspartate(1-) (c),L-aspartate,Nucleotide Metabolism,Nucleotide metabolism,0.5729643988031662,ADSS
+glutcoa_m,glutaryl-CoA(5-) (m),Glutaryl-CoA pool(5-),2-oxocarboxylic Acid Metabolism,2-oxocarboxylic Acid Metabolism,6.0,2OXOADOXm
+gtp_c,GTP (c),G-nucleotides,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5729643988031662,ADSS
+ala__L_e,L-Alanine (e),L-Ala,Extracellular Transport,Extracellular Transport,-6.0,ALAtN1
+nh4_m,Ammonium (m),NH4+,Urea Cycle,Nitrogen disposal,0.57296439871112,r0034
+sphmyln_hs_c,sphingomyelin betaine (c),Sphingomyelin betaine,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+datp_c,dATP (c),A-nucleotides,Purine Metabolism,Nitrogen disposal,0.5729643987111658,NDPK8
+cbp_m,Carbamoyl phosphate (m),Carb-P,"Transport, Mitochondrial",Mitochondrial transport,0.57296439871112,HUMANGEM_MAR08651
+oaa_c,Oxaloacetate (c),Oxaloacetate,2-oxocarboxylic Acid Metabolism,2-oxocarboxylic Acid Metabolism,0.5729643987289457,ASPTA
+air_c,5-amino-1-(5-phospho-D-ribosyl)imidazole (c),5-Amino-1-(5-phospho-d-ribosyl)imidazole,Purine Metabolism,Nitrogen disposal,0.5729643987744117,AIRCr
+ser__L_m,L-serine (m),L-serine,Folate Metabolism,Folate metabolism,6.0,GHMT2rm
+tyr__L_c,L-tyrosine (c),L-tyrosine,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+cdp_m,CDP (m),C-nucleotides,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987111656,NDPK3m;CYTK1m
+g3pc_c,sn-Glycero-3-phosphocholine (c),Sn-glycero-3-phosphocholine,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643986840695,_LPASE;GPDDA1
+atp_c,ATP (c),A-nucleotides,Folate Metabolism,Folate metabolism,0.5729643987744117,FTHFL
+3php_c,3-phosphonatooxypyruvate(3-) (c),3-PhosphonatooxyPyr,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,PGCD;PSERT
+atp_m,ATP (m),A-nucleotides,Fatty Acid Biosynthesis,Lipid metabolism,0.5729643986846154,ACCOACm
+ru5p__D_c,D-ribulose 5-phosphate(2-) (c),D-ribulose 5-phosphate,Pentose Phosphate Pathway,Redox & Pentose Metabolism,0.5729643987467455,GND;RPI
+aicar_c,5-Amino-1-(5-Phospho-D-ribosyl)imidazole-4-carboxamide (c),5-Amino-1-(5-phospho-d-ribosyl)imidazole-4-carboxamide,Folate Metabolism,Folate metabolism,0.5729643987744115,AICART
+co2_e,carbon dioxide (e),CO2,Nitrogen Metabolism,Nitrogen disposal,-0.8566956954519471,r1418
+3hbcoa_m,(S)-3-hydroxybutanoyl-CoA(4-) (m),Ketone/FA-CoA,Fatty Acid Degradation,Lipid metabolism,6.0,HACD1m;ECOAH1m
+aacoa_c,Acetoacetyl-CoA (c),Ketone/FA-CoA,Pyruvate Metabolism,Central Energy Metabolism,0.5729643986846156,ACACT1r
+dutp_m,dUTP (m),Dutp,Nucleotide Metabolism,Nucleotide metabolism,6.0,NDPK6m
+lpam_m,lipoamide (m),Lipoamide,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,GCC2am
+pser__L_c,O-Phospho-L-serine (c),O-phospho-l-serine,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,PSERT
+pro__L_c,L-proline (c),L-Pro,Extracellular Transport,Extracellular Transport,1.6525196699827172,PROt4;r1402
+ump_m,UMP (m),Ump,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987111658,UMPK2m
+cbp_m,Carbamoyl phosphate (m),Carb-P,Urea Cycle,Nitrogen disposal,0.57296439871112,r0034
+co2_c,carbon dioxide (c),CO2,Pentose Phosphate Pathway,Redox & Pentose Metabolism,0.5729643987467458,GND
+h2o_c,Water (c),H2O,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643986844795,_LPASE;GPDDA1;PGPP_hs
+pi_c,hydrogenphosphate (c),Pi,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5729643987543099,ASPCTr;ADSS
+3hbcoa_m,(S)-3-hydroxybutanoyl-CoA(4-) (m),Ketone/FA-CoA,Lysine Degradation,AA other,6.0,HACD1m;ECOAH1m
+dump_c,dUMP (c),Dump,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987008427,URIDK2;_DURIK1
+aacoa_c,Acetoacetyl-CoA (c),Ketone/FA-CoA,Tryptophan Metabolism,AA other,0.5729643986846156,ACACT1r
+10fthf_m,10-Formyltetrahydrofolate (m),Folate pool,Folate Metabolism,Folate metabolism,6.0,MTHFCm;FTHFDHm
+dhcrm_hs_c,dihydroceramide (c),Dihydroceramide,Sphingolipid Metabolism,Sphingolipid Metabolism,6.0,RE2675C;_DSAT
+cholp_c,choline phosphate(1-) (c),Choline phosphate,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643986963399,CHOLK;CHLPCTD
+ppi_c,Diphosphate (c),Diphosphate,Pyrimidine Synthesis,Nucleotide metabolism,0.5729643987111651,ORPT
+ctp_c,CTP (c),C-nucleotides,Pyrimidine Synthesis,Nucleotide metabolism,0.5729643986979145,CTPS2
+ditp_n,dITP(4-) (n),I-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,NDPK10n
+adp_m,ADP (m),A-nucleotides,Arginine Biosynthesis,AA other,0.57296439871112,r0034
+amp_c,AMP (c),A-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987115163,ADK1;ADSL1;NTD7
+h_m,proton (m),H+,Nucleotide Interconversion,Nucleotide metabolism,6.0,_DUTPDPm
+pi_m,hydrogenphosphate (m),Pi,Arginine Biosynthesis,AA other,0.57296439871112,r0034
+nadph_m,Nicotinamide adenine dinucleotide phosphate - reduced (m),NADP+ - reduced,Folate Metabolism,Folate metabolism,6.0,FTHFDHm;r0226
+prpp_c,5-Phospho-alpha-D-ribose 1-diphosphate (c),5-Phospho-alpha-d-ribose 1-diphosphate,Pyrimidine Synthesis,Nucleotide metabolism,0.5729643987111651,ORPT
+asp__L_c,L-aspartate(1-) (c),L-aspartate,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.572964398733278,ASPTA;ASPCTr;ADSS
+h2o_m,Water (m),H2O,Tryptophan Metabolism,AA other,6.0,ECOAH1m
+nadh_c,Nicotinamide adenine dinucleotide - reduced (c),NAD+ - reduced,Citric Acid Cycle,Central Energy Metabolism,0.5729643987238328,MDH
+h2o_m,Water (m),H2O,Lysine Metabolism,Lysine Metabolism,6.0,SACCD3m;r0525;r0594m
+dadp_c,dADP (c),A-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987111656,NDPK8;ADKd
+dcamp_c,"N6-(1,2-Dicarboxyethyl)-AMP (c)","N6-(1,2-dicarboxyethyl)-A-nucleotides",Nucleotide Interconversion,Nucleotide metabolism,0.5729643988031662,ADSL1;ADSS
+h2o_m,Water (m),H2O,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.543909667538749,ECOAH9m;3HBCOAHLm;ECOAH12m
+arg__L_c,L-argininium(1+) (c),Arg,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+2oxoadp_m,2-oxoadipate(2-) (m),Aminoadipate derivatives,2-oxocarboxylic Acid Metabolism,2-oxocarboxylic Acid Metabolism,6.0,r0450;2OXOADOXm
+nadp_c,Nicotinamide adenine dinucleotide phosphate (c),NADP+,Fatty Acid Biosynthesis,Lipid metabolism,0.5729643986846158,FAS120COA;FAS100COA;FAS140COA;FAS160COA;FAS80COA__L
+met__L_c,L-methionine (c),L-methionine,Extracellular Transport,Extracellular Transport,0.5729643987111656,METt4;METtec;r1402
+hco3_m,Bicarbonate (m),HCO3-,Fatty Acid Metabolism,Lipid metabolism,0.5729643986846154,ACCOACm
+atp_m,ATP (m),A-nucleotides,Fatty Acid Degradation,Lipid metabolism,0.5729643986846154,ACCOACm
+ppi_c,Diphosphate (c),Diphosphate,"Transport, Endoplasmic Reticulum","Transport, Endoplasmic Reticulum",0.57296439871112,PPItr
+ps_hs_m,phosphatidylserine (m),PtSer,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643987111653,PSDm_hs
+pro__L_c,L-proline (c),L-Pro,"Transport, Mitochondrial",Mitochondrial transport,6.0,PROtm
+pser__L_c,O-Phospho-L-serine (c),O-phospho-l-serine,"Transport, Mitochondrial",Mitochondrial transport,6.0,PSERtm
+h_m,proton (m),H+,Folate Metabolism,Folate metabolism,6.0,MTHFCm;FTHFDHm;r0226
+amp_c,AMP (c),A-nucleotides,Butanoate Metabolism,AA other,0.572964398684616,AACOAT
+ump_m,UMP (m),Ump,"Transport, Mitochondrial",Mitochondrial transport,0.5729643987111653,HUMANGEM_MAR20148
+2mp2coa_m,2-Methylprop-2-enoyl-CoA (m),Ketone/FA-CoA,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.8025482880538267,ECOAH12m;r0560
+3mob_c,3-methyl-2-oxobutanoate (c),BCAA α-ketoacids,2-oxocarboxylic Acid Metabolism,2-oxocarboxylic Acid Metabolism,-0.802548288064555,VALTA
+orot_c,Orotate (c),Orotate,Pyrimidine Synthesis,Nucleotide metabolism,0.5729643987111651,_DHORD9;ORPT
+dadp_m,dADP (m),A-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,6.0,NDPK8m
+prpp_c,5-Phospho-alpha-D-ribose 1-diphosphate (c),5-Phospho-alpha-d-ribose 1-diphosphate,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987111651,ORPT
+uri_c,Uridine (c),Uridine,Extracellular Transport,Extracellular Transport,0.5729643986952752,URIt
+hmgcoa_m,Hydroxymethylglutaryl-CoA (m),Ketone/FA-CoA,Terpenoid Backbone Biosynthesis,Terpenoid Backbone Biosynthesis,0.5729643986846162,HMGCOASim
+pa_hs_c,phosphatidate(2-) (c),Phosphatidate,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+cdp_m,CDP (m),C-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987111656,NDPK3m;CYTK1m
+malcoa_m,Malonyl-CoA (m),Malonyl-CoA pool,"Transport, Mitochondrial",Mitochondrial transport,0.5729643986846156,MALCOAtm
+dudp_m,dUDP (m),U-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,NDPK6m
+lpchol_hs_c,lysophosphatidylcholine (c),Lysophosphatidylcholine,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643986840695,_LPASE
+trp__L_c,L-tryptophan (c),L-tryptophan,Extracellular Transport,Extracellular Transport,0.5729643987491801,TRPt;r1402
+h2o_m,Water (m),H2O,Nucleotide Interconversion,Nucleotide metabolism,0.5729643988283288,_DUTPDPm;NTD9m;NTD7m
+b2coa_m,crotonoyl-CoA(4-) (m),Ketone/FA-CoA,Fatty Acid Metabolism,Lipid metabolism,6.0,ECOAH1m
+gly_c,Glycine (c),Gly,"Transport, Mitochondrial",Mitochondrial transport,6.0,GLYtm
+pyr_m,pyruvate (m),Pyr,"Transport, Mitochondrial",Mitochondrial transport,0.5729643986846156,r1464
+h2o_m,Water (m),H2O,Taurine And Hypotaurine Metabolism,Taurine And Hypotaurine Metabolism,-0.8007489670516705,GLUDxm
+ppi_m,Diphosphate (m),Diphosphate,Oxidative Phosphorylation,Oxidative Phosphorylation,0.5729643987091395,PPAm
+lys__L_m,L-lysinium(1+) (m),Lys,"Transport, Mitochondrial",Mitochondrial transport,6.0,_LYStm
+oaa_c,Oxaloacetate (c),Oxaloacetate,Methane Metabolism,Methane Metabolism,0.5729643987238328,MDH
+ppi_c,Diphosphate (c),Diphosphate,Purine Metabolism,Nitrogen disposal,0.5729643987168801,GUAPRT;GLUPRT
+asp__L_c,L-aspartate(1-) (c),L-aspartate,Arginine Biosynthesis,AA other,0.5729643987289457,ASPTA
+glu__L_c,L-glutamate(1-) (c),L-Glu,Methane Metabolism,Methane Metabolism,6.0,PSERT
+lpam_m,lipoamide (m),Lipoamide,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,GCC2am
+cbasp_c,N-Carbamoyl-L-aspartate (c),N-carbamoyl-l-aspartate,Pyrimidine Metabolism,Nucleotide metabolism,0.57296439871112,ASPCTr
+5aizc_c,5-amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxylate (c),5-Amino-1-(5-phospho-d-ribosyl)imidazole-4-carboxylate,Purine Metabolism,Nitrogen disposal,0.5729643987744117,AIRCr;PRASCS
+pi_c,hydrogenphosphate (c),Pi,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987144661,NTD8;_DURIPP;ADSS;PUNP1;NTD7
+aacoa_c,Acetoacetyl-CoA (c),Ketone/FA-CoA,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),0.572964398684616,AACOAT;ACACT1r
+gar_c,N1-(5-Phospho-D-ribosyl)glycinamide (c),N1-(5-phospho-d-ribosyl)glycinamide,Purine Metabolism,Nitrogen disposal,0.5729643987744117,PRAGSr;GARFT
+2dr1p_c,2-Deoxy-D-ribose 1-phosphate (c),2-Deoxy-d-ribose 1-phosphate,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987006509,_DURIPP
+aacoa_m,Acetoacetyl-CoA (m),Ketone/FA-CoA,Pyruvate Metabolism,Central Energy Metabolism,-6.0,ACACT1rm
+h_m,proton (m),H+,Synthesis And Degradation Of Ketone Bodies,Lipid metabolism,0.5729643986846162,HMGCOASim
+prpp_c,5-Phospho-alpha-D-ribose 1-diphosphate (c),5-Phospho-alpha-d-ribose 1-diphosphate,Purine Metabolism,Nitrogen disposal,0.5729643987164442,PRPPS;GUAPRT;GLUPRT
+r1p_c,alpha-D-Ribose 1-phosphate (c),Alpha-d-ribose 1-phosphate,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987006509,PYNP2r
+h_m,proton (m),H+,Urea Cycle,Nitrogen disposal,0.57296439871112,r0034
+pi_c,hydrogenphosphate (c),Pi,Extracellular Transport,Extracellular Transport,0.5729643987297266,PIt9;PCt;PSFLIP;r1402
+h2o_m,Water (m),H2O,Folate Metabolism,Folate metabolism,6.0,MTHFCm;FTHFDHm;GHMT2rm
+r5p_c,alpha-D-Ribose 5-phosphate (c),Alpha-d-ribose 5-phosphate,Pentose Phosphate Pathway,Redox & Pentose Metabolism,0.57296439871607,PRPPS;PPM;RPI
+co2_e,carbon dioxide (e),CO2,Extracellular Transport,Extracellular Transport,0.8357100903265128,CO2t
+gmp_c,GMP (c),G-nucleotides,Nucleotide Salvage Pathway,Nucleotide Salvage Pathway,0.5729643987013813,GUAPRT
+ditp_c,dITP(4-) (c),I-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,NDPK10
+utp_c,UTP (c),Utp,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643986979145,CTPS2
+pro__L_e,L-Proline (e),L-Pro,Extracellular Transport,Extracellular Transport,1.6809934729935103,PROt4
+h2o_m,Water (m),H2O,Cyanoamino Acid Metabolism,Cyanoamino Acid Metabolism,6.0,GHMT2rm
+dudp_m,dUDP (m),U-nucleotides,"Transport, Mitochondrial",Mitochondrial transport,6.0,_DNDPt14m
+utp_c,UTP (c),Utp,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+co2_m,carbon dioxide (m),CO2,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.543909667538749,r0670;MMSAD1m;r0385
+ppi_c,Diphosphate (c),Diphosphate,Purine Synthesis,Nucleotide metabolism,0.572964398774412,GLUPRT
+saccrp__L_m,L-saccharopinate(1-) (m),L-saccharoPinate,Lysine Degradation,AA other,6.0,r0525;SACCD3m
+val__L_c,L-valine (c),L-Val,2-oxocarboxylic Acid Metabolism,2-oxocarboxylic Acid Metabolism,-0.802548288064555,VALTA
+5aizc_c,5-amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxylate (c),5-Amino-1-(5-phospho-d-ribosyl)imidazole-4-carboxylate,Purine Synthesis,Nucleotide metabolism,0.5729643987744117,AIRCr;PRASCS
+tdcoa_c,Tetradecanoyl-CoA (n-C14:0CoA) (c),Tetradecanoyl-CoA pool (n-c14:0CoA pool),Fatty Acid Biosynthesis,Lipid metabolism,0.572964398684616,FAS140COA;FAS160COA
+glu__L_c,L-glutamate(1-) (c),L-Glu,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643986979145,CTPS2
+gar_c,N1-(5-Phospho-D-ribosyl)glycinamide (c),N1-(5-phospho-d-ribosyl)glycinamide,Purine Synthesis,Nucleotide metabolism,0.5729643987744117,PRAGSr;GARFT
+akg_c,2-Oxoglutarate (c),2-Oxoglutarate,Cysteine And Methionine Metabolism,AA other,6.0,PSERT
+prpp_c,5-Phospho-alpha-D-ribose 1-diphosphate (c),5-Phospho-alpha-d-ribose 1-diphosphate,Purine Synthesis,Nucleotide metabolism,0.572964398774412,GLUPRT
+glu__L_c,L-glutamate(1-) (c),L-Glu,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+ump_c,UMP (c),Ump,Pyrimidine Synthesis,Nucleotide metabolism,0.5729643987111653,OMPDC
+val__L_c,L-valine (c),L-Val,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",-0.802548288064555,VALTA
+malcoa_m,Malonyl-CoA (m),Malonyl-CoA pool,Fatty Acid Biosynthesis,Lipid metabolism,0.5729643986846154,ACCOACm
+h_m,proton (m),H+,Fatty Acid Biosynthesis,Lipid metabolism,0.5729643986846154,ACCOACm
+prpp_c,5-Phospho-alpha-D-ribose 1-diphosphate (c),5-Phospho-alpha-d-ribose 1-diphosphate,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987013813,GUAPRT
+oaa_c,Oxaloacetate (c),Oxaloacetate,Glyoxylate And Dicarboxylate Metabolism,Glyoxylate And Dicarboxylate Metabolism,0.5729643987238328,MDH
+hmgcoa_m,Hydroxymethylglutaryl-CoA (m),Ketone/FA-CoA,Cholesterol Metabolism,Lipid metabolism,0.5729643986846162,HMGLm
+glygn2_c,"glycogen, structure 2 (glycogenin-1,6-{7[1,4-Glc], 4[1,4-Glc]}) (c)","Glycogen, structure 2 (glycogenin-1,6-{7[1,4-glc], 4[1,4-glc]})",Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+dtdp_c,dTDP (c),T-nucleotides,"Transport, Mitochondrial",Mitochondrial transport,6.0,_DNDPt14m
 3hbcoa_m,(S)-3-hydroxybutanoyl-CoA(4-) (m),Ketone/FA-CoA,Tryptophan Metabolism,AA other,6.0,HACD1m;ECOAH1m
+h_c,proton (c),H+,Pyrimidine Synthesis,Nucleotide metabolism,0.5729643987039892,CTPS2;OMPDC;_DHORTS;ASPCTr
+accoa_c,Acetyl-CoA (c),Acetyl-CoA pool,Butanoate Metabolism,AA other,0.5729643986846156,ACACT1r
+pro__L_m,L-proline (m),L-Pro,Arginine And Proline Metabolism,Arginine And Proline Metabolism,6.0,PRO1xm
+orot5p_c,Orotidine 5-phosphate (c),Orotidine 5-phosphate,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987111651,OMPDC;ORPT
+h2o_m,Water (m),H2O,Synthesis And Degradation Of Ketone Bodies,Lipid metabolism,0.5729643986846162,HMGCOASim
+pram_c,5-Phospho-beta-D-ribosylamine (c),5-Phospho-beta-d-ribosylamine,Purine Metabolism,Nitrogen disposal,0.572964398774412,GLUPRT;PRAGSr
+h2o_m,Water (m),H2O,Urea Cycle,Nitrogen disposal,0.57296439871112,r0034
+dcacoa_c,Decanoyl-CoA (n-C10:0CoA) (c),Decanoyl-CoA pool (n-c10:0CoA pool),Fatty Acid Biosynthesis,Lipid metabolism,0.572964398684616,FAS100COA;FAS120COA
+nad_m,Nicotinamide adenine dinucleotide (m),NAD+,Arginine Biosynthesis,AA other,-0.8007489670516705,GLUDxm
+dhlam_m,dihydrolipoamide (m),Dihydrolipoamide,Glycolysis/Gluconeogenesis,Central Energy Metabolism,2.181966862645131,GCC2cm
+dutp_m,dUTP (m),Dutp,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987111656,_DUTPDPm;NDPK6m
+co2_m,carbon dioxide (m),CO2,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,GCC2am
+pchol_hs_c,Phosphatidylcholine (c),Phosphatidylcholine,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+h_m,proton (m),H+,Terpenoid Backbone Biosynthesis,Terpenoid Backbone Biosynthesis,0.5729643986846162,HMGCOASim
+datp_c,dATP (c),A-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987111656,NDPK8;ADKd
+dhlam_m,dihydrolipoamide (m),Dihydrolipoamide,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,GCC2bim
+didp_c,dIDP (c),I-nucleotides,Purine Metabolism,Nitrogen disposal,6.0,NDPK10
+his__L_c,L-histidine (c),L-histidine,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+h_c,proton (c),H+,Cysteine And Methionine Metabolism,AA other,6.0,PGCD
+hco3_c,Bicarbonate (c),HCO3-,"Transport, Endoplasmic Reticulum","Transport, Endoplasmic Reticulum",1.1672354983333308,HUMANGEM_MAR06107
+mlthf_m,"5,10-Methylenetetrahydrofolate (m)",Folate pool,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,GHMT2rm
+adp_n,ADP (n),A-nucleotides,Pyrimidine Metabolism,Nucleotide metabolism,6.0,NDPK4n
+co2_m,carbon dioxide (m),CO2,Folate Metabolism,Folate metabolism,6.0,FTHFDHm
+3hibutcoa_m,(S)-3-Hydroxyisobutyryl-CoA (m),Ketone/FA-CoA,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.8025482880538267,3HBCOAHLm;ECOAH12m
+fum_c,Fumarate (c),Fumarate,Purine Metabolism,Nitrogen disposal,0.5729643987861271,ADSL2;ADSL1
+pram_c,5-Phospho-beta-D-ribosylamine (c),5-Phospho-beta-d-ribosylamine,Purine Synthesis,Nucleotide metabolism,0.572964398774412,GLUPRT;PRAGSr
+pi_c,hydrogenphosphate (c),Pi,Pyrimidine Synthesis,Nucleotide metabolism,0.5729643987008307,CTPS2;ASPCTr
+glyc3p_c,Glycerol 3-phosphate (c),Glycerol 3-phosphate,Triacylglycerol Synthesis,Lipid metabolism,0.5729643986970447,GPAM_hs
+malcoa_m,Malonyl-CoA (m),Malonyl-CoA pool,Fatty Acid Degradation,Lipid metabolism,0.5729643986846154,ACCOACm
+h_m,proton (m),H+,Fatty Acid Degradation,Lipid metabolism,0.6725000722355299,ACCOACm;HACD1m
+arg__L_e,L-Arginine (e),L-Arg,Extracellular Transport,Extracellular Transport,0.5729643987105012,ARGATB0tc;ARGLYSex
+glu__L_m,L-glutamate(1-) (m),L-Glu,Nitrogen Metabolism,Nitrogen disposal,-0.8007489670516705,GLUDxm
+h_c,proton (c),H+,Glyoxylate And Dicarboxylate Metabolism,Glyoxylate And Dicarboxylate Metabolism,0.5729643987238328,MDH
+nadh_m,Nicotinamide adenine dinucleotide - reduced (m),NAD+ - reduced,Arginine Biosynthesis,AA other,-0.8007489670516705,GLUDxm
+3php_c,3-phosphonatooxypyruvate(3-) (c),3-PhosphonatooxyPyr,Cysteine And Methionine Metabolism,AA other,6.0,PGCD;PSERT
+co2_m,carbon dioxide (m),CO2,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),-0.8025482880538267,MMSAD1m
+adp_c,ADP (c),A-nucleotides,Pyrimidine Synthesis,Nucleotide metabolism,0.5729643986979145,CTPS2
+ade_c,Adenine (c),Adenine,Purine Metabolism,Nitrogen disposal,0.5729643987111395,PUNP2;PUNP1
+accoa_m,Acetyl-CoA (m),Acetyl-CoA pool,Fatty Acid Biosynthesis,Lipid metabolism,0.5729643986846154,ACCOACm
+akg_m,2-Oxoglutarate (m),2-Oxoglutarate,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",-0.8007489670519523,GLUDxm;ALATA__Lm
+h_m,proton (m),H+,Lysine Degradation,AA other,6.0,HACD1m;SACCD3m;r0525
+gua_c,Guanine (c),Guanine,Purine Metabolism,Nitrogen disposal,0.5729643987013813,GUAPRT;PUNP4;PUNP3
+pyr_c,pyruvate (c),Pyr,Extracellular Transport,Extracellular Transport,-0.6520825826830301,PYRt2
+adn_c,Adenosine (c),Adenosine,Purine Metabolism,Nitrogen disposal,0.5729643988131224,PUNP1;NTD7
+prpp_c,5-Phospho-alpha-D-ribose 1-diphosphate (c),5-Phospho-alpha-d-ribose 1-diphosphate,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.572964398774412,GLUPRT
+asp__L_c,L-aspartate(1-) (c),L-aspartate,Pyrimidine Synthesis,Nucleotide metabolism,0.57296439871112,ASPCTr
+mlthf_m,"5,10-Methylenetetrahydrofolate (m)",Folate pool,Folate Metabolism,Folate metabolism,6.0,MTHFD2m;GHMT2rm
+glu__L_c,L-glutamate(1-) (c),L-Glu,Nucleotide Metabolism,Nucleotide metabolism,0.5729643986979145,CTPS2
+adp_m,ADP (m),A-nucleotides,Purine Metabolism,Nitrogen disposal,6.0,NDPK8m;ADK1m
+nad_m,Nicotinamide adenine dinucleotide (m),NAD+,Butanoate Metabolism,AA other,6.0,HACD1m
+gtp_c,GTP (c),G-nucleotides,Purine Metabolism,Nitrogen disposal,0.5729643987923116,NDPK1;ADSS
+lys__L_m,L-lysinium(1+) (m),Lys,Lysine Degradation,AA other,6.0,SACCD3m
+3hbcoa_m,(S)-3-hydroxybutanoyl-CoA(4-) (m),Ketone/FA-CoA,Fatty Acid Metabolism,Lipid metabolism,6.0,HACD1m;ECOAH1m
+mlthf_m,"5,10-Methylenetetrahydrofolate (m)",Folate pool,Cyanoamino Acid Metabolism,Cyanoamino Acid Metabolism,6.0,GHMT2rm
+fum_c,Fumarate (c),Fumarate,Purine Synthesis,Nucleotide metabolism,0.5729643987744115,ADSL2
+gly_m,Glycine (m),Gly,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,GCC2am;GHMT2rm
+gly_m,Glycine (m),Gly,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,GHMT2rm
+coa_c,Coenzyme A (c),CoA pool,Butanoate Metabolism,AA other,0.572964398684616,AACOAT;ACACT1r
+aacoa_c,Acetoacetyl-CoA (c),Ketone/FA-CoA,Fatty Acid Degradation,Lipid metabolism,0.5729643986846156,ACACT1r
+fum_c,Fumarate (c),Fumarate,Nucleotide Metabolism,Nucleotide metabolism,0.5729643988031666,ADSL1
+aacoa_m,Acetoacetyl-CoA (m),Ketone/FA-CoA,Synthesis And Degradation Of Ketone Bodies,Lipid metabolism,0.5729643986846162,HMGCOASim
+didp_n,dIDP (n),I-nucleotides,"Transport, Nuclear","Transport, Nuclear",6.0,_DIDPtn
+r5p_c,alpha-D-Ribose 5-phosphate (c),Alpha-d-ribose 5-phosphate,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.572964398723574,PRPPS;RPI
+accoa_c,Acetyl-CoA (c),Acetyl-CoA pool,Fatty Acid Biosynthesis,Lipid metabolism,0.5729643986846156,FAS80COA__L
+pmtcoa_c,Palmitoyl-CoA (n-C16:0CoA) (c),Palmitoyl-CoA pool (n-c16:0CoA pool),Fatty Acid Biosynthesis,Lipid metabolism,0.5729643986846156,FAS160COA
+oaa_c,Oxaloacetate (c),Oxaloacetate,Citric Acid Cycle,Central Energy Metabolism,0.5729643987238328,MDH
+aacoa_c,Acetoacetyl-CoA (c),Ketone/FA-CoA,Lysine Degradation,AA other,0.5729643986846156,ACACT1r
+tag_hs_c,triglyceride (c),Triglyceride,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+co2_m,carbon dioxide (m),CO2,Urea Cycle,Nitrogen disposal,0.57296439871112,r0034
+q10_m,ubiquinone-10 (m),Ubiquinone-10,Pyrimidine Synthesis,Nucleotide metabolism,0.5729643987111653,_DHORD9
+cbasp_c,N-Carbamoyl-L-aspartate (c),N-carbamoyl-l-aspartate,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.57296439871112,ASPCTr
+nadp_c,Nicotinamide adenine dinucleotide phosphate (c),NADP+,Tryptophan Metabolism,AA other,0.5729643987744161,KYN3OX
+pyr_c,pyruvate (c),Pyr,"Transport, Mitochondrial",Mitochondrial transport,0.5729643986846156,r1464
+h2o_m,Water (m),H2O,Fatty Acid Degradation,Lipid metabolism,6.0,ECOAH1m
+adn_c,Adenosine (c),Adenosine,Nucleotide Metabolism,Nucleotide metabolism,0.5729643988131224,PUNP1;NTD7
+amp_c,AMP (c),A-nucleotides,Pentose Phosphate Pathway,Redox & Pentose Metabolism,0.5729643987160702,PRPPS
+glu__L_e,L-glutamate(1-) (e),L-Glu,Glutathione Metabolism,Redox & Pentose Metabolism,-6.0,r0130
+gly_m,Glycine (m),Gly,Folate Metabolism,Folate metabolism,6.0,GHMT2rm
+dhf_m,"7,8-Dihydrofolate (m)","7,8-Folate pool",Nucleotide Interconversion,Nucleotide metabolism,6.0,TMDSm
+h_c,proton (c),H+,Purine Synthesis,Nucleotide metabolism,0.5729643987744117,r0666;PRAGSr;GARFT;PRFGS;AIRCr;PRASCS
+nadh_m,Nicotinamide adenine dinucleotide - reduced (m),NAD+ - reduced,Butanoate Metabolism,AA other,6.0,HACD1m
+h2o_m,Water (m),H2O,Lysine Degradation,AA other,6.0,SACCD3m;r0525;ECOAH1m
+chsterol_c,cholesterol (c),Cholesterol,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+akg_m,2-Oxoglutarate (m),2-Oxoglutarate,Arginine Biosynthesis,AA other,-0.8007489670519523,GLUDxm;ALATA__Lm
+fum_c,Fumarate (c),Fumarate,Citric Acid Cycle,Central Energy Metabolism,0.5729643987861271,FUM
+pram_c,5-Phospho-beta-D-ribosylamine (c),5-Phospho-beta-d-ribosylamine,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.572964398774412,GLUPRT
+atp_m,ATP (m),A-nucleotides,Fatty Acid Metabolism,Lipid metabolism,0.5729643986846154,ACCOACm
+accoa_c,Acetyl-CoA (c),Acetyl-CoA pool,Terpenoid Backbone Biosynthesis,Terpenoid Backbone Biosynthesis,0.5729643986846156,ACACT1r
+gly_m,Glycine (m),Gly,Cyanoamino Acid Metabolism,Cyanoamino Acid Metabolism,6.0,GHMT2rm
+saccrp__L_m,L-saccharopinate(1-) (m),L-saccharoPinate,Lysine Metabolism,Lysine Metabolism,6.0,r0525;SACCD3m
+adp_n,ADP (n),A-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,0.5729643988483158,NDPK10n;NDPK4n
+h_c,proton (c),H+,Sphingolipid Metabolism,Sphingolipid Metabolism,0.5729643983774859,RE2675C;3DSPHR;_DSAT;SERPT
+h_e,proton (e),H+,Pyrimidine Catabolism,Nucleotide metabolism,0.5729643986952747,CYTDe
+dad_2_c,Deoxyadenosine (c),A-nucleotides,Purine Metabolism,Nitrogen disposal,6.0,PUNP2
+datp_m,dATP (m),A-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,6.0,NDPK8m
+3pg_c,3-Phospho-D-glycerate (c),3-Phospho-d-glycerate,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,PGCD
+oaa_c,Oxaloacetate (c),Oxaloacetate,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5729643987289457,ASPTA
+val__L_c,L-valine (c),L-Val,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+glu__L_c,L-glutamate(1-) (c),L-Glu,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",2.291505731820113,PSERT;ASPTA;ALATA__L;GLUPRT
+nadh_c,Nicotinamide adenine dinucleotide - reduced (c),NAD+ - reduced,Cysteine And Methionine Metabolism,AA other,6.0,PGCD
+ppi_m,Diphosphate (m),Diphosphate,Nucleotide Interconversion,Nucleotide metabolism,6.0,_DUTPDPm
+mlthf_m,"5,10-Methylenetetrahydrofolate (m)",Folate pool,Methane Metabolism,Methane Metabolism,6.0,GHMT2rm
+asp__L_c,L-aspartate(1-) (c),L-aspartate,Purine Metabolism,Nitrogen disposal,0.5729643987861271,PRASCS;ADSS
+h_c,proton (c),H+,Pentose Phosphate Pathway,Redox & Pentose Metabolism,0.5729643987281293,PRPPS;PGL;G6PDH2r
+dudp_c,dUDP (c),U-nucleotides,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987010277,URIDK2
+cbp_m,Carbamoyl phosphate (m),Carb-P,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.57296439871112,r0034
+Rtotalcoa_c,R total Coenzyme A (c),R total CoA pool,Triacylglycerol Synthesis,Lipid metabolism,0.5729643986970447,GPAM_hs
+h_c,proton (c),H+,Citric Acid Cycle,Central Energy Metabolism,0.5729643987238328,MDH
+dgtp_c,dGTP (c),G-nucleotides,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+nad_c,Nicotinamide adenine dinucleotide (c),NAD+,Cysteine And Methionine Metabolism,AA other,6.0,PGCD
+fum_c,Fumarate (c),Fumarate,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5729643988031666,ADSL1
+bilglcur_c,mono(glucosyluronic acid)bilirubin(2-) (c),Mono(glucosyluronic acid)bilirubin,"Transport, Endoplasmic Reticulum","Transport, Endoplasmic Reticulum",1.1672354983333308,HUMANGEM_MAR06107;BILGLCURtr
+xolest2_hs_e,cholesterol ester (e),Cholesterol ester,Fatty Acid Degradation,Lipid metabolism,0.5729643986840695,_LCAT1e
+glu__L_m,L-glutamate(1-) (m),L-Glu,Taurine And Hypotaurine Metabolism,Taurine And Hypotaurine Metabolism,-0.8007489670516705,GLUDxm
+accoa_c,Acetyl-CoA (c),Acetyl-CoA pool,Lysine Degradation,AA other,0.5729643986846156,ACACT1r
+crm_hs_c,N-acylsphingosine (c),N-acylsphingosine,Sphingolipid Metabolism,Sphingolipid Metabolism,6.0,SMS;RE2675C
+adp_c,ADP (c),A-nucleotides,Purine Synthesis,Nucleotide metabolism,0.5729643987744117,r0666;PRFGS;PRASCS;PRAGSr
+dadp_m,dADP (m),A-nucleotides,Pyrimidine Synthesis,Nucleotide metabolism,6.0,RE0452M
+dad_2_c,Deoxyadenosine (c),A-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,6.0,PUNP2
+adp_m,ADP (m),A-nucleotides,Nitrogen Metabolism,Nitrogen disposal,0.57296439871112,r0034
+pi_m,hydrogenphosphate (m),Pi,Nitrogen Metabolism,Nitrogen disposal,0.57296439871112,r0034
+accoa_m,Acetyl-CoA (m),Acetyl-CoA pool,Cholesterol Metabolism,Lipid metabolism,0.5729643986846162,HMGLm
+nad_c,Nicotinamide adenine dinucleotide (c),NAD+,Glyoxylate And Dicarboxylate Metabolism,Glyoxylate And Dicarboxylate Metabolism,0.5729643987238328,MDH
+thf_m,"5,6,7,8-Tetrahydrofolate (m)",Folate pool,Glyoxylate And Dicarboxylate Metabolism,Glyoxylate And Dicarboxylate Metabolism,6.0,GHMT2rm
+2mop_m,2-methyl-3-oxopropanoate (m),BCAA α-ketoacids,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.8025482880538267,MMSAD1m;HIBDm
+ser__L_m,L-serine (m),L-serine,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,GHMT2rm
+uri_e,Uridine (e),Uridine,Extracellular Transport,Extracellular Transport,0.5729643986952752,URIt
+ditp_n,dITP(4-) (n),I-nucleotides,"Transport, Nuclear","Transport, Nuclear",6.0,_DITPtn
+asp__L_c,L-aspartate(1-) (c),L-aspartate,Purine Synthesis,Nucleotide metabolism,0.5729643987744117,PRASCS
+hmgcoa_m,Hydroxymethylglutaryl-CoA (m),Ketone/FA-CoA,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),0.5729643986846162,HMGLm;HMGCOASim
+glu__L_c,L-glutamate(1-) (c),L-Glu,Pantothenate And Coa Biosynthesis,Pantothenate And Coa Biosynthesis,-0.802548288064555,VALTA
+leu__L_c,L-leucine (c),L-leucine,Extracellular Transport,Extracellular Transport,0.5729643987111653,_LEUt4;_LEUtec;r1402
+chol_e,Choline (e),Choline,Extracellular Transport,Extracellular Transport,0.5729643987111666,CHOLtu
+aacoa_m,Acetoacetyl-CoA (m),Ketone/FA-CoA,Fatty Acid Degradation,Lipid metabolism,0.5729643986846162,HACD1m;ACACT1rm
+cytd_e,Cytidine (e),Cytidine,Extracellular Transport,Extracellular Transport,0.5729643986952747,CYTDt
+gar_c,N1-(5-Phospho-D-ribosyl)glycinamide (c),N1-(5-phospho-d-ribosyl)glycinamide,Folate Metabolism,Folate metabolism,0.5729643987744117,GARFT
+ppi_c,Diphosphate (c),Diphosphate,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),0.572964398684616,AACOAT
+cmp_c,CMP (c),C-nucleotides,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987111649,CYTDK1;CYTK1
+akg_c,2-Oxoglutarate (c),2-Oxoglutarate,Tryptophan Metabolism,AA other,0.5729643987744161,3HKYNAKGAT
+ppi_m,Diphosphate (m),Diphosphate,"Transport, Mitochondrial",Mitochondrial transport,0.5729643987091333,PPItm
+ppi_c,Diphosphate (c),Diphosphate,"Transport, Mitochondrial",Mitochondrial transport,0.5729643987091596,PPItm;HUMANGEM_MAR08651
+malcoa_m,Malonyl-CoA (m),Malonyl-CoA pool,Pyruvate Metabolism,Central Energy Metabolism,0.5729643986846154,ACCOACm
+acac_c,acetoacetate (c),Ketone bodies,Butanoate Metabolism,AA other,0.572964398684616,AACOAT
+oaa_c,Oxaloacetate (c),Oxaloacetate,Arginine Biosynthesis,AA other,0.5729643987289457,ASPTA
+aacoa_m,Acetoacetyl-CoA (m),Ketone/FA-CoA,Lysine Degradation,AA other,0.5729643986846162,HACD1m;ACACT1rm
+coa_c,Coenzyme A (c),CoA pool,Glyoxylate And Dicarboxylate Metabolism,Glyoxylate And Dicarboxylate Metabolism,0.5729643986846156,ACACT1r
+chsterol_e,Chsterol c (e),Chsterol c,Fatty Acid Degradation,Lipid metabolism,0.5729643986840695,_LCAT1e
+h_m,proton (m),H+,Tryptophan Metabolism,AA other,6.0,HACD1m;r0541
+ppi_c,Diphosphate (c),Diphosphate,Nucleotide Salvage Pathway,Nucleotide Salvage Pathway,0.5729643987013813,GUAPRT
+g1p_c,D-Glucose 1-phosphate (c),Glc 1-phosphate,Pentose And Glucuronate Interconversions,Redox & Pentose Metabolism,0.5729643987111656,GALU
+h_m,proton (m),H+,Lysine Metabolism,Lysine Metabolism,6.0,SACCD3m;r0525;r0594m
+acac_c,acetoacetate (c),Ketone bodies,"Transport, Mitochondrial",Mitochondrial transport,0.5729643986846156,r1464
+lys__L_e,L-lysinium(1+) (e),Lys,Extracellular Transport,Extracellular Transport,1.323942581876637,_LYSt5r;ARGLYSex
+ser__L_m,L-serine (m),L-serine,Cyanoamino Acid Metabolism,Cyanoamino Acid Metabolism,6.0,GHMT2rm
+atp_c,ATP (c),A-nucleotides,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),0.572964398684616,AACOAT
+hmgcoa_m,Hydroxymethylglutaryl-CoA (m),Ketone/FA-CoA,Synthesis And Degradation Of Ketone Bodies,Lipid metabolism,0.5729643986846162,HMGCOASim
+atp_n,ATP (n),A-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,0.572964398985466,NDPK10n;NDPK4n;ADK1n
+trdox_c,Oxidized thioredoxin (c),Oxidized thioredoxin,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987021279,RNDR2;r0475;TRDR;RNDR3
+pchol_hs_e,Phosphatidylcholine (e),Phosphatidylcholine,Extracellular Transport,Extracellular Transport,0.5729643986840695,PCt
+lys__L_m,L-lysinium(1+) (m),Lys,Lysine Metabolism,Lysine Metabolism,6.0,SACCD3m
+ser__L_c,L-serine (c),L-serine,Extracellular Transport,Extracellular Transport,0.572964398705848,SERt4;r1402
+pser__L_c,O-Phospho-L-serine (c),O-phospho-l-serine,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,PSERT
+pi_r,hydrogenphosphate (r),Pi,"Transport, Endoplasmic Reticulum","Transport, Endoplasmic Reticulum",0.57296439871112,PIter
+ppi_c,Diphosphate (c),Diphosphate,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643986972878,CHLPCTD;CDS
+didp_c,dIDP (c),I-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,NDPK10
+dudp_c,dUDP (c),U-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987010277,URIDK2
+ctp_c,CTP (c),C-nucleotides,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643986972878,CHLPCTD;CDS
+leu__L_e,L-Leucine (e),L-leucine,Extracellular Transport,Extracellular Transport,0.5729643987111653,_LEUt4;_LEUtec
+akg_c,2-Oxoglutarate (c),2-Oxoglutarate,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,PSERT
+lys__L_c,L-lysinium(1+) (c),Lys,Extracellular Transport,Extracellular Transport,1.3047645045927878,_LYSt5r;ARGLYSex;r1402
+q10h2_m,Ubiquinol-10 (m),Ubiquinol-10,Pyrimidine Synthesis,Nucleotide metabolism,0.5729643987111653,_DHORD9
+atp_m,ATP (m),A-nucleotides,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987111656,NDPK3m;NDPK6m;CYTK1m
+glu__L_c,L-glutamate(1-) (c),L-Glu,Glutathione Metabolism,Redox & Pentose Metabolism,1.167235498333331,r0129
+ade_c,Adenine (c),Adenine,Purine Catabolism,Purine Catabolism,6.0,PUNP2
+dhor_S_c,(S)-dihydroorotate (c),(S)-dihydroorotate,Pyrimidine Synthesis,Nucleotide metabolism,0.572964398711142,_DHORD9;_DHORTS
+o2_c,O2 (c),O2,Tryptophan Metabolism,AA other,0.5729643987744159,KYN3OX;TRPO2
+h2o_c,Water (c),H2O,Pyrimidine Catabolism,Nucleotide metabolism,0.5729643987111658,NTD2;_DCMPDA
+dadp_m,dADP (m),A-nucleotides,Purine Metabolism,Nitrogen disposal,6.0,NDPK8m
+gua_c,Guanine (c),Guanine,Purine Catabolism,Purine Catabolism,0.5729643987013813,PUNP4;PUNP3
+amp_c,AMP (c),A-nucleotides,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5729643987160702,PRPPS
+dtdp_n,dTDP (n),T-nucleotides,"Transport, Nuclear","Transport, Nuclear",6.0,_DTDPtn
+phe__L_c,L-phenylalanine (c),L-Phe,Extracellular Transport,Extracellular Transport,0.5729643987111117,PHEtec;TYRPHELAT2tc;r1402
+trp__L_c,L-tryptophan (c),L-tryptophan,Tryptophan Metabolism,AA other,0.5729643987744159,TRPO2
+mal__L_c,(S)-malate(2-) (c),(S)-malate,Pyruvate Metabolism,Central Energy Metabolism,0.5729643987357775,MDH;FUM
+asn__L_c,L-asparagine (c),L-asparagine,Extracellular Transport,Extracellular Transport,0.5729643987111656,ASNtN1;r1402
+h_m,proton (m),H+,Taurine And Hypotaurine Metabolism,Taurine And Hypotaurine Metabolism,-0.8007489670516705,GLUDxm
+ade_c,Adenine (c),Adenine,Nucleotide Interconversion,Nucleotide metabolism,6.0,PUNP1
+3mob_c,3-methyl-2-oxobutanoate (c),BCAA α-ketoacids,Pantothenate And Coa Biosynthesis,Pantothenate And Coa Biosynthesis,-0.802548288064555,VALTA
+dtdp_c,dTDP (c),T-nucleotides,"Transport, Nuclear","Transport, Nuclear",6.0,_DTDPtn
+atp_c,ATP (c),A-nucleotides,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643986961753,CHOLK;_DAGK_hs
+pchol_hs_c,Phosphatidylcholine (c),Phosphatidylcholine,Extracellular Transport,Extracellular Transport,0.5729643986840695,PCt
+C02470_c,Xanthurenic acid (c),Xanthurenic acid,Tryptophan Metabolism,AA other,0.5729643987744161,r0647
+adn_c,Adenosine (c),Adenosine,Nucleotide Interconversion,Nucleotide metabolism,0.5729643988131224,PUNP1;NTD7
+nad_c,Nicotinamide adenine dinucleotide (c),NAD+,Citric Acid Cycle,Central Energy Metabolism,0.5729643987238328,MDH
+tyr__L_e,L-Tyrosine (e),L-tyrosine,Extracellular Transport,Extracellular Transport,0.5729643987111656,TYRPHELAT2tc
+3mob_c,3-methyl-2-oxobutanoate (c),BCAA α-ketoacids,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.802548288064555,VALTA
+cmp_c,CMP (c),C-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987111649,CYTDK1;CYTK1
+adp_m,ADP (m),A-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,0.572964398662608,NDPK3m;NDPK6m;NDPK8m;CYTK1m;ADK1m
+coa_c,Coenzyme A (c),CoA pool,Sphingolipid Metabolism,Sphingolipid Metabolism,6.0,_DSAT;SERPT
+ser__L_m,L-serine (m),L-serine,Methane Metabolism,Methane Metabolism,6.0,GHMT2rm
+ura_c,uracil (c),Uracil,Pyrimidine Catabolism,Nucleotide metabolism,0.5729643987006509,PYNP2r
+lys__L_c,L-lysinium(1+) (c),Lys,"Transport, Mitochondrial",Mitochondrial transport,6.0,_LYStm
+gtp_c,GTP (c),G-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987923116,NDPK1;ADSS
+pi_m,hydrogenphosphate (m),Pi,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,PSP__Lm
+malcoa_m,Malonyl-CoA (m),Malonyl-CoA pool,Fatty Acid Metabolism,Lipid metabolism,0.5729643986846154,ACCOACm
+h_m,proton (m),H+,Fatty Acid Metabolism,Lipid metabolism,0.6725000722355299,ACCOACm;HACD1m
+glu__L_m,L-glutamate(1-) (m),L-Glu,Lysine Biosynthesis,Lysine Biosynthesis,6.0,r0450
+nadph_c,Nicotinamide adenine dinucleotide phosphate - reduced (c),NADP+ - reduced,Glutathione Metabolism,Redox & Pentose Metabolism,0.5729643987467458,GND
+_Lfmkynr_c,N-formyl-L-kynurenine (c),N-formyl-l-kynurenine,Tryptophan Metabolism,AA other,0.5729643987744161,FKYNH;TRPO2
+r1p_c,alpha-D-Ribose 1-phosphate (c),Alpha-d-ribose 1-phosphate,Pyrimidine Catabolism,Nucleotide metabolism,0.5729643987006509,PYNP2r
+amp_c,AMP (c),A-nucleotides,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),0.572964398684616,AACOAT
+dgsn_c,Deoxyguanosine (c),Deoxyguanosine,Purine Metabolism,Nitrogen disposal,0.5729643987011666,NTD8;PUNP4
+cbasp_c,N-Carbamoyl-L-aspartate (c),N-carbamoyl-l-aspartate,Pyrimidine Synthesis,Nucleotide metabolism,0.5729643987111195,_DHORTS;ASPCTr
+thr__L_c,L-Threonine (c),L-threonine,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+h2o_c,Water (c),H2O,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987018755,CTPS2;NTD2
+btn_e,Biotin (e),Biotin,Extracellular Transport,Extracellular Transport,-6.0,BTNt4i;BTNt2
+pglyc_hs_c,phosphatidylglycerol(1-) (c),Phosphatidylglycerol,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+accoa_c,Acetyl-CoA (c),Acetyl-CoA pool,Pyruvate Metabolism,Central Energy Metabolism,0.5729643986846156,ACACT1r
+ps_hs_c,phosphatidylserine (c),PtSer,Extracellular Transport,Extracellular Transport,0.5729643987111656,PSFLIP
+pser__L_m,O-Phospho-L-serine (m),O-phospho-l-serine,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,PSP__Lm
+ctp_m,CTP (m),C-nucleotides,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987111653,NDPK3m
+3php_c,3-phosphonatooxypyruvate(3-) (c),3-PhosphonatooxyPyr,"Glycine, Serine And Threonine Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,PGCD;PSERT
+gthrd_e,Reduced glutathione (e),Reduced glutathione,Glutathione Metabolism,Redox & Pentose Metabolism,-6.0,r0130
+pi_c,hydrogenphosphate (c),Pi,Purine Catabolism,Purine Catabolism,0.5729643987018297,PUNP4;PUNP2;PUNP3
+accoa_c,Acetyl-CoA (c),Acetyl-CoA pool,Tryptophan Metabolism,AA other,0.5729643986846156,ACACT1r
+utp_c,UTP (c),Utp,Pyrimidine Synthesis,Nucleotide metabolism,0.5729643986979145,CTPS2
+cgly_c,L-cysteinylglycine (c),L-cysteinylGly,Glutathione Metabolism,Redox & Pentose Metabolism,1.167235498333331,AMPTASECG;r0129
+2dr1p_c,2-Deoxy-D-ribose 1-phosphate (c),2-Deoxy-d-ribose 1-phosphate,Purine Catabolism,Purine Catabolism,0.5729643987016337,PUNP4;PUNP2
+dtdp_m,dTDP (m),T-nucleotides,"Transport, Mitochondrial",Mitochondrial transport,6.0,_DNDPt14m
+thf_m,"5,6,7,8-Tetrahydrofolate (m)",Folate pool,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,GCC2bim;GHMT2rm
+nad_m,Nicotinamide adenine dinucleotide (m),NAD+,Nitrogen Metabolism,Nitrogen disposal,-0.8007489670516705,GLUDxm
+10fthf_c,10-Formyltetrahydrofolate (c),Folate pool,Purine Metabolism,Nitrogen disposal,0.5729643987744117,GARFT;AICART
+1pyr5c_m,1-Pyrroline-5-carboxylate (m),1-Pyrroline-5-carboxylate,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,PRO1xm
+aacoa_c,Acetoacetyl-CoA (c),Ketone/FA-CoA,Fatty Acid Metabolism,Lipid metabolism,0.5729643986846156,ACACT1r
+b2coa_m,crotonoyl-CoA(4-) (m),Ketone/FA-CoA,Butanoate Metabolism,AA other,6.0,ECOAH1m
+_L2aadp_m,L-2-aminoadipate(1-) (m),Aminoadipate derivatives,Lysine Degradation,AA other,6.0,r0450
+ump_c,UMP (c),Ump,"Transport, Mitochondrial",Mitochondrial transport,0.5729643987111653,HUMANGEM_MAR20148
+fprica_c,5-Formamido-1-(5-phospho-D-ribosyl)imidazole-4-carboxamide (c),5-Formamido-1-(5-phospho-d-ribosyl)imidazole-4-carboxamide,Purine Metabolism,Nitrogen disposal,0.5729643987744115,AICART;IMPC
+_L2aadp6sa_m,L-allysine (m),L-alLys,Lysine Degradation,AA other,6.0,r0525
+C02470_c,Xanthurenic acid (c),Xanthurenic acid,Extracellular Transport,Extracellular Transport,0.5729643987744115,r1030
+atp_m,ATP (m),A-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,0.572964398662608,NDPK3m;NDPK6m;NDPK8m;CYTK1m;ADK1m
+dttp_n,dTTP (n),T-nucleotides,"Transport, Nuclear","Transport, Nuclear",6.0,_DTTPtn
+ura_c,uracil (c),Uracil,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987006509,PYNP2r
+atp_c,ATP (c),A-nucleotides,Pyrimidine Metabolism,Nucleotide metabolism,0.5729643987017308,URIDK2;CTPS2;CYTDK1;CYTK1
+pe_hs_m,phosphatidylethanolamine (m),Phosphatidylethanolamine,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643987111653,PSDm_hs
+gua_c,Guanine (c),Guanine,Nucleotide Salvage Pathway,Nucleotide Salvage Pathway,0.5729643987013813,GUAPRT
+cys__L_c,L-cysteine (c),L-Cys,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+6pgc_c,6-Phospho-D-gluconate (c),6-Phospho-d-gluconate,Glutathione Metabolism,Redox & Pentose Metabolism,0.5729643987467458,GND
+glu__L_c,L-glutamate(1-) (c),L-Glu,Pyrimidine Synthesis,Nucleotide metabolism,0.5729643986979145,CTPS2
+cytd_c,Cytidine (c),Cytidine,Nucleotide Interconversion,Nucleotide metabolism,0.572964398703136,r0531;CYTDK1
+dad_2_c,Deoxyadenosine (c),A-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,6.0,_DADNK
+pser__L_c,O-Phospho-L-serine (c),O-phospho-l-serine,Methane Metabolism,Methane Metabolism,6.0,PSERT
+val__L_c,L-valine (c),L-Val,Pantothenate And Coa Biosynthesis,Pantothenate And Coa Biosynthesis,-0.802548288064555,VALTA
+dgsn_c,Deoxyguanosine (c),Deoxyguanosine,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987011666,NTD8;PUNP4
+nadh_c,Nicotinamide adenine dinucleotide - reduced (c),NAD+ - reduced,Pyruvate Metabolism,Central Energy Metabolism,0.5729643987238328,MDH
+adp_c,ADP (c),A-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987096292,ADK1;GK1;_DGK1;URIDK2;_DURIK1;CYTDK1;NDPK1;NDPK8;CYTK1;NDPK10;_DADNK;NDPK5
+h2o_m,Water (m),H2O,Fatty Acid Metabolism,Lipid metabolism,6.0,ECOAH1m
+h_m,proton (m),H+,Glycerophospholipid Metabolism,Lipid metabolism,0.5729643987111656,PSDm_hs;PGPPTm;CLSm_hs
+akg_c,2-Oxoglutarate (c),2-Oxoglutarate,Methane Metabolism,Methane Metabolism,6.0,PSERT
+cytd_c,Cytidine (c),Cytidine,Extracellular Transport,Extracellular Transport,0.5729643986952747,CYTDt
+aacoa_m,Acetoacetyl-CoA (m),Ketone/FA-CoA,Tryptophan Metabolism,AA other,0.5729643986846162,HACD1m;ACACT1rm
+adp_c,ADP (c),A-nucleotides,Extracellular Transport,Extracellular Transport,0.5729643986901153,PCt;PSFLIP;r1402
+coa_m,Coenzyme A (m),CoA pool,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.5039415438941465,ACACT10m;r0604;3HBCOAHLm;MMSAD1m;r0561
+co2_m,carbon dioxide (m),CO2,Tryptophan Metabolism,AA other,6.0,r0541;2OXOADOXm
+glu__L_m,L-glutamate(1-) (m),L-Glu,Lysine Degradation,AA other,6.0,r0525;r0450
+asp__L_c,L-aspartate(1-) (c),L-aspartate,Nucleotide Interconversion,Nucleotide metabolism,0.5729643988031662,ADSS
+co2_m,carbon dioxide (m),CO2,Lysine Metabolism,Lysine Metabolism,6.0,2OXOADOXm
+10fthf_c,10-Formyltetrahydrofolate (c),Folate pool,Purine Synthesis,Nucleotide metabolism,0.5729643987744117,GARFT;AICART
+orot5p_c,Orotidine 5-phosphate (c),Orotidine 5-phosphate,Pyrimidine Synthesis,Nucleotide metabolism,0.5729643987111651,OMPDC;ORPT
+nadh_m,Nicotinamide adenine dinucleotide - reduced (m),NAD+ - reduced,Nitrogen Metabolism,Nitrogen disposal,-0.8007489670516705,GLUDxm
+ru5p__D_c,D-ribulose 5-phosphate(2-) (c),D-ribulose 5-phosphate,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.5729643987467458,RPI
+pi_c,hydrogenphosphate (c),Pi,Folate Metabolism,Folate metabolism,0.5729643987744117,FTHFL
+3pg_c,3-Phospho-D-glycerate (c),3-Phospho-d-glycerate,Cysteine And Methionine Metabolism,AA other,6.0,PGCD
+fprica_c,5-Formamido-1-(5-phospho-D-ribosyl)imidazole-4-carboxamide (c),5-Formamido-1-(5-phospho-d-ribosyl)imidazole-4-carboxamide,Purine Synthesis,Nucleotide metabolism,0.5729643987744115,AICART;IMPC
+gdp_c,GDP (c),G-nucleotides,Purine Metabolism,Nitrogen disposal,0.5729643987275318,GK1;NDPK1;ADSS
+3mob_c,3-methyl-2-oxobutanoate (c),BCAA α-ketoacids,"Transport, Mitochondrial",Mitochondrial transport,-0.802548288064555,3MOBt2im
+adp_m,ADP (m),A-nucleotides,Urea Cycle,Nitrogen disposal,0.57296439871112,r0034
+dtdp_m,dTDP (m),T-nucleotides,Pyrimidine Synthesis,Nucleotide metabolism,6.0,RE0452M
+pi_m,hydrogenphosphate (m),Pi,Urea Cycle,Nitrogen disposal,0.57296439871112,r0034
+2mp2coa_m,2-Methylprop-2-enoyl-CoA (m),Ketone/FA-CoA,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),-0.802548288053827,ECOAH12m
+glu__L_c,L-glutamate(1-) (c),L-Glu,Cysteine And Methionine Metabolism,AA other,6.0,PSERT
+adp_c,ADP (c),A-nucleotides,Folate Metabolism,Folate metabolism,0.5729643987744117,FTHFL
+trdrd_c,Reduced thioredoxin (c),Reduced thioredoxin,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987021279,RNDR2;r0475;TRDR;RNDR3
+h2o_c,Water (c),H2O,Purine Synthesis,Nucleotide metabolism,0.572964398774412,PRFGS;GLUPRT;IMPC
+nad_m,Nicotinamide adenine dinucleotide (m),NAD+,Tryptophan Metabolism,AA other,6.0,HACD1m;2OXOADOXm
+r1p_c,alpha-D-Ribose 1-phosphate (c),Alpha-d-ribose 1-phosphate,Purine Metabolism,Nitrogen disposal,0.5729643987020131,PPM;PUNP1;PUNP3
+hco3_m,Bicarbonate (m),HCO3-,Fatty Acid Biosynthesis,Lipid metabolism,0.5729643986846154,ACCOACm
+fpram_c,2-(Formamido)-N1-(5-phospho-D-ribosyl)acetamidine (c),2-(Formamido)-n1-(5-phospho-d-ribosyl)acetamidine,Purine Metabolism,Nitrogen disposal,0.5729643987744117,PRFGS
+coa_c,Coenzyme A (c),CoA pool,Pyruvate Metabolism,Central Energy Metabolism,0.5729643986846156,ACACT1r
+pro__L_c,L-proline (c),L-Pro,Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+nad_m,Nicotinamide adenine dinucleotide (m),NAD+,Lysine Metabolism,Lysine Metabolism,6.0,r0525;r0594m;2OXOADOXm
+aicar_c,5-Amino-1-(5-Phospho-D-ribosyl)imidazole-4-carboxamide (c),5-Amino-1-(5-phospho-d-ribosyl)imidazole-4-carboxamide,Purine Metabolism,Nitrogen disposal,0.5729643987744115,ADSL2;AICART
+nad_m,Nicotinamide adenine dinucleotide (m),NAD+,"Valine, Leucine And Isoleucine Biosynthesis",BCAA metabolism (Val/Leu/Iso),-0.543909667538749,HACD9m;MMSAD1m;HIBDm
+bilglcur_r,mono(glucosyluronic acid)bilirubin(2-) (r),Mono(glucosyluronic acid)bilirubin,"Transport, Endoplasmic Reticulum","Transport, Endoplasmic Reticulum",1.1672354983333308,HUMANGEM_MAR06107;BILGLCURtr
+ctp_m,CTP (m),C-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,0.5729643987111653,NDPK3m
+didp_n,dIDP (n),I-nucleotides,Nucleotide Metabolism,Nucleotide metabolism,6.0,NDPK10n
+datp_m,dATP (m),A-nucleotides,Pyrimidine Synthesis,Nucleotide metabolism,6.0,RE0452M
+nadh_c,Nicotinamide adenine dinucleotide - reduced (c),NAD+ - reduced,Biosynthesis Of Amino Acids,"AA central (Ala/Asp/Glu, Gly/Ser/Thr)",6.0,PGCD
+atp_m,ATP (m),A-nucleotides,"Alanine, Aspartate And Glutamate Metabolism","AA central (Ala/Asp/Glu, Gly/Ser/Thr)",0.57296439871112,r0034
+pe_hs_c,Phosphatidylethanolamine (gallus gallus) (c),Phosphatidylethanolamine (gallus gallus),Biomass And Maintenance Functions,Biomass And Maintenance Functions,0.5729643987111656,BIOMASS_maintenance
+co2_c,carbon dioxide (c),CO2,Glutathione Metabolism,Redox & Pentose Metabolism,0.5729643987467458,GND
+accoa_c,Acetyl-CoA (c),Acetyl-CoA pool,"Valine, Leucine And Isoleucine Degradation",BCAA metabolism (Val/Leu/Iso),0.5729643986846156,ACACT1r
+phe__L_e,L-phenylalanine (e),L-Phe,Extracellular Transport,Extracellular Transport,0.5729643987111108,PHEtec;TYRPHELAT2tc
+dudp_c,dUDP (c),U-nucleotides,Nucleotide Interconversion,Nucleotide metabolism,0.5729643987007691,URIDK2;r0531
+accoa_m,Acetyl-CoA (m),Acetyl-CoA pool,Synthesis And Degradation Of Ketone Bodies,Lipid metabolism,0.5729643986846162,HMGCOASim
+nadph_c,Nicotinamide adenine dinucleotide phosphate - reduced (c),NADP+ - reduced,Fatty Acid Biosynthesis,Lipid metabolism,0.5729643986846158,FAS120COA;FAS100COA;FAS140COA;FAS160COA;FAS80COA__L
+hco3_e,Bicarbonate (e),HCO3-,"Transport, Endoplasmic Reticulum","Transport, Endoplasmic Reticulum",1.1672354983333308,HUMANGEM_MAR06107

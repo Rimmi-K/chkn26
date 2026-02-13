@@ -29,18 +29,6 @@ def smart_capitalize(name: str) -> str:
 def shorten_names(name: str, custom_abbrev: Optional[Dict[str, str]] = None) -> str:
     """
     Shorten metabolite names using abbreviation dictionary
-
-    Parameters:
-    -----------
-    name : str
-        Metabolite name to shorten
-    custom_abbrev : dict, optional
-        Custom abbreviation dictionary from input_parameters.yaml
-
-    Returns:
-    --------
-    str
-        Shortened metabolite name
     """
     if custom_abbrev is None:
         custom_abbrev = {}

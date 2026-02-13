@@ -96,6 +96,133 @@
 }
 },
 {
+"id":"h2o_r",
+"name":"Water",
+"compartment":"r",
+"charge":0,
+"formula":"H2O",
+"annotation":{
+"bigg.metabolite":[
+"h2o",
+"M_h2o"
+],
+"chebi":[
+"15377",
+"29374",
+"29375",
+"33806",
+"33811",
+"33813",
+"41981",
+"10743",
+"13352",
+"27313",
+"29373",
+"41979",
+"42043",
+"42857",
+"43228",
+"44292",
+"44701",
+"44819",
+"5585"
+],
+"envipath":[
+"5882df9c-dae1-4d80-a40e-db4724271456/compound/969d0227-3069-4e44-9525-7ae7bad84170",
+"650babc9-9d68-4b73-9332-11972ca26f7b/compound/799908db-b8c9-4982-86cb-1f225e2ad08c",
+"650babc9-9d68-4b73-9332-11972ca26f7b/compound/e7f34a8e-cded-4793-b6d5-792335b38636",
+"b0c0e9bc-b183-45e9-9f83-8e743ed5dc7b/compound/426cf377-a166-441d-a118-d32682004128",
+"d817c31c-d879-44c8-913d-2963d42f8203/compound/27c22ce9-2753-43ba-96bc-ad4164fee4a7"
+],
+"envipathM":[
+"5882df9c-dae1-4d80-a40e-db4724271456/compound/969d0227-3069-4e44-9525-7ae7bad84170",
+"650babc9-9d68-4b73-9332-11972ca26f7b/compound/799908db-b8c9-4982-86cb-1f225e2ad08c",
+"650babc9-9d68-4b73-9332-11972ca26f7b/compound/e7f34a8e-cded-4793-b6d5-792335b38636",
+"b0c0e9bc-b183-45e9-9f83-8e743ed5dc7b/compound/426cf377-a166-441d-a118-d32682004128",
+"d817c31c-d879-44c8-913d-2963d42f8203/compound/27c22ce9-2753-43ba-96bc-ad4164fee4a7"
+],
+"hmdb":[
+"HMDB0002111",
+"HMDB02111"
+],
+"kegg.compound":"C00001",
+"kegg.drug":[
+"D00001",
+"D03703",
+"D06249",
+"D06322"
+],
+"keggC":[
+"C00001",
+"M_C00001"
+],
+"keggD":[
+"D00001",
+"D03703",
+"D06249",
+"D06322",
+"M_D00001",
+"M_D03703",
+"M_D06249",
+"M_D06322"
+],
+"metacyc.compound":"WATER",
+"metacycM":"WATER",
+"mnx":"WATER",
+"reactome":[
+"R-ALL-109276",
+"R-ALL-113518",
+"R-ALL-113519",
+"R-ALL-113521",
+"R-ALL-1222475",
+"R-ALL-141343",
+"R-ALL-1605715",
+"R-ALL-189422",
+"R-ALL-2022884",
+"R-ALL-2429665",
+"R-ALL-29356",
+"R-ALL-351603",
+"R-ALL-5278291",
+"R-ALL-5668574",
+"R-ALL-5685882",
+"R-ALL-5693747",
+"R-ALL-6781870",
+"R-ALL-8851517"
+],
+"reactomeM":[
+"R-ALL-109276",
+"R-ALL-113518",
+"R-ALL-113519",
+"R-ALL-113521",
+"R-ALL-1222475",
+"R-ALL-141343",
+"R-ALL-1605715",
+"R-ALL-189422",
+"R-ALL-2022884",
+"R-ALL-2429665",
+"R-ALL-29356",
+"R-ALL-351603",
+"R-ALL-5278291",
+"R-ALL-5668574",
+"R-ALL-5685882",
+"R-ALL-5693747",
+"R-ALL-6781870",
+"R-ALL-8851517"
+],
+"sabiork.compound":"40",
+"sabiorkM":"40",
+"seed.compound":[
+"cpd00001",
+"M_cpd00001"
+],
+"vmh.metabolite":[
+"M_h2o",
+"h2o"
+],
+"vmhmetabolite":"h2o"
+}
+},
+{
 "id":"pi_r",
 "name":"hydrogenphosphate",
 "compartment":"r",
@@ -4280,6 +4407,208 @@
 }
 },
 {
+"id":"h_r",
+"name":"proton",
+"compartment":"r",
+"charge":1,
+"formula":"H",
+"annotation":{
+"bigg.metabolite":[
+"h",
+"M_h"
+],
+"chebi":[
+"15378",
+"24636",
+"29233",
+"29234",
+"10744",
+"13357",
+"5584"
+],
+"hmdb":[
+"HMDB0059597",
+"HMDB59597"
+],
+"kegg.compound":"C00080",
+"keggC":[
+"C00080",
+"M_C00080"
+],
+"metacyc.compound":"PROTON",
+"metacycM":"PROTON",
+"mnx":"PROTON",
+"reactome":[
+"R-ALL-1132304",
+"R-ALL-113529",
+"R-ALL-1470067",
+"R-ALL-156540",
+"R-ALL-1614597",
+"R-ALL-163953",
+"R-ALL-193465",
+"R-ALL-194688",
+"R-ALL-2000349",
+"R-ALL-2429673",
+"R-ALL-2872447",
+"R-ALL-351626",
+"R-ALL-372511",
+"R-ALL-374900",
+"R-ALL-425969",
+"R-ALL-425978",
+"R-ALL-425999",
+"R-ALL-427899",
+"R-ALL-428040",
+"R-ALL-428548",
+"R-ALL-5228597",
+"R-ALL-5244410",
+"R-ALL-5668577",
+"R-ALL-6783901",
+"R-ALL-70106",
+"R-ALL-74722",
+"R-ALL-9631150",
+"R-ALL-9668967",
+"R-ALL-9683057"
+],
+"reactomeM":[
+"R-ALL-1132304",
+"R-ALL-113529",
+"R-ALL-1470067",
+"R-ALL-156540",
+"R-ALL-1614597",
+"R-ALL-163953",
+"R-ALL-193465",
+"R-ALL-194688",
+"R-ALL-2000349",
+"R-ALL-2429673",
+"R-ALL-2872447",
+"R-ALL-351626",
+"R-ALL-372511",
+"R-ALL-374900",
+"R-ALL-425969",
+"R-ALL-425978",
+"R-ALL-425999",
+"R-ALL-427899",
+"R-ALL-428040",
+"R-ALL-428548",
+"R-ALL-5228597",
+"R-ALL-5244410",
+"R-ALL-5668577",
+"R-ALL-6783901",
+"R-ALL-70106",
+"R-ALL-74722",
+"R-ALL-9631150",
+"R-ALL-9668967",
+"R-ALL-9683057"
+],
+"sabiork.compound":"39",
+"sabiorkM":"39",
+"seed.compound":[
+"cpd00067",
+"M_cpd00067"
+],
+"vmh.metabolite":[
+"HC02115",
+"M_HC02115",
+"M_h",
+"h"
+],
+"vmhmetabolite":[
+"HC02115",
+"h"
+]
+}
+},
+{
+"id":"guln_r",
+"name":"L-gulonate",
+"compartment":"r",
+"charge":-1,
+"formula":"C6H11O7",
+"annotation":{
+"bigg.metabolite":[
+"guln__L",
+"M_guln__L"
+],
+"chebi":[
+"13115",
+"16154",
+"24461",
+"24462",
+"21318",
+"21319",
+"6235"
+],
+"kegg.compound":"C00800",
+"keggC":[
+"C00800",
+"M_C00800"
+],
+"metacyc.compound":"L-GULONATE",
+"metacycM":"L-GULONATE",
+"reactome":"R-ALL-5661268",
+"reactomeM":"R-ALL-5661268",
+"sabiork.compound":[
+"2159",
+"26258"
+],
+"sabiorkM":[
+"2159",
+"26258"
+],
+"seed.compound":[
+"cpd00594",
+"M_cpd00594"
+],
+"vmh.metabolite":[
+"M_guln",
+"guln"
+],
+"vmhmetabolite":"guln"
+}
+},
+{
+"id":"gullac_r",
+"name":"L-gulono-1,4-lactone",
+"compartment":"r",
+"charge":0,
+"formula":"C6H10O6",
+"annotation":{
+"bigg.metabolite":[
+"gullac",
+"M_gullac"
+],
+"chebi":[
+"17587",
+"13116",
+"21320",
+"58198",
+"6236"
+],
+"hmdb":[
+"HMDB0003466",
+"HMDB03466"
+],
+"kegg.compound":"C01040",
+"keggC":[
+"C01040",
+"M_C01040"
+],
+"metacyc.compound":"L-GULONO-1-4-LACTONE",
+"metacycM":"L-GULONO-1-4-LACTONE",
+"sabiork.compound":"2222",
+"sabiorkM":"2222",
+"seed.compound":[
+"cpd00765",
+"M_cpd00765"
+],
+"vmh.metabolite":[
+"M_gullac",
+"gullac"
+],
+"vmhmetabolite":"gullac"
+}
+},
+{
 "id":"6pgc_c",
 "name":"6-Phospho-D-gluconate",
 "compartment":"c",
@@ -4875,6 +5204,87 @@
 }
 },
 {
+"id":"guln_c",
+"name":"L-gulonate",
+"compartment":"c",
+"charge":-1,
+"formula":"C6H11O7",
+"annotation":{
+"bigg.metabolite":[
+"guln__L",
+"M_guln__L"
+],
+"chebi":[
+"13115",
+"16154",
+"24461",
+"24462",
+"21318",
+"21319",
+"6235"
+],
+"kegg.compound":"C00800",
+"keggC":[
+"C00800",
+"M_C00800"
+],
+"metacyc.compound":"L-GULONATE",
+"metacycM":"L-GULONATE",
+"reactome":"R-ALL-5661268",
+"reactomeM":"R-ALL-5661268",
+"sabiork.compound":[
+"2159",
+"26258"
+],
+"sabiorkM":[
+"2159",
+"26258"
+],
+"seed.compound":[
+"cpd00594",
+"M_cpd00594"
+],
+"vmh.metabolite":[
+"M_guln",
+"guln"
+],
+"vmhmetabolite":"guln"
+}
+},
+{
+"id":"glcur_c",
+"name":"D-glucuronate",
+"compartment":"c",
+"charge":-1,
+"formula":"C6H9O7",
+"annotation":{
+"bigg.metabolite":[
+"glcur",
+"M_glcur"
+],
+"chebi":[
+"47952",
+"58720"
+],
+"kegg.compound":"C00191",
+"keggC":[
+"C00191",
+"M_C00191"
+],
+"metacyc.compound":"D-Glucopyranuronate",
+"metacycM":"D-Glucopyranuronate",
+"seed.compound":[
+"cpd00164",
+"M_cpd00164"
+],
+"vmh.metabolite":[
+"M_glcur",
+"glcur"
+],
+"vmhmetabolite":"glcur"
+}
+},
+{
 "id":"udpg_c",
 "name":"UDPglucose",
 "compartment":"c",
@@ -5029,6 +5439,74 @@
 "ppi"
 ],
 "vmhmetabolite":"ppi"
+}
+},
+{
+"id":"udpgal_c",
+"name":"UDP-D-galactose(2-)",
+"compartment":"c",
+"charge":-2,
+"formula":"C15H22N2O17P2",
+"annotation":{
+"bigg.metabolite":[
+"udpgal",
+"M_udpgal"
+],
+"chebi":[
+"18307",
+"58439",
+"66914",
+"67119",
+"13487",
+"13495",
+"22100",
+"42751",
+"9811"
+],
+"hmdb":[
+"HMDB0000302",
+"HMDB00302",
+"HMDB0062573",
+"HMDB62573"
+],
+"kegg.compound":"C00052",
+"keggC":[
+"C00052",
+"M_C00052"
+],
+"metacyc.compound":"CPD-14553",
+"metacycM":"CPD-14553",
+"reactome":[
+"R-ALL-1981137",
+"R-ALL-29452",
+"R-ALL-735682",
+"R-ALL-9034065"
+],
+"reactomeM":[
+"R-ALL-1981137",
+"R-ALL-29452",
+"R-ALL-735682",
+"R-ALL-9034065"
+],
+"sabiork.compound":[
+"1283",
+"3919"
+],
+"sabiorkM":[
+"1283",
+"3919"
+],
+"seed.compound":[
+"cpd00043",
+"cpd30770",
+"M_cpd00043",
+"M_cpd30770"
+],
+"vmh.metabolite":[
+"M_udpgal",
+"udpgal"
+],
+"vmhmetabolite":"udpgal"
 }
 },
 {
@@ -5542,6 +6020,48 @@
 }
 },
 {
+"id":"gullac_c",
+"name":"L-gulono-1,4-lactone",
+"compartment":"c",
+"charge":0,
+"formula":"C6H10O6",
+"annotation":{
+"bigg.metabolite":[
+"gullac",
+"M_gullac"
+],
+"chebi":[
+"17587",
+"13116",
+"21320",
+"58198",
+"6236"
+],
+"hmdb":[
+"HMDB0003466",
+"HMDB03466"
+],
+"kegg.compound":"C01040",
+"keggC":[
+"C01040",
+"M_C01040"
+],
+"metacyc.compound":"L-GULONO-1-4-LACTONE",
+"metacycM":"L-GULONO-1-4-LACTONE",
+"sabiork.compound":"2222",
+"sabiorkM":"2222",
+"seed.compound":[
+"cpd00765",
+"M_cpd00765"
+],
+"vmh.metabolite":[
+"M_gullac",
+"gullac"
+],
+"vmhmetabolite":"gullac"
+}
+},
+{
 "id":"h2o2_c",
 "name":"Hydrogen peroxide",
 "compartment":"c",
@@ -5830,6 +6350,89 @@
 }
 },
 {
+"id":"coa_r",
+"name":"Coenzyme A",
+"compartment":"r",
+"charge":-4,
+"formula":"C21H32N7O16P3S",
+"annotation":{
+"bigg.metabolite":[
+"coa",
+"M_coa"
+],
+"chebi":[
+"15346",
+"57287",
+"13294",
+"13295",
+"13298",
+"23355",
+"3771",
+"41597",
+"41631",
+"741566"
+],
+"envipath":[
+"32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/19310484-6aa5-4dcf-b1da-855a8c21ecfd",
+"650babc9-9d68-4b73-9332-11972ca26f7b/compound/ff7e79d6-b57b-437e-8e3c-e8259a3f2172"
+],
+"envipathM":[
+"32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/19310484-6aa5-4dcf-b1da-855a8c21ecfd",
+"650babc9-9d68-4b73-9332-11972ca26f7b/compound/ff7e79d6-b57b-437e-8e3c-e8259a3f2172"
+],
+"hmdb":[
+"HMDB0001423",
+"HMDB0062184",
+"HMDB01423",
+"HMDB62184"
+],
+"kegg.compound":"C00010",
+"keggC":[
+"C00010",
+"M_C00010"
+],
+"metacyc.compound":[
+"CO-A",
+"COA-GROUP"
+],
+"metacycM":[
+"CO-A",
+"COA-GROUP"
+],
+"reactome":[
+"R-ALL-162743",
+"R-ALL-1678675",
+"R-ALL-193514",
+"R-ALL-2485002",
+"R-ALL-29374",
+"R-ALL-76194",
+"R-ALL-8939024",
+"R-ALL-9766372"
+],
+"reactomeM":[
+"R-ALL-162743",
+"R-ALL-1678675",
+"R-ALL-193514",
+"R-ALL-2485002",
+"R-ALL-29374",
+"R-ALL-76194",
+"R-ALL-8939024",
+"R-ALL-9766372"
+],
+"sabiork.compound":"1265",
+"sabiorkM":"1265",
+"seed.compound":[
+"cpd00010",
+"M_cpd00010"
+],
+"vmh.metabolite":[
+"M_coa",
+"coa"
+],
+"vmhmetabolite":"coa"
+}
+},
+{
 "id":"ppi_r",
 "name":"Diphosphate",
 "compartment":"r",
@@ -5915,6 +6518,115 @@
 }
 },
 {
+"id":"pmtcoa_r",
+"name":"Palmitoyl-CoA (n-C16:0CoA)",
+"compartment":"r",
+"charge":-4,
+"formula":"C37H62N7O17P3S",
+"annotation":{
+"bigg.metabolite":[
+"pmtcoa",
+"M_pmtcoa"
+],
+"chebi":[
+"15525",
+"57379",
+"14397",
+"14732",
+"24543",
+"24544",
+"7898"
+],
+"envipath":"32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/683c12f9-18f4-4439-a718-0877aa11b9ae",
+"envipathM":"32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/683c12f9-18f4-4439-a718-0877aa11b9ae",
+"hmdb":[
+"HMDB0001338",
+"HMDB0059623",
+"HMDB01338",
+"HMDB59623"
+],
+"kegg.compound":"C00154",
+"keggC":[
+"C00154",
+"M_C00154"
+],
+"lipidmaps":"LMFA07050360",
+"lipidmapsM":"LMFA07050360",
+"metacyc.compound":"PALMITYL-COA",
+"metacycM":"PALMITYL-COA",
+"reactome":[
+"R-ALL-1131790",
+"R-ALL-200993",
+"R-ALL-390426",
+"R-ALL-5358339",
+"R-ALL-5690537",
+"R-ALL-77281",
+"R-ALL-9683736",
+"R-ALL-9766371"
+],
+"reactomeM":[
+"R-ALL-1131790",
+"R-ALL-200993",
+"R-ALL-390426",
+"R-ALL-5358339",
+"R-ALL-5690537",
+"R-ALL-77281",
+"R-ALL-9683736",
+"R-ALL-9766371"
+],
+"sabiork.compound":"1310",
+"sabiorkM":"1310",
+"seed.compound":[
+"cpd00134",
+"M_cpd00134"
+],
+"slm":"000000383",
+"vmh.metabolite":[
+"M_pmtcoa",
+"pmtcoa"
+],
+"vmhmetabolite":"pmtcoa"
+}
+},
+{
+"id":"crn_c",
+"name":"L-Carnitine",
+"compartment":"c",
+"charge":0,
+"formula":"C7H15NO3",
+"annotation":{
+"chebi":[
+"11060",
+"51453"
+],
+"hmdb":[
+"HMDB0062634",
+"HMDB62634"
+],
+"kegg.compound":"C15025",
+"keggC":[
+"C15025",
+"M_C15025"
+],
+"metacyc.compound":"D-CARNITINE",
+"metacycM":"D-CARNITINE",
+"seed.compound":[
+"cpd10719",
+"M_cpd10719"
+],
+"vmh.metabolite":[
+"M_crn",
+"M_crn_D",
+"crn",
+"crn_D"
+],
+"vmhmetabolite":[
+"crn",
+"crn_D"
+]
+}
+},
+{
 "id":"pmtcoa_c",
 "name":"Palmitoyl-CoA (n-C16:0CoA)",
 "compartment":"c",
@@ -5983,6 +6695,65 @@
 "pmtcoa"
 ],
 "vmhmetabolite":"pmtcoa"
+}
+},
+{
+"id":"pmtcrn_c",
+"name":"Palmitoyl-CoA (n-C16:0CoA)",
+"compartment":"c",
+"charge":0,
+"formula":"C23H45NO4",
+"annotation":{
+"bigg.metabolite":[
+"pmtcrn",
+"M_pmtcrn"
+],
+"chebi":[
+"17490",
+"13150",
+"21369",
+"6281"
+],
+"hmdb":[
+"HMDB0000222",
+"HMDB0000846",
+"HMDB00222",
+"HMDB00846"
+],
+"kegg.compound":"C02990",
+"keggC":[
+"C02990",
+"M_C02990"
+],
+"lipidmaps":"LMFA07070004",
+"lipidmapsM":"LMFA07070004",
+"metacyc.compound":"CPD-419",
+"metacycM":"CPD-419",
+"reactome":[
+"R-ALL-201034",
+"R-ALL-201050"
+],
+"reactomeM":[
+"R-ALL-201034",
+"R-ALL-201050"
+],
+"sabiork.compound":"2612",
+"sabiorkM":"2612",
+"seed.compound":[
+"cpd01915",
+"M_cpd01915"
+],
+"slm":"000001044",
+"vmh.metabolite":[
+"M_hdcecrn",
+"M_pmtcrn",
+"hdcecrn",
+"pmtcrn"
+],
+"vmhmetabolite":[
+"hdcecrn",
+"pmtcrn"
+]
 }
 },
 {
@@ -6521,158 +7292,6 @@
 }
 },
 {
-"id":"amet_m",
-"name":"S-Adenosyl-L-methionine",
-"compartment":"m",
-"charge":1,
-"formula":"C15H23N6O5S",
-"annotation":{
-"bigg.metabolite":[
-"amet",
-"M_amet"
-],
-"chebi":[
-"15414",
-"59789",
-"67040",
-"10786",
-"10833",
-"12742",
-"12757",
-"12760",
-"22036",
-"45607",
-"527887",
-"8946"
-],
-"hmdb":[
-"HMDB0001185",
-"HMDB0062709",
-"HMDB01185",
-"HMDB62709"
-],
-"kegg.compound":"C00019",
-"keggC":[
-"C00019",
-"M_C00019"
-],
-"metacyc.compound":"S-ADENOSYLMETHIONINE",
-"metacycM":"S-ADENOSYLMETHIONINE",
-"reactome":[
-"R-ALL-2162265",
-"R-ALL-5279190",
-"R-ALL-71284",
-"R-ALL-77087",
-"R-ALL-9639461",
-"R-ALL-9854319"
-],
-"reactomeM":[
-"R-ALL-2162265",
-"R-ALL-5279190",
-"R-ALL-71284",
-"R-ALL-77087",
-"R-ALL-9639461",
-"R-ALL-9854319"
-],
-"seed.compound":[
-"cpd00017",
-"M_cpd00017"
-],
-"vmh.metabolite":[
-"M_amet",
-"amet"
-],
-"vmhmetabolite":"amet"
-}
-},
-{
-"id":"ahcys_m",
-"name":"S-Adenosyl-L-homocysteine",
-"compartment":"m",
-"charge":0,
-"formula":"C14H20N6O5S",
-"annotation":{
-"bigg.metabolite":[
-"ahcys",
-"M_ahcys"
-],
-"chebi":[
-"16680",
-"57856",
-"67009",
-"12741",
-"12759",
-"12761",
-"22034",
-"45495",
-"8945"
-],
-"hmdb":[
-"HMDB0000939",
-"HMDB00939"
-],
-"kegg.compound":"C00021",
-"keggC":[
-"C00021",
-"M_C00021"
-],
-"metacyc.compound":"ADENOSYL-HOMO-CYS",
-"metacycM":"ADENOSYL-HOMO-CYS",
-"reactome":[
-"R-ALL-2162252",
-"R-ALL-5278409",
-"R-ALL-71285",
-"R-ALL-77502",
-"R-ALL-9639443",
-"R-ALL-9854312"
-],
-"reactomeM":[
-"R-ALL-2162252",
-"R-ALL-5278409",
-"R-ALL-71285",
-"R-ALL-77502",
-"R-ALL-9639443",
-"R-ALL-9854312"
-],
-"sabiork.compound":"1274",
-"sabiorkM":"1274",
-"seed.compound":[
-"cpd00019",
-"M_cpd00019"
-],
-"vmh.metabolite":[
-"M_ahcys",
-"ahcys"
-],
-"vmhmetabolite":"ahcys"
-}
-},
-{
-"id":"2dpmhobq_m",
-"name":"2-decaprenyl-5-hydroxy-6-methoxy-3-methyl-1,4-benzoquinone",
-"compartment":"m",
-"charge":0,
-"formula":"C58H88O4",
-"annotation":{
-"bigg.metabolite":[
-"2dpmhobq",
-"M_2dpmhobq"
-],
-"chebi":[
-"231824",
-"50771",
-"145734"
-],
-"lipidmaps":"LMPR02010031",
-"lipidmapsM":"LMPR02010031",
-"vmh.metabolite":[
-"2dpmhobq",
-"M_2dpmhobq"
-],
-"vmhmetabolite":"2dpmhobq"
-}
-},
-{
 "id":"chsterol_c",
 "name":"cholesterol",
 "compartment":"c",
@@ -6853,6 +7472,179 @@
 "so4"
 ],
 "vmhmetabolite":"so4"
+}
+},
+{
+"id":"ac_r",
+"name":"acetate",
+"compartment":"r",
+"charge":-1,
+"formula":"C2H3O2",
+"annotation":{
+"bigg.metabolite":[
+"ac",
+"M_ac"
+],
+"chebi":[
+"15366",
+"193049",
+"30089",
+"13704",
+"22165",
+"22169",
+"2387",
+"40480",
+"40486"
+],
+"envipath":[
+"32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/b545cabc-8c9e-4b20-8848-efa015b481ea",
+"4fd7f3e0-dd25-43ac-9453-dda3e52396e4/compound/d45256fe-61fa-4f5b-bb16-91a3d615e3d8",
+"5882df9c-dae1-4d80-a40e-db4724271456/compound/0a2488ee-aacb-4120-a964-359c4b9bbf9e",
+"5882df9c-dae1-4d80-a40e-db4724271456/compound/5e4989fc-13d3-45d4-ad57-3be380a9d3c0",
+"650babc9-9d68-4b73-9332-11972ca26f7b/compound/a8f0be58-24e8-441b-8d81-a516a0ead4b3",
+"d817c31c-d879-44c8-913d-2963d42f8203/compound/5ac9f896-f447-4920-a359-26012d7f9bf4",
+"d817c31c-d879-44c8-913d-2963d42f8203/compound/e1ed5fe7-8687-48cb-850f-c8551ca87c02"
+],
+"envipathM":[
+"32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/b545cabc-8c9e-4b20-8848-efa015b481ea",
+"4fd7f3e0-dd25-43ac-9453-dda3e52396e4/compound/d45256fe-61fa-4f5b-bb16-91a3d615e3d8",
+"5882df9c-dae1-4d80-a40e-db4724271456/compound/0a2488ee-aacb-4120-a964-359c4b9bbf9e",
+"5882df9c-dae1-4d80-a40e-db4724271456/compound/5e4989fc-13d3-45d4-ad57-3be380a9d3c0",
+"650babc9-9d68-4b73-9332-11972ca26f7b/compound/a8f0be58-24e8-441b-8d81-a516a0ead4b3",
+"d817c31c-d879-44c8-913d-2963d42f8203/compound/5ac9f896-f447-4920-a359-26012d7f9bf4",
+"d817c31c-d879-44c8-913d-2963d42f8203/compound/e1ed5fe7-8687-48cb-850f-c8551ca87c02"
+],
+"hmdb":[
+"HMDB0000042",
+"HMDB00042"
+],
+"kegg.compound":"C00033",
+"kegg.drug":"D00010",
+"keggC":[
+"C00033",
+"M_C00033"
+],
+"keggD":[
+"D00010",
+"M_D00010"
+],
+"lipidmaps":"LMFA01010002",
+"lipidmapsM":"LMFA01010002",
+"metacyc.compound":[
+"ACET",
+"CPD-24335"
+],
+"metacycM":[
+"ACET",
+"CPD-24335"
+],
+"reactome":[
+"R-ALL-113539",
+"R-ALL-1524044",
+"R-ALL-2022890",
+"R-ALL-29416",
+"R-ALL-372540",
+"R-ALL-390305",
+"R-ALL-427486",
+"R-ALL-5566518",
+"R-ALL-9717939",
+"R-ALL-9737107",
+"R-ALL-9737119",
+"R-ALL-9749588"
+],
+"reactomeM":[
+"R-ALL-113539",
+"R-ALL-1524044",
+"R-ALL-2022890",
+"R-ALL-29416",
+"R-ALL-372540",
+"R-ALL-390305",
+"R-ALL-427486",
+"R-ALL-5566518",
+"R-ALL-9717939",
+"R-ALL-9737107",
+"R-ALL-9737119",
+"R-ALL-9749588"
+],
+"sabiork.compound":"1278",
+"sabiorkM":"1278",
+"seed.compound":[
+"cpd00029",
+"M_cpd00029"
+],
+"slm":"000000449",
+"vmh.metabolite":[
+"M_ac",
+"ac"
+],
+"vmhmetabolite":"ac"
+}
+},
+{
+"id":"udp_r",
+"name":"UDP",
+"compartment":"r",
+"charge":-3,
+"formula":"C9H11N2O12P2",
+"annotation":{
+"bigg.metabolite":[
+"udp",
+"M_udp"
+],
+"chebi":[
+"17659",
+"58223",
+"13445",
+"27230",
+"46402",
+"9802"
+],
+"hmdb":[
+"HMDB0000295",
+"HMDB00295"
+],
+"kegg.compound":"C00015",
+"keggC":[
+"C00015",
+"M_C00015"
+],
+"metacyc.compound":[
+"UDP",
+"UDP-GROUP"
+],
+"metacycM":[
+"UDP",
+"UDP-GROUP"
+],
+"reactome":[
+"R-ALL-110096",
+"R-ALL-110732",
+"R-ALL-158602",
+"R-ALL-205687",
+"R-ALL-417888",
+"R-ALL-8851514",
+"R-ALL-9683078"
+],
+"reactomeM":[
+"R-ALL-110096",
+"R-ALL-110732",
+"R-ALL-158602",
+"R-ALL-205687",
+"R-ALL-417888",
+"R-ALL-8851514",
+"R-ALL-9683078"
+],
+"sabiork.compound":"1269",
+"sabiorkM":"1269",
+"seed.compound":[
+"cpd00014",
+"M_cpd00014"
+],
+"vmh.metabolite":[
+"M_udp",
+"udp"
+],
+"vmhmetabolite":"udp"
 }
 },
 {
@@ -7266,74 +8058,6 @@
 "glu_L"
 ],
 "vmhmetabolite":"glu_L"
-}
-},
-{
-"id":"orn_m",
-"name":"Ornithine",
-"compartment":"m",
-"charge":1,
-"formula":"C5H13N2O2",
-"annotation":{
-"bigg.metabolite":[
-"orn",
-"orn__L",
-"M_orn",
-"M_orn__L"
-],
-"chebi":[
-"15729",
-"192081",
-"44667",
-"46911",
-"46914",
-"13148",
-"21367",
-"6280"
-],
-"hmdb":[
-"HMDB0000214",
-"HMDB0000818",
-"HMDB0004984",
-"HMDB00214",
-"HMDB00818",
-"HMDB04984"
-],
-"kegg.compound":"C00077",
-"kegg.drug":"D08302",
-"keggC":[
-"C00077",
-"M_C00077"
-],
-"keggD":[
-"D08302",
-"M_D08302"
-],
-"metacyc.compound":"L-ORNITHINE",
-"metacycM":"L-ORNITHINE",
-"reactome":[
-"R-ALL-113585",
-"R-ALL-113586",
-"R-ALL-29498",
-"R-ALL-375800"
-],
-"reactomeM":[
-"R-ALL-113585",
-"R-ALL-113586",
-"R-ALL-29498",
-"R-ALL-375800"
-],
-"sabiork.compound":"1290",
-"sabiorkM":"1290",
-"seed.compound":[
-"cpd00064",
-"M_cpd00064"
-],
-"vmh.metabolite":[
-"M_orn",
-"orn"
-],
-"vmhmetabolite":"orn"
 }
 },
 {
@@ -8745,6 +9469,90 @@
 "ditp"
 ],
 "vmhmetabolite":"ditp"
+}
+},
+{
+"id":"amp_n",
+"name":"AMP",
+"compartment":"n",
+"charge":-2,
+"formula":"C10H12N5O7P",
+"annotation":{
+"bigg.metabolite":[
+"amp",
+"M_amp"
+],
+"chebi":[
+"16027",
+"40721",
+"456215",
+"12056",
+"13234",
+"13235",
+"13736",
+"13740",
+"22242",
+"22245",
+"2356",
+"40510",
+"40726",
+"40786",
+"40826",
+"47222"
+],
+"envipath":"650babc9-9d68-4b73-9332-11972ca26f7b/compound/9f16b02b-201c-4353-bc44-945eecd80d6a",
+"envipathM":"650babc9-9d68-4b73-9332-11972ca26f7b/compound/9f16b02b-201c-4353-bc44-945eecd80d6a",
+"hmdb":[
+"HMDB0000045",
+"HMDB00045"
+],
+"kegg.compound":"C00020",
+"kegg.drug":"D02769",
+"keggC":[
+"C00020",
+"M_C00020"
+],
+"keggD":[
+"D02769",
+"M_D02769"
+],
+"metacyc.compound":[
+"AMP",
+"AMP-GROUP"
+],
+"metacycM":[
+"AMP",
+"AMP-GROUP"
+],
+"reactome":[
+"R-ALL-109275",
+"R-ALL-159448",
+"R-ALL-164121",
+"R-ALL-2046064",
+"R-ALL-389620",
+"R-ALL-76577",
+"R-ALL-8953493"
+],
+"reactomeM":[
+"R-ALL-109275",
+"R-ALL-159448",
+"R-ALL-164121",
+"R-ALL-2046064",
+"R-ALL-389620",
+"R-ALL-76577",
+"R-ALL-8953493"
+],
+"sabiork.compound":"1273",
+"sabiorkM":"1273",
+"seed.compound":[
+"cpd00018",
+"M_cpd00018"
+],
+"vmh.metabolite":[
+"M_amp",
+"amp"
+],
+"vmhmetabolite":"amp"
 }
 },
 {
@@ -10522,6 +11330,73 @@
 }
 },
 {
+"id":"ump_r",
+"name":"UMP",
+"compartment":"r",
+"charge":-2,
+"formula":"C9H11N2O9P",
+"annotation":{
+"bigg.metabolite":[
+"ump",
+"M_ump"
+],
+"chebi":[
+"16695",
+"57865",
+"13508",
+"13509",
+"27231",
+"46362",
+"46381",
+"46382",
+"47721",
+"9849"
+],
+"hmdb":[
+"HMDB0000288",
+"HMDB00288"
+],
+"kegg.compound":"C00105",
+"keggC":[
+"C00105",
+"M_C00105"
+],
+"metacyc.compound":"UMP",
+"metacycM":"UMP",
+"reactome":[
+"R-ALL-109280",
+"R-ALL-109402",
+"R-ALL-109512",
+"R-ALL-418075",
+"R-ALL-735698"
+],
+"reactomeM":[
+"R-ALL-109280",
+"R-ALL-109402",
+"R-ALL-109512",
+"R-ALL-418075",
+"R-ALL-735698"
+],
+"sabiork.compound":[
+"1300",
+"25061"
+],
+"sabiorkM":[
+"1300",
+"25061"
+],
+"seed.compound":[
+"cpd00091",
+"M_cpd00091"
+],
+"vmh.metabolite":[
+"M_ump",
+"ump"
+],
+"vmhmetabolite":"ump"
+}
+},
+{
 "id":"ctp_m",
 "name":"CTP",
 "compartment":"m",
@@ -12192,6 +13067,72 @@
 }
 },
 {
+"id":"glx_m",
+"name":"glyoxylate",
+"compartment":"m",
+"charge":-1,
+"formula":"C2H1O3",
+"annotation":{
+"bigg.metabolite":[
+"glx",
+"M_glx"
+],
+"chebi":[
+"16891",
+"36655",
+"14368",
+"24420",
+"24421",
+"35977",
+"42767",
+"5509"
+],
+"envipath":[
+"32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/cdffdb1a-3322-4cc1-9171-d857bfaa198a",
+"4fd7f3e0-dd25-43ac-9453-dda3e52396e4/compound/aecbda66-6e98-4c11-aeaf-6a072f4f963c",
+"650babc9-9d68-4b73-9332-11972ca26f7b/compound/43b74f4f-bc8a-4b8b-b587-c97d8e9eed48"
+],
+"envipathM":[
+"32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/cdffdb1a-3322-4cc1-9171-d857bfaa198a",
+"4fd7f3e0-dd25-43ac-9453-dda3e52396e4/compound/aecbda66-6e98-4c11-aeaf-6a072f4f963c",
+"650babc9-9d68-4b73-9332-11972ca26f7b/compound/43b74f4f-bc8a-4b8b-b587-c97d8e9eed48"
+],
+"hmdb":[
+"HMDB0000119",
+"HMDB00119"
+],
+"kegg.compound":"C00048",
+"keggC":[
+"C00048",
+"M_C00048"
+],
+"metacyc.compound":"GLYOX",
+"metacycM":"GLYOX",
+"reactome":[
+"R-ALL-389678",
+"R-ALL-5367039",
+"R-ALL-904849"
+],
+"reactomeM":[
+"R-ALL-389678",
+"R-ALL-5367039",
+"R-ALL-904849"
+],
+"sabiork.compound":"1838",
+"sabiorkM":"1838",
+"seed.compound":[
+"cpd00040",
+"M_cpd00040"
+],
+"slm":"000597587",
+"vmh.metabolite":[
+"M_glx",
+"glx"
+],
+"vmhmetabolite":"glx"
+}
+},
+{
 "id":"gly_m",
 "name":"Glycine",
 "compartment":"m",
@@ -12744,133 +13685,6 @@
 }
 },
 {
-"id":"amet_c",
-"name":"S-Adenosyl-L-methionine",
-"compartment":"c",
-"charge":1,
-"formula":"C15H23N6O5S",
-"annotation":{
-"bigg.metabolite":[
-"amet",
-"M_amet"
-],
-"chebi":[
-"15414",
-"59789",
-"67040",
-"10786",
-"10833",
-"12742",
-"12757",
-"12760",
-"22036",
-"45607",
-"527887",
-"8946"
-],
-"hmdb":[
-"HMDB0001185",
-"HMDB0062709",
-"HMDB01185",
-"HMDB62709"
-],
-"kegg.compound":"C00019",
-"keggC":[
-"C00019",
-"M_C00019"
-],
-"metacyc.compound":"S-ADENOSYLMETHIONINE",
-"metacycM":"S-ADENOSYLMETHIONINE",
-"reactome":[
-"R-ALL-2162265",
-"R-ALL-5279190",
-"R-ALL-71284",
-"R-ALL-77087",
-"R-ALL-9639461",
-"R-ALL-9854319"
-],
-"reactomeM":[
-"R-ALL-2162265",
-"R-ALL-5279190",
-"R-ALL-71284",
-"R-ALL-77087",
-"R-ALL-9639461",
-"R-ALL-9854319"
-],
-"seed.compound":[
-"cpd00017",
-"M_cpd00017"
-],
-"vmh.metabolite":[
-"M_amet",
-"amet"
-],
-"vmhmetabolite":"amet"
-}
-},
-{
-"id":"ahcys_c",
-"name":"S-Adenosyl-L-homocysteine",
-"compartment":"c",
-"charge":0,
-"formula":"C14H20N6O5S",
-"annotation":{
-"bigg.metabolite":[
-"ahcys",
-"M_ahcys"
-],
-"chebi":[
-"16680",
-"57856",
-"67009",
-"12741",
-"12759",
-"12761",
-"22034",
-"45495",
-"8945"
-],
-"hmdb":[
-"HMDB0000939",
-"HMDB00939"
-],
-"kegg.compound":"C00021",
-"keggC":[
-"C00021",
-"M_C00021"
-],
-"metacyc.compound":"ADENOSYL-HOMO-CYS",
-"metacycM":"ADENOSYL-HOMO-CYS",
-"reactome":[
-"R-ALL-2162252",
-"R-ALL-5278409",
-"R-ALL-71285",
-"R-ALL-77502",
-"R-ALL-9639443",
-"R-ALL-9854312"
-],
-"reactomeM":[
-"R-ALL-2162252",
-"R-ALL-5278409",
-"R-ALL-71285",
-"R-ALL-77502",
-"R-ALL-9639443",
-"R-ALL-9854312"
-],
-"sabiork.compound":"1274",
-"sabiorkM":"1274",
-"seed.compound":[
-"cpd00019",
-"M_cpd00019"
-],
-"vmh.metabolite":[
-"M_ahcys",
-"ahcys"
-],
-"vmhmetabolite":"ahcys"
-}
-},
-{
 "id":"betald_m",
 "name":"betaine aldehyde",
 "compartment":"m",
@@ -13341,6 +14155,96 @@
 }
 },
 {
+"id":"for_c",
+"name":"Formate",
+"compartment":"c",
+"charge":-1,
+"formula":"CH1O2",
+"annotation":{
+"bigg.metabolite":[
+"for",
+"M_for"
+],
+"chebi":[
+"15740",
+"193132",
+"30751",
+"14276",
+"24081",
+"24082",
+"42460",
+"5145"
+],
+"envipath":[
+"32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/09c1ad08-016e-4477-8840-b97a031eae23",
+"4fd7f3e0-dd25-43ac-9453-dda3e52396e4/compound/bf16ab32-cb3c-4427-a65a-089ab754823e",
+"5882df9c-dae1-4d80-a40e-db4724271456/compound/34fe3cd9-9b0b-46b0-a1c5-8a66509f1919",
+"650babc9-9d68-4b73-9332-11972ca26f7b/compound/9a9d20ae-b6ec-40a9-93ca-1de20597b1ed",
+"d817c31c-d879-44c8-913d-2963d42f8203/compound/fe596606-cac1-4578-816e-dd96e25081da"
+],
+"envipathM":[
+"32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/09c1ad08-016e-4477-8840-b97a031eae23",
+"4fd7f3e0-dd25-43ac-9453-dda3e52396e4/compound/bf16ab32-cb3c-4427-a65a-089ab754823e",
+"5882df9c-dae1-4d80-a40e-db4724271456/compound/34fe3cd9-9b0b-46b0-a1c5-8a66509f1919",
+"650babc9-9d68-4b73-9332-11972ca26f7b/compound/9a9d20ae-b6ec-40a9-93ca-1de20597b1ed",
+"d817c31c-d879-44c8-913d-2963d42f8203/compound/fe596606-cac1-4578-816e-dd96e25081da"
+],
+"hmdb":[
+"HMDB0000142",
+"HMDB00142",
+"HMDB0304356"
+],
+"kegg.compound":"C00058",
+"keggC":[
+"C00058",
+"M_C00058"
+],
+"metacyc.compound":[
+"CARBOXYL-GROUP",
+"CPD1G-1532",
+"CPD1G-1533",
+"CPD1G-1534",
+"CPD1G-1535",
+"FORMATE"
+],
+"metacycM":[
+"CARBOXYL-GROUP",
+"CPD1G-1532",
+"CPD1G-1533",
+"CPD1G-1534",
+"CPD1G-1535",
+"FORMATE"
+],
+"reactome":[
+"R-ALL-194712",
+"R-ALL-29460",
+"R-ALL-389585",
+"R-ALL-444084",
+"R-ALL-6801451"
+],
+"reactomeM":[
+"R-ALL-194712",
+"R-ALL-29460",
+"R-ALL-389585",
+"R-ALL-444084",
+"R-ALL-6801451"
+],
+"sabiork.compound":"1285",
+"sabiorkM":"1285",
+"seed.compound":[
+"cpd00047",
+"cpd22511",
+"M_cpd00047",
+"M_cpd22511"
+],
+"vmh.metabolite":[
+"M_for",
+"for"
+],
+"vmhmetabolite":"for"
+}
+},
+{
 "id":"ile__L_c",
 "name":"L-isoleucine",
 "compartment":"c",
@@ -13464,61 +14368,6 @@
 }
 },
 {
-"id":"4mop_m",
-"name":"4-methyl-2-oxopentanoate",
-"compartment":"m",
-"charge":-1,
-"formula":"C6H9O3",
-"annotation":{
-"bigg.metabolite":[
-"4mop",
-"M_4mop"
-],
-"chebi":[
-"17865",
-"48430",
-"12020",
-"1891",
-"20438",
-"41619"
-],
-"envipath":"650babc9-9d68-4b73-9332-11972ca26f7b/compound/5e871a01-a329-4d3e-b004-4f31bc650c70",
-"envipathM":"650babc9-9d68-4b73-9332-11972ca26f7b/compound/5e871a01-a329-4d3e-b004-4f31bc650c70",
-"hmdb":[
-"HMDB0000695",
-"HMDB0000762",
-"HMDB00695",
-"HMDB00762"
-],
-"kegg.compound":"C00233",
-"keggC":[
-"C00233",
-"M_C00233"
-],
-"metacyc.compound":"2K-4CH3-PENTANOATE",
-"metacycM":"2K-4CH3-PENTANOATE",
-"reactome":[
-"R-ALL-113598",
-"R-ALL-70701"
-],
-"reactomeM":[
-"R-ALL-113598",
-"R-ALL-70701"
-],
-"sabiork.compound":"1985",
-"sabiorkM":"1985",
-"seed.compound":[
-"cpd00200",
-"M_cpd00200"
-],
-"vmh.metabolite":[
-"4mop",
-"M_4mop"
-],
-"vmhmetabolite":"4mop"
-}
-},
-{
 "id":"leu__L_c",
 "name":"L-leucine",
 "compartment":"c",
@@ -13611,61 +14460,6 @@
 "leu_L"
 ],
 "vmhmetabolite":"leu_L"
-}
-},
-{
-"id":"4mop_c",
-"name":"4-methyl-2-oxopentanoate",
-"compartment":"c",
-"charge":-1,
-"formula":"C6H9O3",
-"annotation":{
-"bigg.metabolite":[
-"4mop",
-"M_4mop"
-],
-"chebi":[
-"17865",
-"48430",
-"12020",
-"1891",
-"20438",
-"41619"
-],
-"envipath":"650babc9-9d68-4b73-9332-11972ca26f7b/compound/5e871a01-a329-4d3e-b004-4f31bc650c70",
-"envipathM":"650babc9-9d68-4b73-9332-11972ca26f7b/compound/5e871a01-a329-4d3e-b004-4f31bc650c70",
-"hmdb":[
-"HMDB0000695",
-"HMDB0000762",
-"HMDB00695",
-"HMDB00762"
-],
-"kegg.compound":"C00233",
-"keggC":[
-"C00233",
-"M_C00233"
-],
-"metacyc.compound":"2K-4CH3-PENTANOATE",
-"metacycM":"2K-4CH3-PENTANOATE",
-"reactome":[
-"R-ALL-113598",
-"R-ALL-70701"
-],
-"reactomeM":[
-"R-ALL-113598",
-"R-ALL-70701"
-],
-"sabiork.compound":"1985",
-"sabiorkM":"1985",
-"seed.compound":[
-"cpd00200",
-"M_cpd00200"
-],
-"vmh.metabolite":[
-"4mop",
-"M_4mop"
-],
-"vmhmetabolite":"4mop"
 }
 },
 {
@@ -14764,6 +15558,33 @@
 }
 },
 {
+"id":"HC01712_m",
+"name":"S-Glutaryldihydrolipoamide",
+"compartment":"m",
+"charge":-1,
+"formula":"C13H22NO4S2",
+"annotation":{
+"bigg.metabolite":[
+"HC01712",
+"M_HC01712"
+],
+"chebi":[
+"28391",
+"22047",
+"8958"
+],
+"hmdb":[
+"HMDB0006832",
+"HMDB06832"
+],
+"vmh.metabolite":[
+"HC01712",
+"M_HC01712"
+],
+"vmhmetabolite":"HC01712"
+}
+},
+{
 "id":"glutcoa_m",
 "name":"glutaryl-CoA(5-)",
 "compartment":"m",
@@ -14860,129 +15681,64 @@
 }
 },
 {
-"id":"glu5sa_m",
-"name":"L-Glutamate 5-semialdehyde",
+"id":"e4hglu_m",
+"name":"erythro-4-hydroxy-L-glutamate(1-)",
 "compartment":"m",
-"charge":0,
-"formula":"C5H9NO3",
+"charge":-1,
+"formula":"C5H8NO5",
 "annotation":{
 "bigg.metabolite":[
-"glu5sa",
-"glusemald",
-"M_glu5sa",
-"M_glusemald"
+"e4hglu",
+"M_e4hglu"
 ],
 "chebi":[
-"17232",
-"58066",
-"13109",
-"21302",
-"6225"
+"16338",
+"21285",
+"32811",
+"32812",
+"6331",
+"11998",
+"1851",
+"20389",
+"20390"
 ],
-"envipath":"650babc9-9d68-4b73-9332-11972ca26f7b/compound/f1f1b41c-5f7e-419e-b202-631905508811",
-"envipathM":"650babc9-9d68-4b73-9332-11972ca26f7b/compound/f1f1b41c-5f7e-419e-b202-631905508811",
 "hmdb":[
-"HMDB0002104",
-"HMDB02104"
+"HMDB0001344",
+"HMDB0002273",
+"HMDB01344",
+"HMDB02273"
 ],
-"kegg.compound":"C01165",
+"kegg.compound":[
+"C03079",
+"C05947"
+],
 "keggC":[
-"C01165",
-"M_C01165"
+"C03079",
+"C05947",
+"M_C03079",
+"M_C05947"
 ],
-"metacyc.compound":"L-GLUTAMATE_GAMMA-SEMIALDEHYDE",
-"metacycM":"L-GLUTAMATE_GAMMA-SEMIALDEHYDE",
-"reactome":"R-ALL-31339",
-"reactomeM":"R-ALL-31339",
-"sabiork.compound":"2262",
-"sabiorkM":"2262",
+"metacyc.compound":[
+"CPD-15057",
+"L-ERYTHRO-4-HYDROXY-GLUTAMATE"
+],
+"metacycM":[
+"CPD-15057",
+"L-ERYTHRO-4-HYDROXY-GLUTAMATE"
+],
+"reactome":"R-ALL-6784236",
+"reactomeM":"R-ALL-6784236",
 "seed.compound":[
-"cpd00858",
-"M_cpd00858"
+"cpd01974",
+"cpd19042",
+"M_cpd01974",
+"M_cpd19042"
 ],
 "vmh.metabolite":[
-"M_glu5sa",
-"glu5sa"
+"M_e4hglu",
+"e4hglu"
 ],
-"vmhmetabolite":"glu5sa"
-}
-},
-{
-"id":"arg__L_m",
-"name":"L-argininium(1+)",
-"compartment":"m",
-"charge":1,
-"formula":"C6H15N4O2",
-"annotation":{
-"bigg.metabolite":[
-"arg__L",
-"M_arg__L",
-"arg-L"
-],
-"chebi":[
-"16467",
-"32681",
-"32682",
-"32683",
-"13077",
-"133495",
-"21235",
-"42927",
-"6185"
-],
-"envipath":"650babc9-9d68-4b73-9332-11972ca26f7b/compound/2574796d-671d-41f9-9bff-2337672b41d2",
-"envipathM":"650babc9-9d68-4b73-9332-11972ca26f7b/compound/2574796d-671d-41f9-9bff-2337672b41d2",
-"hmdb":[
-"HMDB0000517",
-"HMDB00517",
-"HMDB0062762",
-"HMDB62762"
-],
-"kegg.compound":"C00062",
-"kegg.drug":"D02982",
-"keggC":[
-"C00062",
-"M_C00062"
-],
-"keggD":[
-"D02982",
-"M_D02982"
-],
-"metacyc.compound":"ARG",
-"metacycM":"ARG",
-"reactome":[
-"R-ALL-113530",
-"R-ALL-29468",
-"R-ALL-351977",
-"R-ALL-374064",
-"R-ALL-428011",
-"R-ALL-9817767"
-],
-"reactomeM":[
-"R-ALL-113530",
-"R-ALL-29468",
-"R-ALL-351977",
-"R-ALL-374064",
-"R-ALL-428011",
-"R-ALL-9817767"
-],
-"sabiork.compound":[
-"23080",
-"80"
-],
-"sabiorkM":[
-"23080",
-"80"
-],
-"seed.compound":[
-"cpd00051",
-"M_cpd00051"
-],
-"vmh.metabolite":[
-"M_arg_L",
-"arg_L"
-],
-"vmhmetabolite":"arg_L"
+"vmhmetabolite":"e4hglu"
 }
 },
 {
@@ -15256,85 +16012,59 @@
 }
 },
 {
-"id":"urea_m",
-"name":"Urea",
+"id":"4h2oglt_m",
+"name":"4-hydroxy-2-oxoglutarate(2-)",
 "compartment":"m",
-"charge":0,
-"formula":"CH4N2O",
+"charge":-2,
+"formula":"C5H4O6",
 "annotation":{
 "bigg.metabolite":[
-"urea",
-"M_urea"
+"4h2oglt",
+"M_4h2oglt"
 ],
 "chebi":[
-"134711",
-"16199",
-"32285",
-"48376",
-"15292",
-"27218",
-"46379",
-"9888"
+"17742",
+"30923",
+"36148",
+"11993",
+"1838",
+"20374",
+"20375"
 ],
 "envipath":[
-"32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/e1054e0b-a299-4b89-b470-455c007d2bc6",
-"5882df9c-dae1-4d80-a40e-db4724271456/compound/a4a8116a-0fc4-4ad8-b192-1387a253bac6",
-"650babc9-9d68-4b73-9332-11972ca26f7b/compound/f11c06ab-58b8-4bc5-96b8-6ca9eacf7655",
-"650babc9-9d68-4b73-9332-11972ca26f7b/compound/f410026a-1678-4d69-b6ac-505c7b9fe316",
-"d817c31c-d879-44c8-913d-2963d42f8203/compound/a4eaf69d-7b76-49ce-a0d1-0cf419b73713"
+"4fd7f3e0-dd25-43ac-9453-dda3e52396e4/compound/900696f3-15af-4276-a971-cc6603cd87a8",
+"650babc9-9d68-4b73-9332-11972ca26f7b/compound/f38dc384-4d85-498b-95de-64d1edde6c6d"
 ],
 "envipathM":[
-"32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/e1054e0b-a299-4b89-b470-455c007d2bc6",
-"5882df9c-dae1-4d80-a40e-db4724271456/compound/a4a8116a-0fc4-4ad8-b192-1387a253bac6",
-"650babc9-9d68-4b73-9332-11972ca26f7b/compound/f11c06ab-58b8-4bc5-96b8-6ca9eacf7655",
-"650babc9-9d68-4b73-9332-11972ca26f7b/compound/f410026a-1678-4d69-b6ac-505c7b9fe316",
-"d817c31c-d879-44c8-913d-2963d42f8203/compound/a4eaf69d-7b76-49ce-a0d1-0cf419b73713"
+"4fd7f3e0-dd25-43ac-9453-dda3e52396e4/compound/900696f3-15af-4276-a971-cc6603cd87a8",
+"650babc9-9d68-4b73-9332-11972ca26f7b/compound/f38dc384-4d85-498b-95de-64d1edde6c6d"
 ],
 "hmdb":[
-"HMDB0000294",
-"HMDB00294"
+"HMDB0001479",
+"HMDB0002070",
+"HMDB01479",
+"HMDB02070"
 ],
-"kegg.compound":"C00086",
-"kegg.drug":[
-"D00023",
-"D01749",
-"D10496"
-],
+"kegg.compound":"C01127",
 "keggC":[
-"C00086",
-"M_C00086"
+"C01127",
+"M_C01127"
 ],
-"keggD":[
-"D00023",
-"D01749",
-"D10496",
-"M_D00023",
-"M_D01749",
-"M_D10496"
-],
-"metacyc.compound":"UREA",
-"metacycM":"UREA",
-"reactome":[
-"R-ALL-29514",
-"R-ALL-374061",
-"R-ALL-432019"
-],
-"reactomeM":[
-"R-ALL-29514",
-"R-ALL-374061",
-"R-ALL-432019"
-],
-"sabiork.compound":"1798",
-"sabiorkM":"1798",
+"metacyc.compound":"CPD-15015",
+"metacycM":"CPD-15015",
+"reactome":"R-ALL-6784229",
+"reactomeM":"R-ALL-6784229",
+"sabiork.compound":"2252",
+"sabiorkM":"2252",
 "seed.compound":[
-"cpd00073",
-"M_cpd00073"
+"cpd00830",
+"M_cpd00830"
 ],
 "vmh.metabolite":[
-"M_urea",
-"urea"
+"4h2oglt",
+"M_4h2oglt"
 ],
-"vmhmetabolite":"urea"
+"vmhmetabolite":"4h2oglt"
 }
 },
 {
@@ -15425,135 +16155,6 @@
 "his_L"
 ],
 "vmhmetabolite":"his_L"
-}
-},
-{
-"id":"urcan_c",
-"name":"Urocanate",
-"compartment":"c",
-"charge":-1,
-"formula":"C6H5N2O2",
-"annotation":{
-"chebi":[
-"17771",
-"30817",
-"15298",
-"46392",
-"9899"
-],
-"hmdb":[
-"HMDB0000301",
-"HMDB0002280",
-"HMDB00301",
-"HMDB0034174",
-"HMDB02280",
-"HMDB34174"
-],
-"kegg.compound":"C00785",
-"keggC":[
-"C00785",
-"M_C00785"
-],
-"metacyc.compound":"UROCANATE",
-"metacycM":"UROCANATE",
-"reactome":"R-ALL-30721",
-"reactomeM":"R-ALL-30721",
-"sabiork.compound":"5236",
-"sabiorkM":"5236",
-"seed.compound":[
-"cpd00581",
-"M_cpd00581"
-],
-"vmh.metabolite":[
-"M_urcan",
-"urcan"
-],
-"vmhmetabolite":"urcan"
-}
-},
-{
-"id":"4izp_c",
-"name":"4-Imidazolone-5-propanoate",
-"compartment":"c",
-"charge":-1,
-"formula":"C6H7N2O3",
-"annotation":{
-"bigg.metabolite":[
-"4izp",
-"M_4izp"
-],
-"chebi":[
-"57255",
-"77893",
-"58508"
-],
-"vmh.metabolite":[
-"4izp",
-"M_4izp"
-],
-"vmhmetabolite":"4izp"
-}
-},
-{
-"id":"forglu_c",
-"name":"N-Formimidoyl-L-glutamate",
-"compartment":"c",
-"charge":-2,
-"formula":"C6H8N2O4",
-"annotation":{
-"bigg.metabolite":[
-"forglu",
-"M_forglu"
-],
-"chebi":[
-"18327",
-"58928",
-"7274",
-"12502",
-"21705"
-],
-"hmdb":[
-"HMDB0000854",
-"HMDB00854"
-],
-"kegg.compound":"C00439",
-"keggC":[
-"C00439",
-"M_C00439"
-],
-"metacyc.compound":"N-FORMIMINO-L-GLUTAMATE",
-"metacycM":"N-FORMIMINO-L-GLUTAMATE",
-"reactome":"R-ALL-30158",
-"reactomeM":"R-ALL-30158",
-"sabiork.compound":"2050",
-"sabiorkM":"2050",
-"seed.compound":[
-"cpd00344",
-"M_cpd00344"
-],
-"vmh.metabolite":[
-"M_forglu",
-"forglu"
-],
-"vmhmetabolite":"forglu"
-}
-},
-{
-"id":"5forthf_c",
-"name":"5-Formiminotetrahydrofolate",
-"compartment":"c",
-"charge":-2,
-"formula":"C20H22N8O6",
-"annotation":{
-"bigg.metabolite":[
-"5forthf",
-"M_5forthf"
-],
-"vmh.metabolite":[
-"5forthf",
-"M_5forthf"
-],
-"vmhmetabolite":"5forthf"
 }
 },
 {
@@ -16311,6 +16912,82 @@
 }
 },
 {
+"id":"_Lfmkynr_c",
+"name":"N-formyl-L-kynurenine",
+"compartment":"c",
+"charge":0,
+"formula":"C11H12N2O4"
+},
+{
+"id":"_Lkynr_c",
+"name":"L-kynurenine",
+"compartment":"c",
+"charge":0,
+"formula":"C10H12N2O3"
+},
+{
+"id":"hLkynr_c",
+"name":"3-hydroxy-L-kynurenine",
+"compartment":"c",
+"charge":0,
+"formula":"C10H12N2O4",
+"annotation":{
+"bigg.metabolite":[
+"hLkynr",
+"M_hLkynr"
+],
+"chebi":[
+"1547",
+"17380",
+"58125",
+"11823",
+"1530",
+"20055"
+],
+"hmdb":[
+"HMDB0000732",
+"HMDB0001152",
+"HMDB0011631",
+"HMDB00732",
+"HMDB01152",
+"HMDB11631"
+],
+"kegg.compound":[
+"C02794",
+"C03227"
+],
+"keggC":[
+"C02794",
+"C03227",
+"M_C02794",
+"M_C03227"
+],
+"metacyc.compound":"3-HYDROXY-L-KYNURENINE",
+"metacycM":"3-HYDROXY-L-KYNURENINE",
+"reactome":"R-ALL-34351",
+"reactomeM":"R-ALL-34351",
+"sabiork.compound":[
+"6346",
+"6493"
+],
+"sabiorkM":[
+"6346",
+"6493"
+],
+"seed.compound":[
+"cpd01804",
+"cpd02065",
+"M_cpd01804",
+"M_cpd02065"
+],
+"vmh.metabolite":[
+"M_hLkynr",
+"hLkynr"
+],
+"vmhmetabolite":"hLkynr"
+}
+},
+{
 "id":"o2s_c",
 "name":"superoxide",
 "compartment":"c",
@@ -16590,19 +17267,6 @@
 }
 },
 {
-"id":"glygn3_c",
-"name":"glycogen, structure 3 (glycogenin-7[1,4-Glc])",
-"compartment":"c",
-"charge":0,
-"formula":"C42H71O36X",
-"annotation":{
-"bigg.metabolite":[
-"glygn3",
-"M_glygn3"
-]
-}
-},
-{
 "id":"ggn_c",
 "name":"primed glycogenin (glycogenin-8[1,4-Glc])",
 "compartment":"c",
@@ -16635,19 +17299,6 @@
 }
 },
 {
-"id":"dxtrn_c",
-"name":"phosphorylase-limit dextrin (glycogenin-1,6{4[1,4-Glc], 4[1,4-Glc]})",
-"compartment":"c",
-"charge":0,
-"formula":"C48H81O41X",
-"annotation":{
-"bigg.metabolite":[
-"dxtrn",
-"M_dxtrn"
-]
-}
-},
-{
 "id":"glygn1_c",
 "name":"glycogen, structure 1 (glycogenin-11[1,4-Glc])",
 "compartment":"c",
@@ -16657,6 +17308,159 @@
 "bigg.metabolite":[
 "glygn1",
 "M_glygn1"
+]
+}
+},
+{
+"id":"Asn_X_Ser_Thr_r",
+"name":"protein-linked asparagine residue (N-glycosylation site)",
+"compartment":"r",
+"charge":0,
+"formula":"XH",
+"annotation":{
+"bigg.metabolite":[
+"Asn_X_Ser_Thr",
+"M_Asn_X_Ser_Thr"
+],
+"kegg.compound":"C03021",
+"keggC":[
+"C03021",
+"M_C03021"
+],
+"seed.compound":[
+"cpd12235",
+"M_cpd12235"
+]
+}
+},
+{
+"id":"g3m8mpdol__L_r",
+"name":"(alpha-D-Glucosyl)3-(alpha-D-mannosyl)8-beta-D-mannosyl-diacetylchitobiosyldiphosphodolichol, human liver homolog",
+"compartment":"r",
+"charge":-20,
+"formula":"C1960H3228N20O770P20",
+"annotation":{
+"bigg.metabolite":[
+"g3m8mpdol__L",
+"M_g3m8mpdol__L"
+]
+}
+},
+{
+"id":"doldp__L_r",
+"name":"Dolichol diphosphate, human liver homolog",
+"compartment":"r",
+"charge":-30,
+"formula":"C1080H1758O70P20",
+"annotation":{
+"bigg.metabolite":[
+"doldp__L",
+"M_doldp__L"
+]
+}
+},
+{
+"id":"g3m8masn_r",
+"name":"(alpha-D-Glucosyl)3-(alpha-D-mannosyl)8-beta-D-mannosyl-diacetylchitobiosyl-L-asparagine (protein)",
+"compartment":"r",
+"charge":0,
+"formula":"C88H147N2O70X",
+"annotation":{
+"vmh.metabolite":[
+"M_g3m8masn",
+"g3m8masn"
+],
+"vmhmetabolite":"g3m8masn"
+}
+},
+{
+"id":"g3m8mpdol_U_r",
+"name":"(alpha-D-Glucosyl)3-(alpha-D-mannosyl)8-beta-D-mannosyl-diacetylchitobiosyldiphosphodolichol, human uterine homolog",
+"compartment":"r",
+"charge":-20,
+"formula":"C1905H3140N20O770P20",
+"annotation":{
+"vmh.metabolite":[
+"M_g3m8mpdol_U",
+"g3m8mpdol_U"
+],
+"vmhmetabolite":"g3m8mpdol_U"
+}
+},
+{
+"id":"doldp_U_r",
+"name":"Dolichol diphosphate, human uterine homolog",
+"compartment":"r",
+"charge":-30,
+"formula":"C1025H1670O70P20",
+"annotation":{
+"bigg.metabolite":[
+"doldp_U",
+"M_doldp_U"
+],
+"lipidmaps":"LMPR03090023",
+"lipidmapsM":"LMPR03090023",
+"vmh.metabolite":[
+"M_doldp_L",
+"M_doldp_U",
+"doldp_L",
+"doldp_U"
+],
+"vmhmetabolite":[
+"doldp_L",
+"doldp_U"
+]
+}
+},
+{
+"id":"dolp__L_r",
+"name":"dolichyl phosphate(2-)",
+"compartment":"r",
+"charge":-20,
+"formula":"C1080H1758O40P10",
+"annotation":{
+"bigg.metabolite":[
+"dolp__L",
+"M_dolp__L"
+]
+}
+},
+{
+"id":"dolglcp__L_r",
+"name":"Dolichyl beta-D-glucosyl phosphate, human liver homolog",
+"compartment":"r",
+"charge":-10,
+"formula":"C1140H1868O90P10",
+"annotation":{
+"bigg.metabolite":[
+"dolglcp__L",
+"M_dolglcp__L"
+]
+}
+},
+{
+"id":"dolmanp__L_r",
+"name":"Dolichyl phosphate D-mannose, human liver homolog",
+"compartment":"r",
+"charge":-10,
+"formula":"C1140H1868O90P10",
+"annotation":{
+"bigg.metabolite":[
+"dolmanp__L",
+"M_dolmanp__L"
+]
+}
+},
+{
+"id":"g2m8mpdol__L_r",
+"name":"(alpha-D-Glucosyl)2-(alpha-D-mannosyl)8-beta-D-mannosyl-diacetylchitobiosyldiphosphodolichol, human liver homolog",
+"compartment":"r",
+"charge":-20,
+"formula":"C1900H3128N20O720P20",
+"annotation":{
+"bigg.metabolite":[
+"g2m8mpdol__L",
+"M_g2m8mpdol__L"
 ]
 }
 },
@@ -16861,6 +17665,133 @@
 "pail_hs",
 "M_pail_hs"
 ]
+}
+},
+{
+"id":"acgpail_hs_r",
+"name":"6-(N-acetyl-alpha-D-glucosaminyl)-1-phosphatidyl-1D-myo-inositol(1-)",
+"compartment":"r",
+"charge":-1,
+"formula":"C17H29NO14PRCO2R2CO2",
+"annotation":{
+"bigg.metabolite":[
+"acgpail_hs",
+"M_acgpail_hs"
+]
+}
+},
+{
+"id":"gpail_hs_r",
+"name":"6-(alpha-D-glucosaminyl)-1-phosphatidyl-1D-myo-inositol",
+"compartment":"r",
+"charge":0,
+"formula":"C15H28NO13PRCO2R2CO2",
+"annotation":{
+"bigg.metabolite":[
+"gpail_hs",
+"M_gpail_hs"
+]
+}
+},
+{
+"id":"gacpail_hs_r",
+"name":"glucosaminyl-acylphosphatidylinositol",
+"compartment":"r",
+"charge":0,
+"formula":"C31H58NO14PRCO2R2CO2",
+"annotation":{
+"vmh.metabolite":[
+"M_gacpail_hs",
+"gacpail_hs"
+],
+"vmhmetabolite":"gacpail_hs"
+}
+},
+{
+"id":"mgacpail_hs_r",
+"name":"mannosyl-glucosaminyl-acylphosphatidylinositiol (H2)",
+"compartment":"r",
+"charge":0,
+"formula":"C37H68NO19PRCO2R2CO2",
+"annotation":{
+"vmh.metabolite":[
+"M_mgacpail_hs",
+"mgacpail_hs"
+],
+"vmhmetabolite":"mgacpail_hs"
+}
+},
+{
+"id":"pail_hs_r",
+"name":"1-phosphatidyl-1D-myo-inositol(1-)",
+"compartment":"r",
+"charge":-1,
+"formula":"C9H16O9PRCO2R2CO2",
+"annotation":{
+"bigg.metabolite":[
+"pail_hs",
+"M_pail_hs"
+]
+}
+},
+{
+"id":"uacgam_r",
+"name":"UDP-N-acetyl-alpha-D-glucosamine(2-)",
+"compartment":"r",
+"charge":-2,
+"formula":"C17H25N3O17P2",
+"annotation":{
+"bigg.metabolite":[
+"uacgam",
+"M_uacgam"
+],
+"chebi":[
+"16264",
+"57705",
+"13456",
+"13473",
+"13475",
+"13476",
+"22115",
+"46243",
+"9823"
+],
+"hmdb":[
+"HMDB0000290",
+"HMDB00290"
+],
+"kegg.compound":"C00043",
+"keggC":[
+"C00043",
+"M_C00043"
+],
+"lipidmaps":"LMSL01010002",
+"lipidmapsM":"LMSL01010002",
+"metacyc.compound":"UDP-N-ACETYL-D-GLUCOSAMINE",
+"metacycM":"UDP-N-ACETYL-D-GLUCOSAMINE",
+"reactome":[
+"R-ALL-162756",
+"R-ALL-3499326",
+"R-ALL-914003",
+"R-ALL-9683631"
+],
+"reactomeM":[
+"R-ALL-162756",
+"R-ALL-3499326",
+"R-ALL-914003",
+"R-ALL-9683631"
+],
+"sabiork.compound":"1925",
+"sabiorkM":"1925",
+"seed.compound":[
+"cpd00037",
+"M_cpd00037"
+],
+"vmh.metabolite":[
+"M_uacgam",
+"uacgam"
+],
+"vmhmetabolite":"uacgam"
 }
 },
 {
@@ -17554,52 +18485,6 @@
 "M_10fthf"
 ],
 "vmhmetabolite":"10fthf"
-}
-},
-{
-"id":"methf_m",
-"name":"5,10-Methenyltetrahydrofolate",
-"compartment":"m",
-"charge":-1,
-"formula":"C20H20N7O6",
-"annotation":{
-"bigg.metabolite":[
-"methf",
-"M_methf"
-],
-"chebi":[
-"15638",
-"57455",
-"12068",
-"12069",
-"1987"
-],
-"hmdb":[
-"HMDB0001354",
-"HMDB0062623",
-"HMDB01354",
-"HMDB62623"
-],
-"kegg.compound":"C00445",
-"keggC":[
-"C00445",
-"M_C00445"
-],
-"metacyc.compound":"5-10-METHENYL-THF",
-"metacycM":"5-10-METHENYL-THF",
-"reactome":"R-ALL-6801458",
-"reactomeM":"R-ALL-6801458",
-"sabiork.compound":"1338",
-"sabiorkM":"1338",
-"seed.compound":[
-"cpd00347",
-"M_cpd00347"
-],
-"vmh.metabolite":[
-"M_methf",
-"methf"
-],
-"vmhmetabolite":"methf"
 }
 },
 {
@@ -18300,102 +19185,16 @@
 }
 },
 {
-"id":"adrnl_c",
-"name":"Adrenaline",
+"id":"42A3HP24DB_c",
+"name":"4-(2-Amino-3-hydroxyphenyl)-2,4-dioxobutanoate",
 "compartment":"c",
-"charge":1,
-"formula":"C9H14NO3",
+"charge":-1,
+"formula":"C10H8NO5",
 "annotation":{
 "bigg.metabolite":[
-"adrnl",
-"M_adrnl"
-],
-"chebi":[
-"28918",
-"71406",
-"1942",
-"23928"
-],
-"hmdb":[
-"HMDB0000068",
-"HMDB0000615",
-"HMDB00068",
-"HMDB00615"
-],
-"kegg.compound":"C00788",
-"kegg.drug":"D00095",
-"keggC":[
-"C00788",
-"M_C00788"
-],
-"keggD":[
-"D00095",
-"M_D00095"
-],
-"metacyc.compound":"L-EPINEPHRINE",
-"metacycM":"L-EPINEPHRINE",
-"reactome":[
-"R-ALL-209794",
-"R-ALL-444148",
-"R-ALL-549254",
-"R-ALL-8869056"
-],
-"reactomeM":[
-"R-ALL-209794",
-"R-ALL-444148",
-"R-ALL-549254",
-"R-ALL-8869056"
-],
-"sabiork.compound":"2152",
-"sabiorkM":"2152",
-"seed.compound":[
-"cpd00583",
-"M_cpd00583"
-],
-"vmh.metabolite":[
-"M_adrnl",
-"adrnl"
-],
-"vmhmetabolite":"adrnl"
-}
-},
-{
-"id":"mepi_c",
-"name":"Metanephrine",
-"compartment":"c",
-"charge":1,
-"formula":"C10H16NO3",
-"annotation":{
-"bigg.metabolite":[
-"mepi",
-"M_mepi"
-],
-"chebi":[
-"189646",
-"6270"
-],
-"hmdb":[
-"HMDB0062493",
-"HMDB62493"
-],
-"kegg.compound":"C05588",
-"keggC":[
-"C05588",
-"M_C05588"
-],
-"metacyc.compound":"CPD-11877",
-"metacycM":"CPD-11877",
-"sabiork.compound":"7995",
-"sabiorkM":"7995",
-"seed.compound":[
-"cpd03317",
-"M_cpd03317"
-],
-"vmh.metabolite":[
-"M_mepi",
-"mepi"
-],
-"vmhmetabolite":"mepi"
+"42A3HP24DB",
+"M_42A3HP24DB"
+]
 }
 },
 {
@@ -20182,75 +20981,41 @@
 }
 },
 {
-"id":"acac_e",
-"name":"Acetoacetate",
+"id":"crn_e",
+"name":"L-Carnitine",
 "compartment":"e",
-"charge":-1,
-"formula":"C4H5O3",
+"charge":0,
+"formula":"C7H15NO3",
 "annotation":{
-"bigg.metabolite":[
-"acac",
-"M_acac"
-],
 "chebi":[
-"13705",
-"15344",
-"22172",
-"2391",
-"40507"
-],
-"envipath":[
-"32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/6fdb8e86-869c-43e6-a53f-5be3d9719096",
-"4fd7f3e0-dd25-43ac-9453-dda3e52396e4/compound/c0d6192a-b52c-4bd4-a5ef-f1b459bc5a3f",
-"5882df9c-dae1-4d80-a40e-db4724271456/compound/1d5be1e0-4890-4396-a3bf-af5789c697c6",
-"650babc9-9d68-4b73-9332-11972ca26f7b/compound/924da7cc-7d56-4de8-8fc5-6750e564b19d",
-"650babc9-9d68-4b73-9332-11972ca26f7b/compound/fb4f33dd-4427-4324-bdc3-c9e1f3655a36",
-"d817c31c-d879-44c8-913d-2963d42f8203/compound/9b702189-a4a2-4f8e-8719-3564ba1b5f7c"
-],
-"envipathM":[
-"32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/6fdb8e86-869c-43e6-a53f-5be3d9719096",
-"4fd7f3e0-dd25-43ac-9453-dda3e52396e4/compound/c0d6192a-b52c-4bd4-a5ef-f1b459bc5a3f",
-"5882df9c-dae1-4d80-a40e-db4724271456/compound/1d5be1e0-4890-4396-a3bf-af5789c697c6",
-"650babc9-9d68-4b73-9332-11972ca26f7b/compound/924da7cc-7d56-4de8-8fc5-6750e564b19d",
-"650babc9-9d68-4b73-9332-11972ca26f7b/compound/fb4f33dd-4427-4324-bdc3-c9e1f3655a36",
-"d817c31c-d879-44c8-913d-2963d42f8203/compound/9b702189-a4a2-4f8e-8719-3564ba1b5f7c"
+"11060",
+"51453"
 ],
 "hmdb":[
-"HMDB0000060",
-"HMDB00060",
-"HMDB0304256"
+"HMDB0062634",
+"HMDB62634"
 ],
-"kegg.compound":"C00164",
+"kegg.compound":"C15025",
 "keggC":[
-"C00164",
-"M_C00164"
+"C15025",
+"M_C15025"
 ],
-"lipidmaps":"LMFA01060003",
-"lipidmapsM":"LMFA01060003",
-"metacyc.compound":"3-KETOBUTYRATE",
-"metacycM":"3-KETOBUTYRATE",
-"reactome":[
-"R-ALL-29666",
-"R-ALL-433680",
-"R-ALL-73909"
-],
-"reactomeM":[
-"R-ALL-29666",
-"R-ALL-433680",
-"R-ALL-73909"
-],
-"sabiork.compound":"1956",
-"sabiorkM":"1956",
+"metacyc.compound":"D-CARNITINE",
+"metacycM":"D-CARNITINE",
 "seed.compound":[
-"cpd00142",
-"M_cpd00142"
+"cpd10719",
+"M_cpd10719"
 ],
-"slm":"000000867",
 "vmh.metabolite":[
-"M_acac",
-"acac"
+"M_crn",
+"M_crn_D",
+"crn",
+"crn_D"
 ],
-"vmhmetabolite":"acac"
+"vmhmetabolite":[
+"crn",
+"crn_D"
+]
 }
 },
 {
@@ -20640,62 +21405,6 @@
 }
 },
 {
-"id":"fol_e",
-"name":"Folate",
-"compartment":"e",
-"charge":-1,
-"formula":"C19H18N7O6",
-"annotation":{
-"bigg.metabolite":[
-"fol",
-"M_fol"
-],
-"chebi":[
-"27470",
-"62501",
-"24075",
-"42610",
-"5140",
-"569217"
-],
-"hmdb":[
-"HMDB0000121",
-"HMDB00121"
-],
-"kegg.compound":"C00504",
-"kegg.drug":"D00070",
-"keggC":[
-"C00504",
-"M_C00504"
-],
-"keggD":[
-"D00070",
-"M_D00070"
-],
-"metacyc.compound":"CPD-12826",
-"metacycM":"CPD-12826",
-"reactome":[
-"R-ALL-197965",
-"R-ALL-200716"
-],
-"reactomeM":[
-"R-ALL-197965",
-"R-ALL-200716"
-],
-"sabiork.compound":"2063",
-"sabiorkM":"2063",
-"seed.compound":[
-"cpd00393",
-"M_cpd00393"
-],
-"vmh.metabolite":[
-"M_fol",
-"fol"
-],
-"vmhmetabolite":"fol"
-}
-},
-{
 "id":"3dsphgn_c",
 "name":"(2S)-1-hydroxy-3-oxooctadecan-2-aminium",
 "compartment":"c",
@@ -20926,6 +21635,94 @@
 "g3pc"
 ],
 "vmhmetabolite":"g3pc"
+}
+},
+{
+"id":"C02470_c",
+"name":"Xanthurenic acid",
+"compartment":"c",
+"charge":-1,
+"formula":"C10H6NO4",
+"annotation":{
+"bigg.metabolite":[
+"C02470",
+"CE2949",
+"M_C02470",
+"M_CE2949"
+],
+"chebi":[
+"10072",
+"71201"
+],
+"hmdb":[
+"HMDB0000881",
+"HMDB00881"
+],
+"kegg.compound":"C02470",
+"keggC":[
+"C02470",
+"M_C02470"
+],
+"metacyc.compound":"XANTHURENATE",
+"metacycM":"XANTHURENATE",
+"seed.compound":[
+"cpd01625",
+"M_cpd01625"
+],
+"vmh.metabolite":[
+"C02470",
+"CE2949",
+"M_C02470",
+"M_CE2949"
+],
+"vmhmetabolite":[
+"C02470",
+"CE2949"
+]
+}
+},
+{
+"id":"C02470_e",
+"name":"Xanthurenic acid",
+"compartment":"e",
+"charge":-1,
+"formula":"C10H6NO4",
+"annotation":{
+"bigg.metabolite":[
+"C02470",
+"CE2949",
+"M_C02470",
+"M_CE2949"
+],
+"chebi":[
+"10072",
+"71201"
+],
+"hmdb":[
+"HMDB0000881",
+"HMDB00881"
+],
+"kegg.compound":"C02470",
+"keggC":[
+"C02470",
+"M_C02470"
+],
+"metacyc.compound":"XANTHURENATE",
+"metacycM":"XANTHURENATE",
+"seed.compound":[
+"cpd01625",
+"M_cpd01625"
+],
+"vmh.metabolite":[
+"C02470",
+"CE2949",
+"M_C02470",
+"M_CE2949"
+],
+"vmhmetabolite":[
+"C02470",
+"CE2949"
+]
 }
 },
 {
@@ -21272,20 +22069,6 @@
 }
 },
 {
-"id":"HC02136_c",
-"name":"Glycogenin-G7G1",
-"compartment":"c",
-"charge":0,
-"formula":"C48H81O41X",
-"annotation":{
-"vmh.metabolite":[
-"HC02136",
-"M_HC02136"
-],
-"vmhmetabolite":"HC02136"
-}
-},
-{
 "id":"fol_c",
 "name":"Folate",
 "compartment":"c",
@@ -21388,61 +22171,198 @@
 }
 },
 {
-"id":"malcoa_e",
-"name":"Malonyl-CoA",
+"id":"hdcea_e",
+"name":"Hexadecenoate (n-C16:1)",
 "compartment":"e",
-"charge":-5,
-"formula":"C24H33N7O19P3S",
+"charge":-1,
+"formula":"C16H29O2",
 "annotation":{
 "bigg.metabolite":[
-"malcoa",
-"M_malcoa"
+"hdcea",
+"M_hdcea"
 ],
 "chebi":[
-"15531",
-"57384",
-"14565",
-"25135",
-"43979",
-"6661"
+"28716",
+"32372",
+"25836",
+"44696",
+"7897"
 ],
 "hmdb":[
-"HMDB0001175",
-"HMDB01175"
+"HMDB0003229",
+"HMDB0060082",
+"HMDB03229",
+"HMDB60082"
 ],
-"kegg.compound":"C00083",
+"kegg.compound":"C08362",
 "keggC":[
-"C00083",
-"M_C00083"
+"C08362",
+"M_C08362"
 ],
-"lipidmaps":"LMFA07050345",
-"lipidmapsM":"LMFA07050345",
-"metacyc.compound":"MALONYL-COA",
-"metacycM":"MALONYL-COA",
+"lipidmaps":"LMFA01030056",
+"lipidmapsM":"LMFA01030056",
+"metacyc.compound":"CPD-9245",
+"metacycM":"CPD-9245",
+"reactome":"R-ALL-400486",
+"reactomeM":"R-ALL-400486",
+"sabiork.compound":"10457",
+"sabiorkM":"10457",
+"seed.compound":[
+"cpd05274",
+"M_cpd05274"
+],
+"slm":"000000411",
+"vmh.metabolite":[
+"M_hdcea",
+"hdcea"
+],
+"vmhmetabolite":"hdcea"
+}
+},
+{
+"id":"hdcea_c",
+"name":"Hexadecenoate (n-C16:1)",
+"compartment":"c",
+"charge":-1,
+"formula":"C16H29O2",
+"annotation":{
+"bigg.metabolite":[
+"hdcea",
+"M_hdcea"
+],
+"chebi":[
+"28716",
+"32372",
+"25836",
+"44696",
+"7897"
+],
+"hmdb":[
+"HMDB0003229",
+"HMDB0060082",
+"HMDB03229",
+"HMDB60082"
+],
+"kegg.compound":"C08362",
+"keggC":[
+"C08362",
+"M_C08362"
+],
+"lipidmaps":"LMFA01030056",
+"lipidmapsM":"LMFA01030056",
+"metacyc.compound":"CPD-9245",
+"metacycM":"CPD-9245",
+"reactome":"R-ALL-400486",
+"reactomeM":"R-ALL-400486",
+"sabiork.compound":"10457",
+"sabiorkM":"10457",
+"seed.compound":[
+"cpd05274",
+"M_cpd05274"
+],
+"slm":"000000411",
+"vmh.metabolite":[
+"M_hdcea",
+"hdcea"
+],
+"vmhmetabolite":"hdcea"
+}
+},
+{
+"id":"crn_r",
+"name":"L-Carnitine",
+"compartment":"r",
+"charge":0,
+"formula":"C7H15NO3",
+"annotation":{
+"chebi":[
+"11060",
+"51453"
+],
+"hmdb":[
+"HMDB0062634",
+"HMDB62634"
+],
+"kegg.compound":"C15025",
+"keggC":[
+"C15025",
+"M_C15025"
+],
+"metacyc.compound":"D-CARNITINE",
+"metacycM":"D-CARNITINE",
+"seed.compound":[
+"cpd10719",
+"M_cpd10719"
+],
+"vmh.metabolite":[
+"M_crn",
+"M_crn_D",
+"crn",
+"crn_D"
+],
+"vmhmetabolite":[
+"crn",
+"crn_D"
+]
+}
+},
+{
+"id":"pmtcrn_r",
+"name":"L-Palmitoylcarnitine",
+"compartment":"r",
+"charge":0,
+"formula":"C23H45NO4",
+"annotation":{
+"bigg.metabolite":[
+"pmtcrn",
+"M_pmtcrn"
+],
+"chebi":[
+"17490",
+"13150",
+"21369",
+"6281"
+],
+"hmdb":[
+"HMDB0000222",
+"HMDB0000846",
+"HMDB00222",
+"HMDB00846"
+],
+"kegg.compound":"C02990",
+"keggC":[
+"C02990",
+"M_C02990"
+],
+"lipidmaps":"LMFA07070004",
+"lipidmapsM":"LMFA07070004",
+"metacyc.compound":"CPD-419",
+"metacycM":"CPD-419",
 "reactome":[
-"R-ALL-2046066",
-"R-ALL-29508",
-"R-ALL-977314",
-"R-ALL-977323"
+"R-ALL-201034",
+"R-ALL-201050"
 ],
 "reactomeM":[
-"R-ALL-2046066",
-"R-ALL-29508",
-"R-ALL-977314",
-"R-ALL-977323"
+"R-ALL-201034",
+"R-ALL-201050"
 ],
-"sabiork.compound":"1930",
-"sabiorkM":"1930",
+"sabiork.compound":"2612",
+"sabiorkM":"2612",
 "seed.compound":[
-"cpd00070",
-"M_cpd00070"
+"cpd01915",
+"M_cpd01915"
 ],
-"slm":"000000274",
+"slm":"000001044",
 "vmh.metabolite":[
-"M_malcoa",
-"malcoa"
+"M_hdcecrn",
+"M_pmtcrn",
+"hdcecrn",
+"pmtcrn"
 ],
-"vmhmetabolite":"malcoa"
+"vmhmetabolite":[
+"hdcecrn",
+"pmtcrn"
+]
 }
 }
 ],
@@ -21454,8 +22374,8 @@
 "g1p_c":-1.0,
 "g6p_c":1.0
 },
-"lower_bound":-0.0009811456248389097,
-"upper_bound":-0.0002452864062097274,
+"lower_bound":-0.001821116793661241,
+"upper_bound":-0.0004580189467754606,
 "gene_reaction_rule":"PGM1 or PGM2",
 "notes":{
 "Confidence Level":"0",
@@ -21493,8 +22413,8 @@
 "glc__D_c":-1.0,
 "h_c":1.0
 },
-"lower_bound":2.653810875794087,
-"upper_bound":4.9999999999999085,
+"lower_bound":3.4097134343823314,
+"upper_bound":5.000000000000049,
 "gene_reaction_rule":"ADPGK or HK2 or HK1 or HK3 or GCK or ADPGK",
 "notes":{
 "Confidence Level":"0",
@@ -21543,8 +22463,8 @@
 "f6p_c":1.0,
 "g6p_c":-1.0
 },
-"lower_bound":2.651578517391613,
-"upper_bound":4.997767641598671,
+"lower_bound":3.405544991215031,
+"upper_bound":4.995831556831831,
 "gene_reaction_rule":"GPI",
 "notes":{
 "Confidence Level":"0",
@@ -21576,8 +22496,8 @@
 "fdp_c":1.0,
 "h_c":1.0
 },
-"lower_bound":2.6515785173917483,
-"upper_bound":4.997767641598546,
+"lower_bound":3.405544991215031,
+"upper_bound":4.9958315568319165,
 "gene_reaction_rule":"PFKP or (PFKP and PFKL) or (PFKP and PFKM) or PFKM or PFKL or (PFKL and PFKM)",
 "notes":{
 "Confidence Level":"0",
@@ -21606,8 +22526,8 @@
 "dhap_c":-1.0,
 "g3p_c":1.0
 },
-"lower_bound":2.6507819779746256,
-"upper_bound":4.996971102181192,
+"lower_bound":3.4040576273175445,
+"upper_bound":4.9943441929347046,
 "gene_reaction_rule":"TPI1",
 "notes":{
 "Confidence Level":"0",
@@ -21638,8 +22558,8 @@
 "nadh_c":1.0,
 "pi_c":-1.0
 },
-"lower_bound":5.302360495366284,
-"upper_bound":9.994738743779726,
+"lower_bound":6.809602618532825,
+"upper_bound":9.990175749766424,
 "gene_reaction_rule":"GAPDH",
 "notes":{
 "Confidence Level":"0",
@@ -21672,8 +22592,8 @@
 "adp_c":1.0,
 "atp_c":-1.0
 },
-"lower_bound":-9.994738743776793,
-"upper_bound":-5.302360495366202,
+"lower_bound":-9.990175749769492,
+"upper_bound":-6.8096026185328355,
 "gene_reaction_rule":"PGK2",
 "notes":{
 "Confidence Level":"0",
@@ -21728,8 +22648,8 @@
 "2pg_c":-1.0,
 "3pg_c":1.0
 },
-"lower_bound":-9.994058038825807,
-"upper_bound":-5.301679790413417,
+"lower_bound":-9.990071732901947,
+"upper_bound":-6.8094986016679835,
 "gene_reaction_rule":"BPGM or PGAM1",
 "notes":{
 "Confidence Level":"0",
@@ -21792,8 +22712,8 @@
 "pep_c":-1.0,
 "pyr_c":1.0
 },
-"lower_bound":5.301679790413466,
-"upper_bound":9.99405803882527,
+"lower_bound":6.809498601667898,
+"upper_bound":9.990071732904672,
 "gene_reaction_rule":"PKLR",
 "notes":{
 "Confidence Level":"0",
@@ -21847,8 +22767,8 @@
 "nadh_c":1.0,
 "pyr_c":1.0
 },
-"lower_bound":-9.205816319907171,
-"upper_bound":-3.9658120684956657,
+"lower_bound":-9.12429330789439,
+"upper_bound":-5.572727666740775,
 "gene_reaction_rule":"_LDHB and _LDHA",
 "notes":{
 "Confidence Level":"0",
@@ -21869,8 +22789,8 @@
 "nadh_m":1.0,
 "pyr_m":-1.0
 },
-"lower_bound":0.22353272097296661,
-"upper_bound":0.7359054589627524,
+"lower_bound":0.3282519836612687,
+"upper_bound":0.6753766077060144,
 "gene_reaction_rule":"_DLAT",
 "notes":{
 "Confidence Level":"0",
@@ -21926,8 +22846,8 @@
 "nad_m":-1.0,
 "nadh_m":1.0
 },
-"lower_bound":0.0006807049520602959,
-"upper_bound":0.09576994746748824,
+"lower_bound":0.00010401686540717492,
+"upper_bound":0.09093424669242722,
 "gene_reaction_rule":"_DLD",
 "notes":{
 "Confidence Level":"0",
@@ -21985,8 +22905,8 @@
 "h_m":1.0,
 "oaa_m":-1.0
 },
-"lower_bound":0.2598700185726716,
-"upper_bound":0.7722427565811457,
+"lower_bound":0.3517535609588666,
+"upper_bound":0.6998644863707698,
 "gene_reaction_rule":"CS",
 "notes":{
 "Confidence Level":"0",
@@ -22052,8 +22972,8 @@
 "nadh_c":1.0,
 "oaa_c":1.0
 },
-"lower_bound":0.004445875797159715,
-"upper_bound":0.515450707145526,
+"lower_bound":0.008301704864607018,
+"upper_bound":0.3546515502619935,
 "gene_reaction_rule":"MDH2 or MDH1",
 "notes":{
 "Confidence Level":"0",
@@ -22121,8 +23041,8 @@
 "nad_m":-1.0,
 "nadh_m":1.0
 },
-"lower_bound":0.2598700185848175,
-"upper_bound":0.7722427565811673,
+"lower_bound":0.3517535609588666,
+"upper_bound":0.6998644863707247,
 "gene_reaction_rule":"IDH3B and IDH3A",
 "notes":{
 "Confidence Level":"0",
@@ -22169,8 +23089,8 @@
 "h2o_c":-1.0,
 "mal__L_c":1.0
 },
-"lower_bound":-16.328237362831146,
-"upper_bound":-10.159049229233347,
+"lower_bound":-14.778638137286407,
+"upper_bound":-10.595977877262158,
 "gene_reaction_rule":"FH",
 "notes":{
 "Confidence Level":"0",
@@ -22227,8 +23147,8 @@
 "q10h2_m":1.0,
 "succ_m":-1.0
 },
-"lower_bound":0.9565572511847266,
-"upper_bound":1.510683244408724,
+"lower_bound":0.9969182632540068,
+"upper_bound":1.3799747084204155,
 "gene_reaction_rule":"SDHA and SDHB and SDHC and SDHD",
 "notes":{
 "Confidence Level":"0",
@@ -22267,8 +23187,8 @@
 "succ_m":-1.0,
 "succoa_m":1.0
 },
-"lower_bound":-1.5106832444085967,
-"upper_bound":-0.9565572511846767,
+"lower_bound":-1.3799747084206047,
+"upper_bound":-0.9969182632535194,
 "gene_reaction_rule":"SUCLG1 and SUCLA2",
 "notes":{
 "Confidence Level":"0",
@@ -22314,6 +23234,57 @@
 }
 },
 {
+"id":"GLNLASEer",
+"name":"gluconolactonase, endoplasmic reticulum",
+"metabolites":{
+"gullac_r":1.0,
+"guln_r":-1.0,
+"h2o_r":1.0,
+"h_r":-1.0
+},
+"lower_bound":1.1368683772161603e-13,
+"upper_bound":1.1368683772161603e-13,
+"gene_reaction_rule":"RGN",
+"notes":{
+"Confidence Level":"0",
+"References":"KEGG"
+},
+"annotation":{
+"bigg.reaction":[
+"GLNLASEer",
+"R_GLNLASEer"
+],
+"ec-code":"3.1.1.17",
+"kegg.reaction":"R02933",
+"keggR":"R02933",
+"metacyc.reaction":"RXN-8783",
+"metacycR":"RXN-8783",
+"rhea":[
+"42516",
+"42517",
+"42518",
+"42519"
+],
+"sabiork.reaction":"2792",
+"seed.reaction":[
+"rxn02100",
+"rxn32924"
+],
+"vmh.reaction":[
+"GLNLASEer",
+"LGCN14LACH",
+"R_GLNLASEer",
+"R_LGCN14LACH"
+],
+"vmhreaction":[
+"GLNLASEer",
+"LGCN14LACH",
+"R_GLNLASEer",
+"R_LGCN14LACH"
+]
+}
+},
+{
 "id":"PGL",
 "name":"6-phosphogluconolactonase",
 "metabolites":{
@@ -22322,8 +23293,8 @@
 "h2o_c":-1.0,
 "h_c":1.0
 },
-"lower_bound":0.001111103684529268,
-"upper_bound":0.004444414735212146,
+"lower_bound":0.002074744161140536,
+"upper_bound":0.008249334360549195,
 "gene_reaction_rule":"H6PD",
 "notes":{
 "Confidence Level":"0",
@@ -22387,8 +23358,8 @@
 "nadph_c":1.0,
 "ru5p__D_c":1.0
 },
-"lower_bound":0.0011111036845292681,
-"upper_bound":0.004444414735312717,
+"lower_bound":0.002074744161140536,
+"upper_bound":0.008249334360549195,
 "gene_reaction_rule":"PGD",
 "notes":{
 "Confidence Level":"0",
@@ -22450,8 +23421,8 @@
 "r1p_c":-1.0,
 "r5p_c":1.0
 },
-"lower_bound":0.0023200220784025164,
-"upper_bound":0.009280088314394086,
+"lower_bound":0.004332135992562998,
+"upper_bound":0.01722488919735965,
 "gene_reaction_rule":"PGM1 or PGM2",
 "notes":{
 "Confidence Level":"0",
@@ -22492,8 +23463,8 @@
 "prpp_c":1.0,
 "r5p_c":-1.0
 },
-"lower_bound":0.003431125763199816,
-"upper_bound":0.013724503050525527,
+"lower_bound":0.0064068801536905085,
+"upper_bound":0.025474223557807818,
 "gene_reaction_rule":"PRPS1L1 or PRPS2",
 "notes":{
 "Confidence Level":"0",
@@ -22534,8 +23505,8 @@
 "fdp_c":-1.0,
 "g3p_c":1.0
 },
-"lower_bound":2.6515785173917474,
-"upper_bound":4.9977676416012855,
+"lower_bound":3.4055449912150304,
+"upper_bound":4.995831556832741,
 "gene_reaction_rule":"ALDOC or ALDOB",
 "notes":{
 "Confidence Level":"0",
@@ -22560,6 +23531,51 @@
 }
 },
 {
+"id":"RE0383C",
+"name":"RE0383",
+"metabolites":{
+"glcur_c":1.0,
+"guln_c":-1.0,
+"h_c":1.0,
+"nadp_c":-1.0,
+"nadph_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":0.0,
+"gene_reaction_rule":"AKR1A1",
+"notes":{
+"Confidence Level":"0",
+"References":"KEGG"
+},
+"annotation":{
+"bigg.reaction":[
+"GULND",
+"GULNDer",
+"R_GULND",
+"R_GULNDer"
+],
+"ec-code":"1.1.1.2",
+"kegg.reaction":"R01481",
+"keggR":"R01481",
+"seed.reaction":[
+"rxn01079",
+"rxn32560"
+],
+"vmh.reaction":[
+"GULNDer",
+"RE0383C",
+"R_GULNDer",
+"R_RE0383C"
+],
+"vmhreaction":[
+"GULNDer",
+"RE0383C",
+"R_GULNDer",
+"R_RE0383C"
+]
+}
+},
+{
 "id":"GALU",
 "name":"UTP-glucose-1-phosphate uridylyltransferase",
 "metabolites":{
@@ -22569,8 +23585,8 @@
 "udpg_c":1.0,
 "utp_c":-1.0
 },
-"lower_bound":0.0002452864062097274,
-"upper_bound":0.0009811456248389097,
+"lower_bound":0.0004580189467754606,
+"upper_bound":0.001821116793661241,
 "gene_reaction_rule":"UGP2",
 "notes":{
 "Confidence Level":"0",
@@ -22600,6 +23616,52 @@
 }
 },
 {
+"id":"INOSTO",
+"name":"inositol oxygenase",
+"metabolites":{
+"glcur_c":1.0,
+"h2o_c":1.0,
+"h_c":1.0,
+"inost_c":-1.0,
+"o2_c":-1.0
+},
+"lower_bound":0.0,
+"upper_bound":0.0,
+"gene_reaction_rule":"MIOX",
+"notes":{
+"Confidence Level":"0",
+"References":"KEGG"
+},
+"annotation":{
+"bigg.reaction":[
+"INOSTO",
+"R_INOSTO"
+],
+"ec-code":"1.13.99.1",
+"kegg.reaction":"R01184",
+"keggR":"R01184",
+"rhea":[
+"23696",
+"23697",
+"23698",
+"23699"
+],
+"seed.reaction":[
+"rxn00880",
+"rxn33148",
+"rxn33155"
+],
+"vmh.reaction":[
+"INOSTO",
+"R_INOSTO"
+],
+"vmhreaction":[
+"INOSTO",
+"R_INOSTO"
+]
+}
+},
+{
 "id":"ACCOACm",
 "name":"Acetyl-Coa carboxylase, beta isoform",
 "metabolites":{
@@ -22611,8 +23673,8 @@
 "malcoa_m":1.0,
 "pi_m":1.0
 },
-"lower_bound":0.011985722339254237,
-"upper_bound":0.0479428893760664,
+"lower_bound":0.02238072630731148,
+"upper_bound":0.0889874028577614,
 "gene_reaction_rule":"369504 or ACACB",
 "notes":{
 "Confidence Level":"0",
@@ -22662,6 +23724,50 @@
 }
 },
 {
+"id":"C160CPT1",
+"name":"production of Palmitoylcarnitine",
+"metabolites":{
+"coa_c":1.0,
+"crn_c":-1.0,
+"pmtcoa_c":-1.0,
+"pmtcrn_c":1.0
+},
+"lower_bound":0.0,
+"upper_bound":0.0,
+"gene_reaction_rule":"CPT1A",
+"notes":{
+"Confidence Level":"0",
+"References":"KEGG"
+},
+"annotation":{
+"bigg.reaction":[
+"C160CPT1",
+"C160CPT2",
+"C160CPT2rbc",
+"R_C160CPT1",
+"R_C160CPT2",
+"R_C160CPT2rbc",
+"R_r0434",
+"R_r0437",
+"r0434",
+"r0437"
+],
+"ec-code":"2.3.1.21",
+"kegg.reaction":"R01923",
+"keggR":"R01923",
+"metacyc.reaction":"CARNITINE-O-PALMITOYLTRANSFERASE-RXN",
+"metacycR":"CARNITINE-O-PALMITOYLTRANSFERASE-RXN",
+"rhea":[
+"12661",
+"12662",
+"12663",
+"12664"
+],
+"sabiork.reaction":"1977",
+"seed.reaction":"rxn01409"
+}
+},
+{
 "id":"ACACT1r",
 "name":"acetyl-CoA C-acetyltransferase",
 "metabolites":{
@@ -22669,8 +23775,8 @@
 "accoa_c":-2.0,
 "coa_c":1.0
 },
-"lower_bound":-0.0034244920983610427,
-"upper_bound":-0.0008561230242776219,
+"lower_bound":-0.006356243061304667,
+"upper_bound":-0.0015986233072453615,
 "gene_reaction_rule":"ACAT2",
 "notes":{
 "Confidence Level":"0",
@@ -22734,8 +23840,8 @@
 "h_m":1.0,
 "hmgcoa_m":1.0
 },
-"lower_bound":0.0008561230246512423,
-"upper_bound":0.0034244920986828786,
+"lower_bound":0.0015986233072899558,
+"upper_bound":0.0063562430610876125,
 "gene_reaction_rule":"HMGCS2",
 "notes":{
 "Confidence Level":"0",
@@ -22791,38 +23897,6 @@
 }
 },
 {
-"id":"COQ3m",
-"name":"methyltransferase COQ3",
-"metabolites":{
-"2dpmhobq_m":-1.0,
-"ahcys_m":1.0,
-"amet_m":-1.0,
-"h_m":1.0,
-"q10_m":1.0
-},
-"lower_bound":0.0,
-"upper_bound":0.0,
-"gene_reaction_rule":"COQ3",
-"notes":{
-"Confidence Level":"0",
-"References":"KEGG"
-},
-"annotation":{
-"bigg.reaction":[
-"COQ3m",
-"R_COQ3m"
-],
-"vmh.reaction":[
-"COQ3m",
-"R_COQ3m"
-],
-"vmhreaction":[
-"COQ3m",
-"R_COQ3m"
-]
-}
-},
-{
 "id":"NADH2_u10m",
 "name":"NADH dehydrogenase, mitochondrial",
 "metabolites":{
@@ -22833,8 +23907,8 @@
 "q10_m":-1.0,
 "q10h2_m":1.0
 },
-"lower_bound":4.299482425403771,
-"upper_bound":6.869553555220476,
+"lower_bound":4.452114011738477,
+"upper_bound":6.1935836279206065,
 "gene_reaction_rule":"NDUFS2 and NDUFA13 and NDUFB7 and NDUFS4 and NDUFC2 and NDUFB6 and NDUFB10 and NDUFAB1 and NDUFA8 and NDUFA5 and NDUFA12 and NDUFB2 and NDUFV3 and NDUFA9 and NDUFA7 and NDUFB9 and NDUFS6 and NDUFS3 and NDUFB1 and NDUFB8 and NDUFA10 and NDUFB3 and NDUFS1 and NDUFB5 and NDUFV2 and NDUFA6 and NDUFV1 and NDUFA2 and NDUFS8 and NDUFB4 and NDUFS7 and NDUFS5 and NDUFA4 and NDUFA1 and NDUFA11 and ND1 and ND3 and ND6 and ND5 and ND4 and ND4L and ND2",
 "notes":{
 "Confidence Level":"0",
@@ -22875,8 +23949,8 @@
 "h_m":3.0,
 "pi_m":-1.0
 },
-"lower_bound":8.14061687025711,
-"upper_bound":12.833408082912584,
+"lower_bound":8.442695272429345,
+"upper_bound":11.623268403632553,
 "gene_reaction_rule":"NDUFS2 and NDUFA13 and NDUFB7 and NDUFS4 and NDUFC2 and NDUFB6 and NDUFB10 and NDUFAB1 and NDUFA8 and NDUFA5 and NDUFA12 and NDUFB2 and NDUFV3 and NDUFA9 and NDUFA7 and NDUFB9 and NDUFS6 and NDUFS3 and NDUFB1 and NDUFB8 and NDUFA10 and NDUFB3 and NDUFS1 and NDUFB5 and NDUFV2 and NDUFA6 and NDUFV1 and NDUFA2 and NDUFS8 and NDUFB4 and NDUFS7 and NDUFS5 and NDUFA4 and NDUFA1 and NDUFA11 and ND1 and ND3 and ND6 and ND5 and ND4 and ND4L and ND2",
 "notes":{
 "Confidence Level":"0",
@@ -22950,8 +24024,8 @@
 "o2_m":-1.0,
 "o2s_m":0.02
 },
-"lower_bound":2.6911944747397616,
-"upper_bound":4.238334134426273,
+"lower_bound":2.7832131412356733,
+"upper_bound":3.833341679757665,
 "gene_reaction_rule":"COX5B and COX4I1 and COX6A1 and COX6C and COX7A2L and COX7C and COX5A and COX7B and COX7A2 and COX8A and COX2 and COX3 and COX1",
 "notes":{
 "Confidence Level":"0",
@@ -22980,8 +24054,8 @@
 "q10_m":1.0,
 "q10h2_m":-1.0
 },
-"lower_bound":5.382388949480006,
-"upper_bound":8.476668268852718,
+"lower_bound":5.566426282471347,
+"upper_bound":7.6666833595151616,
 "gene_reaction_rule":"UQCRFS1 and UQCRC1 and UQCRQ and UQCRB and UQCRC2 and UQCR11 and UQCR10 and UQCRHL and CYTB",
 "notes":{
 "Confidence Level":"0",
@@ -23008,8 +24082,8 @@
 "pi_m":2.0,
 "ppi_m":-1.0
 },
-"lower_bound":0.03657628617821978,
-"upper_bound":0.14630514472383208,
+"lower_bound":0.06829824910567409,
+"upper_bound":0.27155882807402904,
 "gene_reaction_rule":"PPA2 or _LHPP or PPA1",
 "notes":{
 "Confidence Level":"0",
@@ -23096,8 +24170,8 @@
 "nh4_m":-1.0,
 "pi_m":1.0
 },
-"lower_bound":0.00048610368360459886,
-"upper_bound":0.0019444147352112246,
+"lower_bound":0.0009076927689731999,
+"upper_bound":0.0036090527632128186,
 "gene_reaction_rule":"CPS1",
 "notes":{
 "Confidence Level":"0",
@@ -23144,8 +24218,8 @@
 "nadh_m":1.0,
 "nh4_m":1.0
 },
-"lower_bound":0.46985241036333847,
-"upper_bound":0.7806843846593665,
+"lower_bound":0.48642109486124996,
+"upper_bound":0.6720385430318174,
 "gene_reaction_rule":"GLUD2",
 "notes":{
 "Confidence Level":"0",
@@ -23204,8 +24278,8 @@
 "glu__L_c":1.0,
 "pyr_c":1.0
 },
-"lower_bound":-0.011586527932422541,
-"upper_bound":-0.002896631983048792,
+"lower_bound":-0.021505900922534238,
+"upper_bound":-0.005408829419366157,
 "gene_reaction_rule":"GPT2",
 "notes":{
 "Confidence Level":"0",
@@ -23269,8 +24343,8 @@
 "pram_c":1.0,
 "prpp_c":-1.0
 },
-"lower_bound":0.0006249999961220479,
-"upper_bound":0.00250000000260905,
+"lower_bound":0.0011670513898201578,
+"upper_bound":0.004640281597251514,
 "gene_reaction_rule":"PPAT",
 "notes":{
 "Confidence Level":"0",
@@ -23322,8 +24396,8 @@
 "pi_c":1.0,
 "pram_c":-1.0
 },
-"lower_bound":0.0006249999960346031,
-"upper_bound":0.002500000002669367,
+"lower_bound":0.0011670513925992054,
+"upper_bound":0.004640281597289686,
 "gene_reaction_rule":"GART or GART-B",
 "notes":{
 "Confidence Level":"0",
@@ -23377,8 +24451,8 @@
 "h_c":1.0,
 "thf_c":1.0
 },
-"lower_bound":0.0006249999960346031,
-"upper_bound":0.002500000002669367,
+"lower_bound":0.0011670513925992054,
+"upper_bound":0.004640281597289686,
 "gene_reaction_rule":"GART or GART-B",
 "notes":{
 "Confidence Level":"0",
@@ -23435,8 +24509,8 @@
 "h_c":1.0,
 "pi_c":1.0
 },
-"lower_bound":0.0006249999960570196,
-"upper_bound":0.0025000000026090506,
+"lower_bound":0.0011670513925606972,
+"upper_bound":0.004640281597251513,
 "gene_reaction_rule":"PFAS",
 "notes":{
 "Confidence Level":"0",
@@ -23490,8 +24564,8 @@
 "h_c":2.0,
 "pi_c":1.0
 },
-"lower_bound":0.0006249999959209163,
-"upper_bound":0.0025000000023283064,
+"lower_bound":0.0011670513925992054,
+"upper_bound":0.004640281597403373,
 "gene_reaction_rule":"GART or GART-B",
 "notes":{
 "Confidence Level":"0",
@@ -23522,8 +24596,8 @@
 "co2_c":-1.0,
 "h_c":1.0
 },
-"lower_bound":0.0006249999958072294,
-"upper_bound":0.0025000000023283064,
+"lower_bound":0.0011670513924855186,
+"upper_bound":0.004640281597289686,
 "gene_reaction_rule":"PAICS",
 "notes":{
 "Confidence Level":"0",
@@ -23569,8 +24643,8 @@
 "h_c":1.0,
 "pi_c":1.0
 },
-"lower_bound":0.0006249999959209163,
-"upper_bound":0.0025000000023283064,
+"lower_bound":0.0011670513924855186,
+"upper_bound":0.004640281597175999,
 "gene_reaction_rule":"PAICS",
 "notes":{
 "Confidence Level":"0",
@@ -23622,8 +24696,8 @@
 "aicar_c":1.0,
 "fum_c":1.0
 },
-"lower_bound":0.0006249999959298616,
-"upper_bound":0.0025000000024467026,
+"lower_bound":0.0011670513925013278,
+"upper_bound":0.004640281597091447,
 "gene_reaction_rule":"ADSL",
 "notes":{
 "Confidence Level":"0",
@@ -23675,8 +24749,8 @@
 "fprica_c":1.0,
 "thf_c":1.0
 },
-"lower_bound":0.0006249999959209163,
-"upper_bound":0.00250000000255568,
+"lower_bound":0.0011670513924855186,
+"upper_bound":0.004640281597175999,
 "gene_reaction_rule":"ATIC",
 "notes":{
 "Confidence Level":"0",
@@ -23719,8 +24793,8 @@
 "h2o_c":-1.0,
 "imp_c":-1.0
 },
-"lower_bound":-0.002499999998462954,
-"upper_bound":-0.0006250000020600055,
+"lower_bound":-0.004640281597175999,
+"upper_bound":-0.0011670513930539528,
 "gene_reaction_rule":"ATIC",
 "notes":{
 "Confidence Level":"0",
@@ -23767,8 +24841,8 @@
 "dgdp_c":-1.0,
 "dgtp_c":1.0
 },
-"lower_bound":8.031062361624208e-05,
-"upper_bound":0.0003212424941239078,
+"lower_bound":0.00014996260006228113,
+"upper_bound":0.0005962622532251771,
 "gene_reaction_rule":"NME3 or (NME2 and NME1) or NME6 or NME7 or NME2",
 "notes":{
 "Confidence Level":"0",
@@ -23831,8 +24905,8 @@
 "didp_c":-1.0,
 "ditp_c":1.0
 },
-"lower_bound":0.00011140990162022324,
-"upper_bound":0.0004456396073554883,
+"lower_bound":0.0002080337300128611,
+"upper_bound":0.0008271573075908194,
 "gene_reaction_rule":"NME3 or NME2 or NME6 or NME7 or (NME2 and NME1)",
 "notes":{
 "Confidence Level":"0",
@@ -23890,8 +24964,8 @@
 "didp_n":-1.0,
 "ditp_n":1.0
 },
-"lower_bound":-0.00044563960739196773,
-"upper_bound":-0.00011140990170588339,
+"lower_bound":-0.0008271573076399363,
+"upper_bound":-0.0002080337301322288,
 "gene_reaction_rule":"NME2 and NME1",
 "notes":{
 "Confidence Level":"0",
@@ -23951,8 +25025,8 @@
 "nadph_c":-1.0,
 "nh4_c":1.0
 },
-"lower_bound":0.7420197483958337,
-"upper_bound":1.275802138557448,
+"lower_bound":0.8009694327700398,
+"upper_bound":1.1617549602677686,
 "gene_reaction_rule":"ARMC4",
 "notes":{
 "Confidence Level":"0",
@@ -24003,8 +25077,8 @@
 "nadph_m":1.0,
 "nh4_m":-1.0
 },
-"lower_bound":0.7422150244889281,
-"upper_bound":1.2759974146505328,
+"lower_bound":0.8013340683478418,
+"upper_bound":1.1621195958456383,
 "gene_reaction_rule":"GMPR2",
 "notes":{
 "Confidence Level":"0",
@@ -24056,8 +25130,8 @@
 "imp_c":-1.0,
 "pi_c":1.0
 },
-"lower_bound":0.0004297239080349171,
-"upper_bound":0.0017188956308602367,
+"lower_bound":0.0008024158167843319,
+"upper_bound":0.00319046390179122,
 "gene_reaction_rule":"ADSS2 or ADSS1",
 "notes":{
 "Confidence Level":"0",
@@ -24104,8 +25178,8 @@
 "amp_m":-1.0,
 "atp_m":-1.0
 },
-"lower_bound":-1.1368683772161603e-13,
-"upper_bound":9.094947017729282e-13,
+"lower_bound":-2.2737367544323206e-13,
+"upper_bound":0.0,
 "gene_reaction_rule":"AK4 or AK2 or AK3",
 "notes":{
 "Confidence Level":"0",
@@ -24162,8 +25236,8 @@
 "dadp_c":-1.0,
 "datp_c":1.0
 },
-"lower_bound":0.0002228198037614649,
-"upper_bound":0.0008912792150458596,
+"lower_bound":0.0004160674591767436,
+"upper_bound":0.0016543146143326605,
 "gene_reaction_rule":"NME3 or NME2 or NME6 or NME7 or (NME2 and NME1) or PKLR",
 "notes":{
 "Confidence Level":"0",
@@ -24223,8 +25297,8 @@
 "dadp_m":-1.0,
 "datp_m":1.0
 },
-"lower_bound":0.00011140990191511711,
-"upper_bound":0.00044563960754902184,
+"lower_bound":0.0002080337296895057,
+"upper_bound":0.0008271573072674641,
 "gene_reaction_rule":"NME4 or NME6 or NME1",
 "notes":{
 "Confidence Level":"0",
@@ -24285,8 +25359,8 @@
 "trdox_c":1.0,
 "trdrd_c":-1.0
 },
-"lower_bound":0.00235354054291812,
-"upper_bound":0.009414162173313515,
+"lower_bound":0.004394724426567798,
+"upper_bound":0.017473745381939743,
 "gene_reaction_rule":"(RRM1 and RRM2) or RRM2B",
 "notes":{
 "Confidence Level":"0",
@@ -24310,8 +25384,8 @@
 "damp_c":-1.0,
 "datp_c":-1.0
 },
-"lower_bound":0.00011140990216063074,
-"upper_bound":0.00044563960773302824,
+"lower_bound":0.00020803372956379462,
+"upper_bound":0.0008271573070715021,
 "gene_reaction_rule":"AK5",
 "notes":{
 "Confidence Level":"0",
@@ -24349,8 +25423,8 @@
 "pi_c":-1.0,
 "r1p_c":1.0
 },
-"lower_bound":0.00011140990193325706,
-"upper_bound":0.0004456396076193414,
+"lower_bound":0.00020803372956379462,
+"upper_bound":0.0008271573072988758,
 "gene_reaction_rule":"PNP",
 "notes":{
 "Confidence Level":"0",
@@ -24403,8 +25477,8 @@
 "pi_c":-1.0,
 "r1p_c":1.0
 },
-"lower_bound":4.679215908254264e-05,
-"upper_bound":0.0001871686355343627,
+"lower_bound":8.737416612802917e-05,
+"upper_bound":0.00034740606872674107,
 "gene_reaction_rule":"PNP",
 "notes":{
 "Confidence Level":"0",
@@ -24454,8 +25528,8 @@
 "h2o_c":-1.0,
 "pi_c":1.0
 },
-"lower_bound":0.00011140990175232388,
-"upper_bound":0.0004456396085672702,
+"lower_bound":0.00020803372930504365,
+"upper_bound":0.0008271573074144884,
 "gene_reaction_rule":"NT5C2 or NT5C1B or NT5C1A or _LOC770392 or NT5C3B or NT5DC4",
 "notes":{
 "Confidence Level":"0",
@@ -24525,8 +25599,8 @@
 "h2o_c":-1.0,
 "pi_c":1.0
 },
-"lower_bound":0.0022732299192588525,
-"upper_bound":0.009092919678837413,
+"lower_bound":0.004244761826306854,
+"upper_bound":0.0168774831284664,
 "gene_reaction_rule":"NT5C2 or NT5C1B or NT5C1A or _LOC770392 or NT5C3B or NT5DC4",
 "notes":{
 "Confidence Level":"0",
@@ -24582,8 +25656,8 @@
 "gua_c":1.0,
 "pi_c":-1.0
 },
-"lower_bound":0.002273229919296682,
-"upper_bound":0.00909291967889203,
+"lower_bound":0.004244761826385002,
+"upper_bound":0.01687748312849635,
 "gene_reaction_rule":"PNP",
 "notes":{
 "Confidence Level":"0",
@@ -24633,8 +25707,8 @@
 "ppi_c":1.0,
 "prpp_c":-1.0
 },
-"lower_bound":0.0023200220785033598,
-"upper_bound":0.009280088314428794,
+"lower_bound":0.004332135992656088,
+"upper_bound":0.017224889197189515,
 "gene_reaction_rule":"HPRT1 or _LOC769866 or APRT",
 "notes":{
 "Confidence Level":"0",
@@ -24686,8 +25760,8 @@
 "gdp_c":1.0,
 "gmp_c":-1.0
 },
-"lower_bound":0.002468506012291982,
-"upper_bound":0.00987402405053217,
+"lower_bound":0.004609397404010451,
+"upper_bound":0.01832730082389844,
 "gene_reaction_rule":"GUK1",
 "notes":{
 "Confidence Level":"0",
@@ -24745,8 +25819,8 @@
 "gdp_c":-1.0,
 "gtp_c":1.0
 },
-"lower_bound":0.0005446893773317678,
-"upper_bound":0.00217875750804764,
+"lower_bound":0.0010170887942907469,
+"upper_bound":0.004044019343622867,
 "gene_reaction_rule":"NME3 or NME2 or NME6 or NME7 or (NME2 and NME1) or PKLR",
 "notes":{
 "Confidence Level":"0",
@@ -24809,8 +25883,8 @@
 "ura_c":1.0,
 "uri_c":-1.0
 },
-"lower_bound":0.0021618200171360513,
-"upper_bound":0.008647280071045316,
+"lower_bound":0.00403672809670752,
+"upper_bound":0.01605032582142485,
 "gene_reaction_rule":"UPP2",
 "notes":{
 "Confidence Level":"0",
@@ -24857,8 +25931,8 @@
 "ump_c":-1.0,
 "uri_c":1.0
 },
-"lower_bound":0.0007313900895029208,
-"upper_bound":0.0029255603601178832,
+"lower_bound":0.0013657117159830093,
+"upper_bound":0.005430169557197847,
 "gene_reaction_rule":"NT5C2 or NT5C1B or NT5C1A or _LOC770392 or NT5C3B or NT5DC4",
 "notes":{
 "Confidence Level":"0",
@@ -24925,8 +25999,8 @@
 "orot5p_c":-1.0,
 "ump_c":1.0
 },
-"lower_bound":0.00048610368341571924,
-"upper_bound":0.0019444147352112246,
+"lower_bound":0.0009076927690670903,
+"upper_bound":0.0036090527633961486,
 "gene_reaction_rule":"UMPS",
 "notes":{
 "Confidence Level":"0",
@@ -24973,8 +26047,8 @@
 "ppi_c":1.0,
 "prpp_c":-1.0
 },
-"lower_bound":0.00048610368341571924,
-"upper_bound":0.0019444147352112246,
+"lower_bound":0.0009076927690670903,
+"upper_bound":0.0036090527633961486,
 "gene_reaction_rule":"UMPS",
 "notes":{
 "Confidence Level":"0",
@@ -25025,8 +26099,8 @@
 "q10_m":-1.0,
 "q10h2_m":1.0
 },
-"lower_bound":0.000486103683494954,
-"upper_bound":0.0019444147352112246,
+"lower_bound":0.0009076927690714921,
+"upper_bound":0.0036090527632491615,
 "gene_reaction_rule":"_DHODH",
 "notes":{
 "Confidence Level":"0",
@@ -25045,8 +26119,8 @@
 "h2o_c":-1.0,
 "h_c":1.0
 },
-"lower_bound":-0.0019444147351350693,
-"upper_bound":-0.0004861036834427068,
+"lower_bound":-0.0036090527632950398,
+"upper_bound":-0.0009076927692603931,
 "gene_reaction_rule":"CAD",
 "notes":{
 "Confidence Level":"0",
@@ -25054,6 +26128,27 @@
 },
 "annotation":{
 "ec-code":"3.5.2.3"
+}
+},
+{
+"id":"NDP7r",
+"name":"nucleoside-diphosphatase (UDP), endoplasmic reticulum",
+"metabolites":{
+"h2o_r":-1.0,
+"h_r":1.0,
+"pi_r":1.0,
+"udp_r":-1.0,
+"ump_r":1.0
+},
+"lower_bound":0.0,
+"upper_bound":0.0,
+"gene_reaction_rule":"ENTPD5",
+"notes":{
+"Confidence Level":"0",
+"References":"KEGG"
+},
+"annotation":{
+"ec-code":"3.6.1.6"
 }
 },
 {
@@ -25065,8 +26160,8 @@
 "udp_m":1.0,
 "ump_m":-1.0
 },
-"lower_bound":-0.0009811456247916794,
-"upper_bound":-0.000245286406084233,
+"lower_bound":-0.0018211167939625739,
+"upper_bound":-0.0004580189470289042,
 "gene_reaction_rule":"CMPK2",
 "notes":{
 "Confidence Level":"0",
@@ -25086,8 +26181,8 @@
 "h_c":1.0,
 "pi_c":1.0
 },
-"lower_bound":0.00048610368355639366,
-"upper_bound":0.001944414735362443,
+"lower_bound":0.0009076927690330194,
+"upper_bound":0.0036090527632950398,
 "gene_reaction_rule":"CAD",
 "notes":{
 "Confidence Level":"0",
@@ -25146,8 +26241,8 @@
 "cdp_m":-1.0,
 "ctp_m":1.0
 },
-"lower_bound":-0.0007939769893710036,
-"upper_bound":-0.00019849424711537722,
+"lower_bound":-0.0014737107249273317,
+"upper_bound":-0.00037064478055981454,
 "gene_reaction_rule":"NME4 or NME6 or NME1",
 "notes":{
 "Confidence Level":"0",
@@ -25212,8 +26307,8 @@
 "pi_c":1.0,
 "utp_c":-1.0
 },
-"lower_bound":0.0017153082294296754,
-"upper_bound":0.006861232919795484,
+"lower_bound":0.003202964571283316,
+"upper_bound":0.01273522113241067,
 "gene_reaction_rule":"CTPS1 or CTPS2",
 "notes":{
 "Confidence Level":"0",
@@ -25264,8 +26359,8 @@
 "nh4_e":1.0,
 "uri_e":1.0
 },
-"lower_bound":0.0014304299276779394,
-"upper_bound":0.005721719710960269,
+"lower_bound":0.0026710163807737507,
+"upper_bound":0.010620156264028565,
 "gene_reaction_rule":"CDA",
 "notes":{
 "Confidence Level":"0",
@@ -25285,8 +26380,8 @@
 "dutp_c":-1.0,
 "h_c":1.0
 },
-"lower_bound":-0.008522882957549882,
-"upper_bound":-0.002130720738932723,
+"lower_bound":-0.01581943076701009,
+"upper_bound":-0.003978656966864946,
 "gene_reaction_rule":"UCK2 or UCK1 or UCKL1 or _LOC776992",
 "notes":{
 "Confidence Level":"0"
@@ -25323,8 +26418,8 @@
 "cdp_m":1.0,
 "cmp_m":-1.0
 },
-"lower_bound":4.6792158741482126e-05,
-"upper_bound":0.00018716863530698902,
+"lower_bound":8.737416646908969e-05,
+"upper_bound":0.00034740606902359584,
 "gene_reaction_rule":"CMPK2",
 "notes":{
 "Confidence Level":"0"
@@ -25381,8 +26476,8 @@
 "h_c":-1.0,
 "nh4_c":1.0
 },
-"lower_bound":8.031062338886841e-05,
-"upper_bound":0.0003212424941239078,
+"lower_bound":0.0001499625999485943,
+"upper_bound":0.0005962622532251771,
 "gene_reaction_rule":"_DCTD",
 "notes":{
 "Confidence Level":"0",
@@ -25402,8 +26497,8 @@
 "trdox_c":1.0,
 "trdrd_c":-1.0
 },
-"lower_bound":0.00016062124715058524,
-"upper_bound":0.000642484988602341,
+"lower_bound":0.00029992520005124156,
+"upper_bound":0.0011925245064679211,
 "gene_reaction_rule":"(RRM1 and RRM2) or RRM2B",
 "notes":{
 "Confidence Level":"0"
@@ -25427,8 +26522,8 @@
 "pi_c":-1.0,
 "ura_c":1.0
 },
-"lower_bound":-0.008647280071045316,
-"upper_bound":-0.0021618200171360513,
+"lower_bound":-0.016050325821538536,
+"upper_bound":-0.004036728096934894,
 "gene_reaction_rule":"PNP or UPP2",
 "notes":{
 "Confidence Level":"0",
@@ -25448,8 +26543,8 @@
 "duri_c":-1.0,
 "h_c":1.0
 },
-"lower_bound":0.0021618200171100426,
-"upper_bound":0.00864728007091846,
+"lower_bound":0.004036728096818146,
+"upper_bound":0.01605032582140752,
 "gene_reaction_rule":"TK1",
 "notes":{
 "Confidence Level":"0",
@@ -25468,8 +26563,8 @@
 "dudp_c":1.0,
 "dump_c":-1.0
 },
-"lower_bound":0.0022421306406386066,
-"upper_bound":0.00896852256494185,
+"lower_bound":0.004186690696542428,
+"upper_bound":0.016646588074308966,
 "gene_reaction_rule":"_DTYMK",
 "notes":{
 "Confidence Level":"0",
@@ -25527,8 +26622,8 @@
 "dudp_m":-1.0,
 "dutp_m":1.0
 },
-"lower_bound":0.00011140990187351144,
-"upper_bound":0.00044563960749404574,
+"lower_bound":0.00020803372966439303,
+"upper_bound":0.0008271573072423513,
 "gene_reaction_rule":"NME1 and NME2",
 "notes":{
 "Confidence Level":"0",
@@ -25589,8 +26684,8 @@
 "dump_m":-1.0,
 "mlthf_m":-1.0
 },
-"lower_bound":0.00011140990186253116,
-"upper_bound":0.00044563960745012466,
+"lower_bound":0.00020803372955667128,
+"upper_bound":0.0008271573071346297,
 "gene_reaction_rule":"TYMS",
 "notes":{
 "Confidence Level":"0",
@@ -25610,8 +26705,8 @@
 "trdrd_c":1.0,
 "utp_c":1.0
 },
-"lower_bound":0.0021307207388190363,
-"upper_bound":0.008522882957549882,
+"lower_bound":0.0039786569667512595,
+"upper_bound":0.015819430766896403,
 "gene_reaction_rule":"RRM1 and RRM2 and RRM2B",
 "notes":{
 "Confidence Level":"0"
@@ -25649,8 +26744,8 @@
 "dtdp_m":1.0,
 "dtmp_m":-1.0
 },
-"lower_bound":0.00011140990193325706,
-"upper_bound":0.00044563960750565457,
+"lower_bound":0.00020803372967748146,
+"upper_bound":0.0008271573072988758,
 "gene_reaction_rule":"_DTYMK",
 "notes":{
 "Confidence Level":"0",
@@ -25693,8 +26788,8 @@
 "dtdp_n":-1.0,
 "dttp_n":1.0
 },
-"lower_bound":0.00011140990170588339,
-"upper_bound":0.00044563960739196773,
+"lower_bound":0.00020803372956379462,
+"upper_bound":0.000827157307185189,
 "gene_reaction_rule":"NT5C2 or NT5C1B or NT5C1A or _LOC770392 or NT5C3B or NT5DC4 or NT5C3A",
 "notes":{
 "Confidence Level":"0",
@@ -25754,8 +26849,8 @@
 "dcamp_c":-1.0,
 "fum_c":1.0
 },
-"lower_bound":0.0004297239080349171,
-"upper_bound":0.0017188956308602367,
+"lower_bound":0.0008024158146407384,
+"upper_bound":0.00319046390179122,
 "gene_reaction_rule":"ADSL",
 "notes":{
 "Confidence Level":"0",
@@ -25805,8 +26900,8 @@
 "glu__L_c":1.0,
 "oaa_c":1.0
 },
-"lower_bound":-0.017783503194550576,
-"upper_bound":-0.004445875800001886,
+"lower_bound":-0.033008185011340174,
+"upper_bound":-0.00830170485915005,
 "gene_reaction_rule":"GOT1 or IL4I1",
 "notes":{
 "Confidence Level":"0",
@@ -25870,8 +26965,8 @@
 "h2o_m":-1.0,
 "nh4_m":1.0
 },
-"lower_bound":0.2286131945149606,
-"upper_bound":0.4951184287217542,
+"lower_bound":0.31126543365902193,
+"upper_bound":0.49088472871779293,
 "gene_reaction_rule":"GLS2",
 "notes":{
 "Confidence Level":"0",
@@ -25943,8 +27038,8 @@
 "glu__L_c":-1.0,
 "pser__L_c":1.0
 },
-"lower_bound":0.0006807049518601645,
-"upper_bound":0.0027228198059191825,
+"lower_bound":0.00010401686477833564,
+"upper_bound":0.00041357865346918415,
 "gene_reaction_rule":"PSAT1",
 "notes":{
 "Confidence Level":"0",
@@ -25997,8 +27092,8 @@
 "ser__L_m":-1.0,
 "thf_m":-1.0
 },
-"lower_bound":0.0006807049519466091,
-"upper_bound":0.0027228198063085074,
+"lower_bound":0.00010401686472505389,
+"upper_bound":0.00041357865346918415,
 "gene_reaction_rule":"SHMT1",
 "notes":{
 "Confidence Level":"0",
@@ -26060,8 +27155,8 @@
 "nad_c":-1.0,
 "nadh_c":1.0
 },
-"lower_bound":-1.3401266075405829,
-"upper_bound":-0.7919343460042683,
+"lower_bound":-1.2547284070031992,
+"upper_bound":-0.8731494479477533,
 "gene_reaction_rule":"ALDH7A1",
 "notes":{
 "Confidence Level":"0",
@@ -26122,8 +27217,8 @@
 "nadp_c":-1.0,
 "nadph_c":1.0
 },
-"lower_bound":0.7919343460042683,
-"upper_bound":1.3401266075284184,
+"lower_bound":0.8731494479477533,
+"upper_bound":1.2547284070031992,
 "gene_reaction_rule":"ALDH7A1",
 "notes":{
 "Confidence Level":"0",
@@ -26173,7 +27268,7 @@
 "ile__L_c":-1.0
 },
 "lower_bound":0.0,
-"upper_bound":0.04832301995952548,
+"upper_bound":0.04686860497588441,
 "gene_reaction_rule":"BCAT1 or IL4I1",
 "notes":{
 "Confidence Level":"0",
@@ -26213,26 +27308,6 @@
 }
 },
 {
-"id":"_LEUTA",
-"name":"leucine transaminase",
-"metabolites":{
-"4mop_c":1.0,
-"akg_c":-1.0,
-"glu__L_c":1.0,
-"leu__L_c":-1.0
-},
-"lower_bound":1.1368683772161603e-13,
-"upper_bound":1.1368683772161603e-13,
-"gene_reaction_rule":"BCAT1",
-"notes":{
-"Confidence Level":"0",
-"References":"KEGG"
-},
-"annotation":{
-"ec-code":"2.6.1.42"
-}
-},
-{
 "id":"r0670",
 "name":"(S)-3-Methyl-2-oxopentanoate:[dihydrolipoyllysine-residue (2-methylpropanoyl)transferase] lipoyllysine 2-oxidoreductase (decarboxylating, acceptor-2-methylpropanoylating) EC:1.2.4.4",
 "metabolites":{
@@ -26243,7 +27318,7 @@
 "lpam_m":-1.0
 },
 "lower_bound":0.0,
-"upper_bound":0.04832301995955318,
+"upper_bound":0.04686860497596593,
 "gene_reaction_rule":"BCKDHA and BCKDHB",
 "notes":{
 "Confidence Level":"0",
@@ -26275,8 +27350,8 @@
 "glu__L_c":1.0,
 "val__L_c":-1.0
 },
-"lower_bound":2.2737367544323206e-13,
-"upper_bound":0.04676622255487928,
+"lower_bound":-2.2737367544323206e-13,
+"upper_bound":0.04396162485170407,
 "gene_reaction_rule":"BCAT1",
 "notes":{
 "Confidence Level":"0",
@@ -26335,7 +27410,7 @@
 "lpam_m":-1.0
 },
 "lower_bound":0.0,
-"upper_bound":0.046766222554939445,
+"upper_bound":0.04396162485153241,
 "gene_reaction_rule":"BCKDHA and BCKDHB",
 "notes":{
 "Confidence Level":"0",
@@ -26375,7 +27450,7 @@
 "ibcoa_m":1.0
 },
 "lower_bound":0.0,
-"upper_bound":0.04676622255493945,
+"upper_bound":0.04396162485153241,
 "gene_reaction_rule":"_DBT",
 "notes":{
 "Confidence Level":"0",
@@ -26420,7 +27495,7 @@
 "dhlam_m":1.0
 },
 "lower_bound":0.0,
-"upper_bound":0.04832301995955318,
+"upper_bound":0.046868604975965934,
 "gene_reaction_rule":"_DBT",
 "notes":{
 "Confidence Level":"0",
@@ -26464,7 +27539,7 @@
 "q10h2_m":1.0
 },
 "lower_bound":0.0,
-"upper_bound":0.046766222554939445,
+"upper_bound":0.04396162485153241,
 "gene_reaction_rule":"ACADS",
 "notes":{
 "Confidence Level":"0",
@@ -26495,8 +27570,8 @@
 "q10_m":-1.0,
 "q10h2_m":1.0
 },
-"lower_bound":0.0,
-"upper_bound":0.04832301995952548,
+"lower_bound":1.1368683772161603e-13,
+"upper_bound":0.046868604975998096,
 "gene_reaction_rule":"ACADS and _LOC423987",
 "notes":{
 "Confidence Level":"0",
@@ -26526,8 +27601,8 @@
 "3hibutcoa_m":1.0,
 "h2o_m":-1.0
 },
-"lower_bound":1.1368683772161603e-13,
-"upper_bound":0.046766222554992964,
+"lower_bound":0.0,
+"upper_bound":0.043961624851590386,
 "gene_reaction_rule":"HADHA and EHHADH and ECHS1",
 "notes":{
 "Confidence Level":"0",
@@ -26580,7 +27655,7 @@
 "h2o_m":-1.0
 },
 "lower_bound":1.1368683772161603e-13,
-"upper_bound":0.04832301995952548,
+"upper_bound":0.04686860497577072,
 "gene_reaction_rule":"HADHA and EHHADH and ECHS1",
 "notes":{
 "Confidence Level":"0",
@@ -26636,7 +27711,7 @@
 "h_m":1.0
 },
 "lower_bound":0.0,
-"upper_bound":0.046766222554985123,
+"upper_bound":0.043961624851519165,
 "gene_reaction_rule":"HIBCH",
 "notes":{
 "Confidence Level":"0",
@@ -26690,8 +27765,8 @@
 "nad_m":-1.0,
 "nadh_m":1.0
 },
-"lower_bound":0.0,
-"upper_bound":0.04832301995963917,
+"lower_bound":1.1368683772161603e-13,
+"upper_bound":0.04686860497577072,
 "gene_reaction_rule":"HSD17B10 or EHHADH or HADH",
 "notes":{
 "Confidence Level":"0",
@@ -26746,7 +27821,7 @@
 "nadh_m":1.0
 },
 "lower_bound":-1.1368683772161603e-13,
-"upper_bound":0.04676622255487928,
+"upper_bound":0.0439616248514767,
 "gene_reaction_rule":"HIBADH or EHHADH or HADH",
 "notes":{
 "Confidence Level":"0",
@@ -26782,8 +27857,8 @@
 "accoa_m":1.0,
 "hmgcoa_m":-1.0
 },
-"lower_bound":0.0008561230244636765,
-"upper_bound":0.0034244920986049696,
+"lower_bound":0.0015986233073120148,
+"upper_bound":0.0063562430610876125,
 "gene_reaction_rule":"HMGCL or HMGCLL1",
 "notes":{
 "Confidence Level":"0",
@@ -26847,8 +27922,8 @@
 "coa_m":-1.0,
 "ppcoa_m":1.0
 },
-"lower_bound":0.0,
-"upper_bound":0.04832301995963917,
+"lower_bound":1.1368683772161603e-13,
+"upper_bound":0.04686860497588441,
 "gene_reaction_rule":"ACAT1 or ACAA2",
 "notes":{
 "Confidence Level":"0",
@@ -26904,7 +27979,7 @@
 "ppcoa_m":1.0
 },
 "lower_bound":0.0,
-"upper_bound":0.04676622255499629,
+"upper_bound":0.04396162485165153,
 "gene_reaction_rule":"ALDH6A1",
 "notes":{
 "Confidence Level":"0",
@@ -26949,7 +28024,7 @@
 "ppcoa_m":-1.0
 },
 "lower_bound":0.0,
-"upper_bound":0.09508924251468048,
+"upper_bound":0.09083022982710254,
 "gene_reaction_rule":"PCCB and PCCA",
 "notes":{
 "Confidence Level":"0",
@@ -26999,8 +28074,8 @@
 "mmcoa_R_m":-1.0,
 "mmcoa_S_m":1.0
 },
-"lower_bound":-0.09508924251451845,
-"upper_bound":-4.547473508864641e-13,
+"lower_bound":-0.0908302298274748,
+"upper_bound":-1.1368683772161603e-13,
 "gene_reaction_rule":"MCEE",
 "notes":{
 "Confidence Level":"0",
@@ -27047,8 +28122,8 @@
 "mmcoa_R_m":-1.0,
 "succoa_m":1.0
 },
-"lower_bound":-1.1368683772161603e-13,
-"upper_bound":0.0950892425149732,
+"lower_bound":1.1368683772161603e-13,
+"upper_bound":0.09083022982770217,
 "gene_reaction_rule":"MUT",
 "notes":{
 "Confidence Level":"0",
@@ -27103,8 +28178,8 @@
 "nadph_m":-1.0,
 "saccrp__L_m":1.0
 },
-"lower_bound":0.000856123024265947,
-"upper_bound":0.0034244920984104277,
+"lower_bound":0.0015986233076816887,
+"upper_bound":0.006356243061269999,
 "gene_reaction_rule":"AASS",
 "notes":{
 "Confidence Level":"0",
@@ -27160,8 +28235,8 @@
 "nadh_m":1.0,
 "saccrp__L_m":-1.0
 },
-"lower_bound":0.0008561230242776219,
-"upper_bound":0.0034244920984747296,
+"lower_bound":0.001598623307586422,
+"upper_bound":0.00635624306119098,
 "gene_reaction_rule":"AASS",
 "notes":{
 "Confidence Level":"0",
@@ -27213,8 +28288,8 @@
 "akg_m":-1.0,
 "glu__L_m":1.0
 },
-"lower_bound":0.0008561230242776219,
-"upper_bound":0.0034244920984747296,
+"lower_bound":0.0015986233077001089,
+"upper_bound":0.0063562430610772935,
 "gene_reaction_rule":"AADAT",
 "notes":{
 "Confidence Level":"0",
@@ -27258,6 +28333,27 @@
 }
 },
 {
+"id":"r0451m",
+"name":"2-Oxoadipate:lipoamde 2-oxidoreductase(decarboxylating and acceptor-succinylating) Lysine degradation EC:1.2.4.2",
+"metabolites":{
+"2oxoadp_m":-1.0,
+"HC01712_m":1.0,
+"co2_m":1.0,
+"h_m":-1.0,
+"lpam_m":-1.0
+},
+"lower_bound":0.0,
+"upper_bound":0.0,
+"gene_reaction_rule":"OGDH or OGDHL",
+"notes":{
+"Confidence Level":"0",
+"References":"KEGG"
+},
+"annotation":{
+"ec-code":"1.2.4.2"
+}
+},
+{
 "id":"2OXOADOXm",
 "name":"2-Oxoadipate:lipoamde 2-oxidoreductase(decarboxylating and acceptor-succinylating) (mitochondria)",
 "metabolites":{
@@ -27268,8 +28364,8 @@
 "nad_m":-1.0,
 "nadh_m":1.0
 },
-"lower_bound":0.0008561230244067858,
-"upper_bound":0.003424492098464412,
+"lower_bound":0.0015986233076816887,
+"upper_bound":0.006356243061164443,
 "gene_reaction_rule":"_DLST",
 "notes":{
 "Confidence Level":"0",
@@ -27322,8 +28418,8 @@
 "nad_m":1.0,
 "nadh_m":-1.0
 },
-"lower_bound":-0.0034244920983610427,
-"upper_bound":-0.0008561230245049956,
+"lower_bound":-0.00635624306084992,
+"upper_bound":-0.0015986233071316747,
 "gene_reaction_rule":"XRN1 or HADH",
 "notes":{
 "Confidence Level":"0",
@@ -27376,62 +28472,6 @@
 }
 },
 {
-"id":"r0074",
-"name":"L-Glutamate 5-semialdehyde:NAD+ oxidoreductase Arginine and proline metabolism EC:1.5.1.12",
-"metabolites":{
-"glu5sa_m":-1.0,
-"glu__L_m":1.0,
-"h2o_m":-1.0,
-"h_m":2.0,
-"nad_m":-1.0,
-"nadh_m":1.0
-},
-"lower_bound":-1.1368683772161603e-13,
-"upper_bound":0.04814189929049917,
-"gene_reaction_rule":"ALDH4A1",
-"notes":{
-"Confidence Level":"0",
-"References":"KEGG"
-},
-"annotation":{
-"bigg.reaction":[
-"PUTA3",
-"R_PUTA3",
-"R_r0074",
-"r0074"
-],
-"ec-code":"1.2.1.88",
-"kegg.reaction":"R00245",
-"keggR":"R00245",
-"metacyc.reaction":"RXN-14116",
-"metacycR":"RXN-14116",
-"rhea":[
-"30235",
-"30236",
-"30237",
-"30238"
-],
-"sabiork.reaction":"756",
-"seed.reaction":[
-"rxn00183",
-"rxn33819",
-"rxn33820"
-],
-"vmh.reaction":[
-"PUTA3",
-"R_PUTA3",
-"R_r0074",
-"r0074"
-],
-"vmhreaction":[
-"PUTA3",
-"R_PUTA3",
-"R_r0074",
-"r0074"
-]
-}
-},
-{
 "id":"PRO1xm",
 "name":"proline oxidase (NAD), mitochondrial",
 "metabolites":{
@@ -27441,8 +28481,8 @@
 "nadh_m":1.0,
 "pro__L_m":-1.0
 },
-"lower_bound":2.479406030404468e-13,
-"upper_bound":0.047838998049369016,
+"lower_bound":6.751958437988227e-18,
+"upper_bound":0.04596479946564416,
 "gene_reaction_rule":"PRODH",
 "notes":{
 "Confidence Level":"0",
@@ -27510,7 +28550,7 @@
 "nadh_m":1.0
 },
 "lower_bound":0.0,
-"upper_bound":0.047838998049369016,
+"upper_bound":0.04596479946564417,
 "gene_reaction_rule":"ALDH4A1",
 "notes":{
 "Confidence Level":"0",
@@ -27556,267 +28596,76 @@
 }
 },
 {
-"id":"ORNTArm",
-"name":"ornithine transaminase reversible (m)",
+"id":"EHGLATm",
+"name":"L-erythro-4-Hydroxyglutamate:2-oxoglutarate aminotransferase, mitochondrial",
 "metabolites":{
+"4h2oglt_m":1.0,
 "akg_m":-1.0,
-"glu5sa_m":1.0,
-"glu__L_m":1.0,
-"orn_m":-1.0
-},
-"lower_bound":-1.1368683772161603e-13,
-"upper_bound":0.04814189929049917,
-"gene_reaction_rule":"OAT",
-"notes":{
-"Confidence Level":"0",
-"References":"KEGG"
-},
-"annotation":{
-"bigg.reaction":[
-"GLP5H",
-"ORNTA",
-"ORNTA_1",
-"ORNTArm",
-"R_GLP5H",
-"R_ORNTA",
-"R_ORNTA_1",
-"R_ORNTArm"
-],
-"ec-code":"2.6.1.13",
-"kegg.reaction":"R00667",
-"keggR":"R00667",
-"metacyc.reaction":"ORNITHINE-GLU-AMINOTRANSFERASE-RXN",
-"metacycR":"ORNITHINE-GLU-AMINOTRANSFERASE-RXN",
-"rhea":[
-"25160",
-"25161",
-"25162",
-"25163"
-],
-"sabiork.reaction":"1047",
-"seed.reaction":[
-"rxn00467",
-"rxn20496",
-"rxn33315"
-],
-"vmh.reaction":[
-"ORNTA",
-"ORNTArm",
-"R_ORNTA",
-"R_ORNTArm"
-],
-"vmhreaction":[
-"ORNTA",
-"ORNTArm",
-"R_ORNTA",
-"R_ORNTArm"
-]
-}
-},
-{
-"id":"ARGNm",
-"name":"arginase (m)",
-"metabolites":{
-"arg__L_m":-1.0,
-"h2o_m":-1.0,
-"orn_m":1.0,
-"urea_m":1.0
+"e4hglu_m":-1.0,
+"glu__L_m":1.0
 },
 "lower_bound":0.0,
-"upper_bound":0.048141899290538956,
-"gene_reaction_rule":"ARG2",
+"upper_bound":0.0,
+"gene_reaction_rule":"GOT2",
 "notes":{
 "Confidence Level":"0",
 "References":"KEGG"
 },
 "annotation":{
 "bigg.reaction":[
-"ARGN",
-"ARGN_1",
-"ARGNg",
-"ARGNm",
-"R_ARGN",
-"R_ARGN_1",
-"R_ARGNg",
-"R_ARGNm"
+"EHGLAT",
+"EHGLATm",
+"EHGLATp",
+"R_EHGLAT",
+"R_EHGLATm",
+"R_EHGLATp"
 ],
-"ec-code":"3.5.3.1",
-"kegg.reaction":"R00551",
-"keggR":"R00551",
-"metacyc.reaction":"ARGINASE-RXN",
-"metacycR":"ARGINASE-RXN",
+"ec-code":"2.6.1.1",
+"kegg.reaction":"R03266",
+"keggR":"R03266",
 "rhea":[
-"20569",
-"20570",
-"20571",
-"20572"
-],
-"sabiork.reaction":"574",
-"seed.reaction":[
-"rxn00394",
-"rxn19181",
-"rxn30615",
-"rxn31988"
-],
-"vmh.reaction":[
-"ARGN",
-"ARGNm",
-"R_ARGN",
-"R_ARGNm"
-],
-"vmhreaction":[
-"ARGN",
-"ARGNm",
-"R_ARGN",
-"R_ARGNm"
-]
-}
-},
-{
-"id":"HISD",
-"name":"histidase",
-"metabolites":{
-"his__L_c":-1.0,
-"nh4_c":1.0,
-"urcan_c":1.0
-},
-"lower_bound":0.001250000006349683,
-"upper_bound":0.0050000000050517395,
-"gene_reaction_rule":"HAL",
-"notes":{
-"Confidence Level":"0",
-"References":"KEGG"
-},
-"annotation":{
-"ec-code":"4.3.1.3",
-"kegg.reaction":"R01168",
-"keggR":"R01168",
-"metacyc.reaction":"HISTIDINE-AMMONIA-LYASE-RXN",
-"metacycR":"HISTIDINE-AMMONIA-LYASE-RXN",
-"rhea":[
-"21232",
-"21233",
-"21234",
-"21235"
-],
-"sabiork.reaction":[
-"11319",
-"1406"
+"10480",
+"10481",
+"10482",
+"10483"
 ],
 "seed.reaction":[
-"rxn00867",
-"rxn30486"
+"rxn02339",
+"rxn18921",
+"rxn30371",
+"rxn30372"
 ],
 "vmh.reaction":[
-"HISD",
-"R_HISD"
+"EHGLAT",
+"EHGLATm",
+"R_EHGLAT",
+"R_EHGLATm"
 ],
 "vmhreaction":[
-"HISD",
-"R_HISD"
+"EHGLAT",
+"EHGLATm",
+"R_EHGLAT",
+"R_EHGLATm"
 ]
 }
 },
 {
-"id":"URCN",
-"name":"URCN",
+"id":"_DDPGAm",
+"name":"2-dehydro-3-deoxy-phosphogluconate aldolase, mitochondrial",
 "metabolites":{
-"4izp_c":1.0,
-"h2o_c":-1.0,
-"urcan_c":-1.0
+"4h2oglt_m":-1.0,
+"glx_m":1.0,
+"pyr_m":1.0
 },
-"lower_bound":0.0012500000015487072,
-"upper_bound":0.005000000005051739,
-"gene_reaction_rule":"UROC1",
+"lower_bound":0.0,
+"upper_bound":0.0,
+"gene_reaction_rule":"HOGA1",
 "notes":{
 "Confidence Level":"0",
 "References":"KEGG"
 },
 "annotation":{
-"bigg.reaction":[
-"R_URCN",
-"R_URCN_1",
-"URCN",
-"URCN_1"
-],
-"ec-code":"4.2.1.49"
-}
-},
-{
-"id":"IZPN",
-"name":"Imidazolonepropionase",
-"metabolites":{
-"4izp_c":-1.0,
-"forglu_c":1.0,
-"h2o_c":-1.0,
-"h_c":1.0
-},
-"lower_bound":0.001250000001548707,
-"upper_bound":0.005000000005051738,
-"gene_reaction_rule":"AMDHD1",
-"notes":{
-"Confidence Level":"0",
-"References":"KEGG"
-},
-"annotation":{
-"bigg.reaction":[
-"IZPN",
-"IZPN_1",
-"R_IZPN",
-"R_IZPN_1"
-],
-"ec-code":"3.5.2.7",
-"rhea":[
-"23660",
-"23661",
-"23662",
-"23663"
-],
-"vmh.reaction":[
-"IZPN",
-"R_IZPN"
-],
-"vmhreaction":[
-"IZPN",
-"R_IZPN"
-]
-}
-},
-{
-"id":"GluForTx",
-"name":"Glutamate formimidoyltransferase",
-"metabolites":{
-"5forthf_c":1.0,
-"forglu_c":-1.0,
-"glu__L_c":1.0,
-"h_c":-1.0,
-"thf_c":-1.0
-},
-"lower_bound":0.001250000001548707,
-"upper_bound":0.005000000005051739,
-"gene_reaction_rule":"FTCD",
-"notes":{
-"Confidence Level":"0",
-"References":"KEGG"
-},
-"annotation":{
-"bigg.reaction":[
-"GluForTx",
-"R_GluForTx"
-],
-"ec-code":"2.1.2.5",
-"vmh.reaction":[
-"GLUFORT",
-"GluForTx",
-"R_GLUFORT",
-"R_GluForTx"
-],
-"vmhreaction":[
-"GLUFORT",
-"GluForTx",
-"R_GLUFORT",
-"R_GluForTx"
-]
+"ec-code":"4.1.3.16"
 }
 },
 {
@@ -27828,8 +28677,8 @@
 "phe__L_c":-1.0,
 "phpyr_c":1.0
 },
-"lower_bound":8.096567171350785,
-"upper_bound":13.299950251060068,
+"lower_bound":8.44106491588036,
+"upper_bound":11.967213113854541,
 "gene_reaction_rule":"GOT1",
 "notes":{
 "Confidence Level":"0",
@@ -27885,8 +28734,8 @@
 "phe__L_m":-1.0,
 "phpyr_m":1.0
 },
-"lower_bound":-13.299950251059945,
-"upper_bound":-8.096567171364986,
+"lower_bound":-11.967213113855905,
+"upper_bound":-8.44106491588036,
 "gene_reaction_rule":"TAT or GOT2",
 "notes":{
 "Confidence Level":"0",
@@ -27934,6 +28783,81 @@
 }
 },
 {
+"id":"TRPO2",
+"name":"L-Tryptophan:oxygen 2,3-oxidoreductase (decyclizing)",
+"metabolites":{
+"_Lfmkynr_c":1.0,
+"o2_c":-1.0,
+"trp__L_c":-1.0
+},
+"lower_bound":0.0023341027836260553,
+"upper_bound":0.009280563194657773,
+"gene_reaction_rule":"TDO2 or IDO2",
+"notes":{
+"Confidence Level":"0",
+"References":"KEGG"
+},
+"annotation":{
+"bigg.reaction":[
+"R_TRPO2",
+"TRPO2"
+],
+"ec-code":"1.13.11.11 , 1.13.11.52"
+}
+},
+{
+"id":"KYN3OX",
+"name":"kynurenine 3-monooxygenase",
+"metabolites":{
+"_Lkynr_c":-1.0,
+"h2o_c":1.0,
+"hLkynr_c":1.0,
+"h_c":-1.0,
+"nadp_c":1.0,
+"nadph_c":-1.0,
+"o2_c":-1.0
+},
+"lower_bound":0.0023341027836260558,
+"upper_bound":0.009280563194657775,
+"gene_reaction_rule":"KMO",
+"notes":{
+"Confidence Level":"0",
+"References":"KEGG, ncbi"
+},
+"annotation":{
+"bigg.reaction":[
+"KYN3OX",
+"R_KYN3OX"
+],
+"ec-code":"1.14.13.9",
+"kegg.reaction":"R01960",
+"keggR":"R01960",
+"metacyc.reaction":"KYNURENINE-3-MONOOXYGENASE-RXN",
+"metacycR":"KYNURENINE-3-MONOOXYGENASE-RXN",
+"rhea":[
+"20545",
+"20546",
+"20547",
+"20548"
+],
+"sabiork.reaction":"2007",
+"seed.reaction":[
+"rxn01438",
+"rxn13171",
+"rxn19994",
+"rxn19995"
+],
+"vmh.reaction":[
+"KYN3OX",
+"R_KYN3OX"
+],
+"vmhreaction":[
+"KYN3OX",
+"R_KYN3OX"
+]
+}
+},
+{
 "id":"r0541",
 "name":"Glutaryl-CoA:(acceptor) 2,3-oxidoreductase (decarboxylating) Fatty acid metabolism EC:1.3.99.7",
 "metabolites":{
@@ -27944,8 +28868,8 @@
 "q10_m":-1.0,
 "q10h2_m":1.0
 },
-"lower_bound":0.0008561230243913087,
-"upper_bound":0.0034244920983610427,
+"lower_bound":0.0015986233077001089,
+"upper_bound":0.00635624306119098,
 "gene_reaction_rule":"GCDH",
 "notes":{
 "Confidence Level":"0",
@@ -27976,8 +28900,8 @@
 "gly_c":1.0,
 "h2o_c":-1.0
 },
-"lower_bound":0.000830213856082383,
-"upper_bound":0.003320855424329532,
+"lower_bound":0.0015502435778528968,
+"upper_bound":0.0061638817209835476,
 "gene_reaction_rule":"_LAP3",
 "notes":{
 "Confidence Level":"0",
@@ -28032,8 +28956,8 @@
 "nadp_c":-1.0,
 "nadph_c":1.0
 },
-"lower_bound":0.0011111036849342781,
-"upper_bound":0.004444414735075952,
+"lower_bound":0.0020747441611774775,
+"upper_bound":0.008249334360584726,
 "gene_reaction_rule":"IDH1 or PGD",
 "notes":{
 "Confidence Level":"0",
@@ -28099,8 +29023,8 @@
 "gthrd_c":-1.0,
 "h2o_c":-1.0
 },
-"lower_bound":0.000830213856033879,
-"upper_bound":0.0033208554242492028,
+"lower_bound":0.0015502435779808366,
+"upper_bound":0.006163881721136022,
 "gene_reaction_rule":"GGT2 or GGT2P",
 "notes":{
 "Confidence Level":"0",
@@ -28154,30 +29078,6 @@
 }
 },
 {
-"id":"GLPASE1",
-"name":"glycogen phosphorylase (glygn2 -> dxtrn)",
-"metabolites":{
-"dxtrn_c":1.0,
-"g1p_c":3.0,
-"glygn2_c":-1.0,
-"pi_c":-3.0
-},
-"lower_bound":0.0,
-"upper_bound":0.0,
-"gene_reaction_rule":"PYGB or PYGL",
-"notes":{
-"Confidence Level":"0",
-"References":"KEGG"
-},
-"annotation":{
-"bigg.reaction":[
-"GLPASE1",
-"R_GLPASE1"
-],
-"ec-code":"2.4.1.1"
-}
-},
-{
 "id":"GLGNS1",
 "name":"glycogen synthase (ggn -> glygn1)",
 "metabolites":{
@@ -28187,8 +29087,8 @@
 "udp_c":3.0,
 "udpg_c":-3.0
 },
-"lower_bound":8.176213540324249e-05,
-"upper_bound":0.00032704854161296994,
+"lower_bound":0.00015267298225848686,
+"upper_bound":0.0006070389312204136,
 "gene_reaction_rule":"(GYG2 and _LOC107050456 and GYS2 and GYG1) or (_LOC107050456 and GYG1) or (GYG2 and GYS2)",
 "notes":{
 "Confidence Level":"0",
@@ -28209,8 +29109,8 @@
 "glygn1_c":-1.0,
 "glygn2_c":1.0
 },
-"lower_bound":8.176213540324249e-05,
-"upper_bound":0.00032704854161296994,
+"lower_bound":0.00015267298225848686,
+"upper_bound":0.0006070389312204136,
 "gene_reaction_rule":"GBE1",
 "notes":{
 "Confidence Level":"0",
@@ -28225,6 +29125,90 @@
 }
 },
 {
+"id":"_DOLASNT__Ler",
+"name":"Dolichyl-diphosphooligosaccharide:protein-L-asparagine oligopolysaccharidotransferase (liver)",
+"metabolites":{
+"Asn_X_Ser_Thr_r":-1.0,
+"doldp__L_r":0.1,
+"g3m8masn_r":1.0,
+"g3m8mpdol__L_r":-0.1,
+"h_r":1.0
+},
+"lower_bound":0.0,
+"upper_bound":0.0,
+"gene_reaction_rule":"STT3A or STT3B",
+"notes":{
+"Confidence Level":"0",
+"References":"KEGG, [3]"
+},
+"annotation":{
+"ec-code":"2.4.99.18"
+}
+},
+{
+"id":"_DOLASNT_Uer",
+"name":"Dolichyl-diphosphooligosaccharide:protein-L-asparagine oligopolysaccharidotransferase (uterus)",
+"metabolites":{
+"Asn_X_Ser_Thr_r":-1.0,
+"doldp_U_r":0.1,
+"g3m8masn_r":1.0,
+"g3m8mpdol_U_r":-0.1,
+"h_r":1.0
+},
+"lower_bound":0.0,
+"upper_bound":0.0,
+"gene_reaction_rule":"STT3A or STT3B",
+"notes":{
+"Confidence Level":"0",
+"References":"KEGG, [3]"
+},
+"annotation":{
+"ec-code":"2.4.99.18"
+}
+},
+{
+"id":"_DOLDPP__Ler",
+"name":"Dolichyl-diphosphate phosphohydrolase, human (liver)",
+"metabolites":{
+"doldp__L_r":-0.1,
+"dolp__L_r":0.1,
+"h2o_r":-1.0,
+"h_r":1.0,
+"pi_r":1.0
+},
+"lower_bound":0.0,
+"upper_bound":0.0,
+"gene_reaction_rule":"_DOLPP1",
+"notes":{
+"Confidence Level":"0",
+"References":"KEGG"
+},
+"annotation":{
+"ec-code":"3.6.1.43"
+}
+},
+{
+"id":"_DOLPGT2__Ler",
+"name":"dolichyl-phosphate-glucose-glycolipid alpha-glucosyltransferase (liver)",
+"metabolites":{
+"dolglcp__L_r":-0.1,
+"dolp__L_r":0.1,
+"g2m8mpdol__L_r":-0.1,
+"g3m8mpdol__L_r":0.1,
+"h_r":1.0
+},
+"lower_bound":0.0,
+"upper_bound":0.0,
+"gene_reaction_rule":"ALG8",
+"notes":{
+"Confidence Level":"0",
+"References":"KEGG"
+},
+"annotation":{
+"ec-code":"2.4.1.265"
+}
+},
+{
 "id":"GPAM_hs",
 "name":"glycerol-3-phosphate acyltransferase",
 "metabolites":{
@@ -28233,8 +29217,8 @@
 "coa_c":1.0,
 "glyc3p_c":-1.0
 },
-"lower_bound":0.0016096311628046498,
-"upper_bound":0.00643852465318679,
+"lower_bound":0.0030056356628547234,
+"upper_bound":0.011950626976612604,
 "gene_reaction_rule":"AGPAT5L",
 "notes":{
 "Confidence Level":"0",
@@ -28253,6 +29237,92 @@
 }
 },
 {
+"id":"ACGPIDr",
+"name":"N-acetylglucosaminylphosphatidylinositol deacetylase, endoplasmic reticulum",
+"metabolites":{
+"ac_r":1.0,
+"acgpail_hs_r":-1.0,
+"gpail_hs_r":1.0,
+"h2o_r":-1.0
+},
+"lower_bound":0.0,
+"upper_bound":0.0,
+"gene_reaction_rule":"PIGL",
+"notes":{
+"Confidence Level":"0",
+"References":"KEGG"
+},
+"annotation":{
+"ec-code":"3.5.1.89"
+}
+},
+{
+"id":"GPIATr",
+"name":"glucosaminylphosphatidyl inositol acetyltransferase, endoplasmic reticulum",
+"metabolites":{
+"coa_r":1.0,
+"gacpail_hs_r":1.0,
+"gpail_hs_r":-1.0,
+"pmtcoa_r":-1.0
+},
+"lower_bound":0.0,
+"upper_bound":0.0,
+"gene_reaction_rule":"PIGW",
+"notes":{
+"Confidence Level":"0",
+"References":"KEGG"
+},
+"annotation":{
+"ec-code":"2.3.-.-"
+}
+},
+{
+"id":"GPIMTer__L",
+"name":"GlcN-acylPI mannosyltransferase, endoplasmic reticulum",
+"metabolites":{
+"dolmanp__L_r":-0.1,
+"dolp__L_r":0.1,
+"gacpail_hs_r":-1.0,
+"h_r":1.0,
+"mgacpail_hs_r":1.0
+},
+"lower_bound":0.0,
+"upper_bound":0.0,
+"gene_reaction_rule":"PIGM",
+"notes":{
+"Confidence Level":"0",
+"References":"KEGG"
+},
+"annotation":{
+"bigg.reaction":[
+"GPIMTer_L",
+"R_GPIMTer_L"
+],
+"ec-code":"2.4.1.-"
+}
+},
+{
+"id":"PIACGTr",
+"name":"phosphatidylinositol N-acetylglucosaminyltransferase, ER",
+"metabolites":{
+"acgpail_hs_r":1.0,
+"h_r":1.0,
+"pail_hs_r":-1.0,
+"uacgam_r":-1.0,
+"udp_r":1.0
+},
+"lower_bound":0.0,
+"upper_bound":0.0,
+"gene_reaction_rule":"(PIGC and PIGP and PIGH and PIGQ and _DPM2 and PIGY) or (PIGC and PIGP and PIGH and _DPM2 and PIGY) or (PIGP and PIGH and PIGC and _DPM2 and PIGY)",
+"notes":{
+"Confidence Level":"0",
+"References":"KEGG"
+},
+"annotation":{
+"ec-code":"2.4.1.198"
+}
+},
+{
 "id":"CHOLK",
 "name":"Choline kinase",
 "metabolites":{
@@ -28262,8 +29332,8 @@
 "cholp_c":1.0,
 "h_c":1.0
 },
-"lower_bound":0.0015331180256086202,
-"upper_bound":0.006132472103418577,
+"lower_bound":0.0028627640411857604,
+"upper_bound":0.01138255897091718,
 "gene_reaction_rule":"CHKA",
 "notes":{
 "Confidence Level":"0",
@@ -28312,8 +29382,8 @@
 "h_c":1.0,
 "pa_hs_c":1.0
 },
-"lower_bound":-0.005997978069672172,
-"upper_bound":-0.0014994945173611995,
+"lower_bound":-0.011132922895626507,
+"upper_bound":-0.0027999794616562212,
 "gene_reaction_rule":"_DGKI or _DGKZ or _DGKD or _DGKH or _DGKE or _DGKQ or _DGKK or _DGKE or _DGKI",
 "notes":{
 "Confidence Level":"0",
@@ -28332,8 +29402,8 @@
 "pe_hs_m":1.0,
 "ps_hs_m":-1.0
 },
-"lower_bound":0.000159157002781689,
-"upper_bound":0.0006366280107983679,
+"lower_bound":0.00029719104231626896,
+"upper_bound":0.00118165329606139,
 "gene_reaction_rule":"PISD",
 "notes":{
 "Confidence Level":"0",
@@ -28359,8 +29429,8 @@
 "h_m":1.0,
 "pgp_hs_m":1.0
 },
-"lower_bound":2.5783434467231757e-05,
-"upper_bound":0.00010313373786892703,
+"lower_bound":4.8144948775984595e-05,
+"upper_bound":0.00019142783395177735,
 "gene_reaction_rule":"PGS1",
 "notes":{
 "Confidence Level":"0",
@@ -28380,8 +29450,8 @@
 "h_m":1.0,
 "pglyc_hs_m":-1.0
 },
-"lower_bound":2.100872427376182e-05,
-"upper_bound":8.403489747980991e-05,
+"lower_bound":3.922921761515728e-05,
+"upper_bound":0.0001559782350718185,
 "gene_reaction_rule":"CRLS1",
 "notes":{
 "Confidence Level":"0",
@@ -28401,8 +29471,8 @@
 "h_c":1.0,
 "sphgn_c":-1.0
 },
-"lower_bound":6.811919713577005e-05,
-"upper_bound":0.0002724767885430802,
+"lower_bound":0.00012719776611117413,
+"upper_bound":0.0005057476106874115,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0",
@@ -28421,8 +29491,8 @@
 "nadh_c":-1.0,
 "o2_c":-1.0
 },
-"lower_bound":6.811919713577005e-05,
-"upper_bound":0.0002724767885430802,
+"lower_bound":0.00012719776611117413,
+"upper_bound":0.0005057476106874114,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0",
@@ -28445,8 +29515,8 @@
 "nadph_m":1.0,
 "pyr_m":1.0
 },
-"lower_bound":0.4825466165309137,
-"upper_bound":1.5072920925191713,
+"lower_bound":0.6784069213124369,
+"upper_bound":1.3736424707697688,
 "gene_reaction_rule":"ME1 or ME3",
 "notes":{
 "Confidence Level":"0",
@@ -28506,8 +29576,8 @@
 "pi_m":1.0,
 "pyr_m":-1.0
 },
-"lower_bound":0.2598700185726716,
-"upper_bound":0.7722427565811457,
+"lower_bound":0.35175356095886656,
+"upper_bound":0.6998644863707698,
 "gene_reaction_rule":"PC",
 "notes":{
 "Confidence Level":"0",
@@ -28563,8 +29633,8 @@
 "coa_c":-1.0,
 "ppi_c":1.0
 },
-"lower_bound":0.0008561230242462896,
-"upper_bound":0.003424492098364917,
+"lower_bound":0.0015986233075989814,
+"upper_bound":0.006356243061165007,
 "gene_reaction_rule":"AACS",
 "notes":{
 "Confidence Level":"0",
@@ -28605,61 +29675,56 @@
 }
 },
 {
-"id":"MTHFCm",
-"name":"methenyltetrahydrifikate cyclohydrolase, mitochondrial",
+"id":"FTHFL",
+"name":"Formate-tetrahydrofolate ligase",
 "metabolites":{
-"10fthf_m":1.0,
-"h2o_m":-1.0,
-"h_m":1.0,
-"methf_m":-1.0
+"10fthf_c":1.0,
+"adp_c":1.0,
+"atp_c":-1.0,
+"for_c":-1.0,
+"pi_c":1.0,
+"thf_c":-1.0
 },
-"lower_bound":0.0012499999995725375,
-"upper_bound":0.0050000000048839865,
-"gene_reaction_rule":"MTHFD1L or MTHFD2",
+"lower_bound":0.0023341027865550574,
+"upper_bound":0.009280563194657771,
+"gene_reaction_rule":"MTHFD1",
 "notes":{
 "Confidence Level":"0",
 "References":"KEGG"
 },
 "annotation":{
 "bigg.reaction":[
-"MTHFC",
-"MTHFC_1",
-"MTHFCm",
-"MTHFCm_1",
-"MTHFCx",
-"R_MTHFC",
-"R_MTHFC_1",
-"R_MTHFCm",
-"R_MTHFCm_1",
-"R_MTHFCx"
+"FTHFLi",
+"FTHFLmi",
+"R_FTHFLi",
+"R_FTHFLmi"
 ],
-"ec-code":"3.5.4.9",
-"kegg.reaction":"R01655",
-"keggR":"R01655",
+"ec-code":"6.3.4.3",
+"kegg.reaction":"R00943",
+"keggR":"R00943",
 "rhea":[
-"23700",
-"23701",
-"23702",
-"23703"
+"20221",
+"20222",
+"20223",
+"20224"
 ],
-"sabiork.reaction":"74",
+"sabiork.reaction":"51",
 "seed.reaction":[
-"rxn01211",
-"rxn30160",
-"rxn34246",
-"rxn35246"
+"rxn00690",
+"rxn30159",
+"rxn31923"
 ],
 "vmh.reaction":[
-"MTHFC",
-"MTHFCm",
-"R_MTHFC",
-"R_MTHFCm"
+"FTHFL",
+"FTHFLm",
+"R_FTHFL",
+"R_FTHFLm"
 ],
 "vmhreaction":[
-"MTHFC",
-"MTHFCm",
-"R_MTHFC",
-"R_MTHFCm"
+"FTHFL",
+"FTHFLm",
+"R_FTHFL",
+"R_FTHFLm"
 ]
 }
 },
@@ -28673,8 +29738,8 @@
 "nadph_m":-1.0,
 "thf_m":1.0
 },
-"lower_bound":0.0013614099014634929,
-"upper_bound":0.005445639612458788,
+"lower_bound":0.0002080337295566713,
+"upper_bound":0.0008271573071346299,
 "gene_reaction_rule":"_DHFR",
 "notes":{
 "Confidence Level":"0",
@@ -28719,6 +29784,29 @@
 }
 },
 {
+"id":"FTHFDHm",
+"name":"formyltetrahydrofolate dehydrogenase",
+"metabolites":{
+"10fthf_m":-1.0,
+"co2_m":1.0,
+"h2o_m":-1.0,
+"h_m":1.0,
+"nadp_m":-1.0,
+"nadph_m":1.0,
+"thf_m":1.0
+},
+"lower_bound":-3.982421475938901e-14,
+"upper_bound":0.0,
+"gene_reaction_rule":"ALDH1L2",
+"notes":{
+"Confidence Level":"0",
+"References":"KEGG"
+},
+"annotation":{
+"ec-code":"1.5.1.6"
+}
+},
+{
 "id":"ADK1",
 "name":"adenylate kinase",
 "metabolites":{
@@ -28726,8 +29814,8 @@
 "amp_c":-1.0,
 "atp_c":-1.0
 },
-"lower_bound":0.034900060541673814,
-"upper_bound":0.1396002421790418,
+"lower_bound":0.06516826276761445,
+"upper_bound":0.2591137737277896,
 "gene_reaction_rule":"AK1 or AK7 or AK8 or AK5",
 "notes":{
 "Confidence Level":"0",
@@ -28776,6 +29864,25 @@
 }
 },
 {
+"id":"ADK1n",
+"name":"adenylate kinase, nuclear",
+"metabolites":{
+"adp_n":2.0,
+"amp_n":-1.0,
+"atp_n":-1.0
+},
+"lower_bound":2.2737367544323206e-13,
+"upper_bound":2.2737367544323206e-13,
+"gene_reaction_rule":"AK6 or AK9",
+"notes":{
+"Confidence Level":"0",
+"References":"KEGG"
+},
+"annotation":{
+"ec-code":"2.7.4.3"
+}
+},
+{
 "id":"NTD7m",
 "name":"5'-nucleotidase (AMP)",
 "metabolites":{
@@ -28784,8 +29891,8 @@
 "h2o_m":-1.0,
 "pi_m":1.0
 },
-"lower_bound":0.0,
-"upper_bound":0.0,
+"lower_bound":6.391954089880593e-13,
+"upper_bound":6.391954089880593e-13,
 "gene_reaction_rule":"NT5M",
 "notes":{
 "Confidence Level":"0",
@@ -28804,8 +29911,8 @@
 "h2o_m":-1.0,
 "pi_m":1.0
 },
-"lower_bound":4.6792159007286e-05,
-"upper_bound":0.00018716863552752284,
+"lower_bound":8.73741661568267e-05,
+"upper_bound":0.0003474060687264928,
 "gene_reaction_rule":"NT5M",
 "notes":{
 "Confidence Level":"0",
@@ -28825,8 +29932,8 @@
 "trdrd_m":1.0,
 "utp_m":1.0
 },
-"lower_bound":-1.1368683772161603e-13,
-"upper_bound":-1.1368683772161603e-13,
+"lower_bound":0.0,
+"upper_bound":0.0,
 "gene_reaction_rule":"RRM2B",
 "notes":{
 "Confidence Level":"0",
@@ -28845,8 +29952,8 @@
 "pser__L_m":-1.0,
 "ser__L_m":1.0
 },
-"lower_bound":0.0006807049508313839,
-"upper_bound":0.0027228198059191825,
+"lower_bound":0.00010401686477833564,
+"upper_bound":0.0004135786534691841,
 "gene_reaction_rule":"PSPH",
 "notes":{
 "Confidence Level":"0",
@@ -28867,8 +29974,8 @@
 "nad_m":-1.0,
 "nadh_m":1.0
 },
-"lower_bound":1.713561200626259,
-"upper_bound":2.7802460457819507,
+"lower_bound":1.8112604626525126,
+"upper_bound":2.533743886854154,
 "gene_reaction_rule":"ALDH7A1",
 "notes":{
 "Confidence Level":"0",
@@ -28889,8 +29996,8 @@
 "nadp_m":-1.0,
 "nadph_m":1.0
 },
-"lower_bound":-2.7802460457813822,
-"upper_bound":-1.7135612006261454,
+"lower_bound":-2.533743886854154,
+"upper_bound":-1.8112604626525126,
 "gene_reaction_rule":"ALDH7A1",
 "notes":{
 "Confidence Level":"0",
@@ -28911,8 +30018,8 @@
 "nad_m":-1.0,
 "nadh_m":1.0
 },
-"lower_bound":0.0008561230243683005,
-"upper_bound":0.003424492098458415,
+"lower_bound":0.0015986233075924148,
+"upper_bound":0.006356243061117047,
 "gene_reaction_rule":"ALDH7A1",
 "notes":{
 "Confidence Level":"0",
@@ -28923,49 +30030,45 @@
 }
 },
 {
-"id":"SALMCOM2",
-"name":"S-Adenosyl-L-methionine:catechol O-methyltransferase",
+"id":"3HKYNAKGAT",
+"name":"3-Hydroxy-L-kynurenine:2-oxoglutarate aminotransferase",
 "metabolites":{
-"adrnl_c":-1.0,
-"ahcys_c":1.0,
-"amet_c":-1.0,
-"h_c":1.0,
-"mepi_c":1.0
+"42A3HP24DB_c":1.0,
+"akg_c":-1.0,
+"glu__L_c":1.0,
+"hLkynr_c":-1.0
 },
-"lower_bound":0.0,
-"upper_bound":0.0,
-"gene_reaction_rule":"_LRTOMT",
+"lower_bound":0.0023341027836260553,
+"upper_bound":0.009280563194657775,
+"gene_reaction_rule":"KYAT3",
 "notes":{
 "Confidence Level":"0",
 "References":"KEGG"
 },
 "annotation":{
-"bigg.reaction":[
-"R_SALMCOM2",
-"SALMCOM2"
-],
-"ec-code":"2.1.1.6",
-"kegg.reaction":"R02920",
-"keggR":"R02920",
-"metacyc.reaction":"RXN-10909",
-"metacycR":"RXN-10909",
+"ec-code":"2.6.1.7",
+"kegg.reaction":"R04171",
+"keggR":"R04171",
+"metacyc.reaction":"RXN-10721",
+"metacycR":"RXN-10721",
 "rhea":[
-"72251",
-"72252",
-"72253",
-"72254"
+"65888",
+"65889",
+"65890",
+"65891"
 ],
+"sabiork.reaction":"12045",
 "seed.reaction":[
-"rxn02088",
-"rxn21213"
+"rxn02912",
+"rxn21079"
 ],
 "vmh.reaction":[
-"R_SALMCOM2",
-"SALMCOM2"
+"3HKYNAKGAT",
+"R_3HKYNAKGAT"
 ],
 "vmhreaction":[
-"R_SALMCOM2",
-"SALMCOM2"
+"3HKYNAKGAT",
+"R_3HKYNAKGAT"
 ]
 }
 },
@@ -28977,8 +30080,8 @@
 "b2coa_m":1.0,
 "h2o_m":1.0
 },
-"lower_bound":-0.0034244920983610427,
-"upper_bound":-0.0008561230243913087,
+"lower_bound":-0.00635624306119098,
+"upper_bound":-0.001598623307586422,
 "gene_reaction_rule":"HADHA and ECHS1",
 "notes":{
 "Confidence Level":"0",
@@ -29037,8 +30140,8 @@
 "nad_c":-1.0,
 "nadh_c":1.0
 },
-"lower_bound":-0.0031861576702567618,
-"upper_bound":-0.0007965394173652385,
+"lower_bound":-0.005913867517051585,
+"upper_bound":-0.0014873638972403569,
 "gene_reaction_rule":"GPD1L2",
 "notes":{
 "Confidence Level":"0",
@@ -29057,8 +30160,8 @@
 "h_e":-1.0,
 "hco3_e":-1.0
 },
-"lower_bound":0.0010193051045916945,
-"upper_bound":0.004077220435760864,
+"lower_bound":0.00423743309454494,
+"upper_bound":0.016848343557626322,
 "gene_reaction_rule":"CA15L or CA9",
 "notes":{
 "Confidence Level":"0",
@@ -29136,8 +30239,8 @@
 "h_c":-1.0,
 "hco3_c":-1.0
 },
-"lower_bound":-2.9187288552162176,
-"upper_bound":-1.4419189700489636,
+"lower_bound":-2.7031249947176548,
+"upper_bound":-1.7010378659214211,
 "gene_reaction_rule":"CA13 or CA4 or CA3A or CA3B or CA8 or _LOC421187",
 "notes":{
 "Confidence Level":"0",
@@ -29156,8 +30259,8 @@
 "h_m":-1.0,
 "hco3_m":-1.0
 },
-"lower_bound":-0.8793177214372463,
-"upper_bound":-0.3472966557456814,
+"lower_bound":-0.8129017762804538,
+"upper_bound":-0.4484547898954004,
 "gene_reaction_rule":"CA5A",
 "notes":{
 "Confidence Level":"0",
@@ -29176,8 +30279,8 @@
 "na1_c":1.0,
 "na1_e":-1.0
 },
-"lower_bound":-1.4597795345342774,
-"upper_bound":-0.7213745919525536,
+"lower_bound":-1.3523376191494663,
+"upper_bound":-0.8512940547495873,
 "gene_reaction_rule":"SLC4A5 or SLC4A4 or SLC4A9",
 "notes":{
 "Confidence Level":"0",
@@ -29213,8 +30316,8 @@
 "na1_c":3.0,
 "na1_e":-3.0
 },
-"lower_bound":-0.1353130234129612,
-"upper_bound":0.1206196538829484,
+"lower_bound":-0.09834668520097803,
+"upper_bound":0.07532912418867,
 "gene_reaction_rule":"SLC8A2 or SLC8A3 or SLC8A1",
 "notes":{
 "Confidence Level":"0",
@@ -29250,8 +30353,8 @@
 "tyr__L_c":1.0,
 "tyr__L_e":-1.0
 },
-"lower_bound":0.00147989910715296,
-"upper_bound":0.0059195964287255265,
+"lower_bound":0.0027633893001848264,
+"upper_bound":0.010987437741391659,
 "gene_reaction_rule":"SLC7A5",
 "notes":{
 "Confidence Level":"0",
@@ -29285,8 +30388,8 @@
 "ser__L_c":1.0,
 "ser__L_e":-1.0
 },
-"lower_bound":0.004192723851263141,
-"upper_bound":0.01677089540484823,
+"lower_bound":0.00782899872889117,
+"upper_bound":0.031128670905700297,
 "gene_reaction_rule":"SLC38A1 or SLC6A14 or SLC38A2 or SLC22A5 or (SLC6A19 and TMEM27) or (SLC6A19 and ACE2)",
 "notes":{
 "Confidence Level":"0",
@@ -29337,7 +30440,7 @@
 "pro__L_c":1.0,
 "pro__L_e":-1.0
 },
-"lower_bound":0.002161001950630983,
+"lower_bound":0.004035200534355838,
 "upper_bound":0.05,
 "gene_reaction_rule":"SLC38A1 or SLC6A14 or SLC38A2 or SLC22A5 or (SLC6A19 and TMEM27) or (SLC6A19 and ACE2)",
 "notes":{
@@ -29397,8 +30500,8 @@
 "na1_c":1.0,
 "na1_e":-1.0
 },
-"lower_bound":0.0022551878823571687,
-"upper_bound":0.009020751524682794,
+"lower_bound":0.004211072251313695,
+"upper_bound":0.016743530913006982,
 "gene_reaction_rule":"SLC38A1 or SLC6A14 or SLC38A2 or SLC22A5 or (SLC6A19 and TMEM27) or (SLC6A19 and ACE2)",
 "notes":{
 "Confidence Level":"0",
@@ -29454,8 +30557,8 @@
 "thr__L_c":1.0,
 "thr__L_e":-1.0
 },
-"lower_bound":0.0028952250352728805,
-"upper_bound":0.011580900141091522,
+"lower_bound":0.0054062022507672175,
+"upper_bound":0.021495455107510986,
 "gene_reaction_rule":"SLC38A1 or SLC6A14 or SLC38A2 or SLC22A5 or (SLC6A19 and TMEM27) or (SLC6A19 and ACE2)",
 "notes":{
 "Confidence Level":"0",
@@ -29507,8 +30610,8 @@
 "na1_c":2.0,
 "na1_e":-2.0
 },
-"lower_bound":0.0023853432966234323,
-"upper_bound":0.009541373177285095,
+"lower_bound":0.0021200063564492666,
+"upper_bound":0.008429300153807162,
 "gene_reaction_rule":"SLC38A3",
 "notes":{
 "Confidence Level":"0",
@@ -29540,8 +30643,8 @@
 "na1_c":2.0,
 "na1_e":-2.0
 },
-"lower_bound":0.2334947657944237,
-"upper_bound":0.4999999999998863,
+"lower_bound":0.3203807049370713,
+"upper_bound":0.5000000000006821,
 "gene_reaction_rule":"SLC38A3",
 "notes":{
 "Confidence Level":"0",
@@ -29573,8 +30676,8 @@
 "na1_c":2.0,
 "na1_e":-2.0
 },
-"lower_bound":0.0015862605490610804,
-"upper_bound":0.006345042195789574,
+"lower_bound":0.0029619961298976705,
+"upper_bound":0.011777113006019135,
 "gene_reaction_rule":"SLC38A3",
 "notes":{
 "Confidence Level":"0",
@@ -29604,8 +30707,8 @@
 "lys__L_c":-1.0,
 "lys__L_e":1.0
 },
-"lower_bound":0.0018581007093514297,
-"upper_bound":0.050000000000052044,
+"lower_bound":0.0034695984302620516,
+"upper_bound":0.013795376835597388,
 "gene_reaction_rule":"SLC7A6",
 "notes":{
 "Confidence Level":"0",
@@ -29639,8 +30742,8 @@
 "lys__L_c":1.0,
 "lys__L_e":-1.0
 },
-"lower_bound":0.005145022268984432,
-"upper_bound":0.06314768623940036,
+"lower_bound":0.009607208639605257,
+"upper_bound":0.03819896342051751,
 "gene_reaction_rule":"SLC38A4 or SLC7A3",
 "notes":{
 "Confidence Level":"0",
@@ -29654,8 +30757,8 @@
 "ile__L_c":1.0,
 "ile__L_e":-1.0
 },
-"lower_bound":0.0016769800403153567,
-"upper_bound":0.04999999999984084,
+"lower_bound":0.0031313950245248634,
+"upper_bound":0.0500000000001819,
 "gene_reaction_rule":"SLC43A2",
 "notes":{
 "Confidence Level":"0",
@@ -29720,8 +30823,8 @@
 "leu__L_c":1.0,
 "leu__L_e":-1.0
 },
-"lower_bound":0.004658060729298086,
-"upper_bound":0.01863224291696497,
+"lower_bound":0.00869791401078146,
+"upper_bound":0.0345835415463398,
 "gene_reaction_rule":"SLC43A2",
 "notes":{
 "Confidence Level":"0"
@@ -29734,8 +30837,8 @@
 "phe__L_c":1.0,
 "phe__L_e":-1.0
 },
-"lower_bound":0.003647999460667961,
-"upper_bound":0.014591997840966542,
+"lower_bound":0.006811844555386415,
+"upper_bound":0.02708439160096532,
 "gene_reaction_rule":"SLC16A10 or SLC43A2",
 "notes":{
 "Confidence Level":"0"
@@ -29805,8 +30908,8 @@
 "val__L_c":1.0,
 "val__L_e":-1.0
 },
-"lower_bound":0.0032337774451889345,
-"upper_bound":0.05000000000006821,
+"lower_bound":0.006038375148250452,
+"upper_bound":0.049999999999954525,
 "gene_reaction_rule":"SLC43A2",
 "notes":{
 "Confidence Level":"0"
@@ -29873,8 +30976,8 @@
 "trp__L_c":1.0,
 "trp__L_e":-1.0
 },
-"lower_bound":0.0007480442787937136,
-"upper_bound":0.0029921771151748544,
+"lower_bound":0.003730912577793788,
+"upper_bound":0.014834380952038373,
 "gene_reaction_rule":"SLC36A4 or SLC16A10",
 "notes":{
 "Confidence Level":"0"
@@ -29935,8 +31038,8 @@
 "met__L_c":1.0,
 "met__L_e":-1.0
 },
-"lower_bound":0.0010004227210629324,
-"upper_bound":0.004001690883910669,
+"lower_bound":0.0018680715660366332,
+"upper_bound":0.007427589021745007,
 "gene_reaction_rule":"SLC43A2",
 "notes":{
 "Confidence Level":"0"
@@ -30003,7 +31106,7 @@
 "na1_e":-1.0
 },
 "lower_bound":0.0,
-"upper_bound":0.05000000000000001,
+"upper_bound":0.05,
 "gene_reaction_rule":"SLC38A3",
 "notes":{
 "Confidence Level":"0"
@@ -30048,47 +31151,6 @@
 }
 },
 {
-"id":"ARGtm",
-"name":"Arginine mitochondrial transport via ornithine carrier",
-"metabolites":{
-"arg__L_c":-1.0,
-"arg__L_m":1.0,
-"h_c":1.0,
-"h_m":-1.0
-},
-"lower_bound":0.0,
-"upper_bound":0.04814189929049917,
-"gene_reaction_rule":"SLC25A15",
-"notes":{
-"Confidence Level":"0"
-},
-"annotation":{
-"bigg.reaction":[
-"ARGt3pp",
-"ARGt6",
-"ARGtm",
-"R_ARGt3pp",
-"R_ARGt6",
-"R_ARGtm"
-],
-"metacyc.reaction":"TRANS-RXN-402",
-"metacycR":"TRANS-RXN-402",
-"seed.reaction":[
-"rxn08154",
-"rxn13228",
-"rxn30457"
-],
-"vmh.reaction":[
-"ARGtm",
-"R_ARGtm"
-],
-"vmhreaction":[
-"ARGtm",
-"R_ARGtm"
-]
-}
-},
-{
 "id":"_LYStm",
 "name":"Lysine mitochondrial transport via ornithine carrier",
 "metabolites":{
@@ -30097,8 +31159,8 @@
 "lys__L_c":-1.0,
 "lys__L_m":1.0
 },
-"lower_bound":0.0008561230242776219,
-"upper_bound":0.0034244920983610427,
+"lower_bound":0.0015986233077001089,
+"upper_bound":0.006356243061304667,
 "gene_reaction_rule":"SLC25A15",
 "notes":{
 "Confidence Level":"0"
@@ -30113,8 +31175,8 @@
 "so4_c":1.0,
 "so4_m":-1.0
 },
-"lower_bound":-16.329292086742953,
-"upper_bound":-10.160103953144585,
+"lower_bound":-14.780607604492502,
+"upper_bound":-10.59794734447189,
 "gene_reaction_rule":"SLC25A10",
 "notes":{
 "Confidence Level":"0"
@@ -30149,8 +31211,8 @@
 "pi_c":1.0,
 "pi_m":-1.0
 },
-"lower_bound":-13.390407432727784,
-"upper_bound":-8.698029184302982,
+"lower_bound":-12.052683610254348,
+"upper_bound":-8.872110479022922,
 "gene_reaction_rule":"SLC25A10",
 "notes":{
 "Confidence Level":"0"
@@ -30186,8 +31248,8 @@
 "h_c":-1.0,
 "h_m":1.0
 },
-"lower_bound":8.236298084562055,
-"upper_bound":13.439681164318488,
+"lower_bound":8.57207038274862,
+"upper_bound":12.0989933593636,
 "gene_reaction_rule":"SLC25A12 or SLC25A22 or SLC25A13",
 "notes":{
 "Confidence Level":"0"
@@ -30251,56 +31313,14 @@
 }
 },
 {
-"id":"AMETt2m",
-"name":"S-Adenosyl-L-methionine reversible transport, mitochondrial",
-"metabolites":{
-"ahcys_c":1.0,
-"ahcys_m":-1.0,
-"amet_c":-1.0,
-"amet_m":1.0
-},
-"lower_bound":0.0,
-"upper_bound":0.0,
-"gene_reaction_rule":"SLC25A26",
-"notes":{
-"Confidence Level":"0"
-},
-"annotation":{
-"bigg.reaction":[
-"AMETt2h",
-"AMETt2m",
-"R_AMETt2h",
-"R_AMETt2m"
-],
-"rhea":[
-"75479",
-"75480",
-"75481",
-"75482"
-],
-"seed.reaction":[
-"rxn33692",
-"rxn34490"
-],
-"vmh.reaction":[
-"AMETt2m",
-"R_AMETt2m"
-],
-"vmhreaction":[
-"AMETt2m",
-"R_AMETt2m"
-]
-}
-},
-{
 "id":"GLCt1",
 "name":"Glucose transport  uniport",
 "metabolites":{
 "glc__D_c":1.0,
 "glc__D_e":-1.0
 },
-"lower_bound":2.6538108757940875,
-"upper_bound":5.000000000000114,
+"lower_bound":3.4097134343823314,
+"upper_bound":5.0,
 "gene_reaction_rule":"SLC2A11 or SLC2A9 or SLC2A9L or SLC2A12 or SLC2A1 or SLC2A6 or SLC2A8 or SLC2A2 or SLC2A10",
 "notes":{
 "Confidence Level":"0"
@@ -30383,8 +31403,8 @@
 "inost_c":1.0,
 "inost_e":-1.0
 },
-"lower_bound":5.793314892343915e-05,
-"upper_bound":0.00023173259592113027,
+"lower_bound":0.00010817753957326204,
+"upper_bound":0.00043012179980905785,
 "gene_reaction_rule":"SLC2A13",
 "notes":{
 "Confidence Level":"0"
@@ -30418,70 +31438,6 @@
 }
 },
 {
-"id":"ACACt2",
-"name":"Acetoacetate transport via proton symport",
-"metabolites":{
-"acac_c":1.0,
-"acac_e":-1.0,
-"h_c":1.0,
-"h_e":-1.0
-},
-"lower_bound":0.0,
-"upper_bound":0.0,
-"gene_reaction_rule":"SLC16A1 or SLC16A7 or _LOC416086",
-"notes":{
-"Confidence Level":"0"
-},
-"annotation":{
-"bigg.reaction":[
-"ACACT11",
-"ACACT2",
-"ACACT2m",
-"ACACT2r",
-"HMR_3101",
-"R_ACACT11",
-"R_ACACT2",
-"R_ACACT2m",
-"R_ACACT2r",
-"R_HMR_3101",
-"R_r0287",
-"r0287"
-],
-"kegg.reaction":"R01177",
-"keggR":"R01177",
-"metacyc.reaction":"RXN-12565",
-"metacycR":"RXN-12565",
-"rhea":[
-"31111",
-"31112",
-"31113",
-"31114"
-],
-"sabiork.reaction":"1414",
-"seed.reaction":[
-"rxn00874",
-"rxn19968",
-"rxn19980"
-],
-"vmh.reaction":[
-"ACACT2r",
-"HMR_3101",
-"R_ACACT2r",
-"R_HMR_3101",
-"R_r0287",
-"r0287"
-],
-"vmhreaction":[
-"ACACT2r",
-"HMR_3101",
-"R_ACACT2r",
-"R_HMR_3101",
-"R_r0287",
-"r0287"
-]
-}
-},
-{
 "id":"PYRt2",
 "name":"Pyruvate transport in via proton symport",
 "metabolites":{
@@ -30490,8 +31446,8 @@
 "pyr_c":1.0,
 "pyr_e":-1.0
 },
-"lower_bound":-1.3321149669121723,
-"upper_bound":-0.7844889639088706,
+"lower_bound":-1.2297634821979955,
+"upper_bound":-0.8587709722766022,
 "gene_reaction_rule":"SLC16A3 or SLC16A7 or _LOC416086 or SLC16A1",
 "notes":{
 "Confidence Level":"0"
@@ -30552,8 +31508,8 @@
 "lac__L_c":1.0,
 "lac__L_e":-1.0
 },
-"lower_bound":-9.205816319907235,
-"upper_bound":-3.965812068495552,
+"lower_bound":-9.12429330789439,
+"upper_bound":-5.572727666740775,
 "gene_reaction_rule":"SLC16A7 or _LOC416086 or SLC16A8 or SLC16A1 or SLC16A3 or BSG",
 "notes":{
 "Confidence Level":"0"
@@ -30566,8 +31522,8 @@
 "nh4_c":1.0,
 "nh4_e":-1.0
 },
-"lower_bound":-1.2771324491861833,
-"upper_bound":-0.7433500590244648,
+"lower_bound":-1.1619049228686436,
+"upper_bound":-0.801119395370165,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -30669,8 +31625,8 @@
 "chol_c":1.0,
 "chol_e":-1.0
 },
-"lower_bound":0.0004825640319268132,
-"upper_bound":0.0019302561283893738,
+"lower_bound":0.0009010832397962076,
+"upper_bound":0.00358277279349295,
 "gene_reaction_rule":"_LOC421583 or SLC22A1 or SLC22A5",
 "notes":{
 "Confidence Level":"0"
@@ -30738,8 +31694,8 @@
 "uri_c":1.0,
 "uri_e":-1.0
 },
-"lower_bound":0.0014304299276091115,
-"upper_bound":0.00572171971100488,
+"lower_bound":0.0026710163806455967,
+"upper_bound":0.010620156263939862,
 "gene_reaction_rule":"SLC29A1 or SLC29A3",
 "notes":{
 "Confidence Level":"0"
@@ -30804,8 +31760,8 @@
 "cytd_c":1.0,
 "cytd_e":-1.0
 },
-"lower_bound":-0.00572171971100488,
-"upper_bound":-0.0014304299276091115,
+"lower_bound":-0.010620156263939862,
+"upper_bound":-0.0026710163806455967,
 "gene_reaction_rule":"SLC29A1 or SLC29A3",
 "notes":{
 "Confidence Level":"0"
@@ -30870,8 +31826,8 @@
 "ppi_c":-1.0,
 "ppi_r":1.0
 },
-"lower_bound":0.0004861036834427068,
-"upper_bound":0.0019444147350213825,
+"lower_bound":0.0009076927691467063,
+"upper_bound":0.0036090527632950398,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -30943,8 +31899,8 @@
 "ppi_c":-1.0,
 "ppi_m":1.0
 },
-"lower_bound":0.03646487627690931,
-"upper_bound":0.14585950511195733,
+"lower_bound":0.06809021537560511,
+"upper_bound":0.2707316707668497,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -31016,8 +31972,8 @@
 "ca2_c":1.0,
 "ca2_e":-1.0
 },
-"lower_bound":-0.1353130234129612,
-"upper_bound":0.12061965388294839,
+"lower_bound":-0.09834668520097803,
+"upper_bound":0.07532912418866351,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -31070,8 +32026,8 @@
 "co2_c":1.0,
 "co2_e":-1.0
 },
-"lower_bound":-0.7901943522115289,
-"upper_bound":-0.21588627816663575,
+"lower_bound":-0.6836335322601599,
+"upper_bound":-0.2954610848674909,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -31166,8 +32122,8 @@
 "o2_c":1.0,
 "o2_e":-1.0
 },
-"lower_bound":2.6912625939365853,
-"upper_bound":4.2384022536234625,
+"lower_bound":2.7880085445741543,
+"upper_bound":3.8381370830936703,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -31265,8 +32221,8 @@
 "h2o2_c":1.0,
 "h2o2_e":-1.0
 },
-"lower_bound":-0.08476668268849608,
-"upper_bound":-0.05382388949487904,
+"lower_bound":-0.07666683359514082,
+"upper_bound":-0.05566426282462089,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -31349,9 +32305,98 @@
 "coa_c":-1.0,
 "coa_m":1.0
 },
-"lower_bound":0.011985722339431959,
-"upper_bound":0.04794288937580404,
+"lower_bound":0.022380726307346777,
+"upper_bound":0.08898740285803797,
 "gene_reaction_rule":"SLC25A16",
+"notes":{
+"Confidence Level":"0"
+},
+"annotation":{
+"bigg.reaction":[
+"COAt",
+"COAtg",
+"COAth",
+"COAtim",
+"COAtl",
+"COAtn",
+"COAtp",
+"COAtr",
+"COAts",
+"EX_coa_e",
+"R_COAt",
+"R_COAtg",
+"R_COAth",
+"R_COAtim",
+"R_COAtl",
+"R_COAtn",
+"R_COAtp",
+"R_COAtr",
+"R_COAts",
+"R_EX_coa_e",
+"R_SK_coa_c",
+"SK_coa_c"
+],
+"seed.reaction":[
+"rxn10832",
+"rxn13243",
+"rxn13244",
+"rxn31203",
+"rxn32206",
+"rxn32207",
+"rxn32211"
+],
+"vmh.reaction":[
+"COAt",
+"COAtex",
+"COAtg",
+"COAtl",
+"COAtm",
+"COAtn",
+"COAtp",
+"COAtpp",
+"COAtr",
+"R_COAt",
+"R_COAtex",
+"R_COAtg",
+"R_COAtl",
+"R_COAtm",
+"R_COAtn",
+"R_COAtp",
+"R_COAtpp",
+"R_COAtr"
+],
+"vmhreaction":[
+"COAt",
+"COAtex",
+"COAtg",
+"COAtl",
+"COAtm",
+"COAtn",
+"COAtp",
+"COAtpp",
+"COAtr",
+"R_COAt",
+"R_COAtex",
+"R_COAtg",
+"R_COAtl",
+"R_COAtm",
+"R_COAtn",
+"R_COAtp",
+"R_COAtpp",
+"R_COAtr"
+]
+}
+},
+{
+"id":"COAtr",
+"name":"COA transporter, endoplasmic reticulum",
+"metabolites":{
+"coa_c":-1.0,
+"coa_r":1.0
+},
+"lower_bound":0.0,
+"upper_bound":0.0,
+"gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
 },
@@ -31441,7 +32486,7 @@
 "oaa_e":1.0
 },
 "lower_bound":0.0,
-"upper_bound":0.5110048313456339,
+"upper_bound":0.3463498454008929,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -31475,8 +32520,8 @@
 "chsterol_c":-1.0,
 "chsterol_e":1.0
 },
-"lower_bound":-0.00025975696087243705,
-"upper_bound":-6.493924013284413e-05,
+"lower_bound":-0.00048213817774467316,
+"upper_bound":-0.00012125988894240436,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -31608,8 +32653,8 @@
 "utp_c":-0.053446,
 "val__L_c":-0.2967
 },
-"lower_bound":0.003183140053073366,
-"upper_bound":0.012732560212293464,
+"lower_bound":0.005943820846325378,
+"upper_bound":0.023633065919972503,
 "gene_reaction_rule":"",
 "objective_coefficient":1.0,
 "notes":{
@@ -31623,14 +32668,137 @@
 }
 },
 {
+"id":"H2Oter",
+"name":"H2O endoplasmic reticulum transport",
+"metabolites":{
+"h2o_c":-1.0,
+"h2o_r":1.0
+},
+"lower_bound":1.1368683772161603e-13,
+"upper_bound":1.1368683772161603e-13,
+"gene_reaction_rule":"",
+"notes":{
+"Confidence Level":"0"
+},
+"annotation":{
+"bigg.reaction":[
+"EX_h2o_e",
+"H2Ot",
+"H2Otcx",
+"H2Oter",
+"H2Otex",
+"H2Otf",
+"H2Otg",
+"H2Oth",
+"H2Othu",
+"H2Otly",
+"H2Otm",
+"H2Otn",
+"H2Otp",
+"H2Otpp",
+"H2Ots",
+"H2Otu_syn",
+"H2Otv",
+"R_EX_h2o_e",
+"R_H2Ot",
+"R_H2Otcx",
+"R_H2Oter",
+"R_H2Otex",
+"R_H2Otf",
+"R_H2Otg",
+"R_H2Oth",
+"R_H2Othu",
+"R_H2Otly",
+"R_H2Otm",
+"R_H2Otn",
+"R_H2Otp",
+"R_H2Otpp",
+"R_H2Ots",
+"R_H2Otu_syn",
+"R_H2Otv"
+],
+"metacyc.reaction":[
+"RXN-22387",
+"TRANS-RXN-145",
+"TRANS-RXN0-547",
+"TRANS-RXN0-603"
+],
+"metacycR":[
+"RXN-22387",
+"TRANS-RXN-145",
+"TRANS-RXN0-547",
+"TRANS-RXN0-603"
+],
+"rhea":[
+"29667",
+"29668",
+"29669",
+"29670"
+],
+"seed.reaction":[
+"rxn05319",
+"rxn08686",
+"rxn08687",
+"rxn09643",
+"rxn09745",
+"rxn09812",
+"rxn09838",
+"rxn09874",
+"rxn31175",
+"rxn33306",
+"rxn34181"
+],
+"vmh.reaction":[
+"H2Ot",
+"H2Oter",
+"H2Otex",
+"H2Otg",
+"H2Otly",
+"H2Otm",
+"H2Otn",
+"H2Otp",
+"H2Otpp",
+"R_H2Ot",
+"R_H2Oter",
+"R_H2Otex",
+"R_H2Otg",
+"R_H2Otly",
+"R_H2Otm",
+"R_H2Otn",
+"R_H2Otp",
+"R_H2Otpp"
+],
+"vmhreaction":[
+"H2Ot",
+"H2Oter",
+"H2Otex",
+"H2Otg",
+"H2Otly",
+"H2Otm",
+"H2Otn",
+"H2Otp",
+"H2Otpp",
+"R_H2Ot",
+"R_H2Oter",
+"R_H2Otex",
+"R_H2Otg",
+"R_H2Otly",
+"R_H2Otm",
+"R_H2Otn",
+"R_H2Otp",
+"R_H2Otpp"
+]
+}
+},
+{
 "id":"CO2tm",
 "name":"CO2 transport  diffusion   mitochondrial",
 "metabolites":{
 "co2_c":-1.0,
 "co2_m":1.0
 },
-"lower_bound":-3.6956380579101733,
-"upper_bound":-1.6447791992796965,
+"lower_bound":-3.3624352173598027,
+"upper_bound":-1.9721756411739761,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -31725,8 +32893,8 @@
 "o2s_c":-1.0,
 "o2s_m":1.0
 },
-"lower_bound":-0.08476668268849608,
-"upper_bound":-0.05382388949476535,
+"lower_bound":-0.07666683359514082,
+"upper_bound":-0.05566426282462089,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -31784,8 +32952,8 @@
 "o2_c":-1.0,
 "o2_m":1.0
 },
-"lower_bound":2.6911944747398593,
-"upper_bound":4.238334134426282,
+"lower_bound":2.7832131412357057,
+"upper_bound":3.833341679757723,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -31883,8 +33051,8 @@
 "pro__L_c":-1.0,
 "pro__L_m":1.0
 },
-"lower_bound":6.034699145756635e-18,
-"upper_bound":0.047838998049369016,
+"lower_bound":-5.943444460696928e-18,
+"upper_bound":0.04596479946564416,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -31958,8 +33126,8 @@
 "pi_c":1.0,
 "pi_r":-1.0
 },
-"lower_bound":-0.0019444147350213825,
-"upper_bound":-0.0004861036834427068,
+"lower_bound":-0.0036090527632950398,
+"upper_bound":-0.0009076927691467063,
 "gene_reaction_rule":"SLC37A4",
 "notes":{
 "Confidence Level":"0"
@@ -32051,8 +33219,8 @@
 "pi_c":1.0,
 "pi_e":-1.0
 },
-"lower_bound":0.005013658857251357,
-"upper_bound":0.020054635423889522,
+"lower_bound":0.00936191607092951,
+"upper_bound":0.03722366224781126,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -32088,8 +33256,8 @@
 "gln__L_c":-1.0,
 "gln__L_m":1.0
 },
-"lower_bound":0.2286131945149606,
-"upper_bound":0.49511842872175427,
+"lower_bound":0.3112654336590219,
+"upper_bound":0.4908847287252522,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -32222,8 +33390,8 @@
 "nadph_c":-1.0,
 "sphgn_c":1.0
 },
-"lower_bound":6.811919713577005e-05,
-"upper_bound":0.0002724767885430802,
+"lower_bound":0.00012719776611117413,
+"upper_bound":0.0005057476106874115,
 "gene_reaction_rule":"KDSR",
 "notes":{
 "Confidence Level":"0"
@@ -32272,8 +33440,8 @@
 "coa_c":-1.0,
 "ppi_c":1.0
 },
-"lower_bound":0.0016777503599404197,
-"upper_bound":0.00671100144172987,
+"lower_bound":0.0031328334289658973,
+"upper_bound":0.012456374587300015,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -32295,8 +33463,8 @@
 "h_c":-3.0,
 "o2s_c":-2.0
 },
-"lower_bound":0.026911944747448156,
-"upper_bound":0.04238334134426273,
+"lower_bound":0.027832131412356735,
+"upper_bound":0.03833341679757665,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -32328,8 +33496,8 @@
 "inost_c":-1.0,
 "pail_hs_c":1.0
 },
-"lower_bound":5.793314892343915e-05,
-"upper_bound":0.00023173259592113027,
+"lower_bound":0.00010817753934588836,
+"upper_bound":0.0004301217997598368,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -32359,8 +33527,8 @@
 "pa_hs_c":-1.0,
 "ppi_c":1.0
 },
-"lower_bound":0.00010472530764134463,
-"upper_bound":0.00041890123123040023,
+"lower_bound":0.0001955517056319922,
+"upper_bound":0.0007775278687834325,
 "gene_reaction_rule":"CDS1 or CDS2",
 "notes":{
 "Confidence Level":"0"
@@ -32384,8 +33552,8 @@
 "h_c":1.0,
 "pchol_hs_c":1.0
 },
-"lower_bound":0.0015331180253402154,
-"upper_bound":0.006132472103418576,
+"lower_bound":0.0028627640411857604,
+"upper_bound":0.01138255897091718,
 "gene_reaction_rule":"CEPT1 or CHPT1",
 "notes":{
 "Confidence Level":"0"
@@ -32411,8 +33579,8 @@
 "h_c":-1.0,
 "ppi_c":1.0
 },
-"lower_bound":0.0015331180253402156,
-"upper_bound":0.0061324721034185774,
+"lower_bound":0.0028627640411857604,
+"upper_bound":0.01138255897091718,
 "gene_reaction_rule":"PCYT1A or PCYT1B",
 "notes":{
 "Confidence Level":"0"
@@ -32457,8 +33625,8 @@
 "cytd_c":-1.0,
 "h_c":1.0
 },
-"lower_bound":0.000700290811509775,
-"upper_bound":0.0028011632466987306,
+"lower_bound":0.001307640586090225,
+"upper_bound":0.0051992745025573085,
 "gene_reaction_rule":"UCK2 or UCK1",
 "notes":{
 "Confidence Level":"0"
@@ -32507,8 +33675,8 @@
 "cdp_c":1.0,
 "cmp_c":-1.0
 },
-"lower_bound":0.00016062124723248417,
-"upper_bound":0.0006424849885888761,
+"lower_bound":0.0002999252000108754,
+"upper_bound":0.0011925245064503542,
 "gene_reaction_rule":"CMPK1",
 "notes":{
 "Confidence Level":"0"
@@ -32562,8 +33730,8 @@
 "dcmp_c":-1.0,
 "dctp_c":-1.0
 },
-"lower_bound":-0.00032124249423759466,
-"upper_bound":-8.031062350255525e-05,
+"lower_bound":-0.0005962622532251771,
+"upper_bound":-0.0001499625999485943,
 "gene_reaction_rule":"CMPK1",
 "notes":{
 "Confidence Level":"0"
@@ -32599,8 +33767,8 @@
 "damp_c":1.0,
 "h_c":1.0
 },
-"lower_bound":0.00011140990208118485,
-"upper_bound":0.00044563960776057674,
+"lower_bound":0.0002080337295593674,
+"upper_bound":0.0008271573071663303,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -32615,8 +33783,8 @@
 "nadp_c":1.0,
 "nadph_c":-1.0
 },
-"lower_bound":0.02691194474744816,
-"upper_bound":0.04238334134426273,
+"lower_bound":0.02783213141235674,
+"upper_bound":0.03833341679757666,
 "gene_reaction_rule":"GLRX or GLRX2",
 "notes":{
 "Confidence Level":"0"
@@ -32631,8 +33799,8 @@
 "dgdp_c":1.0,
 "dgmp_c":-1.0
 },
-"lower_bound":-0.00909291967889203,
-"upper_bound":-0.0022732299191829952,
+"lower_bound":-0.01687748312849635,
+"upper_bound":-0.004244761826385002,
 "gene_reaction_rule":"GUK1",
 "notes":{
 "Confidence Level":"0"
@@ -32645,8 +33813,8 @@
 "didp_c":-1.0,
 "didp_n":1.0
 },
-"lower_bound":-0.00044563960739196773,
-"upper_bound":-0.00011140990170588339,
+"lower_bound":-0.0008271573076399363,
+"upper_bound":-0.00020803373001854197,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -32659,8 +33827,8 @@
 "ditp_c":-1.0,
 "ditp_n":1.0
 },
-"lower_bound":0.00011140990170588339,
-"upper_bound":0.00044563960739196773,
+"lower_bound":0.00020803373001854197,
+"upper_bound":0.0008271573076399363,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -32673,8 +33841,8 @@
 "dtdp_c":-1.0,
 "dtdp_n":1.0
 },
-"lower_bound":0.00011140990193325706,
-"upper_bound":0.00044563960750565457,
+"lower_bound":0.00020803372967748146,
+"upper_bound":0.0008271573074125627,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -32687,8 +33855,8 @@
 "dttp_c":-1.0,
 "dttp_n":1.0
 },
-"lower_bound":-0.00044563960750565457,
-"upper_bound":-0.00011140990193325706,
+"lower_bound":-0.0008271573072988758,
+"upper_bound":-0.00020803372956379462,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -32708,8 +33876,8 @@
 "pmtcoa_c":1.0,
 "tdcoa_c":-1.0
 },
-"lower_bound":0.0017122460481480805,
-"upper_bound":0.006848984196549118,
+"lower_bound":0.0031972466154030574,
+"upper_bound":0.012712486122600385,
 "gene_reaction_rule":"FASN or (FASN and ELOVL6 and ELOVL5 and ELOVL2)",
 "notes":{
 "Confidence Level":"0"
@@ -32740,8 +33908,8 @@
 "h2o_c":-1.0,
 "h_c":1.0
 },
-"lower_bound":0.0008388751797018051,
-"upper_bound":0.0033555007208649354,
+"lower_bound":0.001566416714482948,
+"upper_bound":0.006228187293650006,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -32792,8 +33960,8 @@
 "h_c":1.0,
 "lpchol_hs_c":-1.0
 },
-"lower_bound":0.0008388751797018051,
-"upper_bound":0.003355500720864935,
+"lower_bound":0.0015664167144829478,
+"upper_bound":0.006228187293650006,
 "gene_reaction_rule":"PLA2G4A",
 "notes":{
 "Confidence Level":"0"
@@ -32806,8 +33974,8 @@
 "lpchol_hs_c":1.0,
 "lpchol_hs_e":-1.0
 },
-"lower_bound":0.000838875179738352,
-"upper_bound":0.0033555007208860843,
+"lower_bound":0.0015664167144677776,
+"upper_bound":0.006228187293572773,
 "gene_reaction_rule":"SPTLC1 and SPTLC2 and SPTLC3",
 "notes":{
 "Confidence Level":"0"
@@ -32824,8 +33992,8 @@
 "pmtcoa_c":-1.0,
 "ser__L_c":-1.0
 },
-"lower_bound":6.811919713577005e-05,
-"upper_bound":0.0002724767885430802,
+"lower_bound":0.00012719776611117413,
+"upper_bound":0.0005057476106874115,
 "gene_reaction_rule":"SGMS1",
 "notes":{
 "Confidence Level":"0"
@@ -32872,8 +34040,8 @@
 "pchol_hs_c":-1.0,
 "sphmyln_hs_c":1.0
 },
-"lower_bound":6.811919713577005e-05,
-"upper_bound":0.0002724767885430802,
+"lower_bound":0.00012719776611117413,
+"upper_bound":0.0005057476106874114,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0",
@@ -32893,6 +34061,60 @@
 }
 },
 {
+"id":"r0647",
+"name":"Spontaneous reaction",
+"metabolites":{
+"42A3HP24DB_c":1.0,
+"C02470_c":-1.0,
+"h2o_c":-1.0
+},
+"lower_bound":-0.009280563194579372,
+"upper_bound":-0.002334102785084724,
+"gene_reaction_rule":"",
+"notes":{
+"Confidence Level":"0",
+"NOTES":"NCD"
+},
+"annotation":{
+"bigg.reaction":[
+"R_r0647",
+"R_r0647m",
+"r0647",
+"r0647m"
+]
+}
+},
+{
+"id":"r1030",
+"name":"Transport reaction",
+"metabolites":{
+"C02470_c":-1.0,
+"C02470_e":1.0
+},
+"lower_bound":0.002334102785084724,
+"upper_bound":0.009280563194693059,
+"gene_reaction_rule":"",
+"notes":{
+"Confidence Level":"0"
+},
+"annotation":{
+"bigg.reaction":[
+"EX_C02470_e",
+"R_EX_C02470_e",
+"R_r1030",
+"r1030"
+],
+"vmh.reaction":[
+"R_r1030",
+"r1030"
+],
+"vmhreaction":[
+"R_r1030",
+"r1030"
+]
+}
+},
+{
 "id":"3MOBt2im",
 "name":"3-methyl-2-oxobutanoate mitochondrial transport via proton symport",
 "metabolites":{
@@ -32902,7 +34124,7 @@
 "h_m":1.0
 },
 "lower_bound":0.0,
-"upper_bound":0.046766222554939445,
+"upper_bound":0.04396162485166338,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -32937,8 +34159,8 @@
 "coa_c":1.0,
 "pa_hs_c":1.0
 },
-"lower_bound":0.0016096311624110118,
-"upper_bound":0.0064385246531867895,
+"lower_bound":0.003005635662854722,
+"upper_bound":0.011950626976612602,
 "gene_reaction_rule":"AGPAT2 or GPAT4 or AGPAT4 or AGPAT3 or AGPAT5 or AGPAT1 or MBOAT2",
 "notes":{
 "Confidence Level":"0"
@@ -32963,8 +34185,8 @@
 "mal__L_c":-1.0,
 "mal__L_m":1.0
 },
-"lower_bound":8.18363320108233,
-"upper_bound":13.387016280838452,
+"lower_bound":8.519428395983033,
+"upper_bound":12.046351372601464,
 "gene_reaction_rule":"SLC25A11 or SLC25A10",
 "notes":{
 "Confidence Level":"0"
@@ -33012,8 +34234,8 @@
 "atp_c":1.0,
 "atp_m":-1.0
 },
-"lower_bound":8.771352032364609,
-"upper_bound":13.46373028080161,
+"lower_bound":9.00785787865106,
+"upper_bound":12.188431009882466,
 "gene_reaction_rule":"SLC25A4 or SLC25A6 or SLC25A5",
 "notes":{
 "Confidence Level":"0"
@@ -33082,8 +34304,8 @@
 "dag_hs_c":-1.0,
 "tag_hs_c":1.0
 },
-"lower_bound":3.449568875515607e-05,
-"upper_bound":0.0001379827550206243,
+"lower_bound":6.441318651153245e-05,
+"upper_bound":0.000256111535374742,
 "gene_reaction_rule":"_DGAT2",
 "notes":{
 "Confidence Level":"0"
@@ -33098,8 +34320,8 @@
 "dudp_c":-1.0,
 "dudp_m":1.0
 },
-"lower_bound":0.00011140990187351144,
-"upper_bound":0.00044563960749404574,
+"lower_bound":0.00020803372966439305,
+"upper_bound":0.0008271573072423515,
 "gene_reaction_rule":"SLC25A19",
 "notes":{
 "Confidence Level":"0"
@@ -33115,8 +34337,8 @@
 "h_m":1.0,
 "ppi_m":1.0
 },
-"lower_bound":0.00011140990186253115,
-"upper_bound":0.0004456396074501246,
+"lower_bound":0.00020803372955667125,
+"upper_bound":0.0008271573071346297,
 "gene_reaction_rule":"_DUT or ITPA",
 "notes":{
 "Confidence Level":"0"
@@ -33136,8 +34358,8 @@
 "nadph_c":-2.0,
 "occoa_c":-1.0
 },
-"lower_bound":0.0017122460485417186,
-"upper_bound":0.006848984196549118,
+"lower_bound":0.0031972466154030583,
+"upper_bound":0.012712486122600388,
 "gene_reaction_rule":"FASN or (FASN and ELOVL6 and ELOVL5 and ELOVL2)",
 "notes":{
 "Confidence Level":"0"
@@ -33172,8 +34394,8 @@
 "nadp_c":2.0,
 "nadph_c":-2.0
 },
-"lower_bound":0.0017122460485417186,
-"upper_bound":0.006848984196549118,
+"lower_bound":0.0031972466154030583,
+"upper_bound":0.012712486122600388,
 "gene_reaction_rule":"FASN or (FASN and ELOVL6 and ELOVL5 and ELOVL2)",
 "notes":{
 "Confidence Level":"0"
@@ -33208,8 +34430,8 @@
 "nadph_c":-2.0,
 "tdcoa_c":1.0
 },
-"lower_bound":0.0017122460485417186,
-"upper_bound":0.006848984196549118,
+"lower_bound":0.0031972466154030583,
+"upper_bound":0.012712486122600388,
 "gene_reaction_rule":"FASN or (FASN and ELOVL6 and ELOVL5 and ELOVL2)",
 "notes":{
 "Confidence Level":"0"
@@ -33244,8 +34466,8 @@
 "nadph_c":-6.0,
 "occoa_c":1.0
 },
-"lower_bound":0.0017122460485417183,
-"upper_bound":0.006848984196549117,
+"lower_bound":0.003197246615050138,
+"upper_bound":0.01271248612245328,
 "gene_reaction_rule":"FASN",
 "notes":{
 "Confidence Level":"0"
@@ -33267,6 +34489,29 @@
 }
 },
 {
+"id":"FKYNH",
+"name":"N-Formyl-L-kynurenine amidohydrolase",
+"metabolites":{
+"_Lfmkynr_c":-1.0,
+"_Lkynr_c":1.0,
+"for_c":1.0,
+"h2o_c":-1.0,
+"h_c":1.0
+},
+"lower_bound":0.0023341027865550574,
+"upper_bound":0.009280563194657773,
+"gene_reaction_rule":"AFMID",
+"notes":{
+"Confidence Level":"0"
+},
+"annotation":{
+"bigg.reaction":[
+"FKYNH",
+"R_FKYNH"
+]
+}
+},
+{
 "id":"GCC2am",
 "name":"glycine-cleavage complex (lipoamide), mitochondrial",
 "metabolites":{
@@ -33276,8 +34521,8 @@
 "h_m":-1.0,
 "lpam_m":-1.0
 },
-"lower_bound":0.0006807049506960539,
-"upper_bound":0.0027228198060811337,
+"lower_bound":0.00010401686472505389,
+"upper_bound":0.00041357865347890765,
 "gene_reaction_rule":"AMT and _DLD and GLDC and GCSH",
 "notes":{
 "Confidence Level":"0"
@@ -33308,8 +34553,8 @@
 "nh4_m":1.0,
 "thf_m":-1.0
 },
-"lower_bound":0.000680704950632109,
-"upper_bound":0.0027228198062519233,
+"lower_bound":0.00010401686477833561,
+"upper_bound":0.00041357865366544545,
 "gene_reaction_rule":"AMT and _DLD and GLDC and GCSH",
 "notes":{
 "Confidence Level":"0"
@@ -33344,8 +34589,8 @@
 "pchol_hs_e":-1.0,
 "xolest2_hs_e":1.0
 },
-"lower_bound":0.00083887517997021,
-"upper_bound":0.0033555007208649354,
+"lower_bound":0.0015664167144829484,
+"upper_bound":0.006228187293650005,
 "gene_reaction_rule":"_LCAT",
 "notes":{
 "Confidence Level":"0"
@@ -33363,8 +34608,8 @@
 "pchol_hs_e":1.0,
 "pi_c":1.0
 },
-"lower_bound":0.00083887517997021,
-"upper_bound":0.003355500720864935,
+"lower_bound":0.0015664167144829484,
+"upper_bound":0.006228187293650005,
 "gene_reaction_rule":"ABCB1LA or ABCA1",
 "notes":{
 "Confidence Level":"0"
@@ -33383,8 +34628,8 @@
 "pe_hs_c":-1.0,
 "pe_hs_m":1.0
 },
-"lower_bound":-0.0006366280106249178,
-"upper_bound":-0.00015915700271307287,
+"lower_bound":-0.0011816532961574922,
+"upper_bound":-0.00029719104247760697,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -33424,8 +34669,8 @@
 "pgp_hs_c":-1.0,
 "pi_c":1.0
 },
-"lower_bound":2.57834344322026e-05,
-"upper_bound":0.00010313373791441421,
+"lower_bound":4.814494868667404e-05,
+"upper_bound":0.0001914278339517773,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -33451,8 +34696,8 @@
 "ps_hs_c":-1.0,
 "ps_hs_m":1.0
 },
-"lower_bound":0.000159157002781689,
-"upper_bound":0.0006366280107983678,
+"lower_bound":0.0002971910423785922,
+"upper_bound":0.0011816532960613902,
 "gene_reaction_rule":"ATP8A1 or ATP10A",
 "notes":{
 "Confidence Level":"0"
@@ -33473,8 +34718,8 @@
 "ps_hs_c":1.0,
 "ser__L_c":-1.0
 },
-"lower_bound":0.0002116788136845571,
-"upper_bound":0.0008467152543971679,
+"lower_bound":0.00039526408647816424,
+"upper_bound":0.0015715988838564954,
 "gene_reaction_rule":"PTDSS1",
 "notes":{
 "Confidence Level":"0"
@@ -33495,8 +34740,8 @@
 "dad_2_c":-1.0,
 "pi_c":-1.0
 },
-"lower_bound":-0.0004456396078467151,
-"upper_bound":-0.00011140990193325706,
+"lower_bound":-0.0008271573071663336,
+"upper_bound":-0.0002080337297911683,
 "gene_reaction_rule":"PNP",
 "notes":{
 "Confidence Level":"0"
@@ -33540,8 +34785,8 @@
 "r5p_c":-1.0,
 "ru5p__D_c":1.0
 },
-"lower_bound":-0.0044444147376907495,
-"upper_bound":-0.0011111036855027123,
+"lower_bound":-0.008249334360471039,
+"upper_bound":-0.002074744162314346,
 "gene_reaction_rule":"RPIA",
 "notes":{
 "Confidence Level":"0"
@@ -33575,8 +34820,8 @@
 "Rtotal_c":1.0,
 "Rtotal_e":-1.0
 },
-"lower_bound":0.0008388751799657257,
-"upper_bound":0.0033555007208860843,
+"lower_bound":0.0015664167145814645,
+"upper_bound":0.006228187293572773,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -33608,8 +34853,8 @@
 "trdox_c":-1.0,
 "trdrd_c":1.0
 },
-"lower_bound":0.00038344105087324685,
-"upper_bound":0.0015337642042992595,
+"lower_bound":0.000715992659675283,
+"upper_bound":0.0028468391214602593,
 "gene_reaction_rule":"TXNRD1",
 "notes":{
 "Confidence Level":"0"
@@ -33635,8 +34880,8 @@
 "h_e":1.0,
 "xolest2_hs_e":-1.0
 },
-"lower_bound":0.00083887517997021,
-"upper_bound":0.0033555007208649354,
+"lower_bound":0.0015664167145825005,
+"upper_bound":0.006228187293650005,
 "gene_reaction_rule":"_LIPA",
 "notes":{
 "Confidence Level":"0"
@@ -33655,8 +34900,8 @@
 "Rtotal2coa_c":-1.0,
 "pmtcoa_c":1.0
 },
-"lower_bound":-0.006438524653276545,
-"upper_bound":-0.001609631162864389,
+"lower_bound":-0.011950626976613421,
+"upper_bound":-0.0030056356628165304,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -33683,8 +34928,8 @@
 "Rtotal3coa_c":-1.0,
 "pmtcoa_c":1.0
 },
-"lower_bound":-0.00013798275517729053,
-"upper_bound":-3.449568885116605e-05,
+"lower_bound":-0.00025611153537474204,
+"upper_bound":-6.441318646466243e-05,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -33711,8 +34956,8 @@
 "bilglcur_c":-1.0,
 "bilglcur_r":1.0
 },
-"lower_bound":-0.0033208554242492028,
-"upper_bound":-0.0008302138561475658,
+"lower_bound":-0.006163881721022335,
+"upper_bound":-0.0015502435778671497,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -33730,50 +34975,6 @@
 "R_r2353",
 "r2353"
 ]
-}
-},
-{
-"id":"r1391",
-"name":"amylo-1,6-glucosidase, 4-alpha-glucanotransferase  EC:2.4.1.25",
-"metabolites":{
-"HC02136_c":1.0,
-"dxtrn_c":-1.0
-},
-"lower_bound":0.0,
-"upper_bound":0.0,
-"gene_reaction_rule":"AGL",
-"notes":{
-"Confidence Level":"0"
-},
-"annotation":{
-"bigg.reaction":[
-"R_r1391",
-"r1391"
-],
-"ec-code":"2.4.1.25"
-}
-},
-{
-"id":"r1392",
-"name":"amylo-1,6-glucosidase, 4-alpha-glucanotransferase  EC:3.2.1.33",
-"metabolites":{
-"HC02136_c":-1.0,
-"glc__D_c":1.0,
-"glygn3_c":1.0,
-"h2o_c":-1.0
-},
-"lower_bound":0.0,
-"upper_bound":0.0,
-"gene_reaction_rule":"AGL",
-"notes":{
-"Confidence Level":"0"
-},
-"annotation":{
-"bigg.reaction":[
-"R_r1392",
-"r1392"
-],
-"ec-code":"3.2.1.33"
 }
 },
 {
@@ -33808,8 +35009,8 @@
 "tyr__L_c":-13.0,
 "val__L_c":-28.0
 },
-"lower_bound":8.176213540324249e-05,
-"upper_bound":0.00032704854161296994,
+"lower_bound":0.0001526729822584869,
+"upper_bound":0.0006070389312204136,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0",
@@ -33827,36 +35028,6 @@
 }
 },
 {
-"id":"FOLt2",
-"name":"folate transport via anion exchange",
-"metabolites":{
-"fol_c":1.0,
-"fol_e":-1.0,
-"h2o_c":-1.0,
-"h2o_e":1.0
-},
-"lower_bound":0.0012499999997999112,
-"upper_bound":0.00500000000511136,
-"gene_reaction_rule":"SLC19A1",
-"notes":{
-"Confidence Level":"0"
-},
-"annotation":{
-"bigg.reaction":[
-"FOLt2",
-"R_FOLt2"
-],
-"vmh.reaction":[
-"FOLt2le",
-"R_FOLt2le"
-],
-"vmhreaction":[
-"FOLt2le",
-"R_FOLt2le"
-]
-}
-},
-{
 "id":"r0512c",
 "name":"Dihydrofolate:NAD+ oxidoreductase Folate biosynthesis EC:1.5.1.3",
 "metabolites":{
@@ -33865,8 +35036,8 @@
 "nad_c":-1.0,
 "nadh_c":1.0
 },
-"lower_bound":-0.005000000004997673,
-"upper_bound":-0.0012500000043473847,
+"lower_bound":0.0,
+"upper_bound":0.0,
 "gene_reaction_rule":"_DHFR",
 "notes":{
 "Confidence Level":"0"
@@ -33879,8 +35050,8 @@
 "dhf_c":-1.0,
 "dhf_m":1.0
 },
-"lower_bound":0.0012499999996862243,
-"upper_bound":0.0050000000048839865,
+"lower_bound":0.0,
+"upper_bound":0.0,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -33893,8 +35064,8 @@
 "pser__L_c":1.0,
 "pser__L_m":-1.0
 },
-"lower_bound":-0.002722819805967447,
-"upper_bound":-0.0006807049528561038,
+"lower_bound":-0.0004135786533652208,
+"upper_bound":-0.00010401686461136705,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -33910,8 +35081,8 @@
 "nad_c":-1.0,
 "nadh_c":1.0
 },
-"lower_bound":0.000680704950831384,
-"upper_bound":0.0027228198059191825,
+"lower_bound":0.00010401686477833564,
+"upper_bound":0.00041357865346918415,
 "gene_reaction_rule":"PHGDH",
 "notes":{
 "Confidence Level":"0"
@@ -33962,68 +35133,14 @@
 }
 },
 {
-"id":"MTHFD2m",
-"name":"methylenetetrahydrofolate dehydrogenase (NAD), mitochondrial",
-"metabolites":{
-"methf_m":1.0,
-"mlthf_m":-1.0,
-"nad_m":-1.0,
-"nadh_m":1.0
-},
-"lower_bound":0.0012499999997999112,
-"upper_bound":0.005000000004997673,
-"gene_reaction_rule":"",
-"notes":{
-"Confidence Level":"0",
-"NOTES":"NCD"
-},
-"annotation":{
-"bigg.reaction":[
-"MTHFD2",
-"MTHFD2i",
-"MTHFD2m",
-"R_MTHFD2",
-"R_MTHFD2i",
-"R_MTHFD2m"
-],
-"ec-code":"1.5.1.5",
-"kegg.reaction":"R01218",
-"keggR":"R01218",
-"pubmed":"8218174",
-"rhea":[
-"22892",
-"22893",
-"22894",
-"22895"
-],
-"sabiork.reaction":"1450",
-"seed.reaction":[
-"rxn00906",
-"rxn31886"
-],
-"vmh.reaction":[
-"MTHFD2",
-"MTHFD2m",
-"R_MTHFD2",
-"R_MTHFD2m"
-],
-"vmhreaction":[
-"MTHFD2",
-"MTHFD2m",
-"R_MTHFD2",
-"R_MTHFD2m"
-]
-}
-},
-{
 "id":"10FTHFtm",
 "name":"10-Formyltetrahydrofolate mitochondrial transport via diffusion",
 "metabolites":{
 "10fthf_c":-1.0,
 "10fthf_m":1.0
 },
-"lower_bound":-0.005000000004656613,
-"upper_bound":-0.0012500000040063242,
+"lower_bound":0.0,
+"upper_bound":0.0,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0",
@@ -34063,6 +35180,56 @@
 }
 },
 {
+"id":"HDCEAtr",
+"name":"fatty acid transport via diffusion",
+"metabolites":{
+"hdcea_c":1.0,
+"hdcea_e":-1.0
+},
+"lower_bound":0.0,
+"upper_bound":0.0,
+"gene_reaction_rule":"SLC27A2",
+"notes":{
+"Confidence Level":"0",
+"NOTES":"NJ",
+"References":"11788354,12864740"
+},
+"annotation":{
+"bigg.reaction":[
+"EX_hdcea_e",
+"FA1619Zh",
+"FA161tp",
+"HDCEAt",
+"HDCEAtexi",
+"R_EX_hdcea_e",
+"R_FA1619Zh",
+"R_FA161tp",
+"R_HDCEAt",
+"R_HDCEAtexi",
+"R_r1303",
+"R_r1304",
+"r1303",
+"r1304"
+],
+"vmh.reaction":[
+"HDCEAtr",
+"R_HDCEAtr",
+"R_r1303",
+"R_r1304",
+"r1303",
+"r1304"
+],
+"vmhreaction":[
+"HDCEAtr",
+"R_HDCEAtr",
+"R_r1303",
+"R_r1304",
+"r1303",
+"r1304"
+]
+}
+},
+{
 "id":"BTNt2",
 "name":"Biotin reversible transport via proton symport",
 "metabolites":{
@@ -34071,8 +35238,8 @@
 "h_c":1.0,
 "h_e":-1.0
 },
-"lower_bound":-0.6393065228197656,
-"upper_bound":-0.07974889580390733,
+"lower_bound":-0.503764071891851,
+"upper_bound":-0.09752933354229754,
 "gene_reaction_rule":"SLC16A1",
 "notes":{
 "Confidence Level":"0",
@@ -34112,8 +35279,8 @@
 "h_c":-1.0,
 "h_e":1.0
 },
-"lower_bound":0.0797488958034796,
-"upper_bound":0.6393065228247367,
+"lower_bound":0.09752933354592681,
+"upper_bound":0.5037640718918225,
 "gene_reaction_rule":"SLC19A3",
 "notes":{
 "Confidence Level":"0",
@@ -34136,17 +35303,106 @@
 }
 },
 {
-"id":"MALCOAt",
-"name":"malonyl-CoA(4-) transport",
+"id":"r2514e",
+"name":"Transport of Hexadecenoate (N-C16:1) via Carnitine Antiport",
 "metabolites":{
-"malcoa_c":1.0,
-"malcoa_e":-1.0
+"crn_c":1.0,
+"crn_e":-1.0,
+"hdcea_c":-1.0,
+"hdcea_e":1.0
 },
-"lower_bound":-2.2737367544323206e-13,
-"upper_bound":4.547473508864641e-13,
+"lower_bound":-1.1368683772161603e-13,
+"upper_bound":-1.1368683772161603e-13,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
+},
+"annotation":{
+"bigg.reaction":[
+"R_r2514",
+"R_r2514e",
+"R_r2514m",
+"r2514",
+"r2514e",
+"r2514m"
+]
+}
+},
+{
+"id":"r0998",
+"name":"Facilitated diffusion",
+"metabolites":{
+"crn_c":-1.0,
+"crn_r":1.0,
+"pmtcrn_c":1.0,
+"pmtcrn_r":-1.0
+},
+"lower_bound":-1.1368683772161603e-13,
+"upper_bound":-1.1368683772161603e-13,
+"gene_reaction_rule":"",
+"notes":{
+"Confidence Level":"0",
+"References":"14598172,1735445,18406340,1988962,2351134,2355017,6361812,7892212,8132483"
+},
+"annotation":{
+"bigg.reaction":[
+"CARN160t_m",
+"R_CARN160t_m",
+"R_r0998",
+"R_r0999",
+"r0998",
+"r0999"
+],
+"rhea":[
+"49916",
+"49917",
+"49918",
+"49919"
+]
+}
+},
+{
+"id":"r0434",
+"name":"Palmitoyl-CoA:L-carnitine O-palmitoyltransferase Fatty acid metabolism EC:2.3.1.21",
+"metabolites":{
+"coa_r":1.0,
+"crn_r":-1.0,
+"pmtcoa_r":-1.0,
+"pmtcrn_r":1.0
+},
+"lower_bound":-1.1368683772161603e-13,
+"upper_bound":-1.1368683772161603e-13,
+"gene_reaction_rule":"CPT1A and CPT2",
+"notes":{
+"Confidence Level":"0",
+"References":"1735445,1988962,2355017,6361812,7892212"
+},
+"annotation":{
+"bigg.reaction":[
+"C160CPT1",
+"C160CPT2",
+"C160CPT2rbc",
+"R_C160CPT1",
+"R_C160CPT2",
+"R_C160CPT2rbc",
+"R_r0434",
+"R_r0437",
+"r0434",
+"r0437"
+],
+"ec-code":"2.3.1.21",
+"kegg.reaction":"R01923",
+"keggR":"R01923",
+"metacyc.reaction":"CARNITINE-O-PALMITOYLTRANSFERASE-RXN",
+"metacycR":"CARNITINE-O-PALMITOYLTRANSFERASE-RXN",
+"rhea":[
+"12661",
+"12662",
+"12663",
+"12664"
+],
+"sabiork.reaction":"1977",
+"seed.reaction":"rxn01409"
 }
 },
 {
@@ -34156,8 +35412,8 @@
 "malcoa_c":-1.0,
 "malcoa_m":1.0
 },
-"lower_bound":-0.04794288937603142,
-"upper_bound":-0.011985722339204585,
+"lower_bound":-0.0889874028576969,
+"upper_bound":-0.02238072630723309,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -34171,8 +35427,8 @@
 "h2o_c":1.0,
 "pep_c":1.0
 },
-"lower_bound":5.3016797904133455,
-"upper_bound":9.994058038825187,
+"lower_bound":6.8094986016681105,
+"upper_bound":9.990071732904653,
 "gene_reaction_rule":"ENO1 or ENO4 or ENO2",
 "notes":{
 "Confidence Level":"0",
@@ -34230,8 +35486,8 @@
 "pyr_c":1.0,
 "pyr_m":-1.0
 },
-"lower_bound":-0.0034244920987021032,
-"upper_bound":-0.0008561230247323692,
+"lower_bound":-0.0063562430610772935,
+"upper_bound":-0.0015986233078137957,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"0"
@@ -34265,8 +35521,8 @@
 "cit_m":-1.0,
 "icit_m":1.0
 },
-"lower_bound":0.25987001858481745,
-"upper_bound":0.7722427565811673,
+"lower_bound":0.3517535609588666,
+"upper_bound":0.6998644863707247,
 "gene_reaction_rule":"ACO2 or ACO1",
 "notes":{
 "Confidence Level":"0",
@@ -34317,8 +35573,8 @@
 "nadh_m":1.0,
 "succoa_m":1.0
 },
-"lower_bound":0.8745024966421975,
-"upper_bound":1.4155940018943771,
+"lower_bound":0.9183326276993784,
+"upper_bound":1.289356001317681,
 "gene_reaction_rule":"OGDH and _DLD and PDHX and _DLST",
 "notes":{
 "Confidence Level":"0",
@@ -34375,8 +35631,8 @@
 "so4_c":1.0,
 "so4_m":-1.0
 },
-"lower_bound":10.160103953142766,
-"upper_bound":16.329292086743294,
+"lower_bound":10.597947344472004,
+"upper_bound":14.780607604492388,
 "gene_reaction_rule":"SLC25A10",
 "notes":{
 "Confidence Level":"0",
@@ -34406,8 +35662,8 @@
 "h2o_m":-1.0,
 "mal__L_m":1.0
 },
-"lower_bound":11.157046552906195,
-"upper_bound":17.839975331151436,
+"lower_bound":11.629036348836484,
+"upper_bound":16.16058231291298,
 "gene_reaction_rule":"FH",
 "notes":{
 "Confidence Level":"0",
@@ -34462,8 +35718,8 @@
 "metabolites":{
 "hco3_e":-1.0
 },
-"lower_bound":1.440899664945561,
-"upper_bound":2.9177095501082575,
+"lower_bound":1.696800432825561,
+"upper_bound":2.6988875616251042,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34475,8 +35731,8 @@
 "metabolites":{
 "asn__L_e":-1.0
 },
-"lower_bound":-0.0063450421957813585,
-"upper_bound":-0.0015862605489999695,
+"lower_bound":-0.011777113006106593,
+"upper_bound":-0.0029619961299165096,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34488,8 +35744,8 @@
 "metabolites":{
 "co2_e":-1.0
 },
-"lower_bound":0.2169055832600852,
-"upper_bound":0.7912136573153652,
+"lower_bound":0.29969851796308344,
+"upper_bound":0.6878709653556677,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34514,8 +35770,8 @@
 "metabolites":{
 "h_e":-1.0
 },
-"lower_bound":7.078842891901707,
-"upper_bound":11.225960805078339,
+"lower_bound":8.309586392814213,
+"upper_bound":11.120539330699133,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34528,7 +35784,7 @@
 "ile__L_e":-1.0
 },
 "lower_bound":-0.05,
-"upper_bound":-0.0016769800404735288,
+"upper_bound":-0.003131395024502326,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34540,8 +35796,8 @@
 "metabolites":{
 "lac__L_e":-1.0
 },
-"lower_bound":3.96581206849552,
-"upper_bound":9.205816319907237,
+"lower_bound":5.572727666740558,
+"upper_bound":9.12429330789448,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34553,8 +35809,8 @@
 "metabolites":{
 "leu__L_e":-1.0
 },
-"lower_bound":-0.018632242916922795,
-"upper_bound":-0.004658060729199394,
+"lower_bound":-0.034583541546310145,
+"upper_bound":-0.008697914010772682,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34566,8 +35822,8 @@
 "metabolites":{
 "lys__L_e":-1.0
 },
-"lower_bound":-0.01314768623940036,
-"upper_bound":-0.0032869215595238213,
+"lower_bound":-0.02440358658492012,
+"upper_bound":-0.006137610209343197,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34579,21 +35835,8 @@
 "metabolites":{
 "met__L_e":-1.0
 },
-"lower_bound":-0.00400169088375079,
-"upper_bound":-0.0010004227209252092,
-"gene_reaction_rule":"",
-"annotation":{
-"sbo":"SBO:0000627"
-}
-},
-{
-"id":"EX_na1_e",
-"name":"Sodium exchange",
-"metabolites":{
-"na1_e":-1.0
-},
-"lower_bound":3.410605131648481e-13,
-"upper_bound":1.0231815394945443e-12,
+"lower_bound":-0.00742758902184934,
+"upper_bound":-0.0018680715661075556,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34605,8 +35848,8 @@
 "metabolites":{
 "o2_e":-1.0
 },
-"lower_bound":-4.238402253623514,
-"upper_bound":-2.691262593936532,
+"lower_bound":-3.838137083093798,
+"upper_bound":-2.7880085445635316,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34618,8 +35861,8 @@
 "metabolites":{
 "pi_e":-1.0
 },
-"lower_bound":-0.020054635423775835,
-"upper_bound":-0.005013658858388226,
+"lower_bound":-0.03722366224792495,
+"upper_bound":-0.009361916071384258,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34632,7 +35875,7 @@
 "pro__L_e":-1.0
 },
 "lower_bound":-0.05,
-"upper_bound":-0.0021610019506309863,
+"upper_bound":-0.004035200534355833,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34644,8 +35887,8 @@
 "metabolites":{
 "ser__L_e":-1.0
 },
-"lower_bound":-0.016770895404848225,
-"upper_bound":-0.004192723851263139,
+"lower_bound":-0.031128670905700293,
+"upper_bound":-0.007828998728891166,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34658,7 +35901,7 @@
 "val__L_e":-1.0
 },
 "lower_bound":-0.05,
-"upper_bound":-0.0032337774448987153,
+"upper_bound":-0.006038375148348478,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34670,8 +35913,8 @@
 "metabolites":{
 "gly_e":-1.0
 },
-"lower_bound":-0.009020751529191386,
-"upper_bound":-0.0022551878825944616,
+"lower_bound":-0.016743530913006982,
+"upper_bound":-0.004211072252014815,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34683,8 +35926,8 @@
 "metabolites":{
 "his__L_e":-1.0
 },
-"lower_bound":-0.00954137318634337,
-"upper_bound":-0.002385343297101085,
+"lower_bound":-0.008429300154024093,
+"upper_bound":-0.002120006356571287,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34696,8 +35939,8 @@
 "metabolites":{
 "thr__L_e":-1.0
 },
-"lower_bound":-0.011580900141091525,
-"upper_bound":-0.002895225035272876,
+"lower_bound":-0.021495455107510986,
+"upper_bound":-0.005406202250767218,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34710,7 +35953,7 @@
 "gln__L_e":-1.0
 },
 "lower_bound":-0.5,
-"upper_bound":-0.2334947657944237,
+"upper_bound":-0.3203807049370713,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34722,8 +35965,8 @@
 "metabolites":{
 "phe__L_e":-1.0
 },
-"lower_bound":-0.008672401412099143,
-"upper_bound":-0.00216810035315846,
+"lower_bound":-0.016096953859366662,
+"upper_bound":-0.004048455254908434,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34735,8 +35978,8 @@
 "metabolites":{
 "tyr__L_e":-1.0
 },
-"lower_bound":-0.00591959642874678,
-"upper_bound":-0.0014798991073019727,
+"lower_bound":-0.010987437741518995,
+"upper_bound":-0.0027633893002874943,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34749,7 +35992,7 @@
 "oaa_e":-1.0
 },
 "lower_bound":0.0,
-"upper_bound":0.5110048313456339,
+"upper_bound":0.346349845400893,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34761,8 +36004,8 @@
 "metabolites":{
 "arg__L_e":-1.0
 },
-"lower_bound":-0.05,
-"upper_bound":-0.0018581007093514262,
+"lower_bound":-0.013795376835597388,
+"upper_bound":-0.0034695984302620525,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34774,8 +36017,8 @@
 "metabolites":{
 "nh4_e":-1.0
 },
-"lower_bound":0.7447804889521097,
-"upper_bound":1.2785628791138295,
+"lower_bound":0.8037904117506579,
+"upper_bound":1.1645759392484816,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34787,8 +36030,8 @@
 "metabolites":{
 "chol_e":-1.0
 },
-"lower_bound":-0.0019302561284188294,
-"upper_bound":-0.0004825640320622257,
+"lower_bound":-0.0035827727937220444,
+"upper_bound":-0.0009010832400248164,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34800,8 +36043,21 @@
 "metabolites":{
 "chsterol_e":-1.0
 },
-"lower_bound":-0.0002597569610250665,
-"upper_bound":-6.493924035387512e-05,
+"lower_bound":-0.0004821381778572186,
+"upper_bound":-0.00012125988895956674,
+"gene_reaction_rule":"",
+"annotation":{
+"sbo":"SBO:0000627"
+}
+},
+{
+"id":"EX_crn_e",
+"name":"L-Carnitine exchange",
+"metabolites":{
+"crn_e":-1.0
+},
+"lower_bound":0.0,
+"upper_bound":0.0,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34813,8 +36069,8 @@
 "metabolites":{
 "gthrd_e":-1.0
 },
-"lower_bound":-0.00332085542428074,
-"upper_bound":-0.0008302138560963568,
+"lower_bound":-0.006163881720964555,
+"upper_bound":-0.0015502435778604814,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34826,8 +36082,8 @@
 "metabolites":{
 "h2o2_e":-1.0
 },
-"lower_bound":0.053823889494890566,
-"upper_bound":0.08476668268850347,
+"lower_bound":0.05566426282474133,
+"upper_bound":0.07666683359512787,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34839,8 +36095,8 @@
 "metabolites":{
 "inost_e":-1.0
 },
-"lower_bound":-0.00023173259597537074,
-"upper_bound":-5.7933148973685414e-05,
+"lower_bound":-0.00043012179978387487,
+"upper_bound":-0.0001081775394782547,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34853,20 +36109,20 @@
 "glc__D_e":-1.0
 },
 "lower_bound":-5.0,
-"upper_bound":-2.6538108757942434,
+"upper_bound":-3.4097134343786886,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
 }
 },
 {
-"id":"EX_fol_e",
-"name":"Folate exchange",
+"id":"EX_btn_e",
+"name":"Biotin exchange",
 "metabolites":{
-"fol_e":-1.0
+"btn_e":-1.0
 },
-"lower_bound":-0.00500000000163826,
-"upper_bound":-0.0012500000043974189,
+"lower_bound":-1.205025662587289e-14,
+"upper_bound":-1.205025662587289e-14,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34878,21 +36134,21 @@
 "metabolites":{
 "trp__L_e":-1.0
 },
-"lower_bound":-0.0029921771150005633,
-"upper_bound":-0.0007480442787332758,
+"lower_bound":-0.014834380952025404,
+"upper_bound":-0.0037309125699930487,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
 }
 },
 {
-"id":"EX_malcoa_e",
-"name":"Malonyl-CoA exchange",
+"id":"EX_C02470_e",
+"name":"Xanthurenic acid exchange",
 "metabolites":{
-"malcoa_e":-1.0
+"C02470_e":-1.0
 },
-"lower_bound":0.0,
-"upper_bound":0.0,
+"lower_bound":0.0023341027856930555,
+"upper_bound":0.009280563194734562,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
@@ -34904,38 +36160,34 @@
 "metabolites":{
 "pyr_e":-1.0
 },
-"lower_bound":0.7844889639088956,
-"upper_bound":1.332114966912088,
+"lower_bound":0.8587709722768273,
+"upper_bound":1.2297634821981247,
 "gene_reaction_rule":"",
 "annotation":{
 "sbo":"SBO:0000627"
 }
 },
 {
-"id":"DM_5forthf_c",
-"name":"5-Formiminotetrahydrofolate demand",
+"id":"HUMANGEM_MAR08351",
+"name":"Transport from Human-GEM: MAR08351",
 "metabolites":{
-"5forthf_c":-1.0
-},
-"lower_bound":0.001249999992746918,
-"upper_bound":0.0050000000050517395,
-"gene_reaction_rule":"",
-"annotation":{
-"sbo":"SBO:0000628"
-}
-},
-{
-"id":"DM_urea_m",
-"name":"Urea demand",
-"metabolites":{
-"urea_m":-1.0
+"guln_c":1.0,
+"guln_r":-1.0
 },
 "lower_bound":0.0,
-"upper_bound":0.048141899290538956,
-"gene_reaction_rule":"",
-"annotation":{
-"sbo":"SBO:0000628"
-}
+"upper_bound":0.0,
+"gene_reaction_rule":""
+},
+{
+"id":"HUMANGEM_MAR08347",
+"name":"Transport from Human-GEM: MAR08347",
+"metabolites":{
+"gullac_c":-1.0,
+"gullac_r":1.0
+},
+"lower_bound":0.0,
+"upper_bound":0.0,
+"gene_reaction_rule":""
 },
 {
 "id":"HUMANGEM_MAR08651",
@@ -34948,8 +36200,19 @@
 "ppi_c":-1.0,
 "ppi_r":1.0
 },
-"lower_bound":-0.001944414735362443,
-"upper_bound":-0.00048610368355639366,
+"lower_bound":-0.0036090527632950398,
+"upper_bound":-0.0009076927691467063,
+"gene_reaction_rule":""
+},
+{
+"id":"HUMANGEM_MAR07712",
+"name":"Transport from Human-GEM: MAR07712",
+"metabolites":{
+"amp_c":-1.0,
+"amp_n":1.0
+},
+"lower_bound":0.0,
+"upper_bound":2.2737367544323206e-13,
 "gene_reaction_rule":""
 },
 {
@@ -34961,8 +36224,8 @@
 "imp_c":1.0,
 "imp_m":-1.0
 },
-"lower_bound":-1.275997414651897,
-"upper_bound":-0.7422150244890418,
+"lower_bound":-1.1621195958462067,
+"upper_bound":-0.8013340683478418,
 "gene_reaction_rule":"SLC25A36"
 },
 {
@@ -34974,8 +36237,8 @@
 "gmp_c":1.0,
 "gmp_m":-1.0
 },
-"lower_bound":0.7421682323300729,
-"upper_bound":1.2759506225021369,
+"lower_bound":0.8012466941818275,
+"upper_bound":1.1620322216800787,
 "gene_reaction_rule":"SLC25A36"
 },
 {
@@ -34987,8 +36250,8 @@
 "ump_c":1.0,
 "ump_m":-1.0
 },
-"lower_bound":0.00024528640619791986,
-"upper_bound":0.0009811456250190531,
+"lower_bound":0.0004580189469152174,
+"upper_bound":0.001821116793848887,
 "gene_reaction_rule":"SLC25A36"
 },
 {
@@ -35000,22 +36263,9 @@
 "udp_c":1.0,
 "udp_m":-1.0
 },
-"lower_bound":-0.0009811456247916794,
-"upper_bound":-0.00024528640619791986,
+"lower_bound":-0.0018211167936215134,
+"upper_bound":-0.0004580189466878437,
 "gene_reaction_rule":"SLC25A36"
-},
-{
-"id":"HUMANGEM_MAR08099",
-"name":"Transport from Human-GEM: MAR08099",
-"metabolites":{
-"4mop_c":-1.0,
-"4mop_m":1.0,
-"h_c":-1.0,
-"h_m":1.0
-},
-"lower_bound":0.0,
-"upper_bound":0.0,
-"gene_reaction_rule":""
 },
 {
 "id":"HUMANGEM_MAR08093",
@@ -35026,8 +36276,8 @@
 "h_c":-1.0,
 "h_m":1.0
 },
-"lower_bound":7.870393706150405e-16,
-"upper_bound":0.04832301995955318,
+"lower_bound":-4.3933216447509934e-13,
+"upper_bound":0.04686860497596593,
 "gene_reaction_rule":""
 },
 {
@@ -35039,9 +36289,20 @@
 "phpyr_c":1.0,
 "phpyr_m":-1.0
 },
-"lower_bound":-13.299950251060068,
-"upper_bound":-8.096567171364995,
+"lower_bound":-11.967213113855905,
+"upper_bound":-8.44106491588036,
 "gene_reaction_rule":"MPC1 and MPC2"
+},
+{
+"id":"HUMANGEM_MAR00467",
+"name":"Transport from Human-GEM: MAR00467",
+"metabolites":{
+"pail_hs_c":-1.0,
+"pail_hs_r":1.0
+},
+"lower_bound":0.0,
+"upper_bound":0.0,
+"gene_reaction_rule":""
 },
 {
 "id":"HUMANGEM_MAR00120",
@@ -35050,8 +36311,8 @@
 "cdpdag_hs_c":-1.0,
 "cdpdag_hs_m":1.0
 },
-"lower_bound":4.6792158741482126e-05,
-"upper_bound":0.00018716863530698902,
+"lower_bound":8.737416635540285e-05,
+"upper_bound":0.00034740606902359584,
 "gene_reaction_rule":""
 },
 {
@@ -35061,8 +36322,8 @@
 "glyc3p_c":-1.0,
 "glyc3p_m":1.0
 },
-"lower_bound":2.5783434467231753e-05,
-"upper_bound":0.00010313373786892701,
+"lower_bound":4.8144948775984595e-05,
+"upper_bound":0.00019142783395177733,
 "gene_reaction_rule":""
 },
 {
@@ -35072,8 +36333,8 @@
 "pgp_hs_c":1.0,
 "pgp_hs_m":-1.0
 },
-"lower_bound":2.5783434352888435e-05,
-"upper_bound":0.00010313373786630109,
+"lower_bound":4.814494866423047e-05,
+"upper_bound":0.00019142783395177733,
 "gene_reaction_rule":""
 },
 {
@@ -35083,8 +36344,8 @@
 "pglyc_hs_c":1.0,
 "pglyc_hs_m":-1.0
 },
-"lower_bound":-8.403489755437477e-05,
-"upper_bound":-2.100872438859369e-05,
+"lower_bound":-0.0001559782350718185,
+"upper_bound":-3.922921757748554e-05,
 "gene_reaction_rule":""
 },
 {
@@ -35094,8 +36355,8 @@
 "clpn_hs_c":-1.0,
 "clpn_hs_m":1.0
 },
-"lower_bound":-8.403489744068793e-05,
-"upper_bound":-2.1008724274906854e-05,
+"lower_bound":-0.00015597823507179038,
+"upper_bound":-3.922921769117238e-05,
 "gene_reaction_rule":""
 },
 {
@@ -35116,8 +36377,8 @@
 "adn_c":-1.0,
 "adn_m":1.0
 },
-"lower_bound":9.094947017729282e-13,
-"upper_bound":9.094947017729282e-13,
+"lower_bound":0.0,
+"upper_bound":0.0,
 "gene_reaction_rule":"SLC29A1"
 },
 {
@@ -35127,8 +36388,8 @@
 "gsn_c":1.0,
 "gsn_m":-1.0
 },
-"lower_bound":4.6792159072004296e-05,
-"upper_bound":0.00018716863546643542,
+"lower_bound":8.737416645645383e-05,
+"upper_bound":0.0003474060686070118,
 "gene_reaction_rule":"SLC29A1"
 },
 {
@@ -35140,9 +36401,21 @@
 "utp_c":1.0,
 "utp_m":-1.0
 },
-"lower_bound":-1.1368683772161603e-13,
-"upper_bound":-1.1368683772161603e-13,
+"lower_bound":0.0,
+"upper_bound":0.0,
 "gene_reaction_rule":"SLC25A36 or SLC25A33"
+},
+{
+"id":"HUMANGEM_MAR06385",
+"name":"Transport from Human-GEM: MAR06385",
+"metabolites":{
+"udpgal_c":1.0,
+"ump_c":1.0,
+"ump_r":-1.0
+},
+"lower_bound":0.0,
+"upper_bound":0.0,
+"gene_reaction_rule":"SLC35A2"
 },
 {
 "id":"HUMANGEM_MAR05116",
@@ -35153,8 +36426,8 @@
 "phe__L_c":1.0,
 "phe__L_m":-1.0
 },
-"lower_bound":8.096567171364986,
-"upper_bound":13.299950251059943,
+"lower_bound":8.44106491588026,
+"upper_bound":11.967213113855873,
 "gene_reaction_rule":""
 },
 {
@@ -35168,8 +36441,8 @@
 "hco3_c":-1.0,
 "hco3_e":1.0
 },
-"lower_bound":-0.0033208554243628896,
-"upper_bound":-0.0008302138561475658,
+"lower_bound":-0.006163881721136022,
+"upper_bound":-0.0015502435779808366,
 "gene_reaction_rule":"SLCO1B1"
 }
 ],
@@ -35263,6 +36536,10 @@
 "name":"G_426812"
 },
 {
+"id":"AKR1A1",
+"name":"G_424599"
+},
+{
 "id":"_DLD",
 "name":"G_417699"
 },
@@ -35335,6 +36612,10 @@
 "name":"G_418857"
 },
 {
+"id":"RGN",
+"name":"G_395480"
+},
+{
 "id":"H6PD",
 "name":"G_428188"
 },
@@ -35367,6 +36648,10 @@
 "name":"G_373900"
 },
 {
+"id":"MIOX",
+"name":"G_107052518"
+},
+{
 "id":"369504",
 "name":"G_369504"
 },
@@ -35395,6 +36680,14 @@
 "name":"G_770828"
 },
 {
+"id":"CPT1A",
+"name":"G_423118"
+},
+{
+"id":"CPT2",
+"name":"G_424649"
+},
+{
 "id":"ACADS",
 "name":"G_416969"
 },
@@ -35417,10 +36710,6 @@
 {
 "id":"TAT",
 "name":"G_415884"
-},
-{
-"id":"COQ3",
-"name":"G_421797"
 },
 {
 "id":"NDUFS2",
@@ -35703,10 +36992,6 @@
 "name":"G_415746"
 },
 {
-"id":"ARG2",
-"name":"G_423272"
-},
-{
 "id":"ITPA",
 "name":"G_424390"
 },
@@ -35777,6 +37062,10 @@
 {
 "id":"ADSS1",
 "name":"G_776127"
+},
+{
+"id":"ENTPD5",
+"name":"G_423343"
 },
 {
 "id":"AK4",
@@ -36043,6 +37332,10 @@
 "name":"G_428728"
 },
 {
+"id":"OGDHL",
+"name":"G_423618"
+},
+{
 "id":"GCDH",
 "name":"G_771098"
 },
@@ -36059,24 +37352,24 @@
 "name":"G_770734"
 },
 {
-"id":"OAT",
-"name":"G_426430"
+"id":"HOGA1",
+"name":"G_770036"
 },
 {
-"id":"HAL",
-"name":"G_378924"
+"id":"IDO2",
+"name":"G_426785"
 },
 {
-"id":"UROC1",
-"name":"G_416035"
+"id":"TDO2",
+"name":"G_422409"
 },
 {
-"id":"AMDHD1",
-"name":"G_417917"
+"id":"AFMID",
+"name":"G_769005"
 },
 {
-"id":"FTCD",
-"name":"G_395726"
+"id":"KMO",
+"name":"G_424041"
 },
 {
 "id":"PCYT1B",
@@ -36099,14 +37392,6 @@
 "name":"G_728441"
 },
 {
-"id":"PYGB",
-"name":"G_421248"
-},
-{
-"id":"PYGL",
-"name":"G_378909"
-},
-{
 "id":"GYG2",
 "name":"G_418660"
 },
@@ -36127,12 +37412,64 @@
 "name":"G_427964"
 },
 {
+"id":"STT3A",
+"name":"G_100857165"
+},
+{
+"id":"STT3B",
+"name":"G_428444"
+},
+{
+"id":"_DOLPP1",
+"name":"G_417196"
+},
+{
+"id":"ALG8",
+"name":"G_428097"
+},
+{
+"id":"_DPM2",
+"name":"G_771539"
+},
+{
 "id":"AGPAT5L",
 "name":"G_422609"
 },
 {
 "id":"_DGAT2",
 "name":"G_421309"
+},
+{
+"id":"PIGL",
+"name":"G_417600"
+},
+{
+"id":"PIGW",
+"name":"G_417650"
+},
+{
+"id":"PIGM",
+"name":"G_428583"
+},
+{
+"id":"PIGC",
+"name":"G_424387"
+},
+{
+"id":"PIGP",
+"name":"G_418517"
+},
+{
+"id":"PIGH",
+"name":"G_423271"
+},
+{
+"id":"PIGQ",
+"name":"G_770171"
+},
+{
+"id":"PIGY",
+"name":"G_101748971"
 },
 {
 "id":"PLA2G4A",
@@ -36243,16 +37580,16 @@
 "name":"G_416811"
 },
 {
-"id":"MTHFD1L",
-"name":"G_421633"
-},
-{
-"id":"MTHFD2",
-"name":"G_426126"
+"id":"MTHFD1",
+"name":"G_423508"
 },
 {
 "id":"_DHFR",
 "name":"G_427317"
+},
+{
+"id":"ALDH1L2",
+"name":"G_418078"
 },
 {
 "id":"AK1",
@@ -36267,12 +37604,16 @@
 "name":"G_430522"
 },
 {
-"id":"_LRTOMT",
-"name":"G_100857436"
+"id":"AK6",
+"name":"G_425215"
 },
 {
-"id":"AGL",
-"name":"G_424474"
+"id":"AK9",
+"name":"G_771077"
+},
+{
+"id":"KYAT3",
+"name":"G_424517"
 },
 {
 "id":"GPAT4",
@@ -36451,10 +37792,6 @@
 "name":"G_428427"
 },
 {
-"id":"SLC25A26",
-"name":"G_416084"
-},
-{
 "id":"SLC2A11",
 "name":"G_427704"
 },
@@ -36535,6 +37872,10 @@
 "name":"G_423717"
 },
 {
+"id":"SLC27A2",
+"name":"G_426354"
+},
+{
 "id":"ATP8A1",
 "name":"G_422776"
 },
@@ -36601,10 +37942,6 @@
 {
 "id":"TXNRD1",
 "name":"G_418082"
-},
-{
-"id":"SLC19A1",
-"name":"G_424034"
 },
 {
 "id":"SLC19A3",
@@ -37096,6 +38433,10 @@
 },
 {
 "id":"RANBP2",
+"name":""
+},
+{
+"id":"SLC35A2",
 "name":""
 },
 {

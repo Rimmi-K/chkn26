@@ -375,7 +375,7 @@ def plot_fluxsum_log2fc_heatmap(df: pd.DataFrame, tissue: str, output_dir: str,
     plt.rcParams['font.family'] = 'serif'
     plt.rcParams['font.serif'] = ['Times New Roman', 'Times', 'DejaVu Serif']
 
-    label_fontsize = 7.5
+    label_fontsize = 8
     axis_title_fontsize = 9
     annot_fontsize = 8
     cbar_label_fontsize = 8

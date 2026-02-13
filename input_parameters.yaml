@@ -10,17 +10,17 @@ paths:
 tissues:
   - tissue: "breast"
     slow_model: "data/models/context_specific/mcs_slow_breast_fraction_0.65.json"
-    fast_model: "data/models/context_specific/mcs_fast_breast_fraction_0.90.json"
+    fast_model: "data/models/context_specific/mcs_fast_breast_fraction_0.85.json"
     deg_csv: "data/transcriptomics/degs/degs_results_breast.csv"
 
   - tissue: "leg"
-    slow_model: "data/models/context_specific/mcs_slow_leg_fraction_0.60.json"
-    fast_model: "data/models/context_specific/mcs_fast_leg_fraction_0.95.json"
+    slow_model: "data/models/context_specific/mcs_slow_leg_fraction_0.30.json"
+    fast_model: "data/models/context_specific/mcs_fast_leg_fraction_0.75.json"
     deg_csv: "data/transcriptomics/degs/degs_results_leg.csv"
 
   - tissue: "liver"
     slow_model: "data/models/context_specific/mcs_slow_liver_fraction_0.50.json"
-    fast_model: "data/models/context_specific/mcs_fast_liver_fraction_0.60.json"
+    fast_model: "data/models/context_specific/mcs_fast_liver_fraction_0.50.json"
     deg_csv: "data/transcriptomics/degs/degs_results_liver.csv"
 
 # ============================================================================
@@ -48,7 +48,7 @@ visualization:
   drf_figsize: [12, 8]
   drf_min_bar_width: 0.3
   drf_max_bar_width: 1.5
-  drf_xlim_max: 70  # Maximum X-axis value (reactions count). Set to null for auto-scale
+  drf_xlim_max: 70  
   flux_diff_threshold: 0.1  # Minimum |flux_difference| for pathway to be shown in DRF plots
 
   # Heatmaps

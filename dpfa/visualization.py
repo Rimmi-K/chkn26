@@ -235,15 +235,11 @@ def analyze_pathway_flux_difference(merged_df: pd.DataFrame, output_dir: str,
                                    tissue: str, threshold: float = 1.0) -> pd.DataFrame:
     """
     Analyze flux difference by pathways (sum of absolute fluxes).
-    Creates two CSV files:
-    - pathway_flux_values_{tissue}.csv: Original pathway analysis
-    - pathwaygroup_flux_values_{tissue}.csv: Pathway groups analysis
     """
     if not {'flux_slow', 'flux_fast'}.issubset(merged_df.columns):
         logging.warning("Pathway flux analysis skipped (missing flux data).")
         return None
 
-    # 1. Analyze ORIGINAL pathways
     if "Pathways" in merged_df.columns:
         df_original = _explode_pathways(merged_df.copy(), pathway_column="Pathways")
         path_sums_original = df_original.groupby('Pathways')[['flux_slow', 'flux_fast']].apply(
@@ -260,12 +256,10 @@ def analyze_pathway_flux_difference(merged_df: pd.DataFrame, output_dir: str,
             path_sums_original['flux_fast'] - path_sums_original['flux_slow']
         )
 
-        # Save original pathways
         out_path_original = os.path.join(output_dir, f'pathway_flux_values_{tissue}.csv')
         path_sums_original.to_csv(out_path_original, index=False)
         logging.info(f"Original pathway flux values saved: {out_path_original}")
 
-    # 2. Analyze PATHWAY GROUPS
     pathway_groups_available = "Pathway Groups" in merged_df.columns
 
     if pathway_groups_available:
@@ -289,12 +283,10 @@ def analyze_pathway_flux_difference(merged_df: pd.DataFrame, output_dir: str,
             path_sums_groups['total_flux_shift'] / path_sums_groups['n_reactions']
         )
 
-        # Save pathway groups
         out_path_groups = os.path.join(output_dir, f'pathwaygroup_flux_values_{tissue}.csv')
         path_sums_groups.to_csv(out_path_groups, index=False)
         logging.info(f"Pathway groups flux values saved: {out_path_groups}")
 
-        # Return filtered groups for visualization
         filtered = path_sums_groups[abs(path_sums_groups['total_flux_shift']) > threshold]
         filtered = filtered.sort_values(by='total_flux_shift', ascending=False)
         return filtered
@@ -336,7 +328,6 @@ def merge_identical_metabolites(heatmap_df: pd.DataFrame,
                                 tolerance: int = 0) -> pd.DataFrame:
     """
     Merge metabolites with identical log2FC values using comma separation.
-
     """
     df_t = heatmap_df.T
     df_rounded = df_t.round(tolerance)
@@ -669,7 +660,6 @@ def plot_fluxsum_log2fc_heatmap_mets(df: pd.DataFrame, tissue: str, output_dir: 
 def create_flux_summary_table(tissue_flux_dfs: dict, output_dir: str):
     """
     Create summary table of flux values for all tissues.
-
     """
     os.makedirs(output_dir, exist_ok=True)
 
@@ -686,7 +676,6 @@ def create_flux_summary_table(tissue_flux_dfs: dict, output_dir: str):
 
     summary_table = pd.concat(summary_rows, ignore_index=True)
     summary_table = summary_table[['Tissue', 'Pathways', '∑FG_flux', '∑SG_flux', 'Difference']]
-
     summary_table = summary_table.sort_values(['Tissue', 'Pathways'])
 
     for col in ['∑FG_flux', '∑SG_flux', 'Difference']:

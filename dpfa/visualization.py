@@ -45,7 +45,7 @@ def plot_regulation_counts(df: pd.DataFrame, output_dir: str, tissue: str,
                            xlim: tuple = None):
     """
     Plot DRF histogram by pathways with variable bar width.
-    Bar width depends on |flux_difference| (normalized by maximum).
+    Bar width depends on |total_flux_shift| (normalized by maximum).
     """
     import matplotlib.transforms as mtransforms
     from matplotlib.patches import Rectangle, FancyBboxPatch
@@ -88,7 +88,7 @@ def plot_regulation_counts(df: pd.DataFrame, output_dir: str, tissue: str,
         flux_col_diff = "Pathway Groups" if "Pathway Groups" in pathway_flux_diff.columns else "Pathways"
         flux_diff_dict = dict(zip(
             pathway_flux_diff[flux_col_diff],
-            abs(pathway_flux_diff['flux_difference'])
+            abs(pathway_flux_diff['total_flux_shift'])
         ))
 
         pathway_order_before = len(pathway_order)
@@ -110,7 +110,7 @@ def plot_regulation_counts(df: pd.DataFrame, output_dir: str, tissue: str,
         flux_col_diff = "Pathway Groups" if "Pathway Groups" in pathway_flux_diff.columns else "Pathways"
         flux_diff_dict = dict(zip(
             pathway_flux_diff[flux_col_diff],
-            abs(pathway_flux_diff['flux_difference'])
+            abs(pathway_flux_diff['total_flux_shift'])
         ))
 
         relevant_diffs = [flux_diff_dict.get(p, 0) for p in pathway_order]
@@ -178,7 +178,7 @@ def plot_regulation_counts(df: pd.DataFrame, output_dir: str, tissue: str,
         flux_col_final = "Pathway Groups" if "Pathway Groups" in pathway_flux_diff.columns else "Pathways"
         flux_diff_dict = dict(zip(
             pathway_flux_diff[flux_col_final],
-            pathway_flux_diff['flux_difference']
+            pathway_flux_diff['total_flux_shift']
         ))
 
         bar_totals = counts.sum(axis=1)
@@ -195,10 +195,10 @@ def plot_regulation_counts(df: pd.DataFrame, output_dir: str, tissue: str,
                         bar_end_x = bar_totals[pathway]
 
                         if delta_flux >= 0:
-                            text = f'+{delta_flux:.3f}'
+                            text = f'+{delta_flux:.2f}'
                             color = 'darkblue'
                         else:
-                            text = f'{delta_flux:.3f}'
+                            text = f'{delta_flux:.2f}'
                             color = 'darkred'
 
                         ax.text(
@@ -256,7 +256,7 @@ def analyze_pathway_flux_difference(merged_df: pd.DataFrame, output_dir: str,
         path_sums_original['flux_fast'] = path_sums_original['flux_fast'].where(
             path_sums_original['flux_fast'] >= 1e-6, 0
         )
-        path_sums_original['flux_difference'] = (
+        path_sums_original['total_flux_shift'] = (
             path_sums_original['flux_fast'] - path_sums_original['flux_slow']
         )
 
@@ -282,9 +282,11 @@ def analyze_pathway_flux_difference(merged_df: pd.DataFrame, output_dir: str,
             path_sums_groups['flux_fast'] >= 1e-6, 0
         )
         path_sums_groups = path_sums_groups.join(n_reactions, on='Pathway Groups')
-        path_sums_groups['flux_difference'] = (
-            (path_sums_groups['flux_fast'] - path_sums_groups['flux_slow'])
-            / path_sums_groups['n_reactions']
+        path_sums_groups['total_flux_shift'] = (
+            path_sums_groups['flux_fast'] - path_sums_groups['flux_slow']
+        )
+        path_sums_groups['mean_flux_shift'] = (
+            path_sums_groups['total_flux_shift'] / path_sums_groups['n_reactions']
         )
 
         # Save pathway groups
@@ -293,12 +295,12 @@ def analyze_pathway_flux_difference(merged_df: pd.DataFrame, output_dir: str,
         logging.info(f"Pathway groups flux values saved: {out_path_groups}")
 
         # Return filtered groups for visualization
-        filtered = path_sums_groups[abs(path_sums_groups['flux_difference']) > threshold]
-        filtered = filtered.sort_values(by='flux_difference', ascending=False)
+        filtered = path_sums_groups[abs(path_sums_groups['total_flux_shift']) > threshold]
+        filtered = filtered.sort_values(by='total_flux_shift', ascending=False)
         return filtered
     else:
-        filtered = path_sums_original[abs(path_sums_original['flux_difference']) > threshold]
-        filtered = filtered.sort_values(by='flux_difference', ascending=False)
+        filtered = path_sums_original[abs(path_sums_original['total_flux_shift']) > threshold]
+        filtered = filtered.sort_values(by='total_flux_shift', ascending=False)
         return filtered
 
 
@@ -370,7 +372,7 @@ def plot_fluxsum_log2fc_heatmap(df: pd.DataFrame, tissue: str, output_dir: str,
         print(f"[plot_fluxsum_log2fc_heatmap] Empty DataFrame for {tissue} — skip.")
         return
 
-    os.makedirs(output_dir, exist_ok=True)
+    os.makedirs(os.path.join(output_dir, 'plots'), exist_ok=True)
 
     plt.rcParams['font.family'] = 'serif'
     plt.rcParams['font.serif'] = ['Times New Roman', 'Times', 'DejaVu Serif']
@@ -520,8 +522,7 @@ def plot_fluxsum_log2fc_heatmap(df: pd.DataFrame, tissue: str, output_dir: str,
         label.set_fontsize(cbar_tick_fontsize)
 
     plt.tight_layout()
-
-    out_png = os.path.join(output_dir, f"mcPFA_heatmap_{tissue}.png")
+    out_png = os.path.join(output_dir, 'plots', f"mcPFA_heatmap_{tissue}.png")
     plt.savefig(out_png, dpi=300, bbox_inches='tight')
     plt.close()
 

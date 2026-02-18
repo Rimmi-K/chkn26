@@ -19,7 +19,8 @@ from .scatter_plot import make_scatter_deg_vs_flux
 from .utils.flux_utils import (
     process_models,
     ratio_fluxes,
-    create_DRF
+    create_DRF,
+    get_reaction_formula
 )
 from .utils.mets_turnover import analyze_mets_turnover
 
@@ -41,6 +42,7 @@ def run_analysis(model, slow_model, fast_model, tissue,
                  secretion_threshold: float = 1e-6,
                  pathway_merging: dict = None,
                  pathway_filter_mode: str = "none",
+                 metabolite_filter: dict = None,
                  metabolite_shortcuts: dict = None,
                  flux_diff_plot_threshold: float = 0.0,
                  drf_xlim_max: int = None,
@@ -64,6 +66,10 @@ def run_analysis(model, slow_model, fast_model, tissue,
         model_fast = cobra.io.load_json_model(fast_model)
     except Exception as e:
         logging.exception(f"Model loading failed: {e}")
+
+
+    drf_df["Formula"] = drf_df["reaction_id"].apply(lambda rxn_id: get_reaction_formula(model, rxn_id))
+
 
     pathway_db = PathwayDatabase('data/models/subsystem_matrix.csv')
     merged_df = drf_df.copy()
@@ -142,11 +148,12 @@ def run_analysis(model, slow_model, fast_model, tissue,
             output_dir=output_dir,
             tissue=tissue,
             exclude_subsystems=('Unknown',),
-            min_flux=1e-3,
+            min_flux=1e-5,
             pathways_filter=filter_pathways_list,
             merge_compartments=True,
             metabolite_shortcuts=metabolite_shortcuts,
-            pathway_merging=pathway_merging
+            pathway_merging=pathway_merging,
+            metabolite_filter=metabolite_filter,
         )
     except Exception as e:
         logging.exception(f"Metabolite turnover analysis failed: {e}")
@@ -282,6 +289,7 @@ if __name__ == "__main__":
 
     flux_diff_plot_thr = config.get_flux_diff_threshold()
     metabolite_shortcuts = config.get_metabolite_name_shortcuts()
+    metabolite_filter = config.get_metabolite_filter()
     drf_xlim_max = config.visualization.get("drf_xlim_max")
     scatter_params = config.scatter
 
@@ -318,6 +326,7 @@ if __name__ == "__main__":
             scatter_flux_thr=scatter_params['flux_threshold'],
             scatter_require_sig=scatter_params.get('require_significance', False),
             metabolite_shortcuts=metabolite_shortcuts,
+            metabolite_filter=metabolite_filter,
             flux_diff_plot_threshold=flux_diff_plot_thr,
             drf_xlim_max=drf_xlim_max,
             drf_threshold=drf_threshold

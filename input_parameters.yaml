@@ -27,7 +27,7 @@ tissues:
 # ANALYSIS PARAMETERS
 # ============================================================================
 analysis:
-  drf_threshold: 0.3               # Threshold for type of increased and decreased DRF
+  drf_threshold: 0.2               # Threshold for type of increased and decreased DRF
   fdr_threshold: 0.99              # FDR threshold for DEG significance
   flux_diff_threshold: 0.0         # Minimum flux difference for analysis
   secretion_threshold: 1.0e-6      # Threshold for exchange reactions
@@ -49,7 +49,7 @@ visualization:
   drf_min_bar_width: 0.3
   drf_max_bar_width: 1.5
   drf_xlim_max: 70  
-  flux_diff_threshold: 0.1  # Minimum |flux_difference| for pathway to be shown in DRF plots
+  flux_diff_threshold: 0.00000001  # Minimum |flux_difference| for pathway to be shown in DRF plots
 
   # Heatmaps
   heatmap_figsize: [14, 10]
@@ -58,7 +58,7 @@ visualization:
 
 scatter:
   # Thresholds for highlighting points
-  rxn_lfc_threshold: 0.75           # Reaction log2FC threshold
+  rxn_lfc_threshold: 0.6           # Reaction log2FC threshold
   flux_threshold: 0.37              # Flux log2 ratio threshold
 
   # Marker sizes 
@@ -102,22 +102,25 @@ pathway_merging:
     - "Synthesis And Degradation Of Ketone Bodies"
     - "Cholesterol Metabolism"
     - "Glycerophospholipid Metabolism"
-  
-  "AA central (Ala/Asp/Glu, Gly/Ser/Thr)":
-    - "Alanine, Aspartate And Glutamate Metabolism"
-    - "Glycine, Serine And Threonine Metabolism"
-    - "Biosynthesis Of Amino Acids"  
-  
+    - "Sphingolipid Metabolism"
+
   "BCAA metabolism (Val/Leu/Iso)":
     - "Valine, Leucine And Isoleucine Biosynthesis"
     - "Valine, Leucine And Isoleucine Degradation"
-  
+ 
+  "AAA metabolism (Trp/Phe/Tyr)":
+    - "Phenylalanine, Tyrosine And Tryptophan Biosynthesis"
+    - "Phenylalanine Metabolism"
+    - "Tryptophan Metabolism"
+
   "AA other":
     - "Cysteine And Methionine Metabolism"
-    - "Tryptophan Metabolism"
     - "Lysine Degradation"
     - "Arginine Biosynthesis"
-    - "Butanoate Metabolism"  
+    - "Butanoate Metabolism"
+    - "Alanine, Aspartate And Glutamate Metabolism"
+    - "Glycine, Serine And Threonine Metabolism"
+    - "Biosynthesis Of Amino Acids"  
 
   "Nitrogen disposal":
     - "Nitrogen Metabolism"
@@ -131,15 +134,11 @@ pathway_merging:
     - "Pyrimidine Catabolism"
     - "Nucleotide Interconversion"
     - "Nucleotide Metabolism" 
-  
-  "Folate metabolism":
-    - "Folate Metabolism"
-  
+
   "Mitochondrial transport":
     - "Transport, Mitochondrial"
   
-  "Extracellular Transport":
-    - "Extracellular Transport"
+
   
 
 
@@ -150,25 +149,57 @@ pathway_filter:
     - "Oxidative Phosphorylation"
     - "Redox & Pentose Metabolism"
     - "Lipid metabolism"
-    - "AA central (Ala/Asp/Glu, Gly/Ser/Thr)"
-    - "AA other"
     - "BCAA metabolism (Val/Leu/Iso)"
+    - "AAA metabolism (Trp/Phe/Tyr)"
+    - "AA other"
     - "Nucleotide metabolism"
     - "Folate Metabolism"
     - "Nitrogen disposal"
     - "Mitochondrial transport"
     - "Extracellular Transport" 
 
+
+metabolite_filter:
+  mode: "blacklist"        # "whitelist", "blacklist", or "none"
+  whitelist: []
+  blacklist: [H, H2O, CO2, HPO4, PPi, Guanosine, Creatinine, Creatine, HCO3]
+
 metabolite_name_shortcuts:
-  l-2-aminoadipate: Aminoadipate derivatives
-  2-oxoadipate: Aminoadipate derivatives
-  nadp(+): NADP+
-  nadp: NADP+
-  nad(+): NAD+
-  nad+: NAD+
-  nicotinamide adenine dinucleotide phosphate: NADP+
-  nicotinamide adenine dinucleotide: NAD+
-  phosphatidylserine: PtSer
+  Nicotinamide adenine dinucleotide: NAD(+)
+  Nicotinamide adenine dinucleotide - reduced: NAD(+)
+  Nicotinamide adenine dinucleotide phosphate: NADP(+)
+  Nicotinamide adenine dinucleotide phosphate - reduced: NADP(+)
+  ATP: ATP/ADP
+  ADP: ATP/ADP
+  (S)-3-hydroxybutanoyl-coa(4-): SC acyl-CoA
+  Crotonoyl-coa(4-): SC acyl-CoA
+  (S)-3-hydroxybutanoyl-CoA: SC acyl-CoA
+  Crotonoyl-CoA: SC acyl-CoA
+  2-Oxoadipate(2-): Adipates
+  L-2-aminoadipate(1-): Adipates
+  3-Phospho-D-glycerate: Phospho-C3 acids
+  3-Phosphonatooxypyruvate: Phospho-C3 acids
+  3-Phosphonatooxypyruvate(3-): Phospho-C3 acids
+  Dihydrolipoamide: Lipoamides
+  Lipoamide: Lipoamides
+  Deoxyadenosine: dA
+  Ditp(4-): dITP
+  dATP: Purine dNTPs
+  dADP: Purine dNTPs
+  dITP: Purine dNTPs
+  dIDP: Purine dNTPs
+  IMP: Purine NTPs
+  GMP: Purine NTPs
+  s-adenosyl-l-methionine: SAM
+  s-adenosyl-l-homocysteine: SAH
+  adenosine: Ado
+  l-homocysteine: Hcy
+  l-methionine: L-Met
+  diphosphate: PPi
+  ornithine: Orn
+  glycocyamine: GAA
+  Hydroxymethylglutaryl-coa: HMG-CoA
+  Coenzyme A: CoA
   l-phenylalanine: L-Phe
   l-phenylala: L-Phe
   l-glutamate(1-): L-Glu
@@ -179,101 +210,28 @@ metabolite_name_shortcuts:
   l-alanine: L-Ala
   l-proline: L-Pro
   l-valine: L-Val
-  l-glu(1-): L-Glu
-  l-pro: L-Pro
-  l-val: L-Val
-  arginine: Arg
-  glycine: Gly
-  lysine: Lys
-  5,10-methylenetetrahydrofolate: Folate pool
-  5,10-methenyltetrahydrofolate: Folate pool
-  10-formyltetrahydrofolate: Folate pool
-  5-methyltetrahydrofolate: Folate pool
-  5,6,7,8-tetrahydrofolate: Folate pool
-  tetrahydrofolate: Folate pool
-  dihydrofolate: Folate pool
-  hydroxymethylglutaryl-coa: Ketone/FA-CoA
-  (s)-3-hydroxyisobutyryl-coa: Ketone/FA-CoA
-  2-methylprop-2-enoyl-coa: Ketone/FA-CoA
-  (s)-3-hydroxybutanoyl-coa: Ketone/FA-CoA
-  acetyl-coenzyme a: Acetyl-CoA pool
-  acetoacetyl-coa: Ketone/FA-CoA
-  crotonoyl-coa: Ketone/FA-CoA
-  acetyl-coa: Acetyl-CoA pool
-  acac-coa: Ketone/FA-CoA
-  3-hb-coa: Ketone/FA-CoA
-  cro-coa: Ketone/FA-CoA
-  acetylcoa: Acetyl-CoA pool
-  coenzyme a: CoA pool
-  coa: CoA pool
-  d-glucose: Glc
-  glucose: Glc
-  deoxyadenosine: A-nucleotides
-  datp: A-nucleotides
-  dadp: A-nucleotides
-  damp: A-nucleotides
-  atp: A-nucleotides
-  adp: A-nucleotides
-  amp: A-nucleotides
-  ado: A-nucleotides
-  dgtp: G-nucleotides
-  dgdp: G-nucleotides
-  dgmp: G-nucleotides
-  gtp: G-nucleotides
-  gdp: G-nucleotides
-  gmp: G-nucleotides
-  dguo: G-nucleotides
-  guo: G-nucleotides
-  dctp: C-nucleotides
-  dcdp: C-nucleotides
-  dcmp: C-nucleotides
-  ctp: C-nucleotides
-  cdp: C-nucleotides
-  cmp: C-nucleotides
-  dcyd: C-nucleotides
-  cyd: C-nucleotides
-  ditp: I-nucleotides
-  didp: I-nucleotides
-  dimp: I-nucleotides
-  itp: I-nucleotides
-  idp: I-nucleotides
-  imp: I-nucleotides
-  dino: I-nucleotides
-  inosine: I-nucleotides
-  dttp: T-nucleotides
-  dtdp: T-nucleotides
-  dtmp: T-nucleotides
-  dthd: T-nucleotides
-  dudp: U-nucleotides
-  pyruvate: Pyr
-  pyr: Pyr
-  3-methyl-2-oxobutanoate: BCAA α-ketoacids
-  2-methyl-3-oxopropanoate: BCAA α-ketoacids
-  2-oxobutanoate: BCAA α-ketoacids
-  beta-hydroxybutyrate: Ketone bodies
-  3-hydroxybutyrate: Ketone bodies
-  acetoacetate: Ketone bodies
-  carbon dioxide: CO2
-  hydrogen phosphate: Pi
-  inorganic phosphate: Pi
-  orthophosphate: Pi
-  hydrogenphosphate: Pi
-  hydrogen carbonate: HCO3-
-  hydrogencarbonate: HCO3-
-  bicarbonate: HCO3-
-  ammonium: NH4+
-  water: H2O
-  proton: H+
-  hco3-: HCO3-
-  nh4+: NH4+
-  nh4: NH4+
-  h2o: H2O
-  co2: CO2
-  pi: Pi
-  h+: H+
-  carbamoyl phosphate: Carb-P
-  carbamoyl p: Carb-P
-  (4-): ''
-  (3-): ''
-  (2-): ''
-  (1-): ''
+  l-threonine: L-Thr
+  D-Fructose 1,6-bisphosphate: F1,6BP
+  D-glucose: Glc
+  Bicarbonate: HCO3
+  2-Oxobutanoate: α-ketobutyrate
+  Ammonium: NH4
+  Keto-phenylpyruvate: Phenylpyruvate
+  L-Glutamate: L-Glu
+  2-Oxoglutarate: α-KG
+  L-Alanine: L-Ala
+  Pyruvate: Pyr
+  Hydrogenphosphate: HPO4
+  Carbon dioxide: CO2
+  L-Cystathionine: L-Cysth
+  Guanidinoacetic acid: Glycocyamine
+  L-Valine: L-Val
+  3-Methyl-2-oxobutanoate: α-ketoisovalerate
+  Proton: H
+  L-Glutamine: L-Gln
+  Water: H2O
+  Adenosine: Adenosine
+  5,6,7,8-Tetrahydrofolate: THF
+  L-serine: L-ser
+  5,10-Methylenetetrahydrofolate: CH2-THF
+

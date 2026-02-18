@@ -1,107 +1,83 @@
 import cobra
 
-# Маппинг для конкретных реакций (шаг 1)
 REACTION_SUBSYSTEM_FIXES = {
     'r0340g': 'Glycolysis / Gluconeogenesis',
-    'r0384': 'Citric Acid Cycle',
-    'r1391': 'Starch And Sucrose Metabolism',
-    'r1392': 'Starch And Sucrose Metabolism',
-    'r0510': 'Biosynthesis Of Unsaturated Fatty Acids',
-    'r1174': 'Steroid Metabolism',
-    'r1177': 'Steroid Metabolism',
-    'r1167': 'Glycerophospholipid Metabolism',
-    'r1479': 'Fatty Acid Oxidation',
-    'R_group_phosphotase_1': 'Nucleotide Metabolism'
+    'r0384':  'Citric Acid Cycle',
+    'r1391':  'Starch And Sucrose Metabolism',
+    'r1392':  'Starch And Sucrose Metabolism',
+    'r0510':  'Biosynthesis Of Unsaturated Fatty Acids',
+    'r1174':  'Steroid Metabolism',
+    'r1177':  'Steroid Metabolism',
+    'r1167':  'Glycerophospholipid Metabolism',
+    'r1479':  'Fatty Acid Oxidation',
+    'R_group_phosphotase_1': 'Nucleotide Metabolism',
 }
 
-# Словарь группировки (шаг 2)
 SUBSYSTEM_NORMALIZATION = {
-    # Энергетический метаболизм
-    'Citrate Cycle (tca Cycle)': 'Citric Acid Cycle',
-    'Glycolysis/gluconeogenesis': 'Glycolysis / Gluconeogenesis',
-    
-    # Аминокислоты - Глицин/Серин/Треонин/Аланин
-    'Glycine': 'Glycine, Serine And Threonine Metabolism',
-    'Serine': 'Glycine, Serine And Threonine Metabolism',
-    'Alanine And Threonine Metabolism': 'Glycine, Serine And Threonine Metabolism',
-    
-    # Аминокислоты - Аланин/Аспартат/Глутамат
-    'Alanine And Aspartate Metabolism': 'Alanine, Aspartate And Glutamate Metabolism',
-    'Glutamate Metabolism': 'Alanine, Aspartate And Glutamate Metabolism',
-    
-    # BCAA (Разветвленные аминокислоты)
-    'Valine, Leucine And Isoleucine Degradation': 'Valine, Leucine And Isoleucine Metabolism',
+    'Citrate Cycle (tca Cycle)':              'Citric Acid Cycle',
+    'Glycolysis/gluconeogenesis':             'Glycolysis / Gluconeogenesis',
+
+    'Glycine':                                'Glycine, Serine And Threonine Metabolism',
+    'Serine':                                 'Glycine, Serine And Threonine Metabolism',
+    'Alanine And Threonine Metabolism':       'Glycine, Serine And Threonine Metabolism',
+
+    'Alanine And Aspartate Metabolism':       'Alanine, Aspartate And Glutamate Metabolism',
+    'Glutamate Metabolism':                   'Alanine, Aspartate And Glutamate Metabolism',
+
+    'Valine, Leucine And Isoleucine Degradation':  'Valine, Leucine And Isoleucine Metabolism',
     'Valine, Leucine And Isoleucine Biosynthesis': 'Valine, Leucine And Isoleucine Metabolism',
-    'Valine': 'Valine, Leucine And Isoleucine Metabolism',
-    'Leucine': 'Valine, Leucine And Isoleucine Metabolism',
-    'And Isoleucine Metabolism': 'Valine, Leucine And Isoleucine Metabolism',
-    
-    # Серосодержащие аминокислоты
-    'Methionine And Cysteine Metabolism': 'Cysteine And Methionine Metabolism',
-    'Cysteine Metabolism': 'Cysteine And Methionine Metabolism',
-    
-    # Нуклеотиды (объединяем анаболизм/катаболизм)
-    'Purine Synthesis': 'Purine Metabolism',
-    'Purine Catabolism': 'Purine Metabolism',
-    'Pyrimidine Synthesis': 'Pyrimidine Metabolism',
-    'Pyrimidine Catabolism': 'Pyrimidine Metabolism',
-    
-    # Сахара
+    'Valine':                                 'Valine, Leucine And Isoleucine Metabolism',
+    'Leucine':                                'Valine, Leucine And Isoleucine Metabolism',
+    'And Isoleucine Metabolism':              'Valine, Leucine And Isoleucine Metabolism',
+
+    'Methionine And Cysteine Metabolism':     'Cysteine And Methionine Metabolism',
+    'Cysteine Metabolism':                    'Cysteine And Methionine Metabolism',
+
+    'Purine Synthesis':                       'Purine Metabolism',
+    'Purine Catabolism':                      'Purine Metabolism',
+    'Pyrimidine Synthesis':                   'Pyrimidine Metabolism',
+    'Pyrimidine Catabolism':                  'Pyrimidine Metabolism',
+
     'Amino Sugar And Nucleotide Sugar Metabolism': 'Aminosugar Metabolism',
-    'Biosynthesis Of Nucleotide Sugars': 'Biosynthesis Of Various Nucleotide Sugars',
-    
-    # CoA метаболизм
-    'Coa Synthesis': 'Pantothenate And Coa Biosynthesis',
-    'Coa Catabolism': 'Pantothenate And Coa Biosynthesis',
-    
-    # Витамины
-    'Vitamin A Metabolism': 'Retinol Metabolism',
-    
-    # Heme метаболизм
-    'Heme Synthesis': 'Heme Metabolism',
-    'Heme Degradation': 'Heme Metabolism',
-    'Heme': 'Heme Metabolism',
-    
-    # Жирные кислоты - объединить дубликаты
-    'Fatty Acid Synthesis': 'Fatty Acid Biosynthesis',
-    'Fatty Acid Degradation': 'Fatty Acid Oxidation',
-    
-    # Желчные кислоты
-    'Primary Bile Acid Biosynthesis': 'Bile Acid Synthesis',
-    
-    # Линолевая кислота
-    'Linoleic Acid Metabolism': 'Linoleate Metabolism',
+    'Biosynthesis Of Nucleotide Sugars':      'Biosynthesis Of Various Nucleotide Sugars',
 
-    # Стероиды
-    'Steroid Biosynthesis': 'Steroid Metabolism',
-    'Steroid Hormone Biosynthesis': 'Steroid Metabolism',
-    
-    # Лизин
-    'Lysine Biosynthesis': 'Lysine Metabolism',
-    'Lysine Degradation': 'Lysine Metabolism',
-    
-    # Убихинон
-    'Ubiquinone Synthesis': 'Ubiquinone And Other Terpenoid-quinone Biosynthesis',
-    
-    # Сера
-    'Sulfur Cycle': 'Sulfur Metabolism',
-    
-    # Компартменты → Транспорт
-    'Mitochondrial': 'Mitochondrial Transport',
-    'Peroxisomal': 'Peroxisomal Transport',
-    'Endoplasmic Reticular': 'Endoplasmic Reticular Transport',
-    'Lysosomal': 'Lysosomal Transport',
-    'Nuclear': 'Nuclear Transport',
-    'Golgi Apparatus': 'Golgi Transport',
-    'Endosomal': 'Endosomal Transport',
+    'Coa Synthesis':                          'Pantothenate And Coa Biosynthesis',
+    'Coa Catabolism':                         'Pantothenate And Coa Biosynthesis',
 
-        # Selenium
-    'Selenoamino Acid Metabolism': 'Selenium Metabolism',
-    'Selenocompound Metabolism': 'Selenium Metabolism',
+    'Vitamin A Metabolism':                   'Retinol Metabolism',
+
+    'Heme Synthesis':                         'Heme Metabolism',
+    'Heme Degradation':                       'Heme Metabolism',
+    'Heme':                                   'Heme Metabolism',
+
+    'Fatty Acid Synthesis':                   'Fatty Acid Biosynthesis',
+    'Fatty Acid Degradation':                 'Fatty Acid Oxidation',
+
+    'Primary Bile Acid Biosynthesis':         'Bile Acid Synthesis',
+    'Linoleic Acid Metabolism':               'Linoleate Metabolism',
+
+    'Steroid Biosynthesis':                   'Steroid Metabolism',
+    'Steroid Hormone Biosynthesis':           'Steroid Metabolism',
+
+    'Lysine Biosynthesis':                    'Lysine Metabolism',
+    'Lysine Degradation':                     'Lysine Metabolism',
+
+    'Ubiquinone Synthesis':                   'Ubiquinone And Other Terpenoid-quinone Biosynthesis',
+    'Sulfur Cycle':                           'Sulfur Metabolism',
+
+    'Mitochondrial':                          'Mitochondrial Transport',
+    'Peroxisomal':                            'Peroxisomal Transport',
+    'Endoplasmic Reticular':                  'Endoplasmic Reticular Transport',
+    'Lysosomal':                              'Lysosomal Transport',
+    'Nuclear':                                'Nuclear Transport',
+    'Golgi Apparatus':                        'Golgi Transport',
+    'Endosomal':                              'Endosomal Transport',
+
+    'Selenoamino Acid Metabolism':            'Selenium Metabolism',
+    'Selenocompound Metabolism':              'Selenium Metabolism',
 }
 
 SUBSYSTEMS_TO_REMOVE = {
-    # Общие/мусорные категории
     'Metabolic Pathways',
     'Biosynthesis Of Secondary Metabolites',
     'Microbial Metabolism In Diverse Environments',
@@ -110,8 +86,6 @@ SUBSYSTEMS_TO_REMOVE = {
     'Exchange/demand Reaction',
     'Extracellular exchange',
     'Transport',
-    
-    # Бактериальные пути
     'Streptomycin Biosynthesis',
     'Neomycin, Kanamycin And Gentamicin Biosynthesis',
     'Carbapenem Biosynthesis',
@@ -119,204 +93,97 @@ SUBSYSTEMS_TO_REMOVE = {
     'Mycolic Acid Biosynthesis',
     'Novobiocin Biosynthesis',
     'Teichoic Acid Biosynthesis',
-    
-    # Растительные/грибные пути
     'Aflatoxin Biosynthesis',
     'Betalain Biosynthesis',
     'Glucosinolate Biosynthesis',
     'Tropane, Piperidine And Pyridine Alkaloid Biosynthesis',
     'Isoquinoline Alkaloid Biosynthesis',
     'Biosynthesis Of Various Plant Secondary Metabolites',
-    
-    # Неспецифичные для животных
     'Styrene Degradation',
-
-
 }
 
-def normalize_subsystems(model):
-    """
-    Нормализует подсистемы в метаболической модели:
-    1. Заменяет пустые subsystem на значения из REACTION_SUBSYSTEM_FIXES
-    2. Нормализует названия через SUBSYSTEM_NORMALIZATION
-    3. Удаляет мусорные категории из SUBSYSTEMS_TO_REMOVE
-    4. Удаляет дубликаты в пределах одной реакции
-    """
-    
-    stats = {
-        'fixed_empty': 0,
-        'normalized_subsystems': 0,
-        'removed_garbage': 0,
-        'reactions_changed': 0,
-        'unchanged': 0
-    }
-    
-    for reaction in model.reactions:
-        original_subsystem = reaction.subsystem
+
+def normalize_subsystems(model) -> dict:
+    stats = {'fixed_empty': 0, 'normalized': 0, 'removed': 0, 'changed': 0, 'unchanged': 0}
+
+    for rxn in model.reactions:
+        original = rxn.subsystem
         changed = False
-        
-        # Шаг 1: Исправить пустые/Unassigned реакции
-        if (not reaction.subsystem or reaction.subsystem == 'Unassigned') and reaction.id in REACTION_SUBSYSTEM_FIXES:
-            reaction.subsystem = REACTION_SUBSYSTEM_FIXES[reaction.id]
-            stats['fixed_empty'] += 1
+
+        if not rxn.subsystem or rxn.subsystem == 'Unassigned':
+            if rxn.id in REACTION_SUBSYSTEM_FIXES:
+                rxn.subsystem = REACTION_SUBSYSTEM_FIXES[rxn.id]
+                stats['fixed_empty'] += 1
+                print(f"Fixed empty: {rxn.id} -> {rxn.subsystem}")
+            else:
+                rxn.subsystem = ''
+                stats['removed'] += 1
             changed = True
-            print(f"✓ Исправлено пустое: {reaction.id} → {reaction.subsystem}")
-        
-        # Удалить 'Unassigned' если он там есть (заменить на пустую строку)
-        elif reaction.subsystem == 'Unassigned':
-            reaction.subsystem = ''
-            changed = True
-            stats['removed_garbage'] += 1
-        
-        # Шаг 2: Нормализовать существующие подсистемы
-        if reaction.subsystem and reaction.subsystem != '':
-            subsystems = [s.strip() for s in reaction.subsystem.split(';')]
+
+        if rxn.subsystem:
+            parts = [s.strip() for s in rxn.subsystem.split(';')]
             normalized = []
-            
-            for sub in subsystems:
-                # Пропустить мусорные категории
+            for sub in parts:
                 if sub in SUBSYSTEMS_TO_REMOVE:
-                    stats['removed_garbage'] += 1
+                    stats['removed'] += 1
                     changed = True
-                    continue
-                
-                # Нормализовать название
-                if sub in SUBSYSTEM_NORMALIZATION:
+                elif sub in SUBSYSTEM_NORMALIZATION:
                     normalized.append(SUBSYSTEM_NORMALIZATION[sub])
-                    stats['normalized_subsystems'] += 1
+                    stats['normalized'] += 1
                     changed = True
-                elif sub:  # не добавляем пустые строки
+                elif sub:
                     normalized.append(sub)
-            
-            # Убрать дубликаты, сохраняя порядок
-            unique_normalized = list(dict.fromkeys(normalized))
-            
-            # Обновить subsystem
-            if unique_normalized:  # если осталось что-то после фильтрации
-                new_subsystem = '; '.join(unique_normalized)
-            else:  # если все подсистемы были мусорными
-                new_subsystem = ''
-            
-            if new_subsystem != reaction.subsystem:
-                if changed and original_subsystem not in ['', 'Unassigned']:
-                    print(f"  Нормализовано: {reaction.id}")
-                    print(f"    ДО:  {original_subsystem}")
-                    print(f"    ПОСЛЕ: {new_subsystem}")
-                reaction.subsystem = new_subsystem
-                stats['reactions_changed'] += 1
-        
+
+            new_subsystem = '; '.join(dict.fromkeys(normalized))
+            if new_subsystem != rxn.subsystem:
+                if changed and original not in ('', 'Unassigned'):
+                    print(f"  {rxn.id}: [{original}] -> [{new_subsystem}]")
+                rxn.subsystem = new_subsystem
+                stats['changed'] += 1
+
         if not changed:
             stats['unchanged'] += 1
-    
+
     return stats
 
 
-def analyze_subsystems(model, title=""):
-    """Анализ подсистем в модели"""
-    print(f"\n{'='*60}")
-    print(f"{title}")
-    print(f"{'='*60}")
-    
-    subs = set()
-    unassigned = []
-    empty = []
-    
-    for r in model.reactions:
-        if r.subsystem == 'Unassigned':
-            unassigned.append(r.id)
-        elif not r.subsystem or r.subsystem == '':
-            empty.append(r.id)
-        elif r.subsystem:
-            for s in r.subsystem.split(";"):
-                subs.add(s.strip())
-    
-    print(f"\nСтатистика:")
-    print(f"  Уникальных подсистем: {len(subs)}")
-    print(f"  Реакций с 'Unassigned': {len(unassigned)}")
-    print(f"  Реакций с пустой subsystem: {len(empty)}")
-    print(f"  Всего реакций: {len(model.reactions)}")
-    
-    if unassigned:
-        print(f"\n⚠ Реакции с 'Unassigned' ({len(unassigned)}):")
-        for rid in unassigned[:10]:
-            r = model.reactions.get_by_id(rid)
-            print(f"  - {rid}: {r.name}")
-        if len(unassigned) > 10:
-            print(f"  ... и еще {len(unassigned) - 10}")
-    
-    if empty:
-        print(f"\n⚠ Реакции с пустой subsystem ({len(empty)}):")
-        for rid in empty[:10]:
-            r = model.reactions.get_by_id(rid)
-            print(f"  - {rid}: {r.name}")
-        if len(empty) > 10:
-            print(f"  ... и еще {len(empty) - 10}")
-    
-    return subs
+def collect_subsystems(model) -> set:
+    result = set()
+    for rxn in model.reactions:
+        if rxn.subsystem and rxn.subsystem not in ('Unassigned', ''):
+            result.update(s.strip() for s in rxn.subsystem.split(';'))
+    return result
 
 
-# ============ ОСНОВНОЙ КОД ============
+def main():
+    model = cobra.io.load_json_model("iES1300_prepared.json")
 
-print("Загрузка модели...")
-model = cobra.io.load_json_model("iES1300_prepared.json")
+    subs_before = collect_subsystems(model)
+    stats = normalize_subsystems(model)
+    subs_after = collect_subsystems(model)
 
-# Анализ ДО
-subs_before = analyze_subsystems(model, "ДО НОРМАЛИЗАЦИИ")
+    added = subs_after - subs_before
+    removed = subs_before - subs_after
 
-# Нормализация
-print(f"\n{'='*60}")
-print("ПРОЦЕСС НОРМАЛИЗАЦИИ")
-print(f"{'='*60}\n")
-stats = normalize_subsystems(model)
+    if added:
+        print("\nNew subsystems:")
+        for s in sorted(added):
+            print(f"  + {s}")
 
-print(f"\n{'='*60}")
-print("ИТОГОВАЯ СТАТИСТИКА")
-print(f"{'='*60}")
-print(f"  ✓ Исправлено пустых subsystem: {stats['fixed_empty']}")
-print(f"  ✓ Нормализовано названий подсистем: {stats['normalized_subsystems']}")
-print(f"  🗑 Удалено мусорных категорий: {stats['removed_garbage']}")
-print(f"  ✓ Изменено реакций: {stats['reactions_changed']}")
-print(f"  ○ Без изменений: {stats['unchanged']}")
+    if removed:
+        print("\nRemoved subsystems:")
+        for s in sorted(removed):
+            print(f"  - {s}")
 
-# Анализ ПОСЛЕ
-subs_after = analyze_subsystems(model, "ПОСЛЕ НОРМАЛИЗАЦИИ")
+    print(f"\nSubsystems: {len(subs_before)} -> {len(subs_after)}")
+    print(f"Stats: {stats}")
 
-# Сравнение
-print(f"\n{'='*60}")
-print("СРАВНЕНИЕ")
-print(f"{'='*60}")
-print(f"Подсистем было: {len(subs_before)}")
-print(f"Подсистем стало: {len(subs_after)}")
-reduction = len(subs_before) - len(subs_after)
-if len(subs_before) > 0:
-    reduction_pct = 100 * reduction / len(subs_before)
-    print(f"Сокращение: {reduction} ({reduction_pct:.1f}%)")
+    print("\nAll subsystems after normalization:")
+    for i, sub in enumerate(sorted(subs_after), 1):
+        print(f"{i:3d}. {sub}")
 
-# Показать новые подсистемы (если появились)
-new_subs = subs_after - subs_before
-if new_subs:
-    print(f"\n✨ Новые подсистемы ({len(new_subs)}):")
-    for s in sorted(new_subs):
-        print(f"  + {s}")
+    cobra.io.save_json_model(model, "iES1300_normalized.json")
 
-# Показать удаленные подсистемы
-removed_subs = subs_before - subs_after
-if removed_subs:
-    print(f"\n🗑 Удаленные подсистемы ({len(removed_subs)}):")
-    for s in sorted(removed_subs):
-        print(f"  - {s}")
 
-# Финальный список подсистем
-print(f"\n{'='*60}")
-print("ФИНАЛЬНЫЙ СПИСОК ПОДСИСТЕМ")
-print(f"{'='*60}")
-sorted_subs = sorted(list(subs_after))
-for i, sub in enumerate(sorted_subs, 1):
-    print(f"{i:3d}. {sub}")
-
-# Сохранение
-output_file = "iES1300_normalized.json"
-print(f"\n{'='*60}")
-print(f"Сохранение модели в {output_file}...")
-cobra.io.save_json_model(model, output_file)
-print("✓ Готово!")
+if __name__ == "__main__":
+    main()

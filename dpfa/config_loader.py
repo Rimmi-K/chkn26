@@ -41,6 +41,7 @@ class AnalysisConfig:
         self.pathway_filter = self.config.get("pathway_filter", {})
         self.visualization = self.config.get("visualization", {})
         self.metabolite_name_shortcuts = self.config.get("metabolite_name_shortcuts", {})
+        self.metabolite_filter = self.config.get("metabolite_filter", {})
 
     def _load_config(self) -> Dict[str, Any]:
         """Load YAML configuration file"""
@@ -263,6 +264,10 @@ class AnalysisConfig:
     def get_metabolite_name_shortcuts(self) -> Dict[str, str]:
         """Get metabolite name shortcuts dictionary"""
         return self.metabolite_name_shortcuts
+
+    def get_metabolite_filter(self) -> Dict[str, Any]:
+        """Get metabolite filter configuration (mode, whitelist, blacklist)"""
+        return self.metabolite_filter
 
     def get_flux_diff_threshold(self) -> float:
         """Get flux difference threshold for DRF plots"""

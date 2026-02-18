@@ -83,7 +83,55 @@ def ratio_fluxes(flux_slow_path: str, flux_fast_path: str,
     return merged
 
 
-def create_DRF(df: pd.DataFrame, threshold: float = 0.30) -> pd.DataFrame:
+def get_reaction_formula(model, reaction_id: str) -> str:
+    """
+    Get reaction formula from model using reaction ID.
+    """
+    try:
+        reaction = model.reactions.get_by_id(reaction_id)
+        metabolites = reaction.metabolites
+
+        # Separate reactants (negative coefficients) and products (positive coefficients)
+        reactants = []
+        products = []
+
+        for met, coeff in metabolites.items():
+            met_name = met.name if met.name else met.id
+            abs_coeff = abs(coeff)
+
+            # Format coefficient (only show if != 1)
+            if abs_coeff == 1.0:
+                coeff_str = met_name
+            else:
+                coeff_str = f"{abs_coeff} {met_name}"
+
+            if coeff < 0:
+                reactants.append(coeff_str)
+            else:
+                products.append(coeff_str)
+
+        # Build formula string
+        reactants_str = " + ".join(reactants) if reactants else ""
+        products_str = " + ".join(products) if products else ""
+
+        # Determine arrow direction based on reversibility
+        if reaction.reversibility:
+            arrow = "<==>"
+        else:
+            arrow = "-->"
+
+        formula = f"{reactants_str} {arrow} {products_str}"
+        return formula.strip()
+
+    except KeyError:
+        logging.warning(f"Reaction {reaction_id} not found in model")
+        return "N/A"
+    except Exception as e:
+        logging.warning(f"Error getting formula for {reaction_id}: {e}")
+        return "N/A"
+
+
+def create_DRF(df: pd.DataFrame, threshold: float = 0.20) -> pd.DataFrame:
     """
     Categorize flux changes using absolute difference
 

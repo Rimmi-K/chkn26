@@ -17,26 +17,79 @@ except Exception:
     PathwayDatabase = object
 
 
-def smart_capitalize(name: str) -> str:
-    """Capitalize first letter in string"""
-    m = re.search(r'([a-zA-Z])', str(name))
+def smart_capitalize(name: str, abbreviations: Optional[Dict[str, str]] = None) -> str:
+    """
+    Capitalize first letter and fix case for known abbreviations 
+    Searches for abbreviations as substrings and replaces them with correct case.
+    """
+    if abbreviations is None:
+        
+        abbreviations = {
+            "coa": "CoA",
+            "atp": "ATP",
+            "adp": "ADP",
+            "amp": "AMP",
+            "gtp": "GTP",
+            "gdp": "GDP",
+            "ttp": "TTP",
+            "ctp": "CTP",
+            "udp": "UDP",
+            "nad": "NAD",
+            "nadh": "NADH",
+            "nadp": "NADP",
+            "nadph": "NADPH",
+            "fad": "FAD",
+            "fadh": "FADH",
+            "fadh2": "FADH2",
+            "da":"dA",
+            "dudp": "dUDP",
+            "datp": "dATP",
+            "dadp": "dADP",
+            "damp": "dAMP",
+            "dgtp": "dGTP",
+            "dgdp": "dGDP",
+            "dgmp": "dGMP",
+            "dttp": "dTTP",
+            "dtdp": "dTDP",
+            "dtmp": "dTMP",
+            "dctp": "dCTP",
+            "dcdp": "dCDP",
+            "dcmp": "dCMP",
+        }
+
+    result = str(name)
+
+    # Capitalize first letter BEFORE replacing abbreviations
+    m = re.search(r'([a-zA-Z])', result)
     if m:
         i = m.start()
-        return name[:i] + name[i].upper() + name[i+1:]
-    return str(name)
+        result = result[:i] + result[i].upper() + result[i+1:]
+
+    # Replace abbreviations (substring matching, case-insensitive)
+    for abbr_lower, abbr_correct in abbreviations.items():
+        # Find all occurrences (case-insensitive)
+        pattern = re.compile(re.escape(abbr_lower), re.IGNORECASE)
+        result = pattern.sub(abbr_correct, result)
+
+    return result
 
 
 def shorten_names(name: str, custom_abbrev: Optional[Dict[str, str]] = None) -> str:
     """
-    Shorten metabolite names using abbreviation dictionary
+    Shorten metabolite names using abbreviation dictionary.
+    Only replaces exact matches (ignoring case), not substrings.
     """
     if custom_abbrev is None:
         custom_abbrev = {}
 
-    s = str(name).strip().lower()
+    s = str(name).strip()
+
+    # Exact match replacement (case-insensitive)
     for full, abbr in custom_abbrev.items():
-        if full.lower() in s:
-            s = s.replace(full.lower(), abbr)
+        if s.lower() == full.lower():
+            s = abbr
+            break  # Found exact match, stop searching
+
     return smart_capitalize(s)
 
 
@@ -46,44 +99,35 @@ def compute_metabolite_turnover_by_subsystem(
     excluded_subsystems: Optional[Iterable[str]] = None,
     return_rxns: bool = False,
     store_contribs: bool = True,
+    min_flux: float = 1e-5,          # <-- добавлено
 ) -> Union[
     Dict[Tuple[str, str], float],
     Tuple[Dict[Tuple[str, str], float], Dict[Tuple[str, str], List[Tuple[str, float]]]]
 ]:
     solution = model.optimize()
     fluxes = solution.fluxes
-
     flux_sum = defaultdict(float)
-    rxn_details = defaultdict(list)  # (met_id, pathway) -> list[(rxn_id, contrib)]
-
+    rxn_details = defaultdict(list)
     excluded_set = set(excluded_subsystems) if excluded_subsystems else None
-
     for met in model.metabolites:
         for rxn in met.reactions:
             pathways = pathway_db.get_pathways_for_reaction(rxn.id)
-
             if not pathways:
                 continue
-
             v = float(fluxes.get(rxn.id, 0.0))
             contrib = abs(v)
-
-            if contrib == 0.0:
+            if contrib < min_flux:      
                 continue
-
             for pathway in pathways:
                 if excluded_set and pathway in excluded_set:
                     continue
-
                 key = (met.id, pathway)
                 flux_sum[key] += contrib
-
                 if return_rxns:
                     if store_contribs:
                         rxn_details[key].append((rxn.id, contrib))
                     else:
-                        rxn_details[key].append((rxn.id, 1.0))  
-
+                        rxn_details[key].append((rxn.id, 1.0))
     if return_rxns:
         return dict(flux_sum), dict(rxn_details)
     return dict(flux_sum)
@@ -97,12 +141,13 @@ def analyze_mets_turnover(
     output_dir: str,
     tissue: str = "unknown",
     exclude_subsystems: Optional[Iterable[str]] = ("Unknown",),
-    log2fc_threshold: float = 0.5,
+    log2fc_threshold: float = 0.75,
     min_flux: float = 1e-5,
     pathways_filter: Optional[list] = None,
     merge_compartments: bool = True,
     metabolite_shortcuts: Optional[Dict[str, str]] = None,
     pathway_merging: Optional[Dict[str, List[str]]] = None,
+    metabolite_filter: Optional[Dict] = None,
 ) -> pd.DataFrame:
 
     import os
@@ -175,12 +220,12 @@ def analyze_mets_turnover(
         sl = float(flux_slow.get((met_id, subsystem), 0.0))
 
 
-        if fs < min_flux and sl < min_flux:
+        if fs == 0.0 and sl == 0.0:
             continue
         kept_min_flux += 1
         
 
-        if fs < min_flux or sl < min_flux:
+        if fs == 0.0 or sl == 0.0:
             log2fc = 6.0 if sl < fs else -6.0
         else:
             log2fc = float(np.log2((fs / (sl))))
@@ -286,6 +331,7 @@ def analyze_mets_turnover(
         tissue=tissue,
         output_dir=output_dir,
         pathways_filter=pathways_filter,
+        metabolite_filter=metabolite_filter,
     )
 
     return df

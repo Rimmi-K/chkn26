@@ -79,9 +79,6 @@ def plot_regulation_counts(df: pd.DataFrame, output_dir: str, tissue: str,
     df = df[df[pathway_col].isin(pathways_filter)]
     df = df[df['DRF_category'].isin(color_dict.keys())]
 
-    # Note: Pathway flux values are now saved in analyze_pathway_flux_difference()
-    # as pathway_flux_values_{tissue}.csv (original) and pathwaygroup_flux_values_{tissue}.csv (groups)
-
     df['Pathways label'] = df[pathway_col]
     counts = df.groupby(['Pathways label', 'DRF_category']).size().unstack(fill_value=0)
     pathway_order = [p for p in pathways_filter if p in counts.index]
@@ -198,10 +195,10 @@ def plot_regulation_counts(df: pd.DataFrame, output_dir: str, tissue: str,
                         bar_end_x = bar_totals[pathway]
 
                         if delta_flux >= 0:
-                            text = f'+{delta_flux:.2f}'
+                            text = f'+{delta_flux:.3f}'
                             color = 'darkblue'
                         else:
-                            text = f'{delta_flux:.2f}'
+                            text = f'{delta_flux:.3f}'
                             color = 'darkred'
 
                         ax.text(
@@ -273,6 +270,7 @@ def analyze_pathway_flux_difference(merged_df: pd.DataFrame, output_dir: str,
 
     if pathway_groups_available:
         df_groups = _explode_pathways(merged_df.copy(), pathway_column="Pathway Groups")
+        n_reactions = df_groups.groupby('Pathway Groups').size().rename('n_reactions')
         path_sums_groups = df_groups.groupby('Pathway Groups')[['flux_slow', 'flux_fast']].apply(
             lambda x: x.abs().sum()
         ).reset_index()
@@ -283,8 +281,10 @@ def analyze_pathway_flux_difference(merged_df: pd.DataFrame, output_dir: str,
         path_sums_groups['flux_fast'] = path_sums_groups['flux_fast'].where(
             path_sums_groups['flux_fast'] >= 1e-6, 0
         )
+        path_sums_groups = path_sums_groups.join(n_reactions, on='Pathway Groups')
         path_sums_groups['flux_difference'] = (
-            path_sums_groups['flux_fast'] - path_sums_groups['flux_slow']
+            (path_sums_groups['flux_fast'] - path_sums_groups['flux_slow'])
+            / path_sums_groups['n_reactions']
         )
 
         # Save pathway groups
@@ -297,7 +297,6 @@ def analyze_pathway_flux_difference(merged_df: pd.DataFrame, output_dir: str,
         filtered = filtered.sort_values(by='flux_difference', ascending=False)
         return filtered
     else:
-        # No groups - return original pathways
         filtered = path_sums_original[abs(path_sums_original['flux_difference']) > threshold]
         filtered = filtered.sort_values(by='flux_difference', ascending=False)
         return filtered
@@ -361,7 +360,8 @@ def merge_identical_metabolites(heatmap_df: pd.DataFrame,
 
 def plot_fluxsum_log2fc_heatmap(df: pd.DataFrame, tissue: str, output_dir: str,
                                 pathways_filter=None, min_metabolite_values=2,
-                                merge_identical: bool = True):
+                                merge_identical: bool = True,
+                                metabolite_filter: dict = None):
     """
     Enhanced heatmap for mcPFA with unified pathways, empty metabolite filtering,
     identical metabolite merging, and Times New Roman font for compact display.
@@ -410,20 +410,42 @@ def plot_fluxsum_log2fc_heatmap(df: pd.DataFrame, tissue: str, output_dir: str,
         print(f"[plot_fluxsum_log2fc_heatmap] No data after filtering for {tissue} — skip.")
         return
 
+    if metabolite_filter:
+        met_filter_mode = metabolite_filter.get("mode", "none")
+        if met_filter_mode == "whitelist":
+            whitelist = metabolite_filter.get("whitelist", [])
+            if whitelist:
+                available = [m for m in whitelist if m in heatmap_df.columns]
+                if available:
+                    heatmap_df = heatmap_df[available]
+                    logging.info(f"[{tissue}] Metabolite whitelist: {len(available)} of {len(whitelist)} matched")
+                else:
+                    logging.warning(f"[{tissue}] Metabolite whitelist: no matches found, showing all")
+        elif met_filter_mode == "blacklist":
+            blacklist = metabolite_filter.get("blacklist", [])
+            if blacklist:
+                cols_to_keep = [c for c in heatmap_df.columns if c not in blacklist]
+                heatmap_df = heatmap_df[cols_to_keep]
+                logging.info(f"[{tissue}] Metabolite blacklist: removed {len(blacklist)} metabolites, {len(cols_to_keep)} remaining")
+
+    if heatmap_df.empty:
+        print(f"[plot_fluxsum_log2fc_heatmap] No data after metabolite filtering for {tissue} — skip.")
+        return
+
     if merge_identical:
         logging.info(f"[{tissue}] Before merging: {len(heatmap_df.columns)} metabolites")
         heatmap_df = merge_identical_metabolites(heatmap_df)
         logging.info(f"[{tissue}] After merging: {len(heatmap_df.columns)} metabolite groups")
 
     if str.lower(tissue) == "liver":
-        fig_width = 7
-        fig_height = 2.5
+        fig_width = 8
+        fig_height = 3
     elif str.lower(tissue) == "breast":
         fig_width = 7
-        fig_height = 3
+        fig_height = 2.5
     else:
-        fig_width = 7
-        fig_height = 2.7
+        fig_width = 6.2
+        fig_height = 2.5
 
     fig, ax = plt.subplots(figsize=(fig_width, fig_height))
 

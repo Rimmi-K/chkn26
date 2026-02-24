@@ -237,6 +237,11 @@ def _prepare_scatter_dataframe(
     else:
         df["Pathways"] = "Unknown"
 
+    # Add Pathway Groups column if available
+    if "Pathway Groups" in merged_df.columns:
+        pg_map = dict(zip(merged_df["reaction_id"], merged_df["Pathway Groups"]))
+        df["Pathway Groups"] = df["reaction_id"].map(pg_map)
+
     if "Pathways_list" in merged_df.columns:
         list_map = dict(zip(merged_df["reaction_id"], merged_df["Pathways_list"]))
         df["pathway_list"] = df["reaction_id"].map(list_map)
@@ -672,8 +677,10 @@ def make_scatter_deg_vs_flux(
 
     df = _calculate_marker_sizes(df, size_mode, size_thresholds, size_values, size_default)
 
+    # Save CSV without pathway_list (internal column)
     csv_out = os.path.join(output_dir, f"scatter_deg_vs_flux_{tissue}.csv")
-    df.to_csv(csv_out, index=False)
+    cols_to_save = [col for col in df.columns if col != 'pathway_list']
+    df[cols_to_save].to_csv(csv_out, index=False)
 
     fig, ax = plt.subplots(figsize=(7, 6))
 

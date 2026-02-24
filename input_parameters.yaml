@@ -113,15 +113,17 @@ pathway_merging:
     - "Phenylalanine Metabolism"
     - "Tryptophan Metabolism"
 
-  "AA other":
+  "AA central (A/D/E,G/S/T)":
+    - "Alanine, Aspartate And Glutamate Metabolism"
+    - "Glycine, Serine And Threonine Metabolism"
+
+  "AA other (Cys/Met/Lys/Arg/Pro)":
     - "Cysteine And Methionine Metabolism"
     - "Lysine Degradation"
     - "Arginine Biosynthesis"
-    - "Butanoate Metabolism"
-    - "Alanine, Aspartate And Glutamate Metabolism"
-    - "Glycine, Serine And Threonine Metabolism"
-    - "Biosynthesis Of Amino Acids"  
-
+    - "Arginine And Proline Metabolism"
+    - "Lysine Metabolism"
+    
   "Nitrogen disposal":
     - "Nitrogen Metabolism"
     - "Urea Cycle"
@@ -151,7 +153,8 @@ pathway_filter:
     - "Lipid metabolism"
     - "BCAA metabolism (Val/Leu/Iso)"
     - "AAA metabolism (Trp/Phe/Tyr)"
-    - "AA other"
+    - "AA central (A/D/E,G/S/T)"
+    - "AA other (Cys/Met/Lys/Arg/Pro)"
     - "Nucleotide metabolism"
     - "Folate Metabolism"
     - "Nitrogen disposal"
@@ -190,6 +193,9 @@ metabolite_name_shortcuts:
   dIDP: Purine dNTPs
   IMP: Purine NTPs
   GMP: Purine NTPs
+  1-Pyrroline-5-carboxylate: P5C
+  L-Glutamate 5-semialdehyde: GSA 
+  N-phosphocreatinate(2-): PCr
   s-adenosyl-l-methionine: SAM
   s-adenosyl-l-homocysteine: SAH
   adenosine: Ado
@@ -234,4 +240,5 @@ metabolite_name_shortcuts:
   5,6,7,8-Tetrahydrofolate: THF
   L-serine: L-ser
   5,10-Methylenetetrahydrofolate: CH2-THF
+  Glutaryl-CoA(5-):  Glutaryl-CoA
 

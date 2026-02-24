@@ -231,34 +231,233 @@ def plot_regulation_counts(df: pd.DataFrame, output_dir: str, tissue: str,
     plt.close()
     logging.info(f"Plot saved to {plot_path}")
 
+def create_rdpfa_summary(merged_df: pd.DataFrame, output_dir: str, tissue: str) -> pd.DataFrame:
+    """
+    Create unified rDPFA summary file combining DRF categories and flux analysis.
+
+    Returns a hierarchical table with:
+    - Pathway Groups (first column)
+    - Pathways (second column)
+    - DRF category counts (Increased, Decreased, Reversed, On, Off, Unchanged)
+    - DRF reaction lists (which reactions belong to each category)
+    - Flux metrics (flux_slow, flux_fast, total_flux_shift)
+
+    Parameters:
+    -----------
+    merged_df : pd.DataFrame
+        DataFrame with reaction-level DRF data
+    output_dir : str
+        Output directory for the summary file
+    tissue : str
+        Tissue name for the output filename
+
+    Returns:
+    --------
+    pd.DataFrame
+        Summary dataframe at pathway level
+    """
+    if not {'flux_slow', 'flux_fast', 'DRF_category'}.issubset(merged_df.columns):
+        logging.warning(f"[{tissue}] rDPFA summary skipped (missing required columns).")
+        return None
+
+    if "Pathways" not in merged_df.columns or "Pathway Groups" not in merged_df.columns:
+        logging.warning(f"[{tissue}] rDPFA summary skipped (missing pathway columns).")
+        return None
+
+    # Explode pathways to have one row per pathway per reaction
+    df_exploded = _explode_pathways(merged_df.copy(), pathway_column="Pathways")
+
+    # Build pathway to pathway group mapping
+    pathway_to_group = {}
+    for _, row in merged_df.iterrows():
+        if pd.notna(row.get('Pathways')) and pd.notna(row.get('Pathway Groups')):
+            pathways = str(row['Pathways']).split(';')
+            pathway_groups = str(row['Pathway Groups']).split(';')
+            for pw in pathways:
+                pw_clean = pw.strip()
+                for pg in pathway_groups:
+                    pg_clean = pg.strip()
+                    if pg_clean not in pathway_to_group.get(pw_clean, []):
+                        if pw_clean not in pathway_to_group:
+                            pathway_to_group[pw_clean] = []
+                        pathway_to_group[pw_clean].append(pg_clean)
+
+    # Calculate DRF category counts per pathway
+    drf_counts = df_exploded.groupby(['Pathways', 'DRF_category']).size().unstack(fill_value=0)
+
+    # Collect reaction IDs with flux_ratio for each DRF category per pathway
+    drf_categories = ['Increased', 'Decreased', 'Reversed', 'On', 'Off', 'Unchanged']
+
+    drf_reactions = {}
+    for category in drf_categories:
+        category_df = df_exploded[df_exploded['DRF_category'] == category].copy()
+        if len(category_df) > 0:
+            # Create reaction strings with flux_ratio
+            category_df['rxn_with_ratio'] = category_df.apply(
+                lambda row: f"{row['reaction_id']} ({row['flux_ratio']:.2f})", axis=1
+            )
+            # Group by pathway and join reaction strings
+            reactions_by_pathway = (
+                category_df.groupby('Pathways', as_index=True)['rxn_with_ratio']
+                .apply(lambda x: '; '.join(sorted(set(x))))
+            )
+            drf_reactions[f'{category}_reactions'] = reactions_by_pathway
+        else:
+            # Empty series for this category
+            drf_reactions[f'{category}_reactions'] = pd.Series(dtype=str)
+
+    drf_reactions_df = pd.DataFrame(drf_reactions)
+
+    # Calculate flux sums and reaction counts per pathway
+    flux_sums = df_exploded.groupby('Pathways')[['flux_slow', 'flux_fast']].apply(
+        lambda x: x.abs().sum()
+    ).reset_index()
+
+    n_reactions = df_exploded.groupby('Pathways').size().reset_index(name='n_reactions')
+
+    # Clean up near-zero values
+    flux_sums['flux_slow'] = flux_sums['flux_slow'].where(flux_sums['flux_slow'] >= 1e-6, 0)
+    flux_sums['flux_fast'] = flux_sums['flux_fast'].where(flux_sums['flux_fast'] >= 1e-6, 0)
+    flux_sums['total_flux_shift'] = flux_sums['flux_fast'] - flux_sums['flux_slow']
+
+    # Merge reaction counts
+    flux_sums = flux_sums.merge(n_reactions, on='Pathways', how='left')
+
+    # Calculate mean flux shift (normalized by number of reactions)
+    flux_sums['mean_flux_shift'] = flux_sums['total_flux_shift'] / flux_sums['n_reactions']
+
+    # Merge all data together
+    summary_df = drf_counts.reset_index()
+    summary_df = summary_df.merge(drf_reactions_df, left_on='Pathways', right_index=True, how='left')
+    summary_df = summary_df.merge(flux_sums, on='Pathways', how='left')
+
+    # Add pathway group information
+    summary_df['Pathway Groups'] = summary_df['Pathways'].apply(
+        lambda pw: '; '.join(pathway_to_group.get(pw, ['Unknown']))
+    )
+
+    # Reorder columns: Pathway Groups first, then Pathways, then DRF counts, then DRF reaction lists, then flux metrics
+    available_drf_cats = [cat for cat in drf_categories if cat in summary_df.columns]
+    available_drf_rxn_cols = [f'{cat}_reactions' for cat in drf_categories if f'{cat}_reactions' in summary_df.columns]
+
+    column_order = (
+        ['Pathway Groups', 'Pathways'] +
+        available_drf_cats +
+        available_drf_rxn_cols +
+        ['n_reactions', 'flux_fast', 'flux_slow', 'total_flux_shift', 'mean_flux_shift']
+    )
+
+    summary_df = summary_df[[col for col in column_order if col in summary_df.columns]]
+
+    # Fill NaN in reaction lists with empty strings
+    for col in available_drf_rxn_cols:
+        if col in summary_df.columns:
+            summary_df[col] = summary_df[col].fillna('')
+
+    # Sort by Pathway Groups, then by Pathways
+    summary_df = summary_df.sort_values(['Pathway Groups', 'Pathways'])
+
+    # Save the pathway-level summary file
+    out_path_pathways = os.path.join(output_dir, f'rdpfa_summary_pathways_{tissue}.csv')
+    summary_df.to_csv(out_path_pathways, index=False)
+    logging.info(f"[{tissue}] rDPFA pathway-level summary saved: {out_path_pathways}")
+
+    # Create pathway groups level summary
+    groups_summary = _create_pathway_groups_summary(summary_df, drf_categories, tissue)
+
+    # Save the pathway groups summary file
+    out_path_groups = os.path.join(output_dir, f'rdpfa_summary_groups_{tissue}.csv')
+    groups_summary.to_csv(out_path_groups, index=False)
+    logging.info(f"[{tissue}] rDPFA groups-level summary saved: {out_path_groups}")
+
+    return summary_df
+
+
+def _create_pathway_groups_summary(pathways_df: pd.DataFrame,
+                                   drf_categories: list,
+                                   tissue: str) -> pd.DataFrame:
+    """
+    Aggregate pathway-level data to pathway groups level.
+
+    Parameters:
+    -----------
+    pathways_df : pd.DataFrame
+        Pathway-level summary dataframe
+    drf_categories : list
+        List of DRF category names
+    tissue : str
+        Tissue name for logging
+
+    Returns:
+    --------
+    pd.DataFrame
+        Aggregated summary at pathway groups level
+    """
+    # Explode Pathway Groups (in case a pathway belongs to multiple groups)
+    df_exploded = pathways_df.copy()
+    df_exploded['Pathway Groups'] = df_exploded['Pathway Groups'].str.split('; ')
+    df_exploded = df_exploded.explode('Pathway Groups')
+    df_exploded['Pathway Groups'] = df_exploded['Pathway Groups'].str.strip()
+
+    # Aggregate DRF counts
+    drf_cat_columns = [cat for cat in drf_categories if cat in df_exploded.columns]
+    agg_dict = {cat: 'sum' for cat in drf_cat_columns}
+
+    # Aggregate flux metrics
+    agg_dict['n_reactions'] = 'sum'
+    agg_dict['flux_fast'] = 'sum'
+    agg_dict['flux_slow'] = 'sum'
+
+    groups_agg = df_exploded.groupby('Pathway Groups').agg(agg_dict).reset_index()
+
+    # Recalculate total and mean flux shift
+    groups_agg['total_flux_shift'] = groups_agg['flux_fast'] - groups_agg['flux_slow']
+    groups_agg['mean_flux_shift'] = groups_agg['total_flux_shift'] / groups_agg['n_reactions']
+
+    # Collect reaction lists for each DRF category at group level
+    for category in drf_categories:
+        rxn_col = f'{category}_reactions'
+        if rxn_col in df_exploded.columns:
+            # Aggregate reaction lists
+            rxn_lists = (
+                df_exploded[df_exploded[rxn_col].notna() & (df_exploded[rxn_col] != '')]
+                .groupby('Pathway Groups')[rxn_col]
+                .apply(lambda x: '; '.join(x))
+            )
+            groups_agg[rxn_col] = groups_agg['Pathway Groups'].map(rxn_lists).fillna('')
+
+    # Reorder columns to match pathway-level structure
+    available_drf_cats = [cat for cat in drf_categories if cat in groups_agg.columns]
+    available_drf_rxn_cols = [f'{cat}_reactions' for cat in drf_categories if f'{cat}_reactions' in groups_agg.columns]
+
+    column_order = (
+        ['Pathway Groups'] +
+        available_drf_cats +
+        available_drf_rxn_cols +
+        ['n_reactions', 'flux_fast', 'flux_slow', 'total_flux_shift', 'mean_flux_shift']
+    )
+
+    groups_agg = groups_agg[[col for col in column_order if col in groups_agg.columns]]
+
+    # Sort by Pathway Groups
+    groups_agg = groups_agg.sort_values('Pathway Groups')
+
+    logging.info(f"[{tissue}] Aggregated {len(pathways_df)} pathways into {len(groups_agg)} pathway groups")
+
+    return groups_agg
+
+
 def analyze_pathway_flux_difference(merged_df: pd.DataFrame, output_dir: str,
                                    tissue: str, threshold: float = 1.0) -> pd.DataFrame:
     """
     Analyze flux difference by pathways (sum of absolute fluxes).
+
+    This function is kept for backward compatibility with plotting functions.
+    It returns filtered pathway groups data for visualization.
     """
     if not {'flux_slow', 'flux_fast'}.issubset(merged_df.columns):
         logging.warning("Pathway flux analysis skipped (missing flux data).")
         return None
-
-    if "Pathways" in merged_df.columns:
-        df_original = _explode_pathways(merged_df.copy(), pathway_column="Pathways")
-        path_sums_original = df_original.groupby('Pathways')[['flux_slow', 'flux_fast']].apply(
-            lambda x: x.abs().sum()
-        ).reset_index()
-
-        path_sums_original['flux_slow'] = path_sums_original['flux_slow'].where(
-            path_sums_original['flux_slow'] >= 1e-6, 0
-        )
-        path_sums_original['flux_fast'] = path_sums_original['flux_fast'].where(
-            path_sums_original['flux_fast'] >= 1e-6, 0
-        )
-        path_sums_original['total_flux_shift'] = (
-            path_sums_original['flux_fast'] - path_sums_original['flux_slow']
-        )
-
-        out_path_original = os.path.join(output_dir, f'pathway_flux_values_{tissue}.csv')
-        path_sums_original.to_csv(out_path_original, index=False)
-        logging.info(f"Original pathway flux values saved: {out_path_original}")
 
     pathway_groups_available = "Pathway Groups" in merged_df.columns
 
@@ -283,17 +482,30 @@ def analyze_pathway_flux_difference(merged_df: pd.DataFrame, output_dir: str,
             path_sums_groups['total_flux_shift'] / path_sums_groups['n_reactions']
         )
 
-        out_path_groups = os.path.join(output_dir, f'pathwaygroup_flux_values_{tissue}.csv')
-        path_sums_groups.to_csv(out_path_groups, index=False)
-        logging.info(f"Pathway groups flux values saved: {out_path_groups}")
-
         filtered = path_sums_groups[abs(path_sums_groups['total_flux_shift']) > threshold]
         filtered = filtered.sort_values(by='total_flux_shift', ascending=False)
         return filtered
     else:
-        filtered = path_sums_original[abs(path_sums_original['total_flux_shift']) > threshold]
-        filtered = filtered.sort_values(by='total_flux_shift', ascending=False)
-        return filtered
+        if "Pathways" in merged_df.columns:
+            df_original = _explode_pathways(merged_df.copy(), pathway_column="Pathways")
+            path_sums_original = df_original.groupby('Pathways')[['flux_slow', 'flux_fast']].apply(
+                lambda x: x.abs().sum()
+            ).reset_index()
+
+            path_sums_original['flux_slow'] = path_sums_original['flux_slow'].where(
+                path_sums_original['flux_slow'] >= 1e-6, 0
+            )
+            path_sums_original['flux_fast'] = path_sums_original['flux_fast'].where(
+                path_sums_original['flux_fast'] >= 1e-6, 0
+            )
+            path_sums_original['total_flux_shift'] = (
+                path_sums_original['flux_fast'] - path_sums_original['flux_slow']
+            )
+
+            filtered = path_sums_original[abs(path_sums_original['total_flux_shift']) > threshold]
+            filtered = filtered.sort_values(by='total_flux_shift', ascending=False)
+            return filtered
+        return None
 
 
 def make_band_squash_transform(B: float = 1.0, k: float = 10.0):
@@ -368,7 +580,7 @@ def plot_fluxsum_log2fc_heatmap(df: pd.DataFrame, tissue: str, output_dir: str,
     plt.rcParams['font.family'] = 'serif'
     plt.rcParams['font.serif'] = ['Times New Roman', 'Times', 'DejaVu Serif']
 
-    label_fontsize = 8
+    label_fontsize = 7.5
     axis_title_fontsize = 9
     annot_fontsize = 8
     cbar_label_fontsize = 8
@@ -403,6 +615,14 @@ def plot_fluxsum_log2fc_heatmap(df: pd.DataFrame, tissue: str, output_dir: str,
         print(f"[plot_fluxsum_log2fc_heatmap] No data after filtering for {tissue} — skip.")
         return
 
+    # Filter out pathways that became empty after metabolite filtering
+    pathway_content = heatmap_df.notna().sum(axis=1)
+    heatmap_df = heatmap_df[pathway_content > 0]
+
+    if heatmap_df.empty:
+        print(f"[plot_fluxsum_log2fc_heatmap] No pathways with data after filtering for {tissue} — skip.")
+        return
+
     if metabolite_filter:
         met_filter_mode = metabolite_filter.get("mode", "none")
         if met_filter_mode == "whitelist":
@@ -425,6 +645,14 @@ def plot_fluxsum_log2fc_heatmap(df: pd.DataFrame, tissue: str, output_dir: str,
         print(f"[plot_fluxsum_log2fc_heatmap] No data after metabolite filtering for {tissue} — skip.")
         return
 
+    # Filter out pathways that became empty after all metabolite filtering
+    pathway_content = heatmap_df.notna().sum(axis=1)
+    heatmap_df = heatmap_df[pathway_content > 0]
+
+    if heatmap_df.empty:
+        print(f"[plot_fluxsum_log2fc_heatmap] No pathways with data after all filtering for {tissue} — skip.")
+        return
+
     if merge_identical:
         logging.info(f"[{tissue}] Before merging: {len(heatmap_df.columns)} metabolites")
         heatmap_df = merge_identical_metabolites(heatmap_df)
@@ -435,10 +663,10 @@ def plot_fluxsum_log2fc_heatmap(df: pd.DataFrame, tissue: str, output_dir: str,
         fig_height = 3
     elif str.lower(tissue) == "breast":
         fig_width = 7
-        fig_height = 2.5
+        fig_height = 2.7
     else:
         fig_width = 6.2
-        fig_height = 2.5
+        fig_height = 2.3
 
     fig, ax = plt.subplots(figsize=(fig_width, fig_height))
 

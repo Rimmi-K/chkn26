@@ -13,7 +13,8 @@ from .utils.gpr_utils import (
 from .utils.io_utils import load_deg_table
 from .visualization import (
     plot_regulation_counts,
-    analyze_pathway_flux_difference
+    analyze_pathway_flux_difference,
+    create_rdpfa_summary
 )
 from .scatter_plot import make_scatter_deg_vs_flux
 from .utils.flux_utils import (
@@ -118,10 +119,11 @@ def run_analysis(model, slow_model, fast_model, tissue,
         merged_df["Pathway_Groups_list"] = merged_df["Pathways_list"]
         merged_df["Pathway Groups"] = merged_df["Pathways"]
 
-    merged_df.to_csv(os.path.join(output_dir, f'drf_{tissue}.csv'), index=False)
-
     logging.info(f"\n[{tissue}] Pathways in merged_df: {merged_df['Pathways'].nunique()}")
     logging.info(f"[{tissue}] DRF categories: {merged_df['DRF_category'].value_counts().to_dict()}")
+
+    # Create unified rDPFA summary file (replaces separate drf, pathway_flux_values, pathwaygroup_flux_values files)
+    rdpfa_summary = create_rdpfa_summary(merged_df, output_dir, tissue)
 
     filter_pathways_list = None
 

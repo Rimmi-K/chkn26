@@ -9,9 +9,9 @@ import matplotlib.pyplot as plt
 from matplotlib.scale import FuncScale
 from matplotlib.lines import Line2D
 from matplotlib.patches import Wedge, Circle
-from .utils.pathway_colors import canonicalize_pathway, palette_for_df, get_color_for_pathway
-from .utils.gpr_utils import build_gpr_rule_map, make_gpr_rule_with_values, build_reaction_pathways_map
-from .utils.flux_utils import FLUX_ON, FLUX_OFF, FLUX_REVERSED
+from dpfa.utils.pathway_colors import canonicalize_pathway, palette_for_df, get_color_for_pathway
+from dpfa.utils.gpr_utils import build_gpr_rule_map, make_gpr_rule_with_values, build_reaction_pathways_map
+from dpfa.utils.flux_utils import FLUX_ON, FLUX_OFF, FLUX_REVERSED
 import matplotlib.ticker as mticker
 
 
@@ -226,7 +226,7 @@ def _prepare_scatter_dataframe(
 
     df["rxn_p"] = df["reaction_id"].map(rxn_p_map) if rxn_p_map is not None else np.nan
     df["padj_rxn"] = df["reaction_id"].map(padj_rxn_map) if padj_rxn_map is not None else np.nan
-    df["rxn_sig_by_padj"] = df["reaction_id"].map(rxn_sig_map).fillna(False).astype(bool)
+    df["rxn_sig_by_padj"] = df["reaction_id"].map(rxn_sig_map).astype(bool)
 
     if "Pathways" in merged_df.columns:
         path_map = dict(zip(merged_df["reaction_id"], merged_df["Pathways"]))
@@ -237,10 +237,10 @@ def _prepare_scatter_dataframe(
     else:
         df["Pathways"] = "Unknown"
 
-    # Add Pathway Groups column if available
-    if "Pathway Groups" in merged_df.columns:
-        pg_map = dict(zip(merged_df["reaction_id"], merged_df["Pathway Groups"]))
-        df["Pathway Groups"] = df["reaction_id"].map(pg_map)
+    # Add Subsystems column if available
+    if "Subsystems" in merged_df.columns:
+        sub_map = dict(zip(merged_df["reaction_id"], merged_df["Subsystems"]))
+        df["Subsystems"] = df["reaction_id"].map(sub_map)
 
     if "Pathways_list" in merged_df.columns:
         list_map = dict(zip(merged_df["reaction_id"], merged_df["Pathways_list"]))
@@ -437,10 +437,8 @@ def _configure_axes(ax, tissue: str, rxn_lfc_thr: float, flux_log2_thr: float):
     ax.xaxis.set_minor_locator(mticker.NullLocator())
     ax.yaxis.set_minor_locator(mticker.NullLocator())
 
-    if tissue == "leg":
-        ax.set_ylim(bottom=-3.5, top=7)
-    else:
-        ax.set_ylim(bottom=-2, top=7)
+    # Set ylim to -3.5 to show FLUX_OFF reactions (log2_ratio = -3.0)
+    ax.set_ylim(bottom=-3.5, top=7)
 
     ax.axvline(0, ls="--", lw=1, color="k", alpha=0.35)
     ax.axhline(0, ls="--", lw=1, color="k", alpha=0.35)
@@ -677,10 +675,44 @@ def make_scatter_deg_vs_flux(
 
     df = _calculate_marker_sizes(df, size_mode, size_thresholds, size_values, size_default)
 
-    # Save CSV without pathway_list (internal column)
-    csv_out = os.path.join(output_dir, f"scatter_deg_vs_flux_{tissue}.csv")
-    cols_to_save = [col for col in df.columns if col != 'pathway_list']
-    df[cols_to_save].to_csv(csv_out, index=False)
+    # Prepare output dataframe with selected columns
+    COL_MAP = {
+        "reaction_id": "Reaction ID",
+        "GPR_rule": "GPR rule (genes)",
+        "deg_log2fc": "Transcript effect (log2FC)",
+        "log2_ratio": "Flux change log2(FG/SG)",
+        "padj_rxn": "Adjusted p-value (FDR)",
+        "Pathways": "Metabolic pathways",
+        "Subsystems": "Subsystem",
+    }
+
+    # Add Concordant column - requires passing thresholds AND same sign
+    df["Concordant (transcript–flux)"] = df["highlight"] & (
+        ((df["deg_log2fc"] > 0) & (df["log2_ratio"] > 0)) |
+        ((df["deg_log2fc"] < 0) & (df["log2_ratio"] < 0))
+    )
+
+    # Add Significant column (passes both thresholds, regardless of concordance)
+    df["Significant reaction (transcript effect & flux ratio)"] = df["highlight"]
+
+    # Select and rename columns for output
+    keep = [c for c in COL_MAP if c in df.columns]
+    df_out = df[keep + ["Concordant (transcript–flux)", "Significant reaction (transcript effect & flux ratio)"]].rename(columns=COL_MAP).copy()
+
+    # Round numerics
+    for col in ["Transcript effect (log2FC)", "Flux change log2(FG/SG)", "Adjusted p-value (FDR)"]:
+        if col in df_out.columns:
+            df_out[col] = pd.to_numeric(df_out[col], errors="coerce").round(4)
+
+    # Sort: concordant first, then by |flux change| descending
+    df_out["_conc"] = df_out["Concordant (transcript–flux)"].apply(lambda x: 0 if x else 1)
+    df_out["_abs"] = df_out["Flux change log2(FG/SG)"].abs()
+    df_out = df_out.sort_values(["_conc", "_abs"], ascending=[True, False]).drop(
+        columns=["_conc", "_abs"]).reset_index(drop=True)
+
+    # Save CSV
+    csv_out = os.path.join(output_dir, f"tfca_results_{tissue}.csv")
+    df_out.to_csv(csv_out, index=False)
 
     fig, ax = plt.subplots(figsize=(7, 6))
 

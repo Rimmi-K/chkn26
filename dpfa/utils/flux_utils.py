@@ -33,8 +33,8 @@ def process_models(slow_model_path: str, fast_model_path: str, tissue: str, outp
     fast_flux = fast_solution.fluxes.reset_index()
     slow_flux.columns = ['reaction_id', 'flux']
     fast_flux.columns = ['reaction_id', 'flux']
-    slow_flux['flux'] = slow_flux['flux'].where(abs(slow_flux['flux']) >= 1e-5, 0)
-    fast_flux['flux'] = fast_flux['flux'].where(abs(fast_flux['flux']) >= 1e-5, 0)
+    slow_flux['flux'] = slow_flux['flux'].where(abs(slow_flux['flux']) >= 1e-6, 0)
+    fast_flux['flux'] = fast_flux['flux'].where(abs(fast_flux['flux']) >= 1e-6, 0)
 
     slow_path = os.path.join(output_dir, f'slow_model_{tissue}.csv')
     fast_path = os.path.join(output_dir, f'fast_model_{tissue}.csv')
@@ -70,7 +70,7 @@ def ratio_fluxes(flux_slow_path: str, flux_fast_path: str,
             ratios.append(FLUX_REVERSED)
         elif x != 0 and y != 0:
             val = y / x
-            ratios.append(val if abs(val) >= 1e-5 else 0)
+            ratios.append(val if abs(val) >= 1e-6 else 0)
         else:
             ratios.append(0)
 

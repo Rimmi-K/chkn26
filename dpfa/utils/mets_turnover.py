@@ -99,7 +99,7 @@ def compute_metabolite_turnover_by_subsystem(
     excluded_subsystems: Optional[Iterable[str]] = None,
     return_rxns: bool = False,
     store_contribs: bool = True,
-    min_flux: float = 1e-5,          # <-- добавлено
+    min_flux: float = 1e-6,          # <-- добавлено
 ) -> Union[
     Dict[Tuple[str, str], float],
     Tuple[Dict[Tuple[str, str], float], Dict[Tuple[str, str], List[Tuple[str, float]]]]
@@ -141,20 +141,18 @@ def analyze_mets_turnover(
     output_dir: str,
     tissue: str = "unknown",
     exclude_subsystems: Optional[Iterable[str]] = ("Unknown",),
-    log2fc_threshold: float = 0.75,
-    min_flux: float = 1e-5,
+    log2fc_threshold: float = 1.5,
+    min_flux: float = 1e-6,
     pathways_filter: Optional[list] = None,
     merge_compartments: bool = True,
     metabolite_shortcuts: Optional[Dict[str, str]] = None,
     pathway_merging: Optional[Dict[str, List[str]]] = None,
     metabolite_filter: Optional[Dict] = None,
+    min_pathways_with_change: int = 2,
 ) -> pd.DataFrame:
 
     import os
     import logging
-
-    if tissue == "liver":
-        log2fc_threshold = 1.5
 
     os.makedirs(output_dir, exist_ok=True)
 
@@ -163,7 +161,7 @@ def analyze_mets_turnover(
         pathway_db,
         exclude_subsystems,
         return_rxns=True,
-        store_contribs=True,   
+        store_contribs=True,
     )
     flux_slow, rxns_slow = compute_metabolite_turnover_by_subsystem(
         model_slow,
@@ -177,12 +175,53 @@ def analyze_mets_turnover(
         f"[{tissue}] mcPFA raw entries: fast={len(flux_fast)}, slow={len(flux_slow)}"
     )
 
+    # If merge_compartments is True, aggregate fluxes across compartments BEFORE computing log2FC
+    if merge_compartments:
+        flux_fast_merged = {}
+        flux_slow_merged = {}
+        rxns_fast_merged = {}
+        rxns_slow_merged = {}
+
+        def strip_compartment(met_id: str) -> str:
+            """Remove compartment suffix from metabolite ID"""
+            parts = met_id.rsplit("_", 1)
+            if len(parts) == 2 and len(parts[1]) <= 2:  # Compartment suffixes are usually 1-2 chars
+                return parts[0]
+            return met_id
+
+        # Aggregate flux_fast across compartments
+        for (met_id, subsystem), flux_val in flux_fast.items():
+            met_base = strip_compartment(met_id)
+            key = (met_base, subsystem)
+            flux_fast_merged[key] = flux_fast_merged.get(key, 0.0) + flux_val
+
+            if key not in rxns_fast_merged:
+                rxns_fast_merged[key] = []
+            rxns_fast_merged[key].extend(rxns_fast.get((met_id, subsystem), []))
+
+        # Aggregate flux_slow across compartments
+        for (met_id, subsystem), flux_val in flux_slow.items():
+            met_base = strip_compartment(met_id)
+            key = (met_base, subsystem)
+            flux_slow_merged[key] = flux_slow_merged.get(key, 0.0) + flux_val
+
+            if key not in rxns_slow_merged:
+                rxns_slow_merged[key] = []
+            rxns_slow_merged[key].extend(rxns_slow.get((met_id, subsystem), []))
+
+        flux_fast = flux_fast_merged
+        flux_slow = flux_slow_merged
+        rxns_fast = rxns_fast_merged
+        rxns_slow = rxns_slow_merged
+
+        logging.info(
+            f"[{tissue}] mcPFA after compartment merging: fast={len(flux_fast)}, slow={len(flux_slow)}"
+        )
+
     all_keys = set(flux_fast.keys()) | set(flux_slow.keys())
-    logging.info(f"[{tissue}] mcPFA shared entries: {len(all_keys)}")
+    logging.info(f"[{tissue}] mcPFA total entries: {len(all_keys)}")
 
     rows = []
-    kept_min_flux = 0
-    kept_log2fc = 0
     log2fc_vals = []
 
     def _extract_compartment(met_obj, met_id_str: str) -> str:
@@ -199,6 +238,11 @@ def analyze_mets_turnover(
         lst_f = rxns_fast.get(key, [])
         lst_s = rxns_slow.get(key, [])
 
+        # Collect fast and slow fluxes for each reaction
+        fast_fluxes = {rid: c for rid, c in lst_f}
+        slow_fluxes = {rid: c for rid, c in lst_s}
+
+        # Get max flux for sorting
         score = defaultdict(float)
         for rid, c in lst_f:
             if c > score[rid]:
@@ -212,50 +256,68 @@ def analyze_mets_turnover(
         if top_n is not None:
             ordered = ordered[:top_n]
 
-        return ";".join([rid for rid, _ in ordered])
+        # Format: reaction_id (fast_flux, slow_flux)
+        result = []
+        for rid, _ in ordered:
+            fast_val = fast_fluxes.get(rid, 0.0)
+            slow_val = slow_fluxes.get(rid, 0.0)
+            result.append(f"{rid} ({fast_val:.2e}, {slow_val:.2e})")
+
+        return "; ".join(result)
 
 
     for met_id, subsystem in all_keys:
         fs = float(flux_fast.get((met_id, subsystem), 0.0))
         sl = float(flux_slow.get((met_id, subsystem), 0.0))
 
-
+        # Skip entries where both fluxes are exactly zero
         if fs == 0.0 and sl == 0.0:
             continue
-        kept_min_flux += 1
-        
+
 
         if fs == 0.0 or sl == 0.0:
             log2fc = 6.0 if sl < fs else -6.0
         else:
             log2fc = float(np.log2((fs / (sl))))
 
-        if abs(log2fc) <= log2fc_threshold:
-            continue
-
-        kept_log2fc += 1
+        # NOTE: Do NOT filter by log2fc_threshold here!
+        # Filtering should happen only during visualization,
+        # and only if metabolite is below threshold in ALL pathways
         log2fc_vals.append(log2fc)
 
         met = None
         met_original_name = met_id
+
+        # If compartments were merged, met_id may not have compartment suffix
+        # Try to find the metabolite in the model
         try:
             met = model.metabolites.get_by_id(met_id)
             met_original_name = met.name
         except Exception:
-            pass
+            # If met_id doesn't exist (after compartment merging), try to find it with common compartments
+            if merge_compartments:
+                for comp_suffix in ['_c', '_m', '_e', '_n', '_x', '_r', '_g', '_l']:
+                    try:
+                        met = model.metabolites.get_by_id(f"{met_id}{comp_suffix}")
+                        met_original_name = met.name
+                        break
+                    except Exception:
+                        continue
 
         # Get compartment
         comp = _extract_compartment(met, met_id)
 
-        # Original metabolite name with compartment
-        original_met_label = f"{met_original_name} ({comp})" if comp != "?" else met_original_name
+        # Original metabolite name
+        if merge_compartments:
+            # After merging, we show metabolite name without compartment
+            original_met_label = met_original_name
+        else:
+            # Before merging, show with compartment
+            original_met_label = f"{met_original_name} ({comp})" if comp != "?" else met_original_name
 
         # Shortened metabolite name (for grouping/visualization)
         shortened_name = shorten_names(met_original_name, metabolite_shortcuts)
-        if merge_compartments:
-            met_group = shortened_name
-        else:
-            met_group = f"{shortened_name} ({comp})"
+        met_group = shortened_name  # Always use shortened name for grouping after merge
 
         key = (met_id, subsystem)
         rxn_str = _format_reactions_for_key(key, top_n=None)
@@ -264,19 +326,14 @@ def analyze_mets_turnover(
             {
                 "metabolite_id": met_id,
                 "Metabolite": original_met_label,
-                "Metabolite Group": met_group,
+                "Metabolite Shortname": met_group,
                 "Metabolic Pathways": subsystem,
                 "log2FC_fluxsum": log2fc,
                 "Reactions": rxn_str,
             }
         )
 
-    if kept_min_flux == 0:
-        logging.warning(f"[{tissue}] mcPFA no entries passed min_flux={min_flux}")
-    if kept_log2fc == 0:
-        logging.warning(
-            f"[{tissue}] mcPFA no entries passed log2fc_threshold={log2fc_threshold}"
-        )
+
     if log2fc_vals:
         logging.info(
             f"[{tissue}] mcPFA log2fc stats: min={min(log2fc_vals):.3f}, "
@@ -292,21 +349,21 @@ def analyze_mets_turnover(
                 reverse_mapping[old_name] = new_name
 
         original_pathways = df["Metabolic Pathways"].nunique()
-        df["Pathway Group"] = df["Metabolic Pathways"].map(
+        df["Subsystem"] = df["Metabolic Pathways"].map(
             lambda x: reverse_mapping.get(x, x) if pd.notna(x) else x
         )
-        merged_pathways = df["Pathway Group"].nunique()
+        merged_pathways = df["Subsystem"].nunique()
 
         logging.info(
             f"[{tissue}] Applied pathway merging to mcPFA: "
-            f"{original_pathways} original pathways → {merged_pathways} pathway groups"
+            f"{original_pathways} original pathways → {merged_pathways} subsystems"
         )
     else:
-        df["Pathway Group"] = df["Metabolic Pathways"]
+        df["Subsystem"] = df["Metabolic Pathways"]
 
     # Reorder columns
-    cols = ["metabolite_id", "Metabolite", "Metabolite Group",
-            "Metabolic Pathways", "Pathway Group",
+    cols = ["metabolite_id", "Metabolite", "Metabolite Shortname",
+            "Metabolic Pathways", "Subsystem",
             "log2FC_fluxsum", "Reactions"]
     df = df[cols]
 
@@ -315,23 +372,25 @@ def analyze_mets_turnover(
 
     if df.empty:
         logging.warning(
-            f"[{tissue}] mcPFA empty after filtering "
-            f"(min_flux={min_flux}, log2fc_threshold={log2fc_threshold})."
+            f"[{tissue}] mcPFA empty after filtering (min_flux={min_flux})."
         )
         return df
 
-    logging.info(f"[{tissue}] mcPFA rows after filtering: {len(df)}")
+    logging.info(f"[{tissue}] mcPFA total rows (no log2fc filtering): {len(df)}")
     logging.info(f"[{tissue}] mcPFA table saved: {out_csv}")
 
     # Import here to avoid circular dependency
-    from ..visualization import plot_fluxsum_log2fc_heatmap
+    from scrs.dpfa.visualization import plot_fluxsum_log2fc_heatmap
 
+    # Pass log2fc_threshold to visualization function for proper filtering
     plot_fluxsum_log2fc_heatmap(
         df,
         tissue=tissue,
         output_dir=output_dir,
         pathways_filter=pathways_filter,
         metabolite_filter=metabolite_filter,
+        log2fc_threshold=log2fc_threshold,
+        min_pathways_with_change=min_pathways_with_change,
     )
 
     return df

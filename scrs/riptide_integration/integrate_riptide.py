@@ -43,10 +43,16 @@ def process_group_with_fractions(
     for fraction in [round(i * 0.05, 2) for i in range(2, 20)]:
         for growth, transcriptome in (("slow", t_slow), ("fast", t_fast)):
             logging.info(f"\n  Processing group_{group_name}_{growth} with fraction={fraction}")
-            mcs = riptide.contextualize(model=model, transcriptome=transcriptome, fraction=fraction)
-            out_path = os.path.join(output_dir, f"mcs_{growth}_{group_name}_fraction_{fraction:.2f}.json")
-            cobra.io.save_json_model(mcs.model, out_path)
-            logging.info(f"  Saved: {out_path}")
+            try:
+                mcs = riptide.contextualize(model=model, transcriptome=transcriptome, fraction=fraction)
+                out_path = os.path.join(output_dir, f"mcs_{growth}_{group_name}_fraction_{fraction:.2f}.json")
+                cobra.io.save_json_model(mcs.model, out_path)
+                logging.info(f"  Saved: {out_path}")
+            except Exception as e:
+                error_msg = f"  ERROR: Failed for {group_name}_{growth} fraction={fraction}: {e}"
+                logging.error(error_msg)
+                print(error_msg)
+                continue
 
 
 def parse_log_to_table(log_path: str = LOG_FILE, output_path: str = "riptide_summary.csv") -> pd.DataFrame:

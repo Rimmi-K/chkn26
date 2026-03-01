@@ -1,631 +1,134 @@
 The current solver interface glpk doesn't support setting the optimality tolerance.
 
-Processing breast с fraction = 0.1
-  Processing group_breast_slow с fraction = 0.1
+  Processing group_breast_slow with fraction=0.1
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 340 from 2674 (87.28% change)
-Metabolites pruned to 367 from 2570 (85.72% change)
-Flux through the objective DECREASED to ~0.0072 from ~0.0342 (78.95% change)
-Context-specific metabolism correlates with transcriptome (r=0.302, p<0.001 *)
+Reactions pruned to 396 from 2674 (85.19% change)
+Metabolites pruned to 430 from 2570 (83.27% change)
+Flux through the objective DECREASED to ~0.011 from ~0.0342 (67.84% change)
+Context-specific metabolism correlates with transcriptome (r=0.241, p<0.001 *)
 
-RIPTiDe completed in 18 seconds
+RIPTiDe completed in 27 seconds
 
   Saved: data/models/context_specific/mcs_slow_breast_fraction_0.10.json
-  Processing group_breast_fast с fraction = 0.1
+
+  Processing group_breast_fast with fraction=0.1
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 348 from 2674 (86.99% change)
-Metabolites pruned to 372 from 2570 (85.53% change)
-Flux through the objective DECREASED to ~0.0163 from ~0.0342 (52.34% change)
-Context-specific metabolism correlates with transcriptome (r=0.202, p<0.001 *)
+Reactions pruned to 366 from 2674 (86.31% change)
+Metabolites pruned to 397 from 2570 (84.55% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.269, p<0.001 *)
 
-RIPTiDe completed in 18 seconds
+RIPTiDe completed in 25 seconds
 
   Saved: data/models/context_specific/mcs_fast_breast_fraction_0.10.json
 
-Processing breast с fraction = 0.15
-  Processing group_breast_slow с fraction = 0.15
+  Processing group_breast_slow with fraction=0.15
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 353 from 2674 (86.8% change)
-Metabolites pruned to 386 from 2570 (84.98% change)
-Flux through the objective DECREASED to ~0.0072 from ~0.0342 (78.95% change)
-Context-specific metabolism correlates with transcriptome (r=0.244, p<0.001 *)
+Reactions pruned to 408 from 2674 (84.74% change)
+Metabolites pruned to 435 from 2570 (83.07% change)
+Flux through the objective DECREASED to ~0.011 from ~0.0342 (67.84% change)
+Context-specific metabolism correlates with transcriptome (r=0.187, p<0.001 *)
 
-RIPTiDe completed in 19 seconds
+RIPTiDe completed in 25 seconds
 
   Saved: data/models/context_specific/mcs_slow_breast_fraction_0.15.json
-  Processing group_breast_fast с fraction = 0.15
+
+  Processing group_breast_fast with fraction=0.15
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 337 from 2674 (87.4% change)
-Metabolites pruned to 359 from 2570 (86.03% change)
-Flux through the objective DECREASED to ~0.0163 from ~0.0342 (52.34% change)
-Context-specific metabolism correlates with transcriptome (r=0.21, p<0.001 *)
+Reactions pruned to 376 from 2674 (85.94% change)
+Metabolites pruned to 406 from 2570 (84.2% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.27, p<0.001 *)
 
-RIPTiDe completed in 19 seconds
+RIPTiDe completed in 24 seconds
 
   Saved: data/models/context_specific/mcs_fast_breast_fraction_0.15.json
 
-Processing breast с fraction = 0.2
-  Processing group_breast_slow с fraction = 0.2
+  Processing group_breast_slow with fraction=0.2
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 344 from 2674 (87.14% change)
-Metabolites pruned to 366 from 2570 (85.76% change)
-Flux through the objective DECREASED to ~0.0072 from ~0.0342 (78.95% change)
-Context-specific metabolism correlates with transcriptome (r=0.258, p<0.001 *)
+Reactions pruned to 412 from 2674 (84.59% change)
+Metabolites pruned to 441 from 2570 (82.84% change)
+Flux through the objective DECREASED to ~0.011 from ~0.0342 (67.84% change)
+Context-specific metabolism correlates with transcriptome (r=0.238, p<0.001 *)
 
-RIPTiDe completed in 19 seconds
+RIPTiDe completed in 25 seconds
 
   Saved: data/models/context_specific/mcs_slow_breast_fraction_0.20.json
-  Processing group_breast_fast с fraction = 0.2
+
+  Processing group_breast_fast with fraction=0.2
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 346 from 2674 (87.06% change)
-Metabolites pruned to 371 from 2570 (85.56% change)
-Flux through the objective DECREASED to ~0.0163 from ~0.0342 (52.34% change)
-Context-specific metabolism correlates with transcriptome (r=0.202, p<0.001 *)
+Reactions pruned to 368 from 2674 (86.24% change)
+Metabolites pruned to 400 from 2570 (84.44% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.273, p<0.001 *)
 
-RIPTiDe completed in 19 seconds
+RIPTiDe completed in 23 seconds
 
   Saved: data/models/context_specific/mcs_fast_breast_fraction_0.20.json
 
-Processing breast с fraction = 0.25
-  Processing group_breast_slow с fraction = 0.25
+  Processing group_breast_slow with fraction=0.25
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 358 from 2674 (86.61% change)
-Metabolites pruned to 385 from 2570 (85.02% change)
-Flux through the objective DECREASED to ~0.0214 from ~0.0342 (37.43% change)
-Context-specific metabolism correlates with transcriptome (r=0.261, p<0.001 *)
+Reactions pruned to 339 from 2674 (87.32% change)
+Metabolites pruned to 354 from 2570 (86.23% change)
+Flux through the objective DECREASED to ~0.011 from ~0.0342 (67.84% change)
+Context-specific metabolism correlates with transcriptome (r=0.236, p<0.001 *)
 
-RIPTiDe completed in 19 seconds
+RIPTiDe completed in 20 seconds
 
   Saved: data/models/context_specific/mcs_slow_breast_fraction_0.25.json
-  Processing group_breast_fast с fraction = 0.25
+
+  Processing group_breast_fast with fraction=0.25
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 350 from 2674 (86.91% change)
-Metabolites pruned to 376 from 2570 (85.37% change)
-Flux through the objective DECREASED to ~0.0163 from ~0.0342 (52.34% change)
-Context-specific metabolism correlates with transcriptome (r=0.25, p<0.001 *)
+Reactions pruned to 378 from 2674 (85.86% change)
+Metabolites pruned to 410 from 2570 (84.05% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.271, p<0.001 *)
 
-RIPTiDe completed in 19 seconds
+RIPTiDe completed in 22 seconds
 
   Saved: data/models/context_specific/mcs_fast_breast_fraction_0.25.json
 
-Processing breast с fraction = 0.3
-  Processing group_breast_slow с fraction = 0.3
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 349 from 2674 (86.95% change)
-Metabolites pruned to 371 from 2570 (85.56% change)
-Flux through the objective DECREASED to ~0.0214 from ~0.0342 (37.43% change)
-Context-specific metabolism correlates with transcriptome (r=0.238, p<0.001 *)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.30.json
-  Processing group_breast_fast с fraction = 0.3
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 362 from 2674 (86.46% change)
-Metabolites pruned to 387 from 2570 (84.94% change)
-Flux through the objective DECREASED to ~0.0162 from ~0.0342 (52.63% change)
-Context-specific metabolism correlates with transcriptome (r=0.179, p=0.001 *)
-
-RIPTiDe completed in 20 seconds
-
-  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.30.json
-
-Processing breast с fraction = 0.35
-  Processing group_breast_slow с fraction = 0.35
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 336 from 2674 (87.43% change)
-Metabolites pruned to 357 from 2570 (86.11% change)
-Flux through the objective DECREASED to ~0.0214 from ~0.0342 (37.43% change)
-Context-specific metabolism correlates with transcriptome (r=0.251, p<0.001 *)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.35.json
-  Processing group_breast_fast с fraction = 0.35
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 320 from 2674 (88.03% change)
-Metabolites pruned to 337 from 2570 (86.89% change)
-Flux through the objective DECREASED to ~0.0163 from ~0.0342 (52.34% change)
-Context-specific metabolism correlates with transcriptome (r=0.145, p=0.009 *)
-
-RIPTiDe completed in 18 seconds
-
-  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.35.json
-
-Processing breast с fraction = 0.4
-  Processing group_breast_slow с fraction = 0.4
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 319 from 2674 (88.07% change)
-Metabolites pruned to 334 from 2570 (87.0% change)
-Flux through the objective DECREASED to ~0.0214 from ~0.0342 (37.43% change)
-Context-specific metabolism correlates with transcriptome (r=0.251, p<0.001 *)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.40.json
-  Processing group_breast_fast с fraction = 0.4
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 337 from 2674 (87.4% change)
-Metabolites pruned to 358 from 2570 (86.07% change)
-Flux through the objective DECREASED to ~0.0163 from ~0.0342 (52.34% change)
-Context-specific metabolism correlates with transcriptome (r=0.19, p<0.001 *)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.40.json
-
-Processing breast с fraction = 0.45
-  Processing group_breast_slow с fraction = 0.45
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 314 from 2674 (88.26% change)
-Metabolites pruned to 328 from 2570 (87.24% change)
-Flux through the objective DECREASED to ~0.0214 from ~0.0342 (37.43% change)
-Context-specific metabolism correlates with transcriptome (r=0.233, p<0.001 *)
-
-RIPTiDe completed in 18 seconds
-
-  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.45.json
-  Processing group_breast_fast с fraction = 0.45
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 349 from 2674 (86.95% change)
-Metabolites pruned to 378 from 2570 (85.29% change)
-Flux through the objective DECREASED to ~0.0163 from ~0.0342 (52.34% change)
-Context-specific metabolism correlates with transcriptome (r=0.183, p=0.001 *)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.45.json
-
-Processing breast с fraction = 0.5
-  Processing group_breast_slow с fraction = 0.5
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 317 from 2674 (88.15% change)
-Metabolites pruned to 333 from 2570 (87.04% change)
-Flux through the objective DECREASED to ~0.0214 from ~0.0342 (37.43% change)
-Context-specific metabolism correlates with transcriptome (r=0.24, p<0.001 *)
-
-RIPTiDe completed in 18 seconds
-
-  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.50.json
-  Processing group_breast_fast с fraction = 0.5
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 351 from 2674 (86.87% change)
-Metabolites pruned to 379 from 2570 (85.25% change)
-Flux through the objective DECREASED to ~0.0181 from ~0.0342 (47.08% change)
-Context-specific metabolism correlates with transcriptome (r=0.263, p<0.001 *)
-
-RIPTiDe completed in 20 seconds
-
-  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.50.json
-
-Processing breast с fraction = 0.55
-  Processing group_breast_slow с fraction = 0.55
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 354 from 2674 (86.76% change)
-Metabolites pruned to 382 from 2570 (85.14% change)
-Flux through the objective DECREASED to ~0.0214 from ~0.0342 (37.43% change)
-Context-specific metabolism correlates with transcriptome (r=0.233, p<0.001 *)
-
-RIPTiDe completed in 20 seconds
-
-  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.55.json
-  Processing group_breast_fast с fraction = 0.55
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 354 from 2674 (86.76% change)
-Metabolites pruned to 384 from 2570 (85.06% change)
-Flux through the objective DECREASED to ~0.0193 from ~0.0342 (43.57% change)
-Context-specific metabolism correlates with transcriptome (r=0.204, p<0.001 *)
-
-RIPTiDe completed in 20 seconds
-
-  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.55.json
-
-Processing breast с fraction = 0.6
-  Processing group_breast_slow с fraction = 0.6
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 343 from 2674 (87.17% change)
-Metabolites pruned to 367 from 2570 (85.72% change)
-Flux through the objective DECREASED to ~0.0229 from ~0.0342 (33.04% change)
-Context-specific metabolism correlates with transcriptome (r=0.249, p<0.001 *)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.60.json
-  Processing group_breast_fast с fraction = 0.6
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 356 from 2674 (86.69% change)
-Metabolites pruned to 383 from 2570 (85.1% change)
-Flux through the objective DECREASED to ~0.0231 from ~0.0342 (32.46% change)
-Context-specific metabolism correlates with transcriptome (r=0.196, p<0.001 *)
-
-RIPTiDe completed in 20 seconds
-
-  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.60.json
-
-Processing breast с fraction = 0.65
-  Processing group_breast_slow с fraction = 0.65
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 349 from 2674 (86.95% change)
-Metabolites pruned to 373 from 2570 (85.49% change)
-Flux through the objective DECREASED to ~0.023 from ~0.0342 (32.75% change)
-Context-specific metabolism correlates with transcriptome (r=0.253, p<0.001 *)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.65.json
-  Processing group_breast_fast с fraction = 0.65
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 358 from 2674 (86.61% change)
-Metabolites pruned to 385 from 2570 (85.02% change)
-Flux through the objective DECREASED to ~0.0231 from ~0.0342 (32.46% change)
-Context-specific metabolism correlates with transcriptome (r=0.226, p<0.001 *)
-
-RIPTiDe completed in 22 seconds
-
-  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.65.json
-
-Processing breast с fraction = 0.7
-  Processing group_breast_slow с fraction = 0.7
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 349 from 2674 (86.95% change)
-Metabolites pruned to 371 from 2570 (85.56% change)
-No change in objective flux of ~0.0342
-Context-specific metabolism correlates with transcriptome (r=0.204, p<0.001 *)
-
-RIPTiDe completed in 22 seconds
-
-  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.70.json
-  Processing group_breast_fast с fraction = 0.7
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 373 from 2674 (86.05% change)
-Metabolites pruned to 398 from 2570 (84.51% change)
-Flux through the objective DECREASED to ~0.024 from ~0.0342 (29.82% change)
-Context-specific metabolism correlates with transcriptome (r=0.22, p<0.001 *)
-
-RIPTiDe completed in 20 seconds
-
-  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.70.json
-
-Processing breast с fraction = 0.75
-  Processing group_breast_slow с fraction = 0.75
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 353 from 2674 (86.8% change)
-Metabolites pruned to 375 from 2570 (85.41% change)
-No change in objective flux of ~0.0342
-Context-specific metabolism correlates with transcriptome (r=0.257, p<0.001 *)
-
-RIPTiDe completed in 22 seconds
-
-  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.75.json
-  Processing group_breast_fast с fraction = 0.75
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 360 from 2674 (86.54% change)
-Metabolites pruned to 385 from 2570 (85.02% change)
-Flux through the objective DECREASED to ~0.0271 from ~0.0342 (20.76% change)
-Context-specific metabolism correlates with transcriptome (r=0.235, p<0.001 *)
-
-RIPTiDe completed in 29 seconds
-
-  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.75.json
-
-Processing breast с fraction = 0.8
-  Processing group_breast_slow с fraction = 0.8
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 336 from 2674 (87.43% change)
-Metabolites pruned to 353 from 2570 (86.26% change)
-No change in objective flux of ~0.0342
-Context-specific metabolism correlates with transcriptome (r=0.235, p<0.001 *)
-
-RIPTiDe completed in 28 seconds
-
-  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.80.json
-  Processing group_breast_fast с fraction = 0.8
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 360 from 2674 (86.54% change)
-Metabolites pruned to 385 from 2570 (85.02% change)
-Flux through the objective DECREASED to ~0.0276 from ~0.0342 (19.3% change)
-Context-specific metabolism correlates with transcriptome (r=0.194, p<0.001 *)
-
-RIPTiDe completed in 30 seconds
-
-  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.80.json
-
-Processing breast с fraction = 0.85
-  Processing group_breast_slow с fraction = 0.85
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 353 from 2674 (86.8% change)
-Metabolites pruned to 382 from 2570 (85.14% change)
-No change in objective flux of ~0.0342
-Context-specific metabolism correlates with transcriptome (r=0.229, p<0.001 *)
-
-RIPTiDe completed in 30 seconds
-
-  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.85.json
-  Processing group_breast_fast с fraction = 0.85
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 360 from 2674 (86.54% change)
-Metabolites pruned to 383 from 2570 (85.1% change)
-No change in objective flux of ~0.0342
-Context-specific metabolism correlates with transcriptome (r=0.222, p<0.001 *)
-
-RIPTiDe completed in 30 seconds
-
-  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.85.json
-
-Processing breast с fraction = 0.9
-  Processing group_breast_slow с fraction = 0.9
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 328 from 2674 (87.73% change)
-Metabolites pruned to 342 from 2570 (86.69% change)
-No change in objective flux of ~0.0342
-Context-specific metabolism correlates with transcriptome (r=0.205, p<0.001 *)
-
-RIPTiDe completed in 26 seconds
-
-  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.90.json
-  Processing group_breast_fast с fraction = 0.9
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 375 from 2674 (85.98% change)
-Metabolites pruned to 404 from 2570 (84.28% change)
-No change in objective flux of ~0.0342
-Context-specific metabolism correlates with transcriptome (r=0.212, p<0.001 *)
-
-RIPTiDe completed in 30 seconds
-
-  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.90.json
-
-Processing breast с fraction = 0.95
-  Processing group_breast_slow с fraction = 0.95
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 349 from 2674 (86.95% change)
-Metabolites pruned to 370 from 2570 (85.6% change)
-No change in objective flux of ~0.0342
-Context-specific metabolism correlates with transcriptome (r=0.226, p<0.001 *)
-
-RIPTiDe completed in 28 seconds
-
-  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.95.json
-  Processing group_breast_fast с fraction = 0.95
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 374 from 2674 (86.01% change)
-Metabolites pruned to 397 from 2570 (84.55% change)
-No change in objective flux of ~0.0342
-Context-specific metabolism correlates with transcriptome (r=0.196, p<0.001 *)
-
-RIPTiDe completed in 29 seconds
-
-  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.95.json
-The current solver interface glpk doesn't support setting the optimality tolerance.
-
-Processing leg с fraction = 0.1
-  Processing group_leg_slow с fraction = 0.1
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 351 from 2674 (86.87% change)
-Metabolites pruned to 372 from 2570 (85.53% change)
-Flux through the objective DECREASED to ~0.0237 from ~0.0342 (30.7% change)
-Context-specific metabolism correlates with transcriptome (r=0.269, p<0.001 *)
-
-RIPTiDe completed in 27 seconds
-
-  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.10.json
-  Processing group_leg_fast с fraction = 0.1
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 362 from 2674 (86.46% change)
-Metabolites pruned to 384 from 2570 (85.06% change)
-Flux through the objective DECREASED to ~0.0226 from ~0.0342 (33.92% change)
-Context-specific metabolism correlates with transcriptome (r=0.245, p<0.001 *)
-
-RIPTiDe completed in 28 seconds
-
-  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.10.json
-
-Processing leg с fraction = 0.15
-  Processing group_leg_slow с fraction = 0.15
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 344 from 2674 (87.14% change)
-Metabolites pruned to 365 from 2570 (85.8% change)
-Flux through the objective DECREASED to ~0.0237 from ~0.0342 (30.7% change)
-Context-specific metabolism correlates with transcriptome (r=0.217, p<0.001 *)
-
-RIPTiDe completed in 27 seconds
-
-  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.15.json
-  Processing group_leg_fast с fraction = 0.15
+  Processing group_breast_slow with fraction=0.3
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
@@ -633,16 +136,239 @@ Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
 Reactions pruned to 352 from 2674 (86.84% change)
-Metabolites pruned to 376 from 2570 (85.37% change)
-Flux through the objective DECREASED to ~0.0227 from ~0.0342 (33.63% change)
-Context-specific metabolism correlates with transcriptome (r=0.27, p<0.001 *)
+Metabolites pruned to 374 from 2570 (85.45% change)
+Flux through the objective DECREASED to ~0.011 from ~0.0342 (67.84% change)
+Context-specific metabolism correlates with transcriptome (r=0.278, p<0.001 *)
 
 RIPTiDe completed in 22 seconds
 
-  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.15.json
+  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.30.json
 
-Processing leg с fraction = 0.2
-  Processing group_leg_slow с fraction = 0.2
+  Processing group_breast_fast with fraction=0.3
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 401 from 2674 (85.0% change)
+Metabolites pruned to 436 from 2570 (83.04% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.281, p<0.001 *)
+
+RIPTiDe completed in 22 seconds
+
+  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.30.json
+
+  Processing group_breast_slow with fraction=0.35
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 354 from 2674 (86.76% change)
+Metabolites pruned to 374 from 2570 (85.45% change)
+Flux through the objective DECREASED to ~0.0124 from ~0.0342 (63.74% change)
+Context-specific metabolism correlates with transcriptome (r=0.254, p<0.001 *)
+
+RIPTiDe completed in 22 seconds
+
+  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.35.json
+
+  Processing group_breast_fast with fraction=0.35
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 378 from 2674 (85.86% change)
+Metabolites pruned to 406 from 2570 (84.2% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.306, p<0.001 *)
+
+RIPTiDe completed in 21 seconds
+
+  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.35.json
+
+  Processing group_breast_slow with fraction=0.4
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 375 from 2674 (85.98% change)
+Metabolites pruned to 401 from 2570 (84.4% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.287, p<0.001 *)
+
+RIPTiDe completed in 22 seconds
+
+  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.40.json
+
+  Processing group_breast_fast with fraction=0.4
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 348 from 2674 (86.99% change)
+Metabolites pruned to 370 from 2570 (85.6% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.283, p<0.001 *)
+
+RIPTiDe completed in 20 seconds
+
+  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.40.json
+
+  Processing group_breast_slow with fraction=0.45
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 345 from 2674 (87.1% change)
+Metabolites pruned to 359 from 2570 (86.03% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.212, p<0.001 *)
+
+RIPTiDe completed in 19 seconds
+
+  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.45.json
+
+  Processing group_breast_fast with fraction=0.45
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 351 from 2674 (86.87% change)
+Metabolites pruned to 376 from 2570 (85.37% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.279, p<0.001 *)
+
+RIPTiDe completed in 19 seconds
+
+  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.45.json
+
+  Processing group_breast_slow with fraction=0.5
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 377 from 2674 (85.9% change)
+Metabolites pruned to 405 from 2570 (84.24% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.298, p<0.001 *)
+
+RIPTiDe completed in 20 seconds
+
+  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.50.json
+
+  Processing group_breast_fast with fraction=0.5
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 347 from 2674 (87.02% change)
+Metabolites pruned to 371 from 2570 (85.56% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.309, p<0.001 *)
+
+RIPTiDe completed in 21 seconds
+
+  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.50.json
+
+  Processing group_breast_slow with fraction=0.55
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 372 from 2674 (86.09% change)
+Metabolites pruned to 401 from 2570 (84.4% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.249, p<0.001 *)
+
+RIPTiDe completed in 22 seconds
+
+  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.55.json
+
+  Processing group_breast_fast with fraction=0.55
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 372 from 2674 (86.09% change)
+Metabolites pruned to 403 from 2570 (84.32% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.324, p<0.001 *)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.55.json
+
+  Processing group_breast_slow with fraction=0.6
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 366 from 2674 (86.31% change)
+Metabolites pruned to 385 from 2570 (85.02% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.235, p<0.001 *)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.60.json
+
+  Processing group_breast_fast with fraction=0.6
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 334 from 2674 (87.51% change)
+Metabolites pruned to 357 from 2570 (86.11% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.28, p<0.001 *)
+
+RIPTiDe completed in 20 seconds
+
+  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.60.json
+
+  Processing group_breast_slow with fraction=0.65
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 355 from 2674 (86.72% change)
+Metabolites pruned to 379 from 2570 (85.25% change)
+Flux through the objective DECREASED to ~0.0237 from ~0.0342 (30.7% change)
+Context-specific metabolism correlates with transcriptome (r=0.27, p<0.001 *)
+
+RIPTiDe completed in 20 seconds
+
+  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.65.json
+
+  Processing group_breast_fast with fraction=0.65
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
@@ -650,31 +376,208 @@ Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
 Reactions pruned to 344 from 2674 (87.14% change)
-Metabolites pruned to 361 from 2570 (85.95% change)
-Flux through the objective DECREASED to ~0.0237 from ~0.0342 (30.7% change)
-Context-specific metabolism correlates with transcriptome (r=0.252, p<0.001 *)
+Metabolites pruned to 369 from 2570 (85.64% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.298, p<0.001 *)
 
-RIPTiDe completed in 19 seconds
+RIPTiDe completed in 22 seconds
 
-  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.20.json
-  Processing group_leg_fast с fraction = 0.2
+  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.65.json
+
+  Processing group_breast_slow with fraction=0.7
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 338 from 2674 (87.36% change)
-Metabolites pruned to 351 from 2570 (86.34% change)
-Flux through the objective DECREASED to ~0.0227 from ~0.0342 (33.63% change)
-Context-specific metabolism correlates with transcriptome (r=0.203, p<0.001 *)
+Reactions pruned to 337 from 2674 (87.4% change)
+Metabolites pruned to 354 from 2570 (86.23% change)
+Flux through the objective DECREASED to ~0.0281 from ~0.0342 (17.84% change)
+Context-specific metabolism correlates with transcriptome (r=0.259, p<0.001 *)
 
-RIPTiDe completed in 18 seconds
+RIPTiDe completed in 22 seconds
 
-  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.20.json
+  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.70.json
 
-Processing leg с fraction = 0.25
-  Processing group_leg_slow с fraction = 0.25
+  Processing group_breast_fast with fraction=0.7
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 360 from 2674 (86.54% change)
+Metabolites pruned to 380 from 2570 (85.21% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.326, p<0.001 *)
+
+RIPTiDe completed in 22 seconds
+
+  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.70.json
+
+  Processing group_breast_slow with fraction=0.75
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 344 from 2674 (87.14% change)
+Metabolites pruned to 358 from 2570 (86.07% change)
+Flux through the objective DECREASED to ~0.0281 from ~0.0342 (17.84% change)
+Context-specific metabolism correlates with transcriptome (r=0.253, p<0.001 *)
+
+RIPTiDe completed in 21 seconds
+
+  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.75.json
+
+  Processing group_breast_fast with fraction=0.75
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 359 from 2674 (86.57% change)
+Metabolites pruned to 385 from 2570 (85.02% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.323, p<0.001 *)
+
+RIPTiDe completed in 21 seconds
+
+  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.75.json
+
+  Processing group_breast_slow with fraction=0.8
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 339 from 2674 (87.32% change)
+Metabolites pruned to 352 from 2570 (86.3% change)
+Flux through the objective DECREASED to ~0.0281 from ~0.0342 (17.84% change)
+Context-specific metabolism correlates with transcriptome (r=0.235, p<0.001 *)
+
+RIPTiDe completed in 22 seconds
+
+  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.80.json
+
+  Processing group_breast_fast with fraction=0.8
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 393 from 2674 (85.3% change)
+Metabolites pruned to 422 from 2570 (83.58% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.253, p<0.001 *)
+
+RIPTiDe completed in 22 seconds
+
+  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.80.json
+
+  Processing group_breast_slow with fraction=0.85
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 339 from 2674 (87.32% change)
+Metabolites pruned to 349 from 2570 (86.42% change)
+Flux through the objective DECREASED to ~0.0299 from ~0.0342 (12.57% change)
+Context-specific metabolism correlates with transcriptome (r=0.214, p<0.001 *)
+
+RIPTiDe completed in 19 seconds
+
+  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.85.json
+
+  Processing group_breast_fast with fraction=0.85
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 393 from 2674 (85.3% change)
+Metabolites pruned to 423 from 2570 (83.54% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.251, p<0.001 *)
+
+RIPTiDe completed in 22 seconds
+
+  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.85.json
+
+  Processing group_breast_slow with fraction=0.9
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 346 from 2674 (87.06% change)
+Metabolites pruned to 358 from 2570 (86.07% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.244, p<0.001 *)
+
+RIPTiDe completed in 21 seconds
+
+  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.90.json
+
+  Processing group_breast_fast with fraction=0.9
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 407 from 2674 (84.78% change)
+Metabolites pruned to 437 from 2570 (83.0% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.281, p<0.001 *)
+
+RIPTiDe completed in 22 seconds
+
+  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.90.json
+
+  Processing group_breast_slow with fraction=0.95
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 347 from 2674 (87.02% change)
+Metabolites pruned to 356 from 2570 (86.15% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.237, p<0.001 *)
+
+RIPTiDe completed in 20 seconds
+
+  Saved: data/models/context_specific/mcs_slow_breast_fraction_0.95.json
+
+  Processing group_breast_fast with fraction=0.95
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 366 from 2674 (86.31% change)
+Metabolites pruned to 391 from 2570 (84.79% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.296, p<0.001 *)
+
+RIPTiDe completed in 22 seconds
+
+  Saved: data/models/context_specific/mcs_fast_breast_fraction_0.95.json
+The current solver interface glpk doesn't support setting the optimality tolerance.
+
+  Processing group_leg_slow with fraction=0.1
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
@@ -682,46 +585,239 @@ Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
 Reactions pruned to 356 from 2674 (86.69% change)
-Metabolites pruned to 381 from 2570 (85.18% change)
-Flux through the objective DECREASED to ~0.0236 from ~0.0342 (30.99% change)
-Context-specific metabolism correlates with transcriptome (r=0.247, p<0.001 *)
+Metabolites pruned to 379 from 2570 (85.25% change)
+Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
+Context-specific metabolism correlates with transcriptome (r=0.277, p<0.001 *)
 
-RIPTiDe completed in 18 seconds
+RIPTiDe completed in 23 seconds
 
-  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.25.json
-  Processing group_leg_fast с fraction = 0.25
+  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.10.json
+
+  Processing group_leg_fast with fraction=0.1
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 336 from 2674 (87.43% change)
-Metabolites pruned to 352 from 2570 (86.3% change)
-Flux through the objective DECREASED to ~0.0227 from ~0.0342 (33.63% change)
-Context-specific metabolism correlates with transcriptome (r=0.204, p<0.001 *)
+Reactions pruned to 381 from 2674 (85.75% change)
+Metabolites pruned to 406 from 2570 (84.2% change)
+Flux through the objective DECREASED to ~0.024 from ~0.0342 (29.82% change)
+Context-specific metabolism correlates with transcriptome (r=0.289, p<0.001 *)
 
-RIPTiDe completed in 19 seconds
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.10.json
+
+  Processing group_leg_slow with fraction=0.15
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 354 from 2674 (86.76% change)
+Metabolites pruned to 371 from 2570 (85.56% change)
+Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
+Context-specific metabolism correlates with transcriptome (r=0.252, p<0.001 *)
+
+RIPTiDe completed in 22 seconds
+
+  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.15.json
+
+  Processing group_leg_fast with fraction=0.15
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 353 from 2674 (86.8% change)
+Metabolites pruned to 377 from 2570 (85.33% change)
+Flux through the objective DECREASED to ~0.024 from ~0.0342 (29.82% change)
+Context-specific metabolism correlates with transcriptome (r=0.288, p<0.001 *)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.15.json
+
+  Processing group_leg_slow with fraction=0.2
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 340 from 2674 (87.28% change)
+Metabolites pruned to 355 from 2570 (86.19% change)
+Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
+Context-specific metabolism correlates with transcriptome (r=0.285, p<0.001 *)
+
+RIPTiDe completed in 22 seconds
+
+  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.20.json
+
+  Processing group_leg_fast with fraction=0.2
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 354 from 2674 (86.76% change)
+Metabolites pruned to 372 from 2570 (85.53% change)
+Flux through the objective DECREASED to ~0.024 from ~0.0342 (29.82% change)
+Context-specific metabolism correlates with transcriptome (r=0.286, p<0.001 *)
+
+RIPTiDe completed in 21 seconds
+
+  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.20.json
+
+  Processing group_leg_slow with fraction=0.25
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 330 from 2674 (87.66% change)
+Metabolites pruned to 342 from 2570 (86.69% change)
+Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
+Context-specific metabolism correlates with transcriptome (r=0.194, p<0.001 *)
+
+RIPTiDe completed in 21 seconds
+
+  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.25.json
+
+  Processing group_leg_fast with fraction=0.25
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 372 from 2674 (86.09% change)
+Metabolites pruned to 395 from 2570 (84.63% change)
+Flux through the objective DECREASED to ~0.024 from ~0.0342 (29.82% change)
+Context-specific metabolism correlates with transcriptome (r=0.31, p<0.001 *)
+
+RIPTiDe completed in 22 seconds
 
   Saved: data/models/context_specific/mcs_fast_leg_fraction_0.25.json
 
-Processing leg с fraction = 0.3
-  Processing group_leg_slow с fraction = 0.3
+  Processing group_leg_slow with fraction=0.3
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 358 from 2674 (86.61% change)
-Metabolites pruned to 386 from 2570 (84.98% change)
-Flux through the objective DECREASED to ~0.0237 from ~0.0342 (30.7% change)
-Context-specific metabolism correlates with transcriptome (r=0.298, p<0.001 *)
+Reactions pruned to 356 from 2674 (86.69% change)
+Metabolites pruned to 375 from 2570 (85.41% change)
+Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
+Context-specific metabolism correlates with transcriptome (r=0.178, p=0.001 *)
 
-RIPTiDe completed in 25 seconds
+RIPTiDe completed in 20 seconds
 
   Saved: data/models/context_specific/mcs_slow_leg_fraction_0.30.json
-  Processing group_leg_fast с fraction = 0.3
+
+  Processing group_leg_fast with fraction=0.3
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 334 from 2674 (87.51% change)
+Metabolites pruned to 349 from 2570 (86.42% change)
+Flux through the objective DECREASED to ~0.024 from ~0.0342 (29.82% change)
+Context-specific metabolism correlates with transcriptome (r=0.248, p<0.001 *)
+
+RIPTiDe completed in 20 seconds
+
+  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.30.json
+
+  Processing group_leg_slow with fraction=0.35
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 353 from 2674 (86.8% change)
+Metabolites pruned to 371 from 2570 (85.56% change)
+Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
+Context-specific metabolism correlates with transcriptome (r=0.181, p=0.001 *)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.35.json
+
+  Processing group_leg_fast with fraction=0.35
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 345 from 2674 (87.1% change)
+Metabolites pruned to 363 from 2570 (85.88% change)
+Flux through the objective DECREASED to ~0.024 from ~0.0342 (29.82% change)
+Context-specific metabolism correlates with transcriptome (r=0.245, p<0.001 *)
+
+RIPTiDe completed in 24 seconds
+
+  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.35.json
+
+  Processing group_leg_slow with fraction=0.4
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 355 from 2674 (86.72% change)
+Metabolites pruned to 376 from 2570 (85.37% change)
+Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
+Context-specific metabolism correlates with transcriptome (r=0.188, p<0.001 *)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.40.json
+
+  Processing group_leg_fast with fraction=0.4
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 332 from 2674 (87.58% change)
+Metabolites pruned to 346 from 2570 (86.54% change)
+Flux through the objective DECREASED to ~0.024 from ~0.0342 (29.82% change)
+Context-specific metabolism correlates with transcriptome (r=0.258, p<0.001 *)
+
+RIPTiDe completed in 22 seconds
+
+  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.40.json
+
+  Processing group_leg_slow with fraction=0.45
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 332 from 2674 (87.58% change)
+Metabolites pruned to 349 from 2570 (86.42% change)
+Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
+Context-specific metabolism correlates with transcriptome (r=0.199, p<0.001 *)
+
+RIPTiDe completed in 21 seconds
+
+  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.45.json
+
+  Processing group_leg_fast with fraction=0.45
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
@@ -729,63 +825,15 @@ Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
 Reactions pruned to 344 from 2674 (87.14% change)
-Metabolites pruned to 366 from 2570 (85.76% change)
-Flux through the objective DECREASED to ~0.0226 from ~0.0342 (33.92% change)
-Context-specific metabolism correlates with transcriptome (r=0.221, p<0.001 *)
+Metabolites pruned to 367 from 2570 (85.72% change)
+Flux through the objective DECREASED to ~0.024 from ~0.0342 (29.82% change)
+Context-specific metabolism correlates with transcriptome (r=0.246, p<0.001 *)
 
-RIPTiDe completed in 20 seconds
+RIPTiDe completed in 21 seconds
 
-  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.30.json
+  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.45.json
 
-Processing leg с fraction = 0.35
-  Processing group_leg_slow с fraction = 0.35
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 351 from 2674 (86.87% change)
-Metabolites pruned to 377 from 2570 (85.33% change)
-Flux through the objective DECREASED to ~0.0237 from ~0.0342 (30.7% change)
-Context-specific metabolism correlates with transcriptome (r=0.283, p<0.001 *)
-
-RIPTiDe completed in 18 seconds
-
-  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.35.json
-  Processing group_leg_fast с fraction = 0.35
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 367 from 2674 (86.28% change)
-Metabolites pruned to 389 from 2570 (84.86% change)
-Flux through the objective DECREASED to ~0.0227 from ~0.0342 (33.63% change)
-Context-specific metabolism correlates with transcriptome (r=0.266, p<0.001 *)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.35.json
-
-Processing leg с fraction = 0.4
-  Processing group_leg_slow с fraction = 0.4
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 351 from 2674 (86.87% change)
-Metabolites pruned to 368 from 2570 (85.68% change)
-Flux through the objective DECREASED to ~0.0237 from ~0.0342 (30.7% change)
-Context-specific metabolism correlates with transcriptome (r=0.233, p<0.001 *)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.40.json
-  Processing group_leg_fast с fraction = 0.4
+  Processing group_leg_slow with fraction=0.5
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
@@ -794,143 +842,78 @@ Analyzing context-specific flux distributions...
 
 Reactions pruned to 329 from 2674 (87.7% change)
 Metabolites pruned to 342 from 2570 (86.69% change)
-Flux through the objective DECREASED to ~0.0227 from ~0.0342 (33.63% change)
-Context-specific metabolism correlates with transcriptome (r=0.229, p<0.001 *)
+Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
+Context-specific metabolism correlates with transcriptome (r=0.161, p=0.003 *)
+
+RIPTiDe completed in 21 seconds
+
+  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.50.json
+
+  Processing group_leg_fast with fraction=0.5
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 333 from 2674 (87.55% change)
+Metabolites pruned to 349 from 2570 (86.42% change)
+Flux through the objective DECREASED to ~0.024 from ~0.0342 (29.82% change)
+Context-specific metabolism correlates with transcriptome (r=0.26, p<0.001 *)
 
 RIPTiDe completed in 19 seconds
 
-  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.40.json
-
-Processing leg с fraction = 0.45
-  Processing group_leg_slow с fraction = 0.45
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 345 from 2674 (87.1% change)
-Metabolites pruned to 365 from 2570 (85.8% change)
-Flux through the objective DECREASED to ~0.0237 from ~0.0342 (30.7% change)
-Context-specific metabolism correlates with transcriptome (r=0.255, p<0.001 *)
-
-RIPTiDe completed in 18 seconds
-
-  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.45.json
-  Processing group_leg_fast с fraction = 0.45
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 325 from 2674 (87.85% change)
-Metabolites pruned to 339 from 2570 (86.81% change)
-Flux through the objective DECREASED to ~0.0227 from ~0.0342 (33.63% change)
-Context-specific metabolism correlates with transcriptome (r=0.227, p<0.001 *)
-
-RIPTiDe completed in 17 seconds
-
-  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.45.json
-
-Processing leg с fraction = 0.5
-  Processing group_leg_slow с fraction = 0.5
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 358 from 2674 (86.61% change)
-Metabolites pruned to 381 from 2570 (85.18% change)
-Flux through the objective DECREASED to ~0.0237 from ~0.0342 (30.7% change)
-Context-specific metabolism correlates with transcriptome (r=0.255, p<0.001 *)
-
-RIPTiDe completed in 18 seconds
-
-  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.50.json
-  Processing group_leg_fast с fraction = 0.5
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 323 from 2674 (87.92% change)
-Metabolites pruned to 338 from 2570 (86.85% change)
-Flux through the objective DECREASED to ~0.0227 from ~0.0342 (33.63% change)
-Context-specific metabolism correlates with transcriptome (r=0.223, p<0.001 *)
-
-RIPTiDe completed in 16 seconds
-
   Saved: data/models/context_specific/mcs_fast_leg_fraction_0.50.json
 
-Processing leg с fraction = 0.55
-  Processing group_leg_slow с fraction = 0.55
+  Processing group_leg_slow with fraction=0.55
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 348 from 2674 (86.99% change)
-Metabolites pruned to 372 from 2570 (85.53% change)
-Flux through the objective DECREASED to ~0.0237 from ~0.0342 (30.7% change)
-Context-specific metabolism correlates with transcriptome (r=0.256, p<0.001 *)
+Reactions pruned to 367 from 2674 (86.28% change)
+Metabolites pruned to 387 from 2570 (84.94% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.203, p<0.001 *)
 
-RIPTiDe completed in 18 seconds
+RIPTiDe completed in 23 seconds
 
   Saved: data/models/context_specific/mcs_slow_leg_fraction_0.55.json
-  Processing group_leg_fast с fraction = 0.55
+
+  Processing group_leg_fast with fraction=0.55
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 342 from 2674 (87.21% change)
-Metabolites pruned to 362 from 2570 (85.91% change)
-Flux through the objective DECREASED to ~0.0227 from ~0.0342 (33.63% change)
-Context-specific metabolism correlates with transcriptome (r=0.224, p<0.001 *)
+Reactions pruned to 346 from 2674 (87.06% change)
+Metabolites pruned to 368 from 2570 (85.68% change)
+Flux through the objective DECREASED to ~0.024 from ~0.0342 (29.82% change)
+Context-specific metabolism correlates with transcriptome (r=0.265, p<0.001 *)
 
-RIPTiDe completed in 17 seconds
+RIPTiDe completed in 21 seconds
 
   Saved: data/models/context_specific/mcs_fast_leg_fraction_0.55.json
 
-Processing leg с fraction = 0.6
-  Processing group_leg_slow с fraction = 0.6
+  Processing group_leg_slow with fraction=0.6
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 345 from 2674 (87.1% change)
-Metabolites pruned to 368 from 2570 (85.68% change)
-Flux through the objective DECREASED to ~0.0237 from ~0.0342 (30.7% change)
-Context-specific metabolism correlates with transcriptome (r=0.281, p<0.001 *)
+Reactions pruned to 344 from 2674 (87.14% change)
+Metabolites pruned to 362 from 2570 (85.91% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.205, p<0.001 *)
 
-RIPTiDe completed in 17 seconds
+RIPTiDe completed in 20 seconds
 
   Saved: data/models/context_specific/mcs_slow_leg_fraction_0.60.json
-  Processing group_leg_fast с fraction = 0.6
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 358 from 2674 (86.61% change)
-Metabolites pruned to 379 from 2570 (85.25% change)
-Flux through the objective DECREASED to ~0.0227 from ~0.0342 (33.63% change)
-Context-specific metabolism correlates with transcriptome (r=0.262, p<0.001 *)
-
-RIPTiDe completed in 18 seconds
-
-  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.60.json
-
-Processing leg с fraction = 0.65
-  Processing group_leg_slow с fraction = 0.65
+  Processing group_leg_fast with fraction=0.6
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
@@ -938,95 +921,15 @@ Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
 Reactions pruned to 330 from 2674 (87.66% change)
-Metabolites pruned to 349 from 2570 (86.42% change)
-Flux through the objective DECREASED to ~0.0237 from ~0.0342 (30.7% change)
-Context-specific metabolism correlates with transcriptome (r=0.25, p<0.001 *)
-
-RIPTiDe completed in 17 seconds
-
-  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.65.json
-  Processing group_leg_fast с fraction = 0.65
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 336 from 2674 (87.43% change)
-Metabolites pruned to 355 from 2570 (86.19% change)
-Flux through the objective DECREASED to ~0.0227 from ~0.0342 (33.63% change)
-Context-specific metabolism correlates with transcriptome (r=0.244, p<0.001 *)
-
-RIPTiDe completed in 20 seconds
-
-  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.65.json
-
-Processing leg с fraction = 0.7
-  Processing group_leg_slow с fraction = 0.7
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 366 from 2674 (86.31% change)
-Metabolites pruned to 392 from 2570 (84.75% change)
-Flux through the objective DECREASED to ~0.0253 from ~0.0342 (26.02% change)
-Context-specific metabolism correlates with transcriptome (r=0.246, p<0.001 *)
-
-RIPTiDe completed in 20 seconds
-
-  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.70.json
-  Processing group_leg_fast с fraction = 0.7
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 345 from 2674 (87.1% change)
-Metabolites pruned to 366 from 2570 (85.76% change)
+Metabolites pruned to 352 from 2570 (86.3% change)
 Flux through the objective DECREASED to ~0.024 from ~0.0342 (29.82% change)
-Context-specific metabolism correlates with transcriptome (r=0.246, p<0.001 *)
+Context-specific metabolism correlates with transcriptome (r=0.267, p<0.001 *)
 
 RIPTiDe completed in 20 seconds
 
-  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.70.json
+  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.60.json
 
-Processing leg с fraction = 0.75
-  Processing group_leg_slow с fraction = 0.75
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 363 from 2674 (86.42% change)
-Metabolites pruned to 387 from 2570 (84.94% change)
-Flux through the objective DECREASED to ~0.0276 from ~0.0342 (19.3% change)
-Context-specific metabolism correlates with transcriptome (r=0.274, p<0.001 *)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.75.json
-  Processing group_leg_fast с fraction = 0.75
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 353 from 2674 (86.8% change)
-Metabolites pruned to 381 from 2570 (85.18% change)
-Flux through the objective DECREASED to ~0.0266 from ~0.0342 (22.22% change)
-Context-specific metabolism correlates with transcriptome (r=0.266, p<0.001 *)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.75.json
-
-Processing leg с fraction = 0.8
-  Processing group_leg_slow с fraction = 0.8
+  Processing group_leg_slow with fraction=0.65
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
@@ -1034,384 +937,15 @@ Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
 Reactions pruned to 350 from 2674 (86.91% change)
-Metabolites pruned to 371 from 2570 (85.56% change)
-Flux through the objective DECREASED to ~0.0276 from ~0.0342 (19.3% change)
-Context-specific metabolism correlates with transcriptome (r=0.212, p<0.001 *)
+Metabolites pruned to 369 from 2570 (85.64% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.169, p=0.001 *)
 
 RIPTiDe completed in 19 seconds
 
-  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.80.json
-  Processing group_leg_fast с fraction = 0.8
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.65.json
 
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 338 from 2674 (87.36% change)
-Metabolites pruned to 354 from 2570 (86.23% change)
-Flux through the objective DECREASED to ~0.0302 from ~0.0342 (11.7% change)
-Context-specific metabolism correlates with transcriptome (r=0.214, p<0.001 *)
-
-RIPTiDe completed in 17 seconds
-
-  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.80.json
-
-Processing leg с fraction = 0.85
-  Processing group_leg_slow с fraction = 0.85
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 341 from 2674 (87.25% change)
-Metabolites pruned to 360 from 2570 (85.99% change)
-Flux through the objective DECREASED to ~0.0307 from ~0.0342 (10.23% change)
-Context-specific metabolism correlates with transcriptome (r=0.218, p<0.001 *)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.85.json
-  Processing group_leg_fast с fraction = 0.85
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 351 from 2674 (86.87% change)
-Metabolites pruned to 370 from 2570 (85.6% change)
-Flux through the objective DECREASED to ~0.0302 from ~0.0342 (11.7% change)
-Context-specific metabolism correlates with transcriptome (r=0.231, p<0.001 *)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.85.json
-
-Processing leg с fraction = 0.9
-  Processing group_leg_slow с fraction = 0.9
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 343 from 2674 (87.17% change)
-Metabolites pruned to 363 from 2570 (85.88% change)
-Flux through the objective DECREASED to ~0.0311 from ~0.0342 (9.06% change)
-Context-specific metabolism correlates with transcriptome (r=0.222, p<0.001 *)
-
-RIPTiDe completed in 20 seconds
-
-  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.90.json
-  Processing group_leg_fast с fraction = 0.9
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 349 from 2674 (86.95% change)
-Metabolites pruned to 365 from 2570 (85.8% change)
-Flux through the objective DECREASED to ~0.0308 from ~0.0342 (9.94% change)
-Context-specific metabolism correlates with transcriptome (r=0.224, p<0.001 *)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.90.json
-
-Processing leg с fraction = 0.95
-  Processing group_leg_slow с fraction = 0.95
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 338 from 2674 (87.36% change)
-Metabolites pruned to 350 from 2570 (86.38% change)
-Flux through the objective DECREASED to ~0.0332 from ~0.0342 (2.92% change)
-Context-specific metabolism correlates with transcriptome (r=0.197, p<0.001 *)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.95.json
-  Processing group_leg_fast с fraction = 0.95
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 361 from 2674 (86.5% change)
-Metabolites pruned to 383 from 2570 (85.1% change)
-Flux through the objective DECREASED to ~0.0332 from ~0.0342 (2.92% change)
-Context-specific metabolism correlates with transcriptome (r=0.198, p<0.001 *)
-
-RIPTiDe completed in 20 seconds
-
-  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.95.json
-The current solver interface glpk doesn't support setting the optimality tolerance.
-
-Processing liver с fraction = 0.1
-  Processing group_liver_slow с fraction = 0.1
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 393 from 2674 (85.3% change)
-Metabolites pruned to 407 from 2570 (84.16% change)
-Flux through the objective DECREASED to ~0.0096 from ~0.0342 (71.93% change)
-Context-specific metabolism does not correlate with transcriptome (r=0.065, n.s.)
-
-RIPTiDe completed in 21 seconds
-
-  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.10.json
-  Processing group_liver_fast с fraction = 0.1
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 397 from 2674 (85.15% change)
-Metabolites pruned to 419 from 2570 (83.7% change)
-Flux through the objective DECREASED to ~0.0071 from ~0.0342 (79.24% change)
-Context-specific metabolism correlates with transcriptome (r=0.151, p=0.003 *)
-
-RIPTiDe completed in 21 seconds
-
-  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.10.json
-
-Processing liver с fraction = 0.15
-  Processing group_liver_slow с fraction = 0.15
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 404 from 2674 (84.89% change)
-Metabolites pruned to 421 from 2570 (83.62% change)
-Flux through the objective DECREASED to ~0.0097 from ~0.0342 (71.64% change)
-Context-specific metabolism does not correlate with transcriptome (r=0.085, n.s.)
-
-RIPTiDe completed in 22 seconds
-
-  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.15.json
-  Processing group_liver_fast с fraction = 0.15
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 399 from 2674 (85.08% change)
-Metabolites pruned to 419 from 2570 (83.7% change)
-Flux through the objective DECREASED to ~0.007 from ~0.0342 (79.53% change)
-Context-specific metabolism correlates with transcriptome (r=0.179, p<0.001 *)
-
-RIPTiDe completed in 20 seconds
-
-  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.15.json
-
-Processing liver с fraction = 0.2
-  Processing group_liver_slow с fraction = 0.2
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 379 from 2674 (85.83% change)
-Metabolites pruned to 396 from 2570 (84.59% change)
-Flux through the objective DECREASED to ~0.0097 from ~0.0342 (71.64% change)
-Context-specific metabolism correlates with transcriptome (r=0.117, p=0.023 *)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.20.json
-  Processing group_liver_fast с fraction = 0.2
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 389 from 2674 (85.45% change)
-Metabolites pruned to 412 from 2570 (83.97% change)
-Flux through the objective DECREASED to ~0.0071 from ~0.0342 (79.24% change)
-Context-specific metabolism correlates with transcriptome (r=0.185, p<0.001 *)
-
-RIPTiDe completed in 18 seconds
-
-  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.20.json
-
-Processing liver с fraction = 0.25
-  Processing group_liver_slow с fraction = 0.25
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 396 from 2674 (85.19% change)
-Metabolites pruned to 412 from 2570 (83.97% change)
-Flux through the objective DECREASED to ~0.0096 from ~0.0342 (71.93% change)
-Context-specific metabolism does not correlate with transcriptome (r=0.097, n.s.)
-
-RIPTiDe completed in 20 seconds
-
-  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.25.json
-  Processing group_liver_fast с fraction = 0.25
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 416 from 2674 (84.44% change)
-Metabolites pruned to 442 from 2570 (82.8% change)
-Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
-Context-specific metabolism correlates with transcriptome (r=0.175, p<0.001 *)
-
-RIPTiDe completed in 20 seconds
-
-  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.25.json
-
-Processing liver с fraction = 0.3
-  Processing group_liver_slow с fraction = 0.3
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 410 from 2674 (84.67% change)
-Metabolites pruned to 432 from 2570 (83.19% change)
-Flux through the objective DECREASED to ~0.0118 from ~0.0342 (65.5% change)
-Context-specific metabolism correlates with transcriptome (r=0.115, p=0.02 *)
-
-RIPTiDe completed in 20 seconds
-
-  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.30.json
-  Processing group_liver_fast с fraction = 0.3
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 392 from 2674 (85.34% change)
-Metabolites pruned to 414 from 2570 (83.89% change)
-Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
-Context-specific metabolism correlates with transcriptome (r=0.149, p=0.003 *)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.30.json
-
-Processing liver с fraction = 0.35
-  Processing group_liver_slow с fraction = 0.35
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 411 from 2674 (84.63% change)
-Metabolites pruned to 434 from 2570 (83.11% change)
-Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
-Context-specific metabolism does not correlate with transcriptome (r=0.079, n.s.)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.35.json
-  Processing group_liver_fast с fraction = 0.35
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 386 from 2674 (85.56% change)
-Metabolites pruned to 411 from 2570 (84.01% change)
-Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
-Context-specific metabolism correlates with transcriptome (r=0.151, p=0.003 *)
-
-RIPTiDe completed in 20 seconds
-
-  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.35.json
-
-Processing liver с fraction = 0.4
-  Processing group_liver_slow с fraction = 0.4
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 402 from 2674 (84.97% change)
-Metabolites pruned to 416 from 2570 (83.81% change)
-Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
-Context-specific metabolism does not correlate with transcriptome (r=0.075, n.s.)
-
-RIPTiDe completed in 18 seconds
-
-  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.40.json
-  Processing group_liver_fast с fraction = 0.4
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 404 from 2674 (84.89% change)
-Metabolites pruned to 426 from 2570 (83.42% change)
-Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
-Context-specific metabolism correlates with transcriptome (r=0.158, p=0.001 *)
-
-RIPTiDe completed in 20 seconds
-
-  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.40.json
-
-Processing liver с fraction = 0.45
-  Processing group_liver_slow с fraction = 0.45
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 404 from 2674 (84.89% change)
-Metabolites pruned to 417 from 2570 (83.77% change)
-Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
-Context-specific metabolism does not correlate with transcriptome (r=0.068, n.s.)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.45.json
-  Processing group_liver_fast с fraction = 0.45
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 394 from 2674 (85.27% change)
-Metabolites pruned to 413 from 2570 (83.93% change)
-Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
-Context-specific metabolism correlates with transcriptome (r=0.155, p=0.002 *)
-
-RIPTiDe completed in 20 seconds
-
-  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.45.json
-
-Processing liver с fraction = 0.5
-  Processing group_liver_slow с fraction = 0.5
+  Processing group_leg_fast with fraction=0.65
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
@@ -1419,127 +953,208 @@ Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
 Reactions pruned to 366 from 2674 (86.31% change)
-Metabolites pruned to 380 from 2570 (85.21% change)
-Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
-Context-specific metabolism correlates with transcriptome (r=0.148, p=0.005 *)
-
-RIPTiDe completed in 18 seconds
-
-  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.50.json
-  Processing group_liver_fast с fraction = 0.5
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 409 from 2674 (84.7% change)
-Metabolites pruned to 433 from 2570 (83.15% change)
-Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
-Context-specific metabolism correlates with transcriptome (r=0.188, p<0.001 *)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.50.json
-
-Processing liver с fraction = 0.55
-  Processing group_liver_slow с fraction = 0.55
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 398 from 2674 (85.12% change)
-Metabolites pruned to 414 from 2570 (83.89% change)
-No change in objective flux of ~0.0342
-Context-specific metabolism correlates with transcriptome (r=0.112, p=0.026 *)
-
-RIPTiDe completed in 20 seconds
-
-  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.55.json
-  Processing group_liver_fast с fraction = 0.55
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 426 from 2674 (84.07% change)
-Metabolites pruned to 447 from 2570 (82.61% change)
-Flux through the objective DECREASED to ~0.0197 from ~0.0342 (42.4% change)
-Context-specific metabolism correlates with transcriptome (r=0.112, p=0.021 *)
+Metabolites pruned to 387 from 2570 (84.94% change)
+Flux through the objective DECREASED to ~0.024 from ~0.0342 (29.82% change)
+Context-specific metabolism correlates with transcriptome (r=0.289, p<0.001 *)
 
 RIPTiDe completed in 21 seconds
 
-  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.55.json
+  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.65.json
 
-Processing liver с fraction = 0.6
-  Processing group_liver_slow с fraction = 0.6
+  Processing group_leg_slow with fraction=0.7
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 400 from 2674 (85.04% change)
-Metabolites pruned to 417 from 2570 (83.77% change)
-Flux through the objective DECREASED to ~0.0253 from ~0.0342 (26.02% change)
-Context-specific metabolism does not correlate with transcriptome (r=0.094, n.s.)
-
-RIPTiDe completed in 20 seconds
-
-  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.60.json
-  Processing group_liver_fast с fraction = 0.6
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 427 from 2674 (84.03% change)
-Metabolites pruned to 448 from 2570 (82.57% change)
+Reactions pruned to 362 from 2674 (86.46% change)
+Metabolites pruned to 382 from 2570 (85.14% change)
 No change in objective flux of ~0.0342
-Context-specific metabolism does not correlate with transcriptome (r=0.078, n.s.)
+Context-specific metabolism correlates with transcriptome (r=0.193, p<0.001 *)
 
 RIPTiDe completed in 20 seconds
 
-  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.60.json
+  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.70.json
 
-Processing liver с fraction = 0.65
-  Processing group_liver_slow с fraction = 0.65
+  Processing group_leg_fast with fraction=0.7
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 391 from 2674 (85.38% change)
-Metabolites pruned to 410 from 2570 (84.05% change)
-Flux through the objective DECREASED to ~0.0254 from ~0.0342 (25.73% change)
-Context-specific metabolism does not correlate with transcriptome (r=0.09, n.s.)
+Reactions pruned to 361 from 2674 (86.5% change)
+Metabolites pruned to 387 from 2570 (84.94% change)
+Flux through the objective DECREASED to ~0.024 from ~0.0342 (29.82% change)
+Context-specific metabolism correlates with transcriptome (r=0.256, p<0.001 *)
 
-RIPTiDe completed in 19 seconds
+RIPTiDe completed in 22 seconds
 
-  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.65.json
-  Processing group_liver_fast с fraction = 0.65
+  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.70.json
+
+  Processing group_leg_slow with fraction=0.75
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 405 from 2674 (84.85% change)
-Metabolites pruned to 426 from 2570 (83.42% change)
+Reactions pruned to 370 from 2674 (86.16% change)
+Metabolites pruned to 395 from 2570 (84.63% change)
 No change in objective flux of ~0.0342
-Context-specific metabolism does not correlate with transcriptome (r=0.078, n.s.)
+Context-specific metabolism correlates with transcriptome (r=0.187, p<0.001 *)
 
 RIPTiDe completed in 20 seconds
 
-  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.65.json
+  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.75.json
 
-Processing liver с fraction = 0.7
-  Processing group_liver_slow с fraction = 0.7
+  Processing group_leg_fast with fraction=0.75
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 362 from 2674 (86.46% change)
+Metabolites pruned to 384 from 2570 (85.06% change)
+Flux through the objective DECREASED to ~0.0267 from ~0.0342 (21.93% change)
+Context-specific metabolism correlates with transcriptome (r=0.284, p<0.001 *)
+
+RIPTiDe completed in 22 seconds
+
+  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.75.json
+
+  Processing group_leg_slow with fraction=0.8
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 353 from 2674 (86.8% change)
+Metabolites pruned to 366 from 2570 (85.76% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.179, p=0.001 *)
+
+RIPTiDe completed in 21 seconds
+
+  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.80.json
+
+  Processing group_leg_fast with fraction=0.8
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 355 from 2674 (86.72% change)
+Metabolites pruned to 372 from 2570 (85.53% change)
+Flux through the objective DECREASED to ~0.0303 from ~0.0342 (11.4% change)
+Context-specific metabolism correlates with transcriptome (r=0.258, p<0.001 *)
+
+RIPTiDe completed in 20 seconds
+
+  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.80.json
+
+  Processing group_leg_slow with fraction=0.85
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 349 from 2674 (86.95% change)
+Metabolites pruned to 363 from 2570 (85.88% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.153, p=0.004 *)
+
+RIPTiDe completed in 21 seconds
+
+  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.85.json
+
+  Processing group_leg_fast with fraction=0.85
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 340 from 2674 (87.28% change)
+Metabolites pruned to 356 from 2570 (86.15% change)
+Flux through the objective DECREASED to ~0.0302 from ~0.0342 (11.7% change)
+Context-specific metabolism correlates with transcriptome (r=0.251, p<0.001 *)
+
+RIPTiDe completed in 21 seconds
+
+  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.85.json
+
+  Processing group_leg_slow with fraction=0.9
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 349 from 2674 (86.95% change)
+Metabolites pruned to 369 from 2570 (85.64% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.157, p=0.003 *)
+
+RIPTiDe completed in 22 seconds
+
+  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.90.json
+
+  Processing group_leg_fast with fraction=0.9
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 355 from 2674 (86.72% change)
+Metabolites pruned to 374 from 2570 (85.45% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.2, p<0.001 *)
+
+RIPTiDe completed in 20 seconds
+
+  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.90.json
+
+  Processing group_leg_slow with fraction=0.95
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 370 from 2674 (86.16% change)
+Metabolites pruned to 395 from 2570 (84.63% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.286, p<0.001 *)
+
+RIPTiDe completed in 22 seconds
+
+  Saved: data/models/context_specific/mcs_slow_leg_fraction_0.95.json
+
+  Processing group_leg_fast with fraction=0.95
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 353 from 2674 (86.8% change)
+Metabolites pruned to 369 from 2570 (85.64% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.17, p=0.001 *)
+
+RIPTiDe completed in 20 seconds
+
+  Saved: data/models/context_specific/mcs_fast_leg_fraction_0.95.json
+The current solver interface glpk doesn't support setting the optimality tolerance.
+
+  Processing group_liver_slow with fraction=0.1
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
@@ -1547,95 +1162,31 @@ Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
 Reactions pruned to 382 from 2674 (85.71% change)
-Metabolites pruned to 402 from 2570 (84.36% change)
-Flux through the objective DECREASED to ~0.0254 from ~0.0342 (25.73% change)
-Context-specific metabolism does not correlate with transcriptome (r=0.08, n.s.)
+Metabolites pruned to 397 from 2570 (84.55% change)
+Flux through the objective DECREASED to ~0.0081 from ~0.0342 (76.32% change)
+Context-specific metabolism correlates with transcriptome (r=0.172, p=0.001 *)
 
-RIPTiDe completed in 18 seconds
+RIPTiDe completed in 23 seconds
 
-  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.70.json
-  Processing group_liver_fast с fraction = 0.7
+  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.10.json
+
+  Processing group_liver_fast with fraction=0.1
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 403 from 2674 (84.93% change)
-Metabolites pruned to 427 from 2570 (83.39% change)
-No change in objective flux of ~0.0342
-Context-specific metabolism does not correlate with transcriptome (r=0.056, n.s.)
+Reactions pruned to 391 from 2674 (85.38% change)
+Metabolites pruned to 417 from 2570 (83.77% change)
+Flux through the objective DECREASED to ~0.009 from ~0.0342 (73.68% change)
+Context-specific metabolism correlates with transcriptome (r=0.201, p<0.001 *)
 
-RIPTiDe completed in 19 seconds
+RIPTiDe completed in 22 seconds
 
-  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.70.json
+  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.10.json
 
-Processing liver с fraction = 0.75
-  Processing group_liver_slow с fraction = 0.75
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 394 from 2674 (85.27% change)
-Metabolites pruned to 410 from 2570 (84.05% change)
-No change in objective flux of ~0.0342
-Context-specific metabolism correlates with transcriptome (r=0.116, p=0.021 *)
-
-RIPTiDe completed in 20 seconds
-
-  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.75.json
-  Processing group_liver_fast с fraction = 0.75
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 419 from 2674 (84.33% change)
-Metabolites pruned to 443 from 2570 (82.76% change)
-Flux through the objective DECREASED to ~0.0317 from ~0.0342 (7.31% change)
-Context-specific metabolism does not correlate with transcriptome (r=0.089, n.s.)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.75.json
-
-Processing liver с fraction = 0.8
-  Processing group_liver_slow с fraction = 0.8
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 384 from 2674 (85.64% change)
-Metabolites pruned to 403 from 2570 (84.32% change)
-No change in objective flux of ~0.0342
-Context-specific metabolism correlates with transcriptome (r=0.121, p=0.017 *)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.80.json
-  Processing group_liver_fast с fraction = 0.8
-Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
-
-Initializing model and integrating transcriptomic data...
-Pruning zero flux subnetworks...
-Analyzing context-specific flux distributions...
-
-Reactions pruned to 405 from 2674 (84.85% change)
-Metabolites pruned to 423 from 2570 (83.54% change)
-Flux through the objective DECREASED to ~0.0317 from ~0.0342 (7.31% change)
-Context-specific metabolism does not correlate with transcriptome (r=0.085, n.s.)
-
-RIPTiDe completed in 19 seconds
-
-  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.80.json
-
-Processing liver с fraction = 0.85
-  Processing group_liver_slow с fraction = 0.85
+  Processing group_liver_slow with fraction=0.15
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
@@ -1643,31 +1194,63 @@ Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
 Reactions pruned to 389 from 2674 (85.45% change)
-Metabolites pruned to 406 from 2570 (84.2% change)
-No change in objective flux of ~0.0342
-Context-specific metabolism correlates with transcriptome (r=0.119, p=0.019 *)
+Metabolites pruned to 405 from 2570 (84.24% change)
+Flux through the objective DECREASED to ~0.0082 from ~0.0342 (76.02% change)
+Context-specific metabolism correlates with transcriptome (r=0.16, p=0.002 *)
 
-RIPTiDe completed in 19 seconds
+RIPTiDe completed in 23 seconds
 
-  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.85.json
-  Processing group_liver_fast с fraction = 0.85
+  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.15.json
+
+  Processing group_liver_fast with fraction=0.15
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 410 from 2674 (84.67% change)
-Metabolites pruned to 431 from 2570 (83.23% change)
-Flux through the objective DECREASED to ~0.0317 from ~0.0342 (7.31% change)
-Context-specific metabolism does not correlate with transcriptome (r=0.079, n.s.)
+Reactions pruned to 391 from 2674 (85.38% change)
+Metabolites pruned to 415 from 2570 (83.85% change)
+Flux through the objective DECREASED to ~0.009 from ~0.0342 (73.68% change)
+Context-specific metabolism correlates with transcriptome (r=0.193, p<0.001 *)
 
-RIPTiDe completed in 20 seconds
+RIPTiDe completed in 22 seconds
 
-  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.85.json
+  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.15.json
 
-Processing liver с fraction = 0.9
-  Processing group_liver_slow с fraction = 0.9
+  Processing group_liver_slow with fraction=0.2
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 390 from 2674 (85.42% change)
+Metabolites pruned to 407 from 2570 (84.16% change)
+Flux through the objective DECREASED to ~0.0081 from ~0.0342 (76.32% change)
+Context-specific metabolism correlates with transcriptome (r=0.151, p=0.003 *)
+
+RIPTiDe completed in 25 seconds
+
+  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.20.json
+
+  Processing group_liver_fast with fraction=0.2
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 393 from 2674 (85.3% change)
+Metabolites pruned to 414 from 2570 (83.89% change)
+Flux through the objective DECREASED to ~0.009 from ~0.0342 (73.68% change)
+Context-specific metabolism correlates with transcriptome (r=0.203, p<0.001 *)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.20.json
+
+  Processing group_liver_slow with fraction=0.25
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
@@ -1675,46 +1258,399 @@ Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
 Reactions pruned to 386 from 2674 (85.56% change)
-Metabolites pruned to 404 from 2570 (84.28% change)
-No change in objective flux of ~0.0342
-Context-specific metabolism correlates with transcriptome (r=0.116, p=0.023 *)
+Metabolites pruned to 401 from 2570 (84.4% change)
+Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
+Context-specific metabolism correlates with transcriptome (r=0.107, p=0.036 *)
 
-RIPTiDe completed in 19 seconds
+RIPTiDe completed in 23 seconds
 
-  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.90.json
-  Processing group_liver_fast с fraction = 0.9
+  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.25.json
+
+  Processing group_liver_fast with fraction=0.25
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 405 from 2674 (84.85% change)
-Metabolites pruned to 428 from 2570 (83.35% change)
-Flux through the objective DECREASED to ~0.0329 from ~0.0342 (3.8% change)
-Context-specific metabolism does not correlate with transcriptome (r=0.081, n.s.)
+Reactions pruned to 388 from 2674 (85.49% change)
+Metabolites pruned to 413 from 2570 (83.93% change)
+Flux through the objective DECREASED to ~0.0114 from ~0.0342 (66.67% change)
+Context-specific metabolism correlates with transcriptome (r=0.162, p=0.001 *)
 
-RIPTiDe completed in 19 seconds
+RIPTiDe completed in 22 seconds
 
-  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.90.json
+  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.25.json
 
-Processing liver с fraction = 0.95
-  Processing group_liver_slow с fraction = 0.95
+  Processing group_liver_slow with fraction=0.3
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
 Pruning zero flux subnetworks...
 Analyzing context-specific flux distributions...
 
-Reactions pruned to 395 from 2674 (85.23% change)
-Metabolites pruned to 412 from 2570 (83.97% change)
-No change in objective flux of ~0.0342
+Reactions pruned to 388 from 2674 (85.49% change)
+Metabolites pruned to 400 from 2570 (84.44% change)
+Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
+Context-specific metabolism correlates with transcriptome (r=0.124, p=0.014 *)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.30.json
+
+  Processing group_liver_fast with fraction=0.3
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 408 from 2674 (84.74% change)
+Metabolites pruned to 427 from 2570 (83.39% change)
+Flux through the objective DECREASED to ~0.0114 from ~0.0342 (66.67% change)
+Context-specific metabolism correlates with transcriptome (r=0.163, p=0.001 *)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.30.json
+
+  Processing group_liver_slow with fraction=0.35
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 384 from 2674 (85.64% change)
+Metabolites pruned to 400 from 2570 (84.44% change)
+Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
+Context-specific metabolism correlates with transcriptome (r=0.144, p=0.005 *)
+
+RIPTiDe completed in 22 seconds
+
+  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.35.json
+
+  Processing group_liver_fast with fraction=0.35
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 386 from 2674 (85.56% change)
+Metabolites pruned to 406 from 2570 (84.2% change)
+Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
+Context-specific metabolism correlates with transcriptome (r=0.107, p=0.035 *)
+
+RIPTiDe completed in 24 seconds
+
+  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.35.json
+
+  Processing group_liver_slow with fraction=0.4
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 386 from 2674 (85.56% change)
+Metabolites pruned to 402 from 2570 (84.36% change)
+Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
+Context-specific metabolism correlates with transcriptome (r=0.142, p=0.005 *)
+
+RIPTiDe completed in 22 seconds
+
+  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.40.json
+
+  Processing group_liver_fast with fraction=0.4
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 406 from 2674 (84.82% change)
+Metabolites pruned to 426 from 2570 (83.42% change)
+Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
+Context-specific metabolism correlates with transcriptome (r=0.134, p=0.007 *)
+
+RIPTiDe completed in 26 seconds
+
+  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.40.json
+
+  Processing group_liver_slow with fraction=0.45
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 389 from 2674 (85.45% change)
+Metabolites pruned to 401 from 2570 (84.4% change)
+Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
+Context-specific metabolism correlates with transcriptome (r=0.149, p=0.003 *)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.45.json
+
+  Processing group_liver_fast with fraction=0.45
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 404 from 2674 (84.89% change)
+Metabolites pruned to 425 from 2570 (83.46% change)
+Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
 Context-specific metabolism correlates with transcriptome (r=0.135, p=0.007 *)
 
-RIPTiDe completed in 20 seconds
+RIPTiDe completed in 25 seconds
 
-  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.95.json
-  Processing group_liver_fast с fraction = 0.95
+  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.45.json
+
+  Processing group_liver_slow with fraction=0.5
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 381 from 2674 (85.75% change)
+Metabolites pruned to 399 from 2570 (84.47% change)
+Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
+Context-specific metabolism correlates with transcriptome (r=0.153, p=0.003 *)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.50.json
+
+  Processing group_liver_fast with fraction=0.5
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 408 from 2674 (84.74% change)
+Metabolites pruned to 430 from 2570 (83.27% change)
+Flux through the objective DECREASED to ~0.0172 from ~0.0342 (49.71% change)
+Context-specific metabolism correlates with transcriptome (r=0.148, p=0.003 *)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.50.json
+
+  Processing group_liver_slow with fraction=0.55
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 389 from 2674 (85.45% change)
+Metabolites pruned to 410 from 2570 (84.05% change)
+Flux through the objective DECREASED to ~0.0231 from ~0.0342 (32.46% change)
+Context-specific metabolism correlates with transcriptome (r=0.111, p=0.028 *)
+
+RIPTiDe completed in 25 seconds
+
+  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.55.json
+
+  Processing group_liver_fast with fraction=0.55
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 412 from 2674 (84.59% change)
+Metabolites pruned to 433 from 2570 (83.15% change)
+Flux through the objective DECREASED to ~0.0233 from ~0.0342 (31.87% change)
+Context-specific metabolism does not correlate with transcriptome (r=0.092, n.s.)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.55.json
+
+  Processing group_liver_slow with fraction=0.6
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 396 from 2674 (85.19% change)
+Metabolites pruned to 411 from 2570 (84.01% change)
+Flux through the objective DECREASED to ~0.0231 from ~0.0342 (32.46% change)
+Context-specific metabolism correlates with transcriptome (r=0.104, p=0.039 *)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.60.json
+
+  Processing group_liver_fast with fraction=0.6
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 422 from 2674 (84.22% change)
+Metabolites pruned to 442 from 2570 (82.8% change)
+Flux through the objective DECREASED to ~0.0233 from ~0.0342 (31.87% change)
+Context-specific metabolism does not correlate with transcriptome (r=0.093, n.s.)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.60.json
+
+  Processing group_liver_slow with fraction=0.65
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 376 from 2674 (85.94% change)
+Metabolites pruned to 393 from 2570 (84.71% change)
+Flux through the objective DECREASED to ~0.0231 from ~0.0342 (32.46% change)
+Context-specific metabolism correlates with transcriptome (r=0.104, p=0.043 *)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.65.json
+
+  Processing group_liver_fast with fraction=0.65
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 415 from 2674 (84.48% change)
+Metabolites pruned to 441 from 2570 (82.84% change)
+Flux through the objective DECREASED to ~0.0233 from ~0.0342 (31.87% change)
+Context-specific metabolism does not correlate with transcriptome (r=0.081, n.s.)
+
+RIPTiDe completed in 24 seconds
+
+  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.65.json
+
+  Processing group_liver_slow with fraction=0.7
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 382 from 2674 (85.71% change)
+Metabolites pruned to 397 from 2570 (84.55% change)
+Flux through the objective DECREASED to ~0.0336 from ~0.0342 (1.75% change)
+Context-specific metabolism correlates with transcriptome (r=0.132, p=0.01 *)
+
+RIPTiDe completed in 22 seconds
+
+  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.70.json
+
+  Processing group_liver_fast with fraction=0.7
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 432 from 2674 (83.84% change)
+Metabolites pruned to 452 from 2570 (82.41% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism does not correlate with transcriptome (r=0.086, n.s.)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.70.json
+
+  Processing group_liver_slow with fraction=0.75
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 384 from 2674 (85.64% change)
+Metabolites pruned to 400 from 2570 (84.44% change)
+Flux through the objective DECREASED to ~0.0336 from ~0.0342 (1.75% change)
+Context-specific metabolism does not correlate with transcriptome (r=0.068, n.s.)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.75.json
+
+  Processing group_liver_fast with fraction=0.75
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 426 from 2674 (84.07% change)
+Metabolites pruned to 450 from 2570 (82.49% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.101, p=0.037 *)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.75.json
+
+  Processing group_liver_slow with fraction=0.8
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 378 from 2674 (85.86% change)
+Metabolites pruned to 390 from 2570 (84.82% change)
+Flux through the objective DECREASED to ~0.0336 from ~0.0342 (1.75% change)
+Context-specific metabolism correlates with transcriptome (r=0.156, p=0.002 *)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.80.json
+
+  Processing group_liver_fast with fraction=0.8
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 420 from 2674 (84.29% change)
+Metabolites pruned to 439 from 2570 (82.92% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism does not correlate with transcriptome (r=0.094, n.s.)
+
+RIPTiDe completed in 25 seconds
+
+  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.80.json
+
+  Processing group_liver_slow with fraction=0.85
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 375 from 2674 (85.98% change)
+Metabolites pruned to 392 from 2570 (84.75% change)
+Flux through the objective DECREASED to ~0.0336 from ~0.0342 (1.75% change)
+Context-specific metabolism correlates with transcriptome (r=0.102, p=0.049 *)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.85.json
+
+  Processing group_liver_fast with fraction=0.85
 Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
 
 Initializing model and integrating transcriptomic data...
@@ -1723,10 +1659,74 @@ Analyzing context-specific flux distributions...
 
 Reactions pruned to 425 from 2674 (84.11% change)
 Metabolites pruned to 447 from 2570 (82.61% change)
-Flux through the objective DECREASED to ~0.0329 from ~0.0342 (3.8% change)
-Context-specific metabolism correlates with transcriptome (r=0.107, p=0.027 *)
+No change in objective flux of ~0.0342
+Context-specific metabolism does not correlate with transcriptome (r=0.077, n.s.)
 
-RIPTiDe completed in 20 seconds
+RIPTiDe completed in 26 seconds
+
+  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.85.json
+
+  Processing group_liver_slow with fraction=0.9
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 378 from 2674 (85.86% change)
+Metabolites pruned to 394 from 2570 (84.67% change)
+Flux through the objective DECREASED to ~0.0336 from ~0.0342 (1.75% change)
+Context-specific metabolism correlates with transcriptome (r=0.117, p=0.022 *)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.90.json
+
+  Processing group_liver_fast with fraction=0.9
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 421 from 2674 (84.26% change)
+Metabolites pruned to 443 from 2570 (82.76% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism does not correlate with transcriptome (r=0.082, n.s.)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_fast_liver_fraction_0.90.json
+
+  Processing group_liver_slow with fraction=0.95
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 389 from 2674 (85.45% change)
+Metabolites pruned to 402 from 2570 (84.36% change)
+Flux through the objective DECREASED to ~0.0336 from ~0.0342 (1.75% change)
+Context-specific metabolism correlates with transcriptome (r=0.148, p=0.003 *)
+
+RIPTiDe completed in 23 seconds
+
+  Saved: data/models/context_specific/mcs_slow_liver_fraction_0.95.json
+
+  Processing group_liver_fast with fraction=0.95
+Compartment `e` sounds like an external compartment. Using this one without counting boundary reactions.
+
+Initializing model and integrating transcriptomic data...
+Pruning zero flux subnetworks...
+Analyzing context-specific flux distributions...
+
+Reactions pruned to 412 from 2674 (84.59% change)
+Metabolites pruned to 434 from 2570 (83.11% change)
+No change in objective flux of ~0.0342
+Context-specific metabolism correlates with transcriptome (r=0.099, p=0.044 *)
+
+RIPTiDe completed in 23 seconds
 
   Saved: data/models/context_specific/mcs_fast_liver_fraction_0.95.json
-Таблица сохранена в riptide_summary.csv
+Summary saved: riptide_summary.csv

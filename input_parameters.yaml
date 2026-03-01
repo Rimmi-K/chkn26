@@ -9,18 +9,18 @@ paths:
 
 tissues:
   - tissue: "breast"
-    slow_model: "data/models/context_specific/mcs_slow_breast_fraction_0.65.json"
-    fast_model: "data/models/context_specific/mcs_fast_breast_fraction_0.85.json"
+    slow_model: "data/models/context_specific/mcs_slow_breast_fraction_0.50.json"
+    fast_model: "data/models/context_specific/mcs_fast_breast_fraction_0.70.json"
     deg_csv: "data/transcriptomics/degs/degs_results_breast.csv"
 
   - tissue: "leg"
-    slow_model: "data/models/context_specific/mcs_slow_leg_fraction_0.30.json"
-    fast_model: "data/models/context_specific/mcs_fast_leg_fraction_0.75.json"
+    slow_model: "data/models/context_specific/mcs_slow_leg_fraction_0.20.json"
+    fast_model: "data/models/context_specific/mcs_fast_leg_fraction_0.25.json"
     deg_csv: "data/transcriptomics/degs/degs_results_leg.csv"
 
   - tissue: "liver"
-    slow_model: "data/models/context_specific/mcs_slow_liver_fraction_0.50.json"
-    fast_model: "data/models/context_specific/mcs_fast_liver_fraction_0.50.json"
+    slow_model: "data/models/context_specific/mcs_slow_liver_fraction_0.10.json"
+    fast_model: "data/models/context_specific/mcs_fast_liver_fraction_0.20.json"
     deg_csv: "data/transcriptomics/degs/degs_results_liver.csv"
 
 # ============================================================================
@@ -56,10 +56,14 @@ visualization:
   heatmap_cmap: "RdBu_r"
   heatmap_center: 0
 
+  # mcPFA (metabolite-centric pathway flux analysis)
+  mcpfa_log2fc_threshold: 1.0  # Threshold for metabolite turnover filtering in heatmaps
+  mcpfa_min_pathways: 2  # Minimum number of pathways where metabolite must show |log2FC| > threshold
+
 scatter:
   # Thresholds for highlighting points
-  rxn_lfc_threshold: 0.6           # Reaction log2FC threshold
-  flux_threshold: 0.37              # Flux log2 ratio threshold
+  rxn_lfc_threshold: 0.5           # Transcript effect by DEG log2FC threshold
+  flux_threshold: 0.5              # Flux log2 ratio threshold
 
   # Marker sizes 
   size_mode: "discrete"            # "discrete" or "continuous"
@@ -86,6 +90,7 @@ pathway_merging:
   
   "Central Energy Metabolism":
     - "Glycolysis/Gluconeogenesis"
+    - "Glycolysis / Gluconeogenesis (Recon3D)"
     - "Pyruvate Metabolism"
     - "Citric Acid Cycle"
 
@@ -96,17 +101,21 @@ pathway_merging:
   
   "Lipid metabolism":
     - "Fatty Acid Biosynthesis"
+    - "Fatty Acid Synthesis (Recon3D)"
     - "Fatty Acid Degradation"
-    - "Fatty Acid Metabolism" 
+    - "Fatty Acid Oxidation (Recon3D)"
+    - "Fatty Acid Metabolism"
     - "Triacylglycerol Synthesis"
     - "Synthesis And Degradation Of Ketone Bodies"
     - "Cholesterol Metabolism"
+    - "Squalene And Cholesterol Synthesis (Recon3D)"
     - "Glycerophospholipid Metabolism"
     - "Sphingolipid Metabolism"
 
   "BCAA metabolism (Val/Leu/Iso)":
     - "Valine, Leucine And Isoleucine Biosynthesis"
     - "Valine, Leucine And Isoleucine Degradation"
+    - "Valine, Leucine, And Isoleucine Metabolism (Recon3D)"
  
   "AAA metabolism (Trp/Phe/Tyr)":
     - "Phenylalanine, Tyrosine And Tryptophan Biosynthesis"
@@ -115,10 +124,13 @@ pathway_merging:
 
   "AA central (A/D/E,G/S/T)":
     - "Alanine, Aspartate And Glutamate Metabolism"
+    - "Alanine And Aspartate Metabolism (Recon3D)"
     - "Glycine, Serine And Threonine Metabolism"
+    - "Glycine, Serine, Alanine, And Threonine Metabolism (Recon3D)"
 
   "AA other (Cys/Met/Lys/Arg/Pro)":
     - "Cysteine And Methionine Metabolism"
+    - "Methionine Metabolism (iMM1415)"
     - "Lysine Degradation"
     - "Arginine Biosynthesis"
     - "Arginine And Proline Metabolism"
@@ -163,9 +175,46 @@ pathway_filter:
 
 
 metabolite_filter:
-  mode: "blacklist"        # "whitelist", "blacklist", or "none"
+  mode: "blacklist"
   whitelist: []
-  blacklist: [H, H2O, CO2, HPO4, PPi, Guanosine, Creatinine, Creatine, HCO3]
+  blacklist:
+    # Неорганика и шум
+    - H
+    - H2O
+    - CO2
+    - HPO4
+    - PPi
+    - HCO3
+    - NH4
+    # Энергетические валюты
+    - ATP
+    - ADP
+    - ATP/ADP
+    - AMP
+    # Редокс-кофакторы
+    - NAD(+)
+    - NADP(+)
+    # CoA-пул
+    - CoA
+    - SC acyl-CoA
+    - Lipoamides
+    - Acetoacetyl-CoA
+    # Дыхательная цепь
+    - Ubiquinol-10
+    - Ubiquinone-10
+    - "Ubiquinol-10, Ubiquinone-10"
+    # Нуклеозиды
+    - Adenosine
+    - Guanosine
+    # Пуриновые промежуточные (синхронны с IMP/dATP)
+    - dADP
+    - dITP
+    - dIDP
+    - GMP
+    # Креатин
+    - Creatine
+    - Creatinine
+    - Dihydrolipoamide
 
 metabolite_name_shortcuts:
   Nicotinamide adenine dinucleotide: NAD(+)
@@ -180,19 +229,13 @@ metabolite_name_shortcuts:
   Crotonoyl-CoA: SC acyl-CoA
   2-Oxoadipate(2-): Adipates
   L-2-aminoadipate(1-): Adipates
-  3-Phospho-D-glycerate: Phospho-C3 acids
-  3-Phosphonatooxypyruvate: Phospho-C3 acids
-  3-Phosphonatooxypyruvate(3-): Phospho-C3 acids
-  Dihydrolipoamide: Lipoamides
-  Lipoamide: Lipoamides
+  3-Phospho-D-glycerate: 3-PG
+  3-Phosphonatooxypyruvate: 3-PHP
+  3-Phosphonatooxypyruvate(3-): 3-PHP
+  Dihydroxyacetone phosphate: DHAP
+  Glyceraldehyde 3-phosphate: G3P
   Deoxyadenosine: dA
   Ditp(4-): dITP
-  dATP: Purine dNTPs
-  dADP: Purine dNTPs
-  dITP: Purine dNTPs
-  dIDP: Purine dNTPs
-  IMP: Purine NTPs
-  GMP: Purine NTPs
   1-Pyrroline-5-carboxylate: P5C
   L-Glutamate 5-semialdehyde: GSA 
   N-phosphocreatinate(2-): PCr

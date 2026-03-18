@@ -9,7 +9,6 @@ library(BiocParallel)
 library(ggtree)
 library(tidyverse)
 library(patchwork)
-library(openxlsx)
 
 register(SerialParam())
 
@@ -28,22 +27,46 @@ register(SerialParam())
   stop("Cannot identify gene column in data frame.")
 }
 
-run_gsea_and_save <- function(tissue, pval_cutoff = 0.05, show_categories = 15, ontology = "BP") {
-  message("== ", tissue, " ==")
+run_gsea_and_save <- function(tissue, pval_cutoff = 0.05, show_categories = 15,
+                              ontology = "BP", minGSSize = 5, nPermSimple = 1000,
+                              rank_metric = "stat") {
 
-  deg_file <- paste0("../deg/archive/ggrsw1_v01/degs_results_", tissue, ".csv")
+  message("== ", tissue, " (all genes, rank: ", rank_metric, ") ==")
+
+  # Load DEG results
+  deg_file <- paste0("data/transcriptomics/degs/degs_results_", tissue, ".csv")
   deg_df   <- suppressMessages(read_csv(deg_file, show_col_types = FALSE)) |> as.data.frame()
 
   if (!"log2FoldChange" %in% colnames(deg_df)) stop("Column 'log2FoldChange' not found.")
 
-  gene_list <- tibble(
-    gene   = .extract_gene_col(deg_df),
-    log2FC = deg_df$log2FoldChange
-  ) |>
-    filter(!is.na(gene), is.finite(log2FC)) |>
+  # Calculate ranking metric
+  if (rank_metric == "log2FC") {
+    gene_list <- tibble(
+      gene   = .extract_gene_col(deg_df),
+      rank_value = deg_df$log2FoldChange
+    )
+  } else if (rank_metric == "stat") {
+    if (!"stat" %in% colnames(deg_df)) stop("Column 'stat' not found for Wald statistic ranking.")
+    gene_list <- tibble(
+      gene   = .extract_gene_col(deg_df),
+      rank_value = deg_df$stat
+    )
+  } else if (rank_metric == "signed_pvalue") {
+    if (!"pvalue" %in% colnames(deg_df)) stop("Column 'pvalue' not found.")
+    gene_list <- tibble(
+      gene   = .extract_gene_col(deg_df),
+      rank_value = sign(deg_df$log2FoldChange) * -log10(deg_df$pvalue + 1e-300)
+    )
+  } else {
+    stop("Unknown rank_metric: ", rank_metric)
+  }
+
+  # Filter and deduplicate
+  gene_list <- gene_list |>
+    filter(!is.na(gene), is.finite(rank_value)) |>
     group_by(gene) |>
-    summarise(log2FC = log2FC[which.max(abs(log2FC))], .groups = "drop") |>
-    arrange(desc(log2FC)) |>
+    summarise(rank_value = rank_value[which.max(abs(rank_value))], .groups = "drop") |>
+    arrange(desc(rank_value)) |>
     deframe()
 
   message("Genes in geneList: ", length(gene_list))
@@ -54,10 +77,11 @@ run_gsea_and_save <- function(tissue, pval_cutoff = 0.05, show_categories = 15, 
     OrgDb         = org.Gg.eg.db,
     ont           = ontology,
     keyType       = "SYMBOL",
-    minGSSize     = 5,
+    minGSSize     = minGSSize,
     maxGSSize     = 1000,
     pvalueCutoff  = pval_cutoff,
     pAdjustMethod = "BH",
+    nPermSimple   = nPermSimple,
     verbose       = FALSE
   )
 
@@ -73,29 +97,63 @@ run_gsea_and_save <- function(tissue, pval_cutoff = 0.05, show_categories = 15, 
     error = function(e) { message("pairwise_termsim error: ", e$message); gse_go }
   )
 
-  write.xlsx(
-    as.data.frame(gse_go) |> arrange(pvalue),
-    paste0(tissue, "_gsea_results.xlsx"),
-    overwrite = TRUE
+  # Save results to results/transcriptomics/gsea/
+  output_dir <- "results/transcriptomics/gsea"
+  if (!dir.exists(output_dir)) {
+    dir.create(output_dir, recursive = TRUE)
+  }
+
+  output_suffix <- ""
+  if (rank_metric != "log2FC") {
+    output_suffix <- paste0("_", rank_metric)
+  }
+
+  # Save as CSV with ontology metadata
+  results_df <- as.data.frame(gse_go) |> arrange(pvalue)
+  results_df$ontology <- ontology  # Add ontology column
+  write_csv(
+    results_df,
+    file.path(output_dir, paste0(tissue, "_gsea_results", output_suffix, ".csv"))
   )
 
-  p_tree <- treeplot(gse_sim, showCategory = show_categories) +
-    ggtitle(paste("GSEA GO", ontology, "-", tissue)) +
-    theme(legend.position = "bottom")
+  n_pathways <- nrow(as.data.frame(gse_go))
+  actual_show_categories <- min(show_categories, n_pathways)
 
-  p_dot <- dotplot(gse_sim, showCategory = show_categories, split = ".sign") +
+  # Only create treeplot if we have enough pathways (need at least 3 for clustering)
+  plot_suffix <- if (rank_metric != "log2FC") paste0("_", rank_metric) else ""
+
+  if (n_pathways >= 3) {
+    p_tree <- treeplot(gse_sim, showCategory = actual_show_categories) +
+      ggtitle(paste("GSEA GO", ontology, "-", tissue, "(rank:", rank_metric, ")")) +
+      theme(legend.position = "bottom")
+    ggsave(file.path(output_dir, paste0(tissue, "_gsea_treeplot", plot_suffix, ".svg")),
+           p_tree, width = 12, height = 8)
+  } else {
+    message("Skipping treeplot for ", tissue, " (only ", n_pathways, " pathways found, need at least 3)")
+    p_tree <- NULL
+  }
+
+  p_dot <- dotplot(gse_sim, showCategory = actual_show_categories, split = ".sign") +
     facet_grid(. ~ .sign) +
-    ggtitle(paste("Dotplot -", tissue))
+    ggtitle(paste("Dotplot -", tissue, "(rank:", rank_metric, ")"))
 
-  ggsave(paste0(tissue, "_gsea_treeplot1.pdf"), p_tree, width = 12, height = 8)
-  ggsave(paste0(tissue, "_gsea_dotplot1.pdf"),  p_dot,  width = 12, height = 8)
+  ggsave(file.path(output_dir, paste0(tissue, "_gsea_dotplot", plot_suffix, ".svg")),
+         p_dot, width = 12, height = 8)
 
   message("Done: ", tissue)
   list(gse_result = gse_go, sim_result = gse_sim, tree_plot = p_tree, dot_plot = p_dot)
 }
 
-setwd("/home/rimmi/WorkStation/drvoms-chkn/work_with_genes/gsea/")
 
-breast <- run_gsea_and_save("breast", pval_cutoff = 0.10)
-leg    <- run_gsea_and_save("leg",    pval_cutoff = 0.30)
-liver  <- run_gsea_and_save("liver",  pval_cutoff = 0.30)
+
+
+breast <- run_gsea_and_save("breast", pval_cutoff = 0.25, minGSSize = 15, nPermSimple = 100000,
+                            rank_metric = "stat")
+
+leg    <- run_gsea_and_save("leg",    pval_cutoff = 0.25, minGSSize = 15, nPermSimple = 100000,
+                            rank_metric = "stat")
+
+liver  <- run_gsea_and_save("liver",  pval_cutoff = 0.25, minGSSize = 15, nPermSimple = 100000,
+                            rank_metric = "stat")
+
+

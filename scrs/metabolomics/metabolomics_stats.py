@@ -4,6 +4,7 @@ import warnings
 import numpy as np
 import pandas as pd
 from scipy.stats import mannwhitneyu, median_abs_deviation
+from statsmodels.stats.multitest import multipletests
 
 warnings.filterwarnings('ignore')
 
@@ -69,6 +70,39 @@ def _get_metabolite_id(row, idx: int) -> str:
     return f"metabolite_{idx}"
 
 
+def combine_csv_to_excel(
+    results_dir: str,
+    output_filename: str = "metabolomics_combined_results.xlsx",
+) -> None:
+    """
+    Combine all CSV files from results directory into a single Excel file
+    with each CSV as a separate sheet.
+
+    Args:
+        results_dir: Directory containing CSV files
+        output_filename: Name of the output Excel file
+    """
+    import glob
+
+    csv_files = glob.glob(os.path.join(results_dir, "metabolites_*.csv"))
+
+    if not csv_files:
+        print(f"No CSV files found in {results_dir}")
+        return
+
+    output_path = os.path.join(results_dir, output_filename)
+
+    with pd.ExcelWriter(output_path, engine='openpyxl') as writer:
+        for csv_file in sorted(csv_files):
+            # Extract sheet name from filename (e.g., "metabolites_Liver.csv" -> "Liver")
+            sheet_name = os.path.basename(csv_file).replace("metabolites_", "").replace(".csv", "")
+            df = pd.read_csv(csv_file)
+            df.to_excel(writer, sheet_name=sheet_name, index=False)
+            print(f"  Added sheet: {sheet_name} ({len(df)} metabolites)")
+
+    print(f"\nCombined Excel file saved: {output_path}")
+
+
 def analyze_metabolite_differences(
     excel_path: str,
     sheet_name: str,
@@ -84,12 +118,19 @@ def analyze_metabolite_differences(
     random_state: int = 42,
 ) -> pd.DataFrame:
     """
-    Analyze metabolite differences using a hybrid approach.
+    Analyze metabolite differences using a hybrid approach combining:
+      - Hodges-Lehmann estimator for robust effect size
+      - Bootstrap-based probability estimates
+      - Mann-Whitney U test with FDR correction
 
-    Filtering requires all three conditions:
-      1. Pr(direction) > prob_direction_threshold
-      2. Pr(|HL| > delta) > prob_magnitude_threshold
-      3. Mann-Whitney p < mw_pvalue_threshold
+    Results include both raw and FDR-corrected p-values.
+    Users can apply custom thresholds based on:
+      1. prob_direction (directional consistency)
+      2. prob_exceeds_mcid (magnitude of effect)
+      3. mw_pvalue_fdr (statistical significance with FDR correction)
+
+    FDR correction uses the Benjamini-Hochberg method to control
+    false discovery rate across all metabolites.
     """
     rng = np.random.default_rng(random_state)
     print(f"Reading {excel_path}, sheet: {sheet_name}")
@@ -121,11 +162,6 @@ def analyze_metabolite_differences(
         except Exception:
             mw_pvalue = np.nan
 
-        directional = probs["prob_direction"] > prob_direction_threshold
-        magnitude = probs["prob_exceeds_mcid"] > prob_magnitude_threshold
-        mw_sig = mw_pvalue < mw_pvalue_threshold
-        passes = directional and magnitude and mw_sig
-
         if probs["prob_positive"] > 0.5:
             direction_label = "Higher in fast-growing"
         elif probs["prob_negative"] > 0.5:
@@ -151,33 +187,55 @@ def analyze_metabolite_differences(
             "prob_exceeds_mcid": probs["prob_exceeds_mcid"],
             "direction_label": direction_label,
             "mw_pvalue": mw_pvalue,
-            "directional_consistent": directional,
-            "magnitude_exceeds": magnitude,
-            "mw_significant": mw_sig,
-            "passes_filters": passes,
         })
 
         if (idx + 1) % 10 == 0:
             print(f"  Processed {idx + 1} metabolites...")
 
-    result_df = pd.DataFrame(records).sort_values(
-        ["passes_filters", "prob_direction", "prob_exceeds_mcid"],
-        ascending=False,
+    result_df = pd.DataFrame(records)
+
+    # Apply FDR correction to Mann-Whitney p-values
+    valid_pvals = result_df['mw_pvalue'].notna()
+    if valid_pvals.sum() > 0:
+        # Apply Benjamini-Hochberg FDR correction
+        pvals = result_df.loc[valid_pvals, 'mw_pvalue'].values
+        _, pvals_corrected, _, _ = multipletests(pvals, alpha=mw_pvalue_threshold, method='fdr_bh')
+
+        # Add corrected p-values to dataframe
+        result_df['mw_pvalue_fdr'] = np.nan
+        result_df.loc[valid_pvals, 'mw_pvalue_fdr'] = pvals_corrected
+    else:
+        result_df['mw_pvalue_fdr'] = np.nan
+
+    # Sort by probability metrics
+    result_df = result_df.sort_values(
+        ["prob_direction", "prob_exceeds_mcid", "mw_pvalue_fdr"],
+        ascending=[False, False, True],
     )
 
     output_path = os.path.join(output_dir, f"metabolites_{sheet_name}.csv")
     result_df.to_csv(output_path, index=False, float_format='%.4f')
 
     n_total = len(result_df)
-    n_passed = result_df['passes_filters'].sum()
+    n_directional = (result_df['prob_direction'] > prob_direction_threshold).sum()
+    n_magnitude = (result_df['prob_exceeds_mcid'] > prob_magnitude_threshold).sum()
+    n_mw_uncorrected = (result_df['mw_pvalue'] < mw_pvalue_threshold).sum()
+    n_mw_fdr = (result_df['mw_pvalue_fdr'] < mw_pvalue_threshold).sum()
+    n_all_criteria = (
+        (result_df['prob_direction'] > prob_direction_threshold) &
+        (result_df['prob_exceeds_mcid'] > prob_magnitude_threshold) &
+        (result_df['mw_pvalue_fdr'] < mw_pvalue_threshold)
+    ).sum()
+
     print(f"\n{'='*60}")
     print(f"RESULTS FOR {sheet_name}")
     print(f"{'='*60}")
     print(f"Total metabolites analyzed: {n_total}")
-    print(f"Passed filters: {n_passed} ({100*n_passed/n_total:.1f}%)")
-    print(f"  - Directional (>{prob_direction_threshold}): {result_df['directional_consistent'].sum()}")
-    print(f"  - Magnitude (>{prob_magnitude_threshold}): {result_df['magnitude_exceeds'].sum()}")
-    print(f"  - MW p-value (<{mw_pvalue_threshold}): {result_df['mw_significant'].sum()}")
+    print(f"Meeting all criteria (FDR-corrected): {n_all_criteria} ({100*n_all_criteria/n_total:.1f}%)")
+    print(f"  - Directional (>{prob_direction_threshold}): {n_directional}")
+    print(f"  - Magnitude (>{prob_magnitude_threshold}): {n_magnitude}")
+    print(f"  - MW p-value uncorrected (<{mw_pvalue_threshold}): {n_mw_uncorrected}")
+    print(f"  - MW p-value FDR-corrected (<{mw_pvalue_threshold}): {n_mw_fdr}")
     print(f"Saved: {output_path}")
     print(f"{'='*60}\n")
 
@@ -194,9 +252,9 @@ if __name__ == "__main__":
         print(f"{'='*70}")
 
         df = analyze_metabolite_differences(
-            excel_path="Metabolome_updated_3.xlsx",
+            excel_path="data/metabolomics/Metabolome.xlsx",
             sheet_name=tissue,
-            output_dir="results_mets",
+            output_dir="results/metabolomics/",
             n_bootstrap=10000,
             k_sd=0.2,
             prob_direction_threshold=0.90,
@@ -209,5 +267,20 @@ if __name__ == "__main__":
     print("OVERALL SUMMARY")
     print("="*70)
     for tissue, df in all_results.items():
-        n_passed = df['passes_filters'].sum()
-        print(f"{tissue:15s}: {n_passed:3d} metabolites passed filter")
+        n_total = len(df)
+        n_passed = (
+            (df['prob_direction'] > 0.90) &
+            (df['prob_exceeds_mcid'] > 0.75) &
+            (df['mw_pvalue_fdr'] < 0.2)
+        ).sum()
+        print(f"{tissue:15s}: {n_passed:3d}/{n_total} metabolites meet all criteria (FDR-corrected)")
+
+    # Combine all CSV files into a single Excel file
+    print("\n" + "="*70)
+    print("COMBINING RESULTS INTO EXCEL")
+    print("="*70)
+    combine_csv_to_excel(
+        results_dir="results/metabolomics/",
+        output_filename="metabolomics_all_tissues.xlsx"
+    )
+    print("="*70)

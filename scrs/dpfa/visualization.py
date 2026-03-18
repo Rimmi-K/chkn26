@@ -42,7 +42,8 @@ def _explode_pathways(df: pd.DataFrame, pathway_column: str = "Pathways") -> pd.
 def plot_regulation_counts(df: pd.DataFrame, output_dir: str, tissue: str,
                            pathways_filter=None, pathway_flux_diff=None,
                            flux_diff_threshold: float = 0.0,
-                           xlim: tuple = None):
+                           xlim: tuple = None,
+                           figsize=None):
     """
     Plot DRF histogram by pathways with variable bar width.
     Bar width depends on |total_flux_shift| (normalized by maximum).
@@ -126,10 +127,13 @@ def plot_regulation_counts(df: pd.DataFrame, output_dir: str, tissue: str,
     else:
         bar_heights_pt = {p: 20 for p in pathway_order}
 
-    if False:
-        fig, ax = plt.subplots(figsize=(6, 2.2))
+    # Use tissue-specific figure size or default
+    if figsize and len(figsize) == 2:
+        fig_size = tuple(figsize)
     else:
-        fig, ax = plt.subplots(figsize=(6, 2.5))
+        fig_size = (12, 8)  # Default size for DRF histogram
+
+    fig, ax = plt.subplots(figsize=fig_size)
 
     y_positions = np.arange(len(pathway_order))
     categories = [c for c in color_dict.keys() if c in counts.columns]
@@ -598,7 +602,8 @@ def plot_fluxsum_log2fc_heatmap(df: pd.DataFrame, tissue: str, output_dir: str,
                                 merge_identical: bool = True,
                                 metabolite_filter: dict = None,
                                 log2fc_threshold: float = 0.0,
-                                min_pathways_with_change: int = 2):
+                                min_pathways_with_change: int = 2,
+                                figsize=None):
     """
     Enhanced heatmap for mcPFA with unified pathways, metabolite filtering,
     identical metabolite merging, and Times New Roman font for compact display.
@@ -719,15 +724,13 @@ def plot_fluxsum_log2fc_heatmap(df: pd.DataFrame, tissue: str, output_dir: str,
         heatmap_df = merge_identical_metabolites(heatmap_df)
         logging.info(f"[{tissue}] After merging: {len(heatmap_df.columns)} metabolite groups")
 
-    if str.lower(tissue) == "liver":
-        fig_width = 7
-        fig_height = 2.7
-    elif str.lower(tissue) == "breast":
-        fig_width = 7
-        fig_height = 2.7
+    # Use tissue-specific figure size or default
+    if figsize and len(figsize) == 2:
+        fig_width, fig_height = figsize
     else:
-        fig_width = 7
-        fig_height = 2.7
+        # Default size
+        fig_width = 14
+        fig_height = 10
 
     fig, ax = plt.subplots(figsize=(fig_width, fig_height))
 
@@ -808,9 +811,20 @@ def plot_fluxsum_log2fc_heatmap(df: pd.DataFrame, tissue: str, output_dir: str,
 
     logging.info(f"mcPFA heatmap saved: {out_png}")
 
+    # Save filtered version of original dataframe (not pivot table)
+    # Get list of metabolites that passed filtering
+    filtered_metabolites = list(heatmap_df.columns)
+    filtered_pathways = list(heatmap_df.index)
+
+    # Filter original dataframe by metabolites and pathways that appear on heatmap
+    df_filtered = df[
+        (df[metabolite_column].isin(filtered_metabolites)) &
+        (df[pathway_column].isin(filtered_pathways))
+    ].copy()
+
     csv_path = os.path.join(output_dir, f"mcPFA_filtered_{tissue}.csv")
-    heatmap_df.to_csv(csv_path)
-    logging.info(f"Filtered mcPFA data saved: {csv_path}")
+    df_filtered.to_csv(csv_path, index=False)
+    logging.info(f"Filtered mcPFA data saved: {csv_path} ({len(df_filtered)} rows, {df_filtered[metabolite_column].nunique()} metabolites, {df_filtered[pathway_column].nunique()} pathways)")
 
 
 

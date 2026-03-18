@@ -10,14 +10,14 @@ import cobra
 from statsmodels.stats.multitest import multipletests
 
 from scrs.config_loader import load_config
-from dpfa.utils.pathway_database import PathwayDatabase
-from dpfa.utils.gpr_utils import (
+from scrs.dpfa.utils.pathway_database import PathwayDatabase
+from scrs.dpfa.utils.gpr_utils import (
     build_gpr_clauses,
     reaction_log2fc_via_gpr,
     reaction_pvalues_via_gpr,
 )
-from dpfa.utils.io_utils import load_deg_table
-from dpfa.utils.flux_utils import (
+from scrs.dpfa.utils.io_utils import load_deg_table
+from scrs.dpfa.utils.flux_utils import (
     process_models,
     ratio_fluxes,
     create_DRF,
@@ -67,6 +67,8 @@ def main():
         fast_model = cfg["fast_model"]
         deg_csv = cfg.get("deg_csv")
         output_dir = cfg.get("output_dir")
+        figure_sizes = cfg.get("figure_sizes", {})
+        scatter_axis_limits = cfg.get("scatter_axis_limits", {})
 
         if not deg_csv:
             logging.warning(f"[{tissue}] No DEG file specified, skipping TFCA")
@@ -91,7 +93,7 @@ def main():
 
         # Apply pathway merging if configured
         if config.pathway_merging:
-            from dpfa.utils.pathway_utils import apply_pathway_merging_to_list_column
+            from scrs.dpfa.utils.pathway_utils import apply_pathway_merging_to_list_column
 
             if "Pathways_list" in drf_df.columns:
                 drf_df_grouped = apply_pathway_merging_to_list_column(
@@ -161,7 +163,10 @@ def main():
             size_mode=scatter_params.get('size_mode', 'discrete'),
             size_thresholds=scatter_params.get('size_thresholds', [0.001, 0.01, 0.05, 0.25]),
             size_values=scatter_params.get('size_values', [175, 150, 100, 50]),
-            size_default=scatter_params.get('size_default', 25)
+            size_default=scatter_params.get('size_default', 25),
+            figsize=figure_sizes.get('scatter'),
+            xlim=scatter_axis_limits.get('xlim'),
+            ylim=scatter_axis_limits.get('ylim')
         )
 
         logging.info(f"[{tissue}] TFCA analysis completed")

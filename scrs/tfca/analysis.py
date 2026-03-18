@@ -9,9 +9,9 @@ import matplotlib.pyplot as plt
 from matplotlib.scale import FuncScale
 from matplotlib.lines import Line2D
 from matplotlib.patches import Wedge, Circle
-from dpfa.utils.pathway_colors import canonicalize_pathway, palette_for_df, get_color_for_pathway
-from dpfa.utils.gpr_utils import build_gpr_rule_map, make_gpr_rule_with_values, build_reaction_pathways_map
-from dpfa.utils.flux_utils import FLUX_ON, FLUX_OFF, FLUX_REVERSED
+from scrs.dpfa.utils.pathway_colors import canonicalize_pathway, palette_for_df, get_color_for_pathway
+from scrs.dpfa.utils.gpr_utils import build_gpr_rule_map, make_gpr_rule_with_values, build_reaction_pathways_map
+from scrs.dpfa.utils.flux_utils import FLUX_ON, FLUX_OFF, FLUX_REVERSED
 import matplotlib.ticker as mticker
 
 
@@ -413,14 +413,27 @@ def _draw_scatter_with_markers(ax, df: pd.DataFrame, tissue: str) -> List[dict]:
     return multi_markers_data
 
 
-def _configure_axes(ax, tissue: str, rxn_lfc_thr: float, flux_log2_thr: float):
+def _configure_axes(ax, tissue: str, rxn_lfc_thr: float, flux_log2_thr: float,
+                   xlim: Optional[List[float]] = None, ylim: Optional[List[float]] = None):
     """Configures axis scales, ticks, and grid"""
     fx, fxi = make_band_squash_transform(B=1.0, k=8.0)
     ax.set_xscale(FuncScale(ax, (fx, fxi)))
     ax.set_yscale(FuncScale(ax, (fx, fxi)))
 
-    xt = np.arange(-1, 4, 1)
-    yt = np.array([-4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7])
+    # Set axis limits
+    if xlim is not None and len(xlim) == 2:
+        x_min, x_max = xlim
+    else:
+        x_min, x_max = -1, 4
+
+    if ylim is not None and len(ylim) == 2:
+        y_min, y_max = ylim
+    else:
+        y_min, y_max = -3.5, 7
+
+    # Generate ticks based on limits
+    xt = np.arange(int(np.floor(x_min)), int(np.ceil(x_max)) + 1, 1)
+    yt = np.arange(int(np.floor(y_min)), int(np.ceil(y_max)) + 1, 1)
 
     ax.set_xticks(xt)
     ax.set_yticks(yt)
@@ -437,8 +450,9 @@ def _configure_axes(ax, tissue: str, rxn_lfc_thr: float, flux_log2_thr: float):
     ax.xaxis.set_minor_locator(mticker.NullLocator())
     ax.yaxis.set_minor_locator(mticker.NullLocator())
 
-    # Set ylim to -3.5 to show FLUX_OFF reactions (log2_ratio = -3.0)
-    ax.set_ylim(bottom=-3.5, top=7)
+    # Set axis limits
+    ax.set_xlim(left=x_min, right=x_max)
+    ax.set_ylim(bottom=y_min, top=y_max)
 
     ax.axvline(0, ls="--", lw=1, color="k", alpha=0.35)
     ax.axhline(0, ls="--", lw=1, color="k", alpha=0.35)
@@ -654,6 +668,9 @@ def make_scatter_deg_vs_flux(
 
     model_for_gpr_rules=None,
     deg_df_for_labels=None,
+    figsize: Optional[List[float]] = None,
+    xlim: Optional[List[float]] = None,
+    ylim: Optional[List[float]] = None,
 ):
     """
     Draws scatter plot of DEG vs flux ratio with multi-colored markers
@@ -686,13 +703,13 @@ def make_scatter_deg_vs_flux(
         "Subsystems": "Subsystem",
     }
 
-    # Add Concordant column - requires passing thresholds AND same sign
-    df["Concordant (transcript–flux)"] = df["highlight"] & (
+    # Add Concordant column - shows if transcript and flux change in same direction
+    df["Concordant (transcript–flux)"] = (
         ((df["deg_log2fc"] > 0) & (df["log2_ratio"] > 0)) |
         ((df["deg_log2fc"] < 0) & (df["log2_ratio"] < 0))
     )
 
-    # Add Significant column (passes both thresholds, regardless of concordance)
+    # Add Significant column - shows if reaction passes both thresholds
     df["Significant reaction (transcript effect & flux ratio)"] = df["highlight"]
 
     # Select and rename columns for output
@@ -714,11 +731,13 @@ def make_scatter_deg_vs_flux(
     csv_out = os.path.join(output_dir, f"tfca_results_{tissue}.csv")
     df_out.to_csv(csv_out, index=False)
 
-    fig, ax = plt.subplots(figsize=(7, 6))
+    # Use tissue-specific figure size or default
+    fig_size = tuple(figsize) if figsize else (7, 6)
+    fig, ax = plt.subplots(figsize=fig_size)
 
     multi_markers_data = _draw_scatter_with_markers(ax, df, tissue)
 
-    _configure_axes(ax, tissue, rxn_lfc_thr, flux_log2_thr)
+    _configure_axes(ax, tissue, rxn_lfc_thr, flux_log2_thr, xlim=xlim, ylim=ylim)
 
     df_hi = df[df["highlight"]]
     if not df_hi.empty and multi_markers_data:

@@ -9,7 +9,7 @@ import pandas as pd
 import cobra
 
 from scrs.config_loader import load_config
-from dpfa.utils.pathway_database import PathwayDatabase
+from scrs.dpfa.utils.pathway_database import PathwayDatabase
 from .analysis import run_analysis
 
 
@@ -63,6 +63,8 @@ def main():
         logging.info(f"PROCESSING TISSUE: {tissue.upper()}")
         logging.info(f"{'='*70}")
 
+        figure_sizes = cfg.get("figure_sizes", {})
+
         run_analysis(
             model=model,
             slow_model=cfg["slow_model"],
@@ -81,7 +83,8 @@ def main():
             drf_xlim_max=drf_xlim_max,
             drf_threshold=drf_threshold,
             mcpfa_log2fc_threshold=config.visualization.get('mcpfa_log2fc_threshold', 1.0),
-            mcpfa_min_pathways=config.visualization.get('mcpfa_min_pathways', 2)
+            mcpfa_min_pathways=config.visualization.get('mcpfa_min_pathways', 2),
+            figure_sizes=figure_sizes
         )
 
     logging.info("\n" + "="*70)

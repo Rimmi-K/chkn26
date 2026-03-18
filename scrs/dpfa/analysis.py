@@ -3,20 +3,20 @@ import logging
 import pandas as pd
 import cobra
 
-from dpfa.utils.pathway_colors import save_legend_from_df
-from dpfa.utils.pathway_database import PathwayDatabase
+from scrs.dpfa.utils.pathway_colors import save_legend_from_df
+from scrs.dpfa.utils.pathway_database import PathwayDatabase
 from .visualization import (
     plot_regulation_counts,
     analyze_pathway_flux_difference,
     create_rdpfa_summary
 )
-from dpfa.utils.flux_utils import (
+from scrs.dpfa.utils.flux_utils import (
     process_models,
     ratio_fluxes,
     create_DRF,
     get_reaction_formula
 )
-from dpfa.utils.mets_turnover import analyze_mets_turnover
+from scrs.dpfa.utils.mets_turnover import analyze_mets_turnover
 
 
 def run_analysis(model, slow_model, fast_model, tissue,
@@ -34,7 +34,8 @@ def run_analysis(model, slow_model, fast_model, tissue,
                  drf_xlim_max: int = None,
                  drf_threshold: float = 0.3,
                  mcpfa_log2fc_threshold: float = 1.5,
-                 mcpfa_min_pathways: int = 2):
+                 mcpfa_min_pathways: int = 2,
+                 figure_sizes: dict = None):
     """
     Performs differential pathway flux analysis (DPFA) of metabolic models.
 
@@ -92,7 +93,7 @@ def run_analysis(model, slow_model, fast_model, tissue,
 
     # Create pathway groups for visualization (keep original pathways intact)
     if pathway_merging:
-        from dpfa.utils.pathway_utils import apply_pathway_merging_to_list_column
+        from scrs.dpfa.utils.pathway_utils import apply_pathway_merging_to_list_column
 
         if "Pathways_list" in merged_df.columns:
             # Create a copy for grouping
@@ -151,6 +152,7 @@ def run_analysis(model, slow_model, fast_model, tissue,
             metabolite_filter=metabolite_filter,
             log2fc_threshold=mcpfa_log2fc_threshold,
             min_pathways_with_change=mcpfa_min_pathways,
+            heatmap_figsize=figure_sizes.get('heatmap') if figure_sizes else None,
         )
     except Exception as e:
         logging.exception(f"Metabolite turnover analysis failed: {e}")
@@ -167,7 +169,8 @@ def run_analysis(model, slow_model, fast_model, tissue,
         pathways_filter=filter_pathways_list,
         pathway_flux_diff=pathway_flux_diff,
         flux_diff_threshold=flux_diff_plot_threshold,
-        xlim=(0, drf_xlim_max) if drf_xlim_max else None
+        xlim=(0, drf_xlim_max) if drf_xlim_max else None,
+        figsize=figure_sizes.get('drf_histogram') if figure_sizes else None
     )
 
     logging.info(f"[{tissue}] DPFA analysis completed")

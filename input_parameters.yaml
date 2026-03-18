@@ -12,16 +12,37 @@ tissues:
     slow_model: "data/models/context_specific/mcs_slow_breast_fraction_0.50.json"
     fast_model: "data/models/context_specific/mcs_fast_breast_fraction_0.70.json"
     deg_csv: "data/transcriptomics/degs/degs_results_breast.csv"
+    figure_sizes:
+      scatter: [7, 6]           # TFCA scatter plot (width, height)
+      heatmap: [6.5, 2.5]         # mcDPFA metabolite heatmap
+      drf_histogram: [6.7, 2.5]    # rDPFA histogram
+    scatter_axis_limits:
+      xlim: [-2, 4]            # X-axis limits [min, max] for transcript log2FC
+      ylim: [-7, 7]            # Y-axis limits [min, max] for flux log2 ratio
 
   - tissue: "leg"
     slow_model: "data/models/context_specific/mcs_slow_leg_fraction_0.20.json"
     fast_model: "data/models/context_specific/mcs_fast_leg_fraction_0.25.json"
     deg_csv: "data/transcriptomics/degs/degs_results_leg.csv"
+    figure_sizes:
+      scatter: [7, 6]
+      heatmap: [6.5, 2.5]
+      drf_histogram: [6.7, 2.5]
+    scatter_axis_limits:
+      xlim: [-2, 4]
+      ylim: [-7, 7]
 
   - tissue: "liver"
     slow_model: "data/models/context_specific/mcs_slow_liver_fraction_0.10.json"
     fast_model: "data/models/context_specific/mcs_fast_liver_fraction_0.20.json"
     deg_csv: "data/transcriptomics/degs/degs_results_liver.csv"
+    figure_sizes:
+      scatter: [7, 6]
+      heatmap: [6.5, 2.5]
+      drf_histogram: [6.7, 2.5]
+    scatter_axis_limits:
+      xlim: [-2, 4]
+      ylim: [-7, 7]
 
 # ============================================================================
 # ANALYSIS PARAMETERS
@@ -151,9 +172,7 @@ pathway_merging:
 
   "Mitochondrial transport":
     - "Transport, Mitochondrial"
-  
 
-  
 
 
 pathway_filter:
@@ -178,7 +197,6 @@ metabolite_filter:
   mode: "blacklist"
   whitelist: []
   blacklist:
-    # Неорганика и шум
     - H
     - H2O
     - CO2
@@ -186,32 +204,25 @@ metabolite_filter:
     - PPi
     - HCO3
     - NH4
-    # Энергетические валюты
     - ATP
     - ADP
     - ATP/ADP
     - AMP
-    # Редокс-кофакторы
     - NAD(+)
     - NADP(+)
-    # CoA-пул
     - CoA
     - SC acyl-CoA
     - Lipoamides
     - Acetoacetyl-CoA
-    # Дыхательная цепь
     - Ubiquinol-10
     - Ubiquinone-10
     - "Ubiquinol-10, Ubiquinone-10"
-    # Нуклеозиды
     - Adenosine
     - Guanosine
-    # Пуриновые промежуточные (синхронны с IMP/dATP)
     - dADP
     - dITP
     - dIDP
     - GMP
-    # Креатин
     - Creatine
     - Creatinine
     - Dihydrolipoamide

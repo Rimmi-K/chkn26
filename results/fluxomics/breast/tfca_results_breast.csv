@@ -1,26 +1,44 @@
 Reaction ID,GPR rule (genes),Transcript effect (log2FC),Flux change log2(FG/SG),Adjusted p-value (FDR),Metabolic pathways,Subsystem,Concordant (transcript–flux),Significant reaction (transcript effect & flux ratio)
+ME2m,ME1 or ME3,0.0308,3.1359,0.8057,Pyruvate Metabolism,Central Energy Metabolism,True,False
+ACACT1rm,ACAT1,0.1256,3.0,0.528,"Butanoate Metabolism; Fatty Acid Degradation; Fatty Acid Metabolism; Glyoxylate And Dicarboxylate Metabolism; Lysine Degradation; Pyruvate Metabolism; Terpenoid Backbone Biosynthesis; Tryptophan Metabolism; Valine, Leucine And Isoleucine Degradation",Butanoate Metabolism; Lipid metabolism; Glyoxylate And Dicarboxylate Metabolism; AA other (Cys/Met/Lys/Arg/Pro); Central Energy Metabolism; Terpenoid Backbone Biosynthesis; AAA metabolism (Trp/Phe/Tyr); BCAA metabolism (Val/Leu/Iso),True,False
 ALATA__L,GPT2,2.3741,3.0,0.0,"2-oxocarboxylic Acid Metabolism; Alanine, Aspartate And Glutamate Metabolism; Arginine Biosynthesis; Biosynthesis Of Amino Acids","2-oxocarboxylic Acid Metabolism; AA central (A/D/E,G/S/T); AA other (Cys/Met/Lys/Arg/Pro); Biosynthesis Of Amino Acids",True,True
+ARGLYSex,SLC7A6,0.2933,3.0,0.509,Extracellular Transport,Extracellular Transport,True,False
+ASNtN1,SLC38A3,0.1033,3.0,0.8364,Extracellular Transport,Extracellular Transport,True,False
 CSm,CS,1.0112,3.0,0.0292,2-oxocarboxylic Acid Metabolism; Biosynthesis Of Amino Acids; Citric Acid Cycle; Glyoxylate And Dicarboxylate Metabolism,2-oxocarboxylic Acid Metabolism; Biosynthesis Of Amino Acids; Central Energy Metabolism; Glyoxylate And Dicarboxylate Metabolism,True,True
 ECOAH1m,HADHA and ECHS1,-0.5208,-3.0,0.8782,Butanoate Metabolism; Fatty Acid Degradation; Fatty Acid Metabolism; Lysine Degradation; Tryptophan Metabolism,Butanoate Metabolism; Lipid metabolism; AA other (Cys/Met/Lys/Arg/Pro); AAA metabolism (Trp/Phe/Tyr),True,True
 GLNt4,SLC38A1 or SLC6A14 or SLC38A2 or SLC22A5 or (SLC6A19 and TMEM27) or (SLC6A19 and ACE2),1.3991,3.0,0.6849,Extracellular Transport,Extracellular Transport,True,True
 PDHm,DLAT,2.3375,3.0,0.0099,2-oxocarboxylic Acid Metabolism; Glycolysis/Gluconeogenesis,2-oxocarboxylic Acid Metabolism; Central Energy Metabolism,True,True
 r0130,GGT2 or GGT2P,0.9771,3.0,0.1495,Glutathione Metabolism,Redox & Pentose Metabolism,True,True
+r0450,AADAT,-0.0115,-3.0,0.9879,2-oxocarboxylic Acid Metabolism; Biosynthesis Of Amino Acids; Lysine Biosynthesis; Lysine Degradation; Lysine Metabolism,2-oxocarboxylic Acid Metabolism; Biosynthesis Of Amino Acids; Lysine Biosynthesis; AA other (Cys/Met/Lys/Arg/Pro),True,False
 CYSGLUexR,SLC7A10 or SLC7A5,1.146,1.3334,0.9888,Extracellular Transport,Extracellular Transport,True,True
 r0129,GGT2 or GGT2P,0.9771,0.84,0.1495,Glutathione Metabolism,Redox & Pentose Metabolism,True,True
+GCC2am,AMT and DLD and GLDC and GCSH,-0.0856,-0.737,0.7551,"Alanine, Aspartate And Glutamate Metabolism; Glycine, Serine And Threonine Metabolism","AA central (A/D/E,G/S/T)",True,False
+GCC2bim,AMT and DLD and GLDC and GCSH,-0.0856,-0.737,0.7551,"Alanine, Aspartate And Glutamate Metabolism; Glycine, Serine And Threonine Metabolism","AA central (A/D/E,G/S/T)",True,False
+PGCD,PHGDH,-0.3278,-0.737,0.5944,"Alanine, Aspartate And Glutamate Metabolism; Biosynthesis Of Amino Acids; Cysteine And Methionine Metabolism; Glycine, Serine And Threonine Metabolism; Methane Metabolism","AA central (A/D/E,G/S/T); Biosynthesis Of Amino Acids; AA other (Cys/Met/Lys/Arg/Pro); Methane Metabolism",True,False
+PSP__Lm,PSPH,-0.0841,-0.737,0.9307,"Alanine, Aspartate And Glutamate Metabolism; Glycine, Serine And Threonine Metabolism","AA central (A/D/E,G/S/T)",True,False
+FUMm,FH,0.4581,0.696,0.097,Citric Acid Cycle; Pyruvate Metabolism,Central Energy Metabolism,True,False
+SUCOASm,SUCLG1 and SUCLA2,0.0517,0.696,0.8844,Citric Acid Cycle; Propanoate Metabolism,Central Energy Metabolism; Propanoate Metabolism,True,False
+GCC2cm,DLD,-0.0856,-0.6897,0.7551,Glycolysis/Gluconeogenesis,Central Energy Metabolism,True,False
+r1418,CA15L or CA9,0.2457,0.4854,0.8343,Nitrogen Metabolism,Nitrogen disposal,True,False
+GLUt4,SLC38A3,0.1033,0.263,0.8364,Extracellular Transport,Extracellular Transport,True,False
+CYOOm3,COX5B and COX4I1 and COX6A1 and COX6C and COX7A2L and COX7C and COX5A and COX7B and COX7A2 and COX8A and COX2 and COX3 and COX1,-0.6969,-0.074,,Oxidative Phosphorylation,Oxidative Phosphorylation,True,False
+CYOR_u10m,UQCRFS1 and UQCRC1 and UQCRQ and UQCRB and UQCRC2 and UQCR11 and UQCR10 and UQCRHL and CYTB,-0.4791,-0.074,,Oxidative Phosphorylation,Oxidative Phosphorylation,True,False
+ATPS4m,NDUFS2 and NDUFA13 and NDUFB7 and NDUFS4 and NDUFC2 and NDUFB6 and NDUFB10 and NDUFAB1 and NDUFA8 and NDUFA5 and NDUFA12 and NDUFB2 and NDUFV3 and NDUFA9 and NDUFA7 and NDUFB9 and NDUFS6 and NDUFS3 and NDUFB1 and NDUFB8 and NDUFA10 and NDUFB3 and NDUFS1 and NDUFB5 and NDUFV2 and NDUFA6 and NDUFV1 and NDUFA2 and NDUFS8 and NDUFB4 and NDUFS7 and NDUFS5 and NDUFA4 and NDUFA1 and NDUFA11 and ND1 and ND3 and ND6 and ND5 and ND4 and ND4L and ND2,-0.707,-0.0589,,Oxidative Phosphorylation,Oxidative Phosphorylation,True,False
+ENO,ENO1 or ENO4 or ENO2,0.8543,0.0566,0.0016,Biosynthesis Of Amino Acids; Glycolysis/Gluconeogenesis; Methane Metabolism,Biosynthesis Of Amino Acids; Central Energy Metabolism; Methane Metabolism,True,False
+PYK,PKLR,0.1968,0.0566,0.487,Biosynthesis Of Amino Acids; Glycolysis/Gluconeogenesis; Pyruvate Metabolism,Biosynthesis Of Amino Acids; Central Energy Metabolism,True,False
+ATPtm,SLC25A4 or SLC25A6 or SLC25A5,-0.0191,-0.0439,0.0049,"Transport, Mitochondrial",Mitochondrial transport,True,False
+r0276,GMPR2,-0.029,-0.0439,0.9622,Nucleotide Metabolism; Purine Catabolism; Purine Metabolism,Nucleotide metabolism; Purine Catabolism; Nitrogen disposal,True,False
+AKGMALtm,SLC25A11 or SLC25A10,0.3232,0.0426,0.5539,"Transport, Mitochondrial",Mitochondrial transport,True,False
+GLUt2m,SLC25A12 or SLC25A22 or SLC25A13,0.6577,0.0426,0.0903,"Transport, Mitochondrial",Mitochondrial transport,True,False
 r0202c,GPD1L2,0.3552,-6.6439,0.62,Glycerophospholipid Metabolism,Lipid metabolism,False,False
 BTNt2,SLC16A1,0.5596,-5.6439,0.1147,Extracellular Transport,Extracellular Transport,False,True
 BTNt4i,SLC19A3,0.0,-5.6439,,Extracellular Transport,Extracellular Transport,False,False
-ME2m,ME1 or ME3,0.0308,3.1359,0.8057,Pyruvate Metabolism,Central Energy Metabolism,False,False
-ACACT1rm,ACAT1,0.1256,3.0,0.528,"Butanoate Metabolism; Fatty Acid Degradation; Fatty Acid Metabolism; Glyoxylate And Dicarboxylate Metabolism; Lysine Degradation; Pyruvate Metabolism; Terpenoid Backbone Biosynthesis; Tryptophan Metabolism; Valine, Leucine And Isoleucine Degradation",Butanoate Metabolism; Lipid metabolism; Glyoxylate And Dicarboxylate Metabolism; AA other (Cys/Met/Lys/Arg/Pro); Central Energy Metabolism; Terpenoid Backbone Biosynthesis; AAA metabolism (Trp/Phe/Tyr); BCAA metabolism (Val/Leu/Iso),False,False
 ACONTm,ACO2 or ACO1,-0.0206,3.0,0.8579,2-oxocarboxylic Acid Metabolism; Biosynthesis Of Amino Acids; Citric Acid Cycle,2-oxocarboxylic Acid Metabolism; Biosynthesis Of Amino Acids; Central Energy Metabolism,False,False
-ARGLYSex,SLC7A6,0.2933,3.0,0.509,Extracellular Transport,Extracellular Transport,False,False
-ASNtN1,SLC38A3,0.1033,3.0,0.8364,Extracellular Transport,Extracellular Transport,False,False
 GLUDxm,GLUD2,2.4688,-3.0,0.0009,"Alanine, Aspartate And Glutamate Metabolism; Arginine Biosynthesis; Nitrogen Metabolism; Taurine And Hypotaurine Metabolism","AA central (A/D/E,G/S/T); AA other (Cys/Met/Lys/Arg/Pro); Nitrogen disposal; Taurine And Hypotaurine Metabolism",False,True
 HACD1m,XRN1 or HADH,0.1318,-3.0,0.8734,Butanoate Metabolism; Fatty Acid Degradation; Fatty Acid Metabolism; Lysine Degradation; Tryptophan Metabolism,Butanoate Metabolism; Lipid metabolism; AA other (Cys/Met/Lys/Arg/Pro); AAA metabolism (Trp/Phe/Tyr),False,False
 ICDHxm,IDH3B and IDH3A,-0.2924,3.0,0.8253,2-oxocarboxylic Acid Metabolism; Biosynthesis Of Amino Acids; Citric Acid Cycle,2-oxocarboxylic Acid Metabolism; Biosynthesis Of Amino Acids; Central Energy Metabolism,False,False
 LYStm,SLC25A15,0.8802,-3.0,0.0743,"Transport, Mitochondrial",Mitochondrial transport,False,True
 SACCD3m,AASS,0.2022,-3.0,0.5383,Lysine Degradation; Lysine Metabolism,AA other (Cys/Met/Lys/Arg/Pro),False,False
-r0450,AADAT,-0.0115,-3.0,0.9879,2-oxocarboxylic Acid Metabolism; Biosynthesis Of Amino Acids; Lysine Biosynthesis; Lysine Degradation; Lysine Metabolism,2-oxocarboxylic Acid Metabolism; Biosynthesis Of Amino Acids; Lysine Biosynthesis; AA other (Cys/Met/Lys/Arg/Pro),False,False
 r0525,AASS,0.2022,-3.0,0.5383,Lysine Degradation; Lysine Metabolism,AA other (Cys/Met/Lys/Arg/Pro),False,False
 r0541,GCDH,0.5482,-3.0,0.2005,Tryptophan Metabolism,AAA metabolism (Trp/Phe/Tyr),False,True
 r0594m,ALDH7A1,0.0239,-3.0,0.9319,Lysine Metabolism,AA other (Cys/Met/Lys/Arg/Pro),False,False
@@ -30,38 +48,20 @@ r1418m,CA5A,-0.0957,0.8953,0.9059,Nitrogen Metabolism,Nitrogen disposal,False,Fa
 AMPTASECG,LAP3,-0.244,0.84,0.4862,Glutathione Metabolism,Redox & Pentose Metabolism,False,False
 AKGDm,OGDH and DLD and PDHX and DLST,-0.0856,0.7485,0.9748,2-oxocarboxylic Acid Metabolism; Citric Acid Cycle,2-oxocarboxylic Acid Metabolism; Central Energy Metabolism,False,False
 FTHFDHm,ALDH1L2,0.0665,-0.737,0.9102,Folate Metabolism,Folate Metabolism,False,False
-GCC2am,AMT and DLD and GLDC and GCSH,-0.0856,-0.737,0.7551,"Alanine, Aspartate And Glutamate Metabolism; Glycine, Serine And Threonine Metabolism","AA central (A/D/E,G/S/T)",False,False
-GCC2bim,AMT and DLD and GLDC and GCSH,-0.0856,-0.737,0.7551,"Alanine, Aspartate And Glutamate Metabolism; Glycine, Serine And Threonine Metabolism","AA central (A/D/E,G/S/T)",False,False
 GHMT2rm,SHMT1,0.0,-0.737,,"Alanine, Aspartate And Glutamate Metabolism; Biosynthesis Of Amino Acids; Cyanoamino Acid Metabolism; Folate Metabolism; Glycine, Serine And Threonine Metabolism; Glyoxylate And Dicarboxylate Metabolism; Methane Metabolism","AA central (A/D/E,G/S/T); Biosynthesis Of Amino Acids; Cyanoamino Acid Metabolism; Folate Metabolism; Glyoxylate And Dicarboxylate Metabolism; Methane Metabolism",False,False
 MTHFCm,MTHFD1L or MTHFD2,0.5499,-0.737,0.3051,Folate Metabolism,Folate Metabolism,False,True
-PGCD,PHGDH,-0.3278,-0.737,0.5944,"Alanine, Aspartate And Glutamate Metabolism; Biosynthesis Of Amino Acids; Cysteine And Methionine Metabolism; Glycine, Serine And Threonine Metabolism; Methane Metabolism","AA central (A/D/E,G/S/T); Biosynthesis Of Amino Acids; AA other (Cys/Met/Lys/Arg/Pro); Methane Metabolism",False,False
 PSERT,PSAT1,0.8412,-0.737,0.0101,"Alanine, Aspartate And Glutamate Metabolism; Biosynthesis Of Amino Acids; Cysteine And Methionine Metabolism; Glycine, Serine And Threonine Metabolism; Methane Metabolism","AA central (A/D/E,G/S/T); Biosynthesis Of Amino Acids; AA other (Cys/Met/Lys/Arg/Pro); Methane Metabolism",False,True
-PSP__Lm,PSPH,-0.0841,-0.737,0.9307,"Alanine, Aspartate And Glutamate Metabolism; Glycine, Serine And Threonine Metabolism","AA central (A/D/E,G/S/T)",False,False
-FUMm,FH,0.4581,0.696,0.097,Citric Acid Cycle; Pyruvate Metabolism,Central Energy Metabolism,False,False
-SUCOASm,SUCLG1 and SUCLA2,0.0517,0.696,0.8844,Citric Acid Cycle; Propanoate Metabolism,Central Energy Metabolism; Propanoate Metabolism,False,False
 r0509,SDHA and SDHB and SDHC and SDHD,-0.0623,0.696,0.8957,Citric Acid Cycle,Central Energy Metabolism,False,False
-GCC2cm,DLD,-0.0856,-0.6897,0.7551,Glycolysis/Gluconeogenesis,Central Energy Metabolism,False,False
-r1418,CA15L or CA9,0.2457,0.4854,0.8343,Nitrogen Metabolism,Nitrogen disposal,False,False
 GLNtN1,SLC38A3,0.1033,-0.2863,0.8364,Extracellular Transport,Extracellular Transport,False,False
-GLUt4,SLC38A3,0.1033,0.263,0.8364,Extracellular Transport,Extracellular Transport,False,False
 2HCO3_NAt,SLC4A5 or SLC4A4 or SLC4A9,0.0,-0.2009,0.7836,Extracellular Transport,Extracellular Transport,False,False
 r1418c,CA13 or CA4 or CA3A or CA3B or CA8 or LOC421187,0.6438,-0.2009,0.6003,Nitrogen Metabolism,Nitrogen disposal,False,False
-CYOOm3,COX5B and COX4I1 and COX6A1 and COX6C and COX7A2L and COX7C and COX5A and COX7B and COX7A2 and COX8A and COX2 and COX3 and COX1,-0.6969,-0.074,,Oxidative Phosphorylation,Oxidative Phosphorylation,False,False
-CYOR_u10m,UQCRFS1 and UQCRC1 and UQCRQ and UQCRB and UQCRC2 and UQCR11 and UQCR10 and UQCRHL and CYTB,-0.4791,-0.074,,Oxidative Phosphorylation,Oxidative Phosphorylation,False,False
 H2Otm,AQP8,0.0,-0.074,,"Transport, Mitochondrial",Mitochondrial transport,False,False
-ATPS4m,NDUFS2 and NDUFA13 and NDUFB7 and NDUFS4 and NDUFC2 and NDUFB6 and NDUFB10 and NDUFAB1 and NDUFA8 and NDUFA5 and NDUFA12 and NDUFB2 and NDUFV3 and NDUFA9 and NDUFA7 and NDUFB9 and NDUFS6 and NDUFS3 and NDUFB1 and NDUFB8 and NDUFA10 and NDUFB3 and NDUFS1 and NDUFB5 and NDUFV2 and NDUFA6 and NDUFV1 and NDUFA2 and NDUFS8 and NDUFB4 and NDUFS7 and NDUFS5 and NDUFA4 and NDUFA1 and NDUFA11 and ND1 and ND3 and ND6 and ND5 and ND4 and ND4L and ND2,-0.707,-0.0589,,Oxidative Phosphorylation,Oxidative Phosphorylation,False,False
-ENO,ENO1 or ENO4 or ENO2,0.8543,0.0566,0.0016,Biosynthesis Of Amino Acids; Glycolysis/Gluconeogenesis; Methane Metabolism,Biosynthesis Of Amino Acids; Central Energy Metabolism; Methane Metabolism,False,False
 LDH__L,LDHB and LDHA,-0.0438,0.0566,0.9079,Pyruvate Metabolism,Central Energy Metabolism,False,False
 NADH2_u10m,NDUFS2 and NDUFA13 and NDUFB7 and NDUFS4 and NDUFC2 and NDUFB6 and NDUFB10 and NDUFAB1 and NDUFA8 and NDUFA5 and NDUFA12 and NDUFB2 and NDUFV3 and NDUFA9 and NDUFA7 and NDUFB9 and NDUFS6 and NDUFS3 and NDUFB1 and NDUFB8 and NDUFA10 and NDUFB3 and NDUFS1 and NDUFB5 and NDUFV2 and NDUFA6 and NDUFV1 and NDUFA2 and NDUFS8 and NDUFB4 and NDUFS7 and NDUFS5 and NDUFA4 and NDUFA1 and NDUFA11 and ND1 and ND3 and ND6 and ND5 and ND4 and ND4L and ND2,-0.707,0.0566,,Oxidative Phosphorylation,Oxidative Phosphorylation,False,False
 PGM,BPGM or PGAM1,-0.1929,0.0566,0.417,"Biosynthesis Of Amino Acids; Glycine, Serine And Threonine Metabolism; Glycolysis/Gluconeogenesis; Methane Metabolism","Biosynthesis Of Amino Acids; AA central (A/D/E,G/S/T); Central Energy Metabolism; Methane Metabolism",False,False
-PYK,PKLR,0.1968,0.0566,0.487,Biosynthesis Of Amino Acids; Glycolysis/Gluconeogenesis; Pyruvate Metabolism,Biosynthesis Of Amino Acids; Central Energy Metabolism,False,False
-ATPtm,SLC25A4 or SLC25A6 or SLC25A5,-0.0191,-0.0439,0.0049,"Transport, Mitochondrial",Mitochondrial transport,False,False
 GMPR,ARMC4,0.0,-0.0439,,Nucleotide Interconversion; Nucleotide Metabolism; Purine Metabolism,Nucleotide metabolism; Nitrogen disposal,False,False
 HUMANGEM_MAR20139,SLC25A36,0.4366,-0.0439,0.0947,"Transport, Mitochondrial",Mitochondrial transport,False,False
 HUMANGEM_MAR20145,SLC25A36,0.4366,-0.0439,0.0947,"Transport, Mitochondrial",Mitochondrial transport,False,False
-r0276,GMPR2,-0.029,-0.0439,0.9622,Nucleotide Metabolism; Purine Catabolism; Purine Metabolism,Nucleotide metabolism; Purine Catabolism; Nitrogen disposal,False,False
-AKGMALtm,SLC25A11 or SLC25A10,0.3232,0.0426,0.5539,"Transport, Mitochondrial",Mitochondrial transport,False,False
-GLUt2m,SLC25A12 or SLC25A22 or SLC25A13,0.6577,0.0426,0.0903,"Transport, Mitochondrial",Mitochondrial transport,False,False
 r0552,ALDH7A1,0.0239,-0.0291,0.9319,"Alanine, Aspartate And Glutamate Metabolism; Folate Metabolism; Glycine, Serine And Threonine Metabolism","AA central (A/D/E,G/S/T); Folate Metabolism",False,False
 r0552m,ALDH7A1,0.0239,-0.0291,0.9319,"Alanine, Aspartate And Glutamate Metabolism; Glycine, Serine And Threonine Metabolism","AA central (A/D/E,G/S/T)",False,False
 r0553,ALDH7A1,0.0239,-0.0291,0.9319,"Alanine, Aspartate And Glutamate Metabolism; Folate Metabolism; Glycine, Serine And Threonine Metabolism","AA central (A/D/E,G/S/T); Folate Metabolism",False,False

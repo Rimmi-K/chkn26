@@ -18,12 +18,12 @@ data/
 └── models/             # iES1470 GEM (SBML) + RIPTiDe context-specific models
 
 scrs/
-├── transcriptomics/    # CAGE-seq QC, DESeq2, GSEA
+├── transcriptomics/    # CAGE-seq QC, DESeq2, GSEA (R scripts)
 ├── metabolomics/       # Hodges–Lehmann analysis, bootstrap CIs
+├── dpfa/               # Differential Pathway Flux Analysis package
+├── tfca/               # Transcript-Flux Concordance Analysis
 ├── riptide_integration/# RIPTiDe integration
 └── models/             # scripts for refine model
-
-dpfa/                   # Differential Pathway Flux Analysis package
 
 results/                # Generated figures, tables, supplementary files
 ```
@@ -50,7 +50,58 @@ Differential Pathway Flux Analysis toolkit for comparing context-specific flux d
 - `dpfa.scatter_plot` — transcript–flux concordance analysis: compares transcript-derived reaction effects (aggregated via GPR rules) with predicted flux ratios to identify concordant, flux-dominant, and transcript-dominant regulation
 - `dpfa.utils` — GPR rule parsing, metabolite turnover calculations
 
-**Usage:** Configure `input_parameters.yaml`, run `python -m dpfa`
+**Usage:** Configure `input_parameters.yaml`, run `python -m scrs.dpfa`
+
+---
+
+## Reproducibility
+
+### Computational environment
+
+Analysis performed using three conda environments:
+- **`base`**: Python 3.12 + COBRApy 0.29.1 (flux analysis, DPFA, TFCA)
+- **`r_gsea_bio`**: R 4.3+ with Bioconductor (DESeq2, clusterProfiler, GSEA)
+- **`riptide`**: RIPTiDe context-specific model integration
+
+Environment specifications provided in `environment_*.yml` files. To recreate environments:
+
+```bash
+conda env create -f environment_base.yml
+conda env create -f environment_r_gsea.yml
+conda env create -f environment_riptide.yml
+```
+
+### Analysis workflow
+
+**1. Transcriptomics** (R, `r_gsea_bio` env)
+```bash
+conda activate r_gsea_bio
+cd scrs/transcriptomics/
+Rscript TMM.R              # TMM normalization
+Rscript DEG_analysis.R     # DESeq2 differential expression
+Rscript GSEA.R             # Gene set enrichment analysis
+```
+
+**2. Metabolomics** (Python, `base` env)
+```bash
+conda activate base
+python scrs/metabolomics/metabolomics_stats.py
+```
+
+**3. Context-specific models** (Python, `riptide` env)
+```bash
+conda activate riptide
+# Generate tissue-specific models using RIPTiDe
+# (scripts in scrs/riptide_integration/)
+```
+
+**4. Flux analysis** (Python, `base` env)
+```bash
+conda activate base
+# Configure tissue-specific parameters in input_parameters.yaml
+python -m scrs.dpfa        # Differential pathway flux analysis
+python -m scrs.tfca        # Transcript-flux concordance analysis
+```
 
 ---
 
